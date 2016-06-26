@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>银月轻语</title>
+  <subtitle>前天看到了小兔子，昨天是小鹿，今天是你。</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://moemoemortimer.github.io/"/>
+  <updated>2016-06-26T12:43:36.833Z</updated>
+  <id>https://moemoemortimer.github.io/</id>
+  
+  <author>
+    <name>Nyanko Chan</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>嗷~~宝宝解锁了新姿势(*//ω//*)</title>
+    <link href="https://moemoemortimer.github.io/2016/06/26/insert-video/"/>
+    <id>https://moemoemortimer.github.io/2016/06/26/insert-video/</id>
+    <published>2016-06-26T09:11:04.000Z</published>
+    <updated>2016-06-26T12:43:36.833Z</updated>
+    
+    <content type="html">&lt;p&gt;学会了向博客中插入视频，麻麻再也不用担心我没地方收藏MV了o(&lt;em&gt;￣▽￣&lt;/em&gt;)ブ&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Into-You-–-Ariana-Grande&quot;&gt;&lt;a href=&quot;#Into-You-–-Ariana-Grande&quot; class=&quot;headerlink&quot; title=&quot;Into You  – Ariana Grande&quot;&gt;&lt;/a&gt;Into You  – Ariana Grande&lt;/h2&gt;&lt;p&gt;&amp;emsp;&lt;br&gt;天···妹子的身材简直了ԅ(¯﹃¯ԅ)&lt;br&gt;还有这种低喃的唱腔······性感度MAX~~！！&lt;br&gt;脸红+鼻血狂涌 (//ω//)&lt;br&gt;&amp;emsp;&lt;/p&gt;
+&lt;p&gt;&lt;iframe height=&quot;460&quot; width=&quot;800&quot; src=&quot;http://hc.yinyuetai.com/uploads/videos/common/36090154E0FE57833DCF1EC5EC672542.flv?sc=d7d407187d2d43f5&amp;br=781&amp;vid=2578239&amp;aid=14158&amp;area=US&amp;vst=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;br&gt;&lt;/iframe&gt;&lt;br&gt;&amp;emsp;&lt;br&gt;&amp;emsp;&lt;br&gt;&amp;emsp;&lt;/p&gt;
+&lt;h2 id=&quot;在这个世界相遇-电影-lt-大鱼海棠-gt-主题曲-–-陈奕迅&quot;&gt;&lt;a href=&quot;#在这个世界相遇-电影-lt-大鱼海棠-gt-主题曲-–-陈奕迅&quot; class=&quot;headerlink&quot; title=&quot;在这个世界相遇 电影&amp;lt;大鱼海棠&amp;gt;主题曲 – 陈奕迅&quot;&gt;&lt;/a&gt;在这个世界相遇 电影&amp;lt;大鱼海棠&amp;gt;主题曲 – 陈奕迅&lt;/h2&gt;&lt;p&gt;北冥有鱼，其名为鲲。&lt;br&gt;不知道是陈奕迅的唱功太厉害还是电影本身的魅力，看MV的时候居然泪目了，关注《大鱼》好久好久，终于要来了，准备一回家就去看✧٩(ˊωˋ*)و✧&lt;br&gt;&amp;emsp;&lt;/p&gt;
+&lt;p&gt;&lt;iframe height=&quot;460&quot; width=&quot;800&quot; src=&quot;http://hc.yinyuetai.com/uploads/videos/common/27C001554E02215F6CFBD17C4A62D566.flv?sc=b24ff284a61b0742&amp;br=780&amp;vid=2596337&amp;aid=157&amp;area=HT&amp;vst=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;br&gt;&lt;/iframe&gt;&lt;br&gt;&amp;emsp;&lt;br&gt;&amp;emsp;&lt;br&gt;&amp;emsp;&lt;/p&gt;
+&lt;h2 id=&quot;姿势要点&quot;&gt;&lt;a href=&quot;#姿势要点&quot; class=&quot;headerlink&quot; title=&quot;姿势要点&quot;&gt;&lt;/a&gt;姿势要点&lt;/h2&gt;&lt;p&gt;咳咳、鼻血总算止住了、下面老湿要开始讲课了~(◕ˇ∀ˇ◕)&lt;/p&gt;
+&lt;p&gt;诶···其实也就是一段代码而已 _(:3」∠❀)__&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;iframe &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	height=480 width=800&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	src=&lt;span class=&quot;string&quot;&gt;&quot;http://hc.yinyuetai.com/uploads/videos/common/27C001554E02215F6CFBD17C4A62D566.flv?sc=b24ff284a61b0742&amp;amp;br=780&amp;amp;vid=2596337&amp;amp;aid=157&amp;amp;area=HT&amp;amp;vst=0&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	frameborder=0 allowfullscreen&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/iframe&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&amp;emsp;&lt;br&gt;iframe是一个html标签，在google的时候还有人提到了html的video标签~~&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;video width=&lt;span class=&quot;string&quot;&gt;&quot;498&quot;&lt;/span&gt; height=&lt;span class=&quot;string&quot;&gt;&quot;510 &quot;&lt;/span&gt; src=&lt;span class=&quot;string&quot;&gt;&quot; &quot;&lt;/span&gt; poster=&lt;span class=&quot;string&quot;&gt;&quot; &quot;&lt;/span&gt; autoplay=&lt;span class=&quot;string&quot;&gt;&quot;autoplay&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/video&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;可是不知道为什么我用不了T皿T&lt;br&gt;&amp;emsp;&lt;br&gt;还有一个问题···一般来说刚点开网页的时候不是要先点一下play按钮才会播放么~~~可我的…肿么会酱థ౪థ&lt;br&gt;如果我收藏了一百个MV，那他们就会不受控制地同时唱起来了…థ౪థ&lt;/p&gt;
+&lt;p&gt;PS:&lt;br&gt;如果使用的是chrome浏览器，可能会遇到加载不出多媒体文件的问题。这时候只要单击搜索框右侧小盾牌，添加信任，让脚本文件正常运行即可。&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bgw1f58u234b1tj205702bmwz.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/c3c8eb1bgw1f58u2rtjd2j208e050dg6.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;小盾牌姿势来自&lt;a href=&quot;http://erofish.github.io/2015/10/12/hexo%20%E4%B8%AD%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%20%E8%A7%86%E9%A2%91%E7%AD%89%E5%A4%9A%E5%AA%92%E4%BD%93%E6%96%87%E4%BB%B6/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo 中添加音乐 视频等多媒体文件 –十八仙僧の理想国&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;学会了向博客中插入视频，麻麻再也不用担心我没地方收藏MV了o(&lt;em&gt;￣▽￣&lt;/em&gt;)ブ&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="姿势" scheme="https://moemoemortimer.github.io/tags/%E5%A7%BF%E5%8A%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>图床ԅ(¯﹃¯ԅ)</title>
+    <link href="https://moemoemortimer.github.io/2016/06/26/photo/"/>
+    <id>https://moemoemortimer.github.io/2016/06/26/photo/</id>
+    <published>2016-06-26T05:11:53.000Z</published>
+    <updated>2016-06-26T05:39:06.400Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;&lt;br&gt;     如何拯救不配图会死星人系列✧٩(ˊωˋ*)و✧&lt;/excerpt&gt;&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;the rest=&quot;&quot; of=&quot;&quot; contents=&quot;&quot; |=&quot;&quot; 余下全文=&quot;&quot;&gt;
+
+&lt;p&gt;儿纸梭博客贴图可以用html的语言·····还有新浪微博图床这一利器( •̀ ω •́ )&lt;/p&gt;
+&lt;p&gt;咦？微博图床？好像在哪里听过的样子&lt;em&gt;(:3」∠)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/%E6%96%B0%E6%B5%AA%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A/fdfdnfpdplfbbnemmmoklbfjbhecpnhf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;从阿成33那里copy来的简单粗暴的链接&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;诶···今天好热滴说ԅ(¯﹃¯ԅ)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/c3c8eb1bgw1f58johuz1aj20m80dw3zs.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/c3c8eb1bgw1f58k2rflz0j20m80dwgmn.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/c3c8eb1bgw1f58k37tkgyj20m80cidgi.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/c3c8eb1bgw1f58k3ijsjxj20m80cigmt.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/c3c8eb1bgw1f58k3y3kj9j20m80dw75a.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bgw1f58k49gq8cj20m80dwwfc.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;嗷嗷嗷血槽已空~~~好想次ԅ(¯﹃¯ԅ)&lt;/p&gt;
+&lt;p&gt;发现用markdown和html都可以传图片~~~  o(&lt;em&gt;￣▽￣&lt;/em&gt;)ブ&lt;/p&gt;
+&lt;p&gt;昨天博客被上学期教我们写网页的LZ学长表扬了···然后他也去搭了一个（纳尼？？）&lt;br&gt;不愧是大神థ౪థ第一篇就是&lt;a href=&quot;http://lvze1992.github.io/2016/06/25/hello-world&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;markdown的基本语法&lt;/a&gt;，赶紧码住~~&lt;/p&gt;
+&lt;/the&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;Excerpt in index | 首页摘要&gt;&lt;br&gt;     如何拯救不配图会死星人系列✧٩(ˊωˋ*)و✧&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="日常" scheme="https://moemoemortimer.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>论代码能力与食量的正比例关系</title>
+    <link href="https://moemoemortimer.github.io/2016/06/25/ACMgather/"/>
+    <id>https://moemoemortimer.github.io/2016/06/25/ACMgather/</id>
+    <published>2016-06-25T13:21:10.000Z</published>
+    <updated>2016-06-26T05:12:07.882Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;&lt;br&gt;    今天有集训队一年一度的聚餐~~众巨欢聚一堂，场面其乐融融，我们满含热泪，欢送即将毕业的学长学姐们。(～￣▽￣)～*（噗·····！好像哪里不对~）&lt;/excerpt&gt;&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;the rest=&quot;&quot; of=&quot;&quot; contents=&quot;&quot; |=&quot;&quot; 余下全文=&quot;&quot;&gt;
+
+&lt;p&gt;四个年级都在，我想每个人的心情都不一样吧。等到我毕业的时候，会不会舍不得呢？&lt;/p&gt;
+&lt;p&gt;总共有三桌，一桌全是14级的汉纸，他们······炒鸡能吃(●ˇ∀ˇ●)。一桌是老师队长和毕业学长们在的桌子，然后剩下的人又坐了一桌。&lt;/p&gt;
+&lt;p&gt;好吧，我真是太不争气了······去的时候不知道该坐哪整个人都要羞愤欲死了，然后就被“调剂”到老师组···全是陌生人···敲尴尬尴尬尴尬,,ԾㅂԾ,,（不过能有幸一览众巨风采···）&lt;/p&gt;
+&lt;p&gt;菜还是点少了，圆台转动的方向和时间基本上是由老湿控制的&amp;gt;o&amp;lt;他怎么总把好吃的往自己那边转(╯▔皿▔)╯我的炼乳小馒头转了没半圈呢就没了TAT&lt;/p&gt;
+&lt;p&gt;大家纷纷表示没次饱···我好方( ▼-▼ )尤其是纯汉纸辣桌···天哪···又能吃酒量又好···战斗力真强啊(⊙o⊙)&lt;/p&gt;
+&lt;p&gt;看他们嚷嚷着我要我要我还要，我觉得我的钱包在滴血థ౪థ&lt;/p&gt;
+&lt;p&gt;不过还是有点担心、、喝辣么多酒，真心···大丈夫？&lt;/p&gt;
+&lt;p&gt;最后·····诶豆······他们都在好奇这烤串为何频频空降宛如上天的特别优待，我差点就绷不住当场承认了···ORZ&lt;/p&gt;
+&lt;p&gt;（其实是我点的、和大鱿鱼一起、、只不过烧烤上的太慢了你们吃的太快了嗷嗷···థ౪థ）&lt;/p&gt;
+&lt;h2 id=&quot;脑洞&quot;&gt;&lt;a href=&quot;#脑洞&quot; class=&quot;headerlink&quot; title=&quot;脑洞&quot;&gt;&lt;/a&gt;脑洞&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;途中听到汉纸桌嚷嚷“娘子”···然后我就莫名想到自己的ID Nyanko（因为ko音在日文名里都是“什么什么子”）
+
+诶我脑洞是不是太大了···不过确实有点想解释一下呢~~~
+
+因为猫=ねこ（neko），demo···为了卖萌，我把neko改成nyanko（娘口33其实就是一个hin好的例子）
+
+所以 Nyanko Chan 就相当于“喵咪酱”“喵星银”的赶脚、、读起来也软软糯糯的，似不似很萌_(:3」∠❀)_
+&lt;/code&gt;&lt;/pre&gt;&lt;/the&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;Excerpt in index | 首页摘要&gt;&lt;br&gt;    今天有集训队一年一度的聚餐~~众巨欢聚一堂，场面其乐融融，我们满含热泪，欢送即将毕业的学长学姐们。(～￣▽￣)～*（噗·····！好像哪里不对~）&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="日常" scheme="https://moemoemortimer.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Created my Private Castle</title>
+    <link href="https://moemoemortimer.github.io/2016/06/24/HELLO-HEXO/"/>
+    <id>https://moemoemortimer.github.io/2016/06/24/HELLO-HEXO/</id>
+    <published>2016-06-24T02:20:43.000Z</published>
+    <updated>2016-06-25T03:05:47.684Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;&lt;br&gt;    初めまして、HEXO君、私はニャンコちゃんです。どうぞよろしくお願いします∠( ᐛ 」∠)＿&lt;br&gt;    hexo圈萌♥，亲手搭窝，一本满足。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/excerpt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;the rest=&quot;&quot; of=&quot;&quot; contents=&quot;&quot; |=&quot;&quot; 余下全文=&quot;&quot;&gt;&lt;br&gt;    今天真是说不粗的嗨森呢(～￣▽￣)～*&lt;br&gt;    真的要好好感谢阿成33的先见之明和铺路工作，提前教了我sublime text（好吧我到底学会了什么T皿T），蠢货如我也能搭个博客粗来了~~~(●’ω’●)&lt;/the&gt;&lt;/p&gt;
+&lt;p&gt;诶豆······事情的起源是这样的~~昨晚熬夜补高酥作业又抢课抢到凌晨两三点还被蚊子嗡嗡嗡嗡地折磨了半夜，第二天的汇编当然是理所当然的不会编辣，C艹也憋不出几行代码23333，于是我就自暴自弃地跑去开小差了（逃···  ( •̀ ω •́ )&lt;/p&gt;
+&lt;p&gt;本来想啊快期末了我还是不要作死好好复习吧，但在机（lao）缘（shi）巧（cui）合（cu）下最后还是拾起来了而且还越来越兴奋【excited(★ ω ★)】&lt;/p&gt;
+&lt;p&gt;做的时候google了一堆教程，步骤什么的都很清晰、、不过本智障紧张地摸索着也就没精力截图记录过程什么的，在这里贴出对我帮助最大的两篇博客，蒸的是、包教包会啊！&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;★史上最详细的Hexo博客搭建图文教程 --by Xuanwo https://xuanwo.org/2015/03/26/hexo-intor/
+★成功叛逃到hexo --by lechain （伪征婚帖o(*￣▽￣*)ブ）http://old.lyeec.me/jekyll-to-hexo/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;我是在Windows下搭的博客，大致流程是这样的~~&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;①首先下载node.js，保持默认一路Next就好了
+    戳这里：https://nodejs.org/dist/v4.4.5/node-v4.4.5-x64.msi 
+②配置好node.js环境之后，到github（https://github.com/）上申请一个帐号 
+③接下来完成git的安装和配置
+④使用GitHub Pages解锁各种新姿势=v=
+    看使用帮助说不定能更好的理解GitHub Pages是做什么用的：
+    https://help.github.com/categories/github-pages-basics/
+⑤······
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;写流程是帮助自己回忆吧，具体的操作大神们的教程里讲的比我清楚多了，嘿嘿（逃···）&lt;/p&gt;
+&lt;p&gt;这个时候已经可以用hexo s命令预览你的博客了，它会给出这样的提示：Hexo is running at &lt;a href=&quot;http://localhost:4000/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost:4000/&lt;/a&gt;.  然后······你会一边预览一边发现······嗯、有点丑。&lt;/p&gt;
+&lt;p&gt;所以我们需要一个主题( •̀ ω •́ )y&lt;/p&gt;
+&lt;p&gt;主题的话，我直接吃了一枚安利：&lt;a href=&quot;https://github.com/MOxFIVE/yelee&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/MOxFIVE/yelee&lt;/a&gt;&lt;br&gt;作者给出了超级详细的使用说明~~！&lt;a href=&quot;http://moxfive.coding.me/yelee/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://moxfive.coding.me/yelee/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;总之自己还是智障了、在更改Author的时候（总不能用人家默认的名字吧···）居然产生了一个不大不小的错误、、没法hexo s了（哭唧唧···）它说错误出现在repo那行代码第七列,瞬间生无可恋这要上哪找去、、（最后才知道这是在提示我_config.yml中deploy那一步我冒号后面没加空格&amp;gt;o&amp;lt;~）最后的最后，我在更改完主页的标题个人信息并保存之后，重新hexo g了一下，重新上传自己的博客。好的这次就成功了~~&lt;/p&gt;
+&lt;p&gt;到这基本上就差不多了（？····）好吧这完全是我的错觉（摔！）（╯－＿－）╯╧╧&lt;/p&gt;
+&lt;p&gt;本以为按照教程上说的generate一下再deploy一下输个github的账号密码就OK了可素没想到啊他他他居然失败了啊T皿T&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Permission denied (publickey).
+fatal: Could not read from remote repository.
+Please make sure you have the correct access rights and the repository exists.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;表示一脸蒙蔽赶紧灰溜溜的跑去谷歌，发现好多人和我有一样的问题、、最后大家讨论出来的解决方案居然是更换一个较低版本的git······orz&lt;br&gt;可是我懒啊······&lt;br&gt;于是我想不如改用sshkey，如果成功了的话好像会更方便一些（虽然不懂其中原理）~~&lt;br&gt;锵锵~！干货教程在此 &lt;a href=&quot;http://old.lyeec.me/git/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://old.lyeec.me/git/&lt;/a&gt; 阿成33的博客真是个好地方吖~~~∠( ᐛ 」∠)＿&lt;/p&gt;
+&lt;p&gt;然后就···然后就成功惹~！✧٩(ˊωˋ*)و✧&lt;/p&gt;
+&lt;p&gt;诶诶诶不行了我已经做不到一本正经地胡说（zhuang）八道（bi）了，明明别人家的博客都是干货我这怎么全是水呢 (～￣▽￣)→))&lt;em&gt;￣▽￣&lt;/em&gt;)o天哪难道我只能靠强行卖萌来留住人气了么sad、&lt;/p&gt;
+&lt;p&gt; 就个人感觉而言，这种类型的博客是私人性质比较高的一种，莫名喜欢(❤ ω ❤)，在秋秋上自己发的东西大家都能看到，我自己是内心活动比较丰富的人，如果表现的太频繁了的话难免会被认为有装X的嫌疑，微信虽然好友少了点，可那个圈子太无聊了没意思，一直想有一个自己的小天地啊啊啊，可以毫无顾忌地说自己喜欢的话~~天天自嗨天天水（怎么感觉有种注孤生的辛酸=……=）&lt;/p&gt;
+&lt;p&gt; 本来还想买域名的···DEMO好贵···改天吧、改天再买QAQ（改天是哪天啊摔！）&lt;/p&gt;
+&lt;p&gt; 可怕的是都这么晚了我居然不会困诶〒_〒果然自己探索喜欢的东西什么的真的好燃o(&lt;em&gt;￣▽￣&lt;/em&gt;)ブ比复习高酥大雾有意思多了啊~demo貌似吾辈真的要挂科了呢~~如果可以早早起床的话我就熬粥喝嗷嗷嗷想想就鸡冻的流下了口水（❤ ω ❤）&lt;/p&gt;
+&lt;p&gt; 呐呐，Private Castle就是内心的具象化吧~哇唔~发明出这么美好的东西的人真是太赞了~(★ ω ★)&lt;del&gt;我会像照顾恋人一样照顾好我的博客（虽然并不知道恋人这种生物要怎么照顾）不过我想给它100%的care应该就够了吧&lt;/del&gt;~(～￣▽￣)～*&lt;/p&gt;
+&lt;p&gt; 深刻地意识到自己弱到爆炸，还有hin多姿势要学，不过吾辈不怕被嫌弃~欢迎大家常来玩耍~~ (～￣▽￣)→))&lt;em&gt;￣▽￣&lt;/em&gt;)o&lt;/p&gt;
+&lt;p&gt;最后的最后还要再感谢一次阿成33，33赛高！！✧٩(ˊωˋ*)و✧&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;Excerpt in index | 首页摘要&gt;&lt;br&gt;    初めまして、HEXO君、私はニャンコちゃんです。どうぞよろしくお願いします∠( ᐛ 」∠)＿&lt;br&gt;    hexo圈萌♥，亲手搭窝，一本满足。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="日常" scheme="https://moemoemortimer.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
+  
+</feed>
