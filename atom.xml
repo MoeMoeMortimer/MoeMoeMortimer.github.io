@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://moemoemortimer.github.io/"/>
-  <updated>2016-07-20T10:18:32.013Z</updated>
+  <updated>2016-07-21T01:25:47.640Z</updated>
   <id>https://moemoemortimer.github.io/</id>
   
   <author>
@@ -16,13 +16,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CodeForces 587A 解题报告</title>
+    <link href="https://moemoemortimer.github.io/2016/07/21/codeforces-587A/"/>
+    <id>https://moemoemortimer.github.io/2016/07/21/codeforces-587A/</id>
+    <published>2016-07-21T00:48:32.000Z</published>
+    <updated>2016-07-21T01:25:47.640Z</updated>
+    
+    <content type="html">&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://codeforces.com/problemset/problem/587/A&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;题目传送门&lt;/a&gt;&lt;br&gt;大意：&lt;br&gt;给出n个数w1——wn，分别表示2的wi次方，请尽可能在这些数中组合出最少的2的x次方。输出最少的组数k。&lt;/p&gt;
+&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;p&gt;仅考虑幂指数部分，1 1 凑成2，2 2 凑成3，以此类推，wi若为偶数，就可以凑出wi/2个wi+1，如果是奇数必会剩下一个。从小到大扫一遍就好了。&lt;br&gt;还有，貌似用cin,cout会超时&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;cmath&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;algorithm&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;using namespace std;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int w[1000100];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;/span&gt;()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    int a,n;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(scanf(&lt;span class=&quot;string&quot;&gt;&quot;%d&quot;&lt;/span&gt;, &amp;amp;n) != EOF)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int i = 0; i &amp;lt; n; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            scanf(&lt;span class=&quot;string&quot;&gt;&quot;%d&quot;&lt;/span&gt;, &amp;amp;a);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            w[a]++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        int step = 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int i = 0; i &amp;lt; 1000100-1; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            w[i+1] += w[i]/2;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            w[i] %= 2;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(w[i])step++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%d\n&quot;&lt;/span&gt;,step);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+      <category term="贪心" scheme="https://moemoemortimer.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
+    
+  </entry>
+  
+  <entry>
     <title>STL学习笔记</title>
     <link href="https://moemoemortimer.github.io/2016/07/20/stl-study-notes/"/>
     <id>https://moemoemortimer.github.io/2016/07/20/stl-study-notes/</id>
     <published>2016-07-20T10:10:08.000Z</published>
-    <updated>2016-07-20T10:18:32.013Z</updated>
+    <updated>2016-07-21T00:52:10.266Z</updated>
     
-    <content type="html">&lt;table&gt;
+    <content type="html">&lt;p&gt;被STL虐哭_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;C++ STL中标准关联容器set, multiset, map, multimap,其内部采用的是一种非常高效的平衡检索二叉树：红黑树，也成为RB树(Red-Black Tree)。RB树的统计性能要好于一般平衡二叉树，所以被STL选择作为了关联容器的内部结构。&lt;/p&gt;
+&lt;h2 id=&quot;set&quot;&gt;&lt;a href=&quot;#set&quot; class=&quot;headerlink&quot; title=&quot;set&quot;&gt;&lt;/a&gt;set&lt;/h2&gt;&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th style=&quot;text-align:center&quot;&gt;名称&lt;/th&gt;
@@ -68,16 +94,7 @@
     
     <summary type="html">
     
-      &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;名称&lt;/th&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;作用&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text
+      &lt;p&gt;被STL虐哭_(:3」∠❀)_&lt;br&gt;
     
     </summary>
     
@@ -103,18 +120,27 @@
   </entry>
   
   <entry>
-    <title>hdu-4544</title>
+    <title>HDU 4544 解题报告</title>
     <link href="https://moemoemortimer.github.io/2016/07/20/hdu-4544/"/>
     <id>https://moemoemortimer.github.io/2016/07/20/hdu-4544/</id>
     <published>2016-07-20T10:09:08.000Z</published>
-    <updated>2016-07-20T10:09:08.503Z</updated>
+    <updated>2016-07-21T01:04:43.952Z</updated>
     
-    <content type="html"></content>
+    <content type="html">&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=4544&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;题目传送门&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;大意：&lt;br&gt;第一行有两个整数N，M（1 &amp;lt;= N, M &amp;lt;= 100000），分别表示兔子的个数和箭的种类；&lt;br&gt;第二行有N个正整数，分别表示兔子的血量Bi（1 &amp;lt;= i &amp;lt;= N）；&lt;br&gt;第三行有M个正整数，表示每把箭所能造成的伤害值Di（1 &amp;lt;= i &amp;lt;= M）；&lt;br&gt;第四行有M个正整数，表示每把箭需要花费的QQ币Pi（1 &amp;lt;= i &amp;lt;= M）。&lt;br&gt;如果不能杀死所有兔子，请输出”No”，否则，请输出最少的QQ币数，每组输出一行。&lt;/p&gt;
+</content>
     
     <summary type="html">
     
+      &lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;
+    
     </summary>
     
+    
+      <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+      <category term="STL" scheme="https://moemoemortimer.github.io/tags/STL/"/>
     
   </entry>
   
@@ -149,7 +175,7 @@
     <link href="https://moemoemortimer.github.io/2016/07/20/codeforces-579B/"/>
     <id>https://moemoemortimer.github.io/2016/07/20/codeforces-579B/</id>
     <published>2016-07-20T08:20:38.000Z</published>
-    <updated>2016-07-20T10:01:08.073Z</updated>
+    <updated>2016-07-21T00:52:33.811Z</updated>
     
     <content type="html">&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://codeforces.com/problemset/problem/579/B&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;题目传送门&lt;/a&gt;&lt;/p&gt;
@@ -167,7 +193,9 @@
     </summary>
     
     
-      <category term="解题报告，STL" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A%EF%BC%8CSTL/"/>
+      <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+      <category term="STL" scheme="https://moemoemortimer.github.io/tags/STL/"/>
     
   </entry>
   
@@ -201,10 +229,11 @@
     <link href="https://moemoemortimer.github.io/2016/07/19/trainning-diary/"/>
     <id>https://moemoemortimer.github.io/2016/07/19/trainning-diary/</id>
     <published>2016-07-19T15:09:08.000Z</published>
-    <updated>2016-07-20T00:10:53.398Z</updated>
+    <updated>2016-07-21T01:25:55.665Z</updated>
     
     <content type="html">&lt;p&gt;日啖键帽三百颗，脑残吃枣药丸~~&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;7月19日&quot;&gt;&lt;a href=&quot;#7月19日&quot; class=&quot;headerlink&quot; title=&quot;7月19日&quot;&gt;&lt;/a&gt;7月19日&lt;/h2&gt;&lt;p&gt;今天是第一个到实验室的。信南大门上贴的开门关门时间我没注意，不过还好门是开着的。上午自学看书，今天学枚举和贪心，不过一早上连枚举都没看完，脑袋涨涨的。&lt;br&gt;从狗东上买了一箱牛奶一箱酸奶，没想到居然一起到了…求心理阴影面积…累成一坨翔…中午直接睡过了，我错了再也不敢了…&lt;br&gt;下午的比赛都是水题…明明知道是水题…但我怎么那么慢呢…两个半小时硬是被我拖了五个小时…六个题做出四个…比预想的稍好一些，我以为自己会爆零的2333&lt;br&gt;后来看到学长也去做我们的题了，一个小时出三道…天哪我真是差的太远了。&lt;br&gt;今晚的CF没有register，一脸蒙蔽。名额什么的…抢上了估计也是给人家拖后腿，不如踏踏实实做题。&lt;br&gt;浴室关门前十分钟冲了进去，23333好险~&lt;br&gt;嗷嗷嗷写个题解也这么慢！！我真是没治了థ౪థ吃枣药丸、还有那么多题要补….啊哭唧唧…&lt;br&gt;外头风好大、能不能别吹玻璃~我很怕啊啊…&lt;/p&gt;
+&lt;h2 id=&quot;7月20日&quot;&gt;&lt;a href=&quot;#7月20日&quot; class=&quot;headerlink&quot; title=&quot;7月20日&quot;&gt;&lt;/a&gt;7月20日&lt;/h2&gt;&lt;p&gt;我真的很慢，还蠢。真是的，世界上怎么会有你这么蠢的人呢？&lt;br&gt;每次看到Pending然后Running on test xx的时候心里真的好紧张啊、、今天很少AC，我快要哭了థ౪థ&lt;br&gt;本来以为和人家差得很远，后来发现他是抄的代码，呃平衡了那么一丢丢~~&lt;br&gt;回宿舍的时候差点被恶狗咬一口，吓死宝宝了。。。我什么也没做呀！？&lt;br&gt;总之今天心好累···其实也没啥的，蠢就蠢呗，做不出来就做不出来呗，可是我就是爱跟自己过不去。啊啊啊啊真是够了。&lt;br&gt;讨厌讨厌讨厌讨厌！！&amp;lt;(￣3￣)&amp;gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -301,7 +330,7 @@
     <link href="https://moemoemortimer.github.io/2016/07/18/short-holiday/"/>
     <id>https://moemoemortimer.github.io/2016/07/18/short-holiday/</id>
     <published>2016-07-18T03:00:00.000Z</published>
-    <updated>2016-07-18T04:29:18.502Z</updated>
+    <updated>2016-07-21T01:25:52.555Z</updated>
     
     <content type="html">&lt;p&gt;抓住假期的小尾巴，滚回小岛惹~~&lt;br&gt;多图慎入_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;可爱的你真好次ԅ-¯﹃¯ԅ&quot;&gt;&lt;a href=&quot;#可爱的你真好次ԅ-¯﹃¯ԅ&quot; class=&quot;headerlink&quot; title=&quot;可爱的你真好次ԅ(¯﹃¯ԅ)&quot;&gt;&lt;/a&gt;可爱的你真好次ԅ(¯﹃¯ԅ)&lt;/h2&gt;&lt;p&gt;&amp;emsp; &lt;/p&gt;
@@ -381,7 +410,7 @@
     <link href="https://moemoemortimer.github.io/2016/06/27/aishite/"/>
     <id>https://moemoemortimer.github.io/2016/06/27/aishite/</id>
     <published>2016-06-27T14:32:22.000Z</published>
-    <updated>2016-06-28T11:32:09.046Z</updated>
+    <updated>2016-07-21T01:25:45.429Z</updated>
     
     <content type="html">&lt;p&gt;全世界は恋に落ちるみたいです~~✧٩(ˊωˋ*)و✧&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=38689097&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;
