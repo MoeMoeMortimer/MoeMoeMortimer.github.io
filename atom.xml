@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://moemoemortimer.github.io/"/>
-  <updated>2016-07-21T01:25:47.640Z</updated>
+  <updated>2016-07-21T11:39:54.861Z</updated>
   <id>https://moemoemortimer.github.io/</id>
   
   <author>
@@ -14,6 +14,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>codeforces-448c</title>
+    <link href="https://moemoemortimer.github.io/2016/07/21/codeforces-448c/"/>
+    <id>https://moemoemortimer.github.io/2016/07/21/codeforces-448c/</id>
+    <published>2016-07-21T11:39:54.000Z</published>
+    <updated>2016-07-21T11:39:54.861Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>HDU 1007 解题报告</title>
+    <link href="https://moemoemortimer.github.io/2016/07/21/hdu-1007/"/>
+    <id>https://moemoemortimer.github.io/2016/07/21/hdu-1007/</id>
+    <published>2016-07-21T11:39:37.000Z</published>
+    <updated>2016-07-21T12:04:03.797Z</updated>
+    
+    <content type="html">&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=1007&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;题目传送门&lt;/a&gt;&lt;br&gt;大意：&lt;br&gt;给定平面上n个点，求最近两点的距离，输出距离的一半。&lt;/p&gt;
+&lt;p&gt;和《挑战》上的题一模一样（除了数据范围？）&lt;br&gt;挑战上的是&lt;a href=&quot;https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;amp;page=show_problem&amp;amp;problem=1186&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;UVa 10245 最近点对问题&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;p&gt;由于n比较大，直接暴力是不行的，因此要选用分治法。&lt;br&gt;我们把所有点按x坐标分为左右两半，那么最近点对的距离就是下面二者的最小值。&lt;br&gt;（1）两点同属一边时最小距离&lt;br&gt;（2）两点属于不同区域时最小距离&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;algorithm&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;vector&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;cmath&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;using namespace std;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;typedef pair&amp;lt;double, double&amp;gt; P;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int n;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;P a[100010];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;const int INF = 0xffffff0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//用于按y坐标归并的比较函数&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bool cmp(P a, P b)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; a.second &amp;lt; b.second;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//传入的a已经按x坐标排好序了（具体见下solve()函数）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;double closest(P *a, int n)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (n &amp;lt;= 1)&lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; INF;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    int m = n/2;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    double x = a[m].first;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    double d = min(closest(a, m), closest(a+m,n-m));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    inplace_merge(a, a + m, a + n, cmp);   //归并两个排好序的数列&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	//此时，a已经按y坐标排好序了&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	//将到直线小于d的点加入&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    vector&amp;lt;P&amp;gt; b;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int i = 0; i &amp;lt; n; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(fabs(a[i].first - x) &amp;gt;= d)&lt;span class=&quot;built_in&quot;&gt;continue&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        //从后往前检查b中y坐标相差小于d的点&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int j = 0; j &amp;lt; b.size(); j++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            double dx = a[i].first - b[b.size() - j - 1].first;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            double dy = a[i].second - b[b.size() - j - 1].second;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(dy &amp;gt;= d)&lt;span class=&quot;built_in&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            d = min(d, sqrt(dx*dx + dy*dy));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        b.push_back(a[i]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; d;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;void &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;solve&lt;/span&gt;&lt;/span&gt;()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    sort(a, a+n); //按x坐标排序&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%.2f\n&quot;&lt;/span&gt;,closest(a,n)/2.0);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;/span&gt;()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(scanf(&lt;span class=&quot;string&quot;&gt;&quot;%d&quot;&lt;/span&gt;,&amp;amp;n))&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(n == 0)&lt;span class=&quot;built_in&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int i = 0; i &amp;lt; n; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            scanf(&lt;span class=&quot;string&quot;&gt;&quot;%lf%lf&quot;&lt;/span&gt;, &amp;amp;a[i].first, &amp;amp;a[i].second);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        solve();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+      <category term="分治" scheme="https://moemoemortimer.github.io/tags/%E5%88%86%E6%B2%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>CodeForces 587A 解题报告</title>
@@ -229,11 +272,12 @@
     <link href="https://moemoemortimer.github.io/2016/07/19/trainning-diary/"/>
     <id>https://moemoemortimer.github.io/2016/07/19/trainning-diary/</id>
     <published>2016-07-19T15:09:08.000Z</published>
-    <updated>2016-07-21T01:25:55.665Z</updated>
+    <updated>2016-07-22T06:36:00.413Z</updated>
     
     <content type="html">&lt;p&gt;日啖键帽三百颗，脑残吃枣药丸~~&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;7月19日&quot;&gt;&lt;a href=&quot;#7月19日&quot; class=&quot;headerlink&quot; title=&quot;7月19日&quot;&gt;&lt;/a&gt;7月19日&lt;/h2&gt;&lt;p&gt;今天是第一个到实验室的。信南大门上贴的开门关门时间我没注意，不过还好门是开着的。上午自学看书，今天学枚举和贪心，不过一早上连枚举都没看完，脑袋涨涨的。&lt;br&gt;从狗东上买了一箱牛奶一箱酸奶，没想到居然一起到了…求心理阴影面积…累成一坨翔…中午直接睡过了，我错了再也不敢了…&lt;br&gt;下午的比赛都是水题…明明知道是水题…但我怎么那么慢呢…两个半小时硬是被我拖了五个小时…六个题做出四个…比预想的稍好一些，我以为自己会爆零的2333&lt;br&gt;后来看到学长也去做我们的题了，一个小时出三道…天哪我真是差的太远了。&lt;br&gt;今晚的CF没有register，一脸蒙蔽。名额什么的…抢上了估计也是给人家拖后腿，不如踏踏实实做题。&lt;br&gt;浴室关门前十分钟冲了进去，23333好险~&lt;br&gt;嗷嗷嗷写个题解也这么慢！！我真是没治了థ౪థ吃枣药丸、还有那么多题要补….啊哭唧唧…&lt;br&gt;外头风好大、能不能别吹玻璃~我很怕啊啊…&lt;/p&gt;
 &lt;h2 id=&quot;7月20日&quot;&gt;&lt;a href=&quot;#7月20日&quot; class=&quot;headerlink&quot; title=&quot;7月20日&quot;&gt;&lt;/a&gt;7月20日&lt;/h2&gt;&lt;p&gt;我真的很慢，还蠢。真是的，世界上怎么会有你这么蠢的人呢？&lt;br&gt;每次看到Pending然后Running on test xx的时候心里真的好紧张啊、、今天很少AC，我快要哭了థ౪థ&lt;br&gt;本来以为和人家差得很远，后来发现他是抄的代码，呃平衡了那么一丢丢~~&lt;br&gt;回宿舍的时候差点被恶狗咬一口，吓死宝宝了。。。我什么也没做呀！？&lt;br&gt;总之今天心好累···其实也没啥的，蠢就蠢呗，做不出来就做不出来呗，可是我就是爱跟自己过不去。啊啊啊啊真是够了。&lt;br&gt;讨厌讨厌讨厌讨厌！！&amp;lt;(￣3￣)&amp;gt;&lt;/p&gt;
+&lt;h2 id=&quot;7月21日&quot;&gt;&lt;a href=&quot;#7月21日&quot; class=&quot;headerlink&quot; title=&quot;7月21日&quot;&gt;&lt;/a&gt;7月21日&lt;/h2&gt;&lt;p&gt;我特么真是一个傻x&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -537,61 +581,6 @@
     <summary type="html">
     
       &lt;p&gt;&lt;Excerpt in index | 首页摘要&gt;&lt;br&gt;    今天有集训队一年一度的聚餐~~众巨欢聚一堂，场面其乐融融，我们满含热泪，欢送即将毕业的学长学姐们。(～￣▽￣)～*（噗·····！好像哪里不对~）&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="日常" scheme="https://moemoemortimer.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Created my Private Castle</title>
-    <link href="https://moemoemortimer.github.io/2016/06/24/HELLO-HEXO/"/>
-    <id>https://moemoemortimer.github.io/2016/06/24/HELLO-HEXO/</id>
-    <published>2016-06-24T02:20:43.000Z</published>
-    <updated>2016-06-25T03:05:47.684Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;&lt;br&gt;    初めまして、HEXO君、私はニャンコちゃんです。どうぞよろしくお願いします∠( ᐛ 」∠)＿&lt;br&gt;    hexo圈萌♥，亲手搭窝，一本满足。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/excerpt&gt;&lt;/p&gt;
-&lt;p&gt;&lt;the rest=&quot;&quot; of=&quot;&quot; contents=&quot;&quot; |=&quot;&quot; 余下全文=&quot;&quot;&gt;&lt;br&gt;    今天真是说不粗的嗨森呢(～￣▽￣)～*&lt;br&gt;    真的要好好感谢阿成33的先见之明和铺路工作，提前教了我sublime text（好吧我到底学会了什么T皿T），蠢货如我也能搭个博客粗来了~~~(●’ω’●)&lt;/the&gt;&lt;/p&gt;
-&lt;p&gt;诶豆······事情的起源是这样的~~昨晚熬夜补高酥作业又抢课抢到凌晨两三点还被蚊子嗡嗡嗡嗡地折磨了半夜，第二天的汇编当然是理所当然的不会编辣，C艹也憋不出几行代码23333，于是我就自暴自弃地跑去开小差了（逃···  ( •̀ ω •́ )&lt;/p&gt;
-&lt;p&gt;本来想啊快期末了我还是不要作死好好复习吧，但在机（lao）缘（shi）巧（cui）合（cu）下最后还是拾起来了而且还越来越兴奋【excited(★ ω ★)】&lt;/p&gt;
-&lt;p&gt;做的时候google了一堆教程，步骤什么的都很清晰、、不过本智障紧张地摸索着也就没精力截图记录过程什么的，在这里贴出对我帮助最大的两篇博客，蒸的是、包教包会啊！&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;★史上最详细的Hexo博客搭建图文教程 --by Xuanwo https://xuanwo.org/2015/03/26/hexo-intor/
-★成功叛逃到hexo --by lechain （伪征婚帖o(*￣▽￣*)ブ）http://old.lyeec.me/jekyll-to-hexo/
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;我是在Windows下搭的博客，大致流程是这样的~~&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;①首先下载node.js，保持默认一路Next就好了
-    戳这里：https://nodejs.org/dist/v4.4.5/node-v4.4.5-x64.msi 
-②配置好node.js环境之后，到github（https://github.com/）上申请一个帐号 
-③接下来完成git的安装和配置
-④使用GitHub Pages解锁各种新姿势=v=
-    看使用帮助说不定能更好的理解GitHub Pages是做什么用的：
-    https://help.github.com/categories/github-pages-basics/
-⑤······
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;写流程是帮助自己回忆吧，具体的操作大神们的教程里讲的比我清楚多了，嘿嘿（逃···）&lt;/p&gt;
-&lt;p&gt;这个时候已经可以用hexo s命令预览你的博客了，它会给出这样的提示：Hexo is running at &lt;a href=&quot;http://localhost:4000/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost:4000/&lt;/a&gt;.  然后······你会一边预览一边发现······嗯、有点丑。&lt;/p&gt;
-&lt;p&gt;所以我们需要一个主题( •̀ ω •́ )y&lt;/p&gt;
-&lt;p&gt;主题的话，我直接吃了一枚安利：&lt;a href=&quot;https://github.com/MOxFIVE/yelee&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/MOxFIVE/yelee&lt;/a&gt;&lt;br&gt;作者给出了超级详细的使用说明~~！&lt;a href=&quot;http://moxfive.coding.me/yelee/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://moxfive.coding.me/yelee/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;总之自己还是智障了、在更改Author的时候（总不能用人家默认的名字吧···）居然产生了一个不大不小的错误、、没法hexo s了（哭唧唧···）它说错误出现在repo那行代码第七列,瞬间生无可恋这要上哪找去、、（最后才知道这是在提示我_config.yml中deploy那一步我冒号后面没加空格&amp;gt;o&amp;lt;~）最后的最后，我在更改完主页的标题个人信息并保存之后，重新hexo g了一下，重新上传自己的博客。好的这次就成功了~~&lt;/p&gt;
-&lt;p&gt;到这基本上就差不多了（？····）好吧这完全是我的错觉（摔！）（╯－＿－）╯╧╧&lt;/p&gt;
-&lt;p&gt;本以为按照教程上说的generate一下再deploy一下输个github的账号密码就OK了可素没想到啊他他他居然失败了啊T皿T&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Permission denied (publickey).
-fatal: Could not read from remote repository.
-Please make sure you have the correct access rights and the repository exists.
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;表示一脸蒙蔽赶紧灰溜溜的跑去谷歌，发现好多人和我有一样的问题、、最后大家讨论出来的解决方案居然是更换一个较低版本的git······orz&lt;br&gt;可是我懒啊······&lt;br&gt;于是我想不如改用sshkey，如果成功了的话好像会更方便一些（虽然不懂其中原理）~~&lt;br&gt;锵锵~！干货教程在此 &lt;a href=&quot;http://old.lyeec.me/git/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://old.lyeec.me/git/&lt;/a&gt; 阿成33的博客真是个好地方吖~~~∠( ᐛ 」∠)＿&lt;/p&gt;
-&lt;p&gt;然后就···然后就成功惹~！✧٩(ˊωˋ*)و✧&lt;/p&gt;
-&lt;p&gt;诶诶诶不行了我已经做不到一本正经地胡说（zhuang）八道（bi）了，明明别人家的博客都是干货我这怎么全是水呢 (～￣▽￣)→))&lt;em&gt;￣▽￣&lt;/em&gt;)o天哪难道我只能靠强行卖萌来留住人气了么sad、&lt;/p&gt;
-&lt;p&gt; 就个人感觉而言，这种类型的博客是私人性质比较高的一种，莫名喜欢(❤ ω ❤)，在秋秋上自己发的东西大家都能看到，我自己是内心活动比较丰富的人，如果表现的太频繁了的话难免会被认为有装X的嫌疑，微信虽然好友少了点，可那个圈子太无聊了没意思，一直想有一个自己的小天地啊啊啊，可以毫无顾忌地说自己喜欢的话~~天天自嗨天天水（怎么感觉有种注孤生的辛酸=……=）&lt;/p&gt;
-&lt;p&gt; 本来还想买域名的···DEMO好贵···改天吧、改天再买QAQ（改天是哪天啊摔！）&lt;/p&gt;
-&lt;p&gt; 可怕的是都这么晚了我居然不会困诶〒_〒果然自己探索喜欢的东西什么的真的好燃o(&lt;em&gt;￣▽￣&lt;/em&gt;)ブ比复习高酥大雾有意思多了啊~demo貌似吾辈真的要挂科了呢~~如果可以早早起床的话我就熬粥喝嗷嗷嗷想想就鸡冻的流下了口水（❤ ω ❤）&lt;/p&gt;
-&lt;p&gt; 呐呐，Private Castle就是内心的具象化吧~哇唔~发明出这么美好的东西的人真是太赞了~(★ ω ★)&lt;del&gt;我会像照顾恋人一样照顾好我的博客（虽然并不知道恋人这种生物要怎么照顾）不过我想给它100%的care应该就够了吧&lt;/del&gt;~(～￣▽￣)～*&lt;/p&gt;
-&lt;p&gt; 深刻地意识到自己弱到爆炸，还有hin多姿势要学，不过吾辈不怕被嫌弃~欢迎大家常来玩耍~~ (～￣▽￣)→))&lt;em&gt;￣▽￣&lt;/em&gt;)o&lt;/p&gt;
-&lt;p&gt;最后的最后还要再感谢一次阿成33，33赛高！！✧٩(ˊωˋ*)و✧&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;Excerpt in index | 首页摘要&gt;&lt;br&gt;    初めまして、HEXO君、私はニャンコちゃんです。どうぞよろしくお願いします∠( ᐛ 」∠)＿&lt;br&gt;    hexo圈萌♥，亲手搭窝，一本满足。&lt;br&gt;
     
     </summary>
     
