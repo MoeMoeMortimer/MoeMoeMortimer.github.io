@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://moemoemortimer.github.io/"/>
-  <updated>2016-07-21T11:39:54.861Z</updated>
+  <updated>2016-07-22T11:06:11.712Z</updated>
   <id>https://moemoemortimer.github.io/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HDU 2585 解题报告</title>
+    <link href="https://moemoemortimer.github.io/2016/07/22/hdu-2585/"/>
+    <id>https://moemoemortimer.github.io/2016/07/22/hdu-2585/</id>
+    <published>2016-07-22T10:53:28.000Z</published>
+    <updated>2016-07-22T11:06:11.712Z</updated>
+    
+    <content type="html">&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=2585&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;题目传送门&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;大意：&lt;br&gt;给出一个带有’&lt;em&gt;‘和’?’的字符串，然后在n个完整串中找出可能与它匹配的字符串个数。其中，’&lt;/em&gt;‘代表多个字符，’?’代表一个字符。&lt;/p&gt;
+&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;p&gt;substr(start, end)，start默认为0，&lt;br&gt;注意顺序，注意顺序，注意顺序，TAT&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;string&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;using namespace std;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bool match(string a, string b)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    int i, j;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(i = 0; i &amp;lt; a.length(); i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(a[i] == &lt;span class=&quot;string&quot;&gt;&#39;*&#39;&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(i == a.length() - 1)&lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            string c = a.substr(i+1);  //相当于以*为断点剖离出一个字串&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(j = i; j &amp;lt; b.length(); j++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(match(c,b.substr(j)))&lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;; //存在一个匹配即为真&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            //否则说明都不匹配，这句不能丢啊啊啊啊啊&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(i &amp;gt;= b.length())&lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;; //先判断长度，长度不符一定不匹配&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(a[i] == &lt;span class=&quot;string&quot;&gt;&#39;?&#39;&lt;/span&gt;)&lt;span class=&quot;built_in&quot;&gt;continue&lt;/span&gt;;  //然后再看是不是&lt;span class=&quot;string&quot;&gt;&#39;?&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(a[i] != b[i])&lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            /*这里一定一定千万千万不能把两个&lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;的合并在一起，如果这句写在了&lt;span class=&quot;string&quot;&gt;&#39;?&#39;&lt;/span&gt;前面，那么出现？时就会被判为不相等了，也就是说下一行对&lt;span class=&quot;string&quot;&gt;&#39;?&#39;&lt;/span&gt;的处理写了也白写*/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    //如果没有出现*和？说明循环安全结束，匹配&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;/span&gt;()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    string aim,str;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    int n;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(cin &amp;gt;&amp;gt; aim)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        int ans = 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        cin &amp;gt;&amp;gt; n;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(n--)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            cin &amp;gt;&amp;gt; str;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(match(aim,str))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                ans++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        cout &amp;lt;&amp;lt; ans &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+      <category term="递归" scheme="https://moemoemortimer.github.io/tags/%E9%80%92%E5%BD%92/"/>
+    
+  </entry>
   
   <entry>
     <title>codeforces-448c</title>
@@ -36,7 +62,7 @@
     <link href="https://moemoemortimer.github.io/2016/07/21/hdu-1007/"/>
     <id>https://moemoemortimer.github.io/2016/07/21/hdu-1007/</id>
     <published>2016-07-21T11:39:37.000Z</published>
-    <updated>2016-07-21T12:04:03.797Z</updated>
+    <updated>2016-07-22T10:51:30.818Z</updated>
     
     <content type="html">&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=1007&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;题目传送门&lt;/a&gt;&lt;br&gt;大意：&lt;br&gt;给定平面上n个点，求最近两点的距离，输出距离的一半。&lt;/p&gt;
@@ -167,11 +193,12 @@
     <link href="https://moemoemortimer.github.io/2016/07/20/hdu-4544/"/>
     <id>https://moemoemortimer.github.io/2016/07/20/hdu-4544/</id>
     <published>2016-07-20T10:09:08.000Z</published>
-    <updated>2016-07-21T01:04:43.952Z</updated>
+    <updated>2016-07-22T11:19:12.381Z</updated>
     
     <content type="html">&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=4544&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;题目传送门&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;大意：&lt;br&gt;第一行有两个整数N，M（1 &amp;lt;= N, M &amp;lt;= 100000），分别表示兔子的个数和箭的种类；&lt;br&gt;第二行有N个正整数，分别表示兔子的血量Bi（1 &amp;lt;= i &amp;lt;= N）；&lt;br&gt;第三行有M个正整数，表示每把箭所能造成的伤害值Di（1 &amp;lt;= i &amp;lt;= M）；&lt;br&gt;第四行有M个正整数，表示每把箭需要花费的QQ币Pi（1 &amp;lt;= i &amp;lt;= M）。&lt;br&gt;如果不能杀死所有兔子，请输出”No”，否则，请输出最少的QQ币数，每组输出一行。&lt;/p&gt;
+&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;p&gt;对兔叽血量从大到小排一遍，对剑的攻击力从大到小排一遍，然后逐个对比，能灭兔叽的箭收收好放进set（pair里first放QB，second放攻击，这样扔进set里的时候箭们就能按QB排序了）然后贪心。&lt;br&gt;感觉用cin，cout会超时，改scanf print安全些&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;algorithm&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;set&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;string&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;using namespace std;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;typedef pair&amp;lt;int,int&amp;gt; P;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;P itv[100010];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int blood[100010];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bool cmp1(int a, int b)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; a &amp;gt; b;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bool cmp2(P a, P b)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; a.second &amp;gt; b.second;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;/span&gt;()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    int n,m;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt;&amp;lt;P&amp;gt; st;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(scanf(&lt;span class=&quot;string&quot;&gt;&quot;%d%d&quot;&lt;/span&gt;,&amp;amp;n,&amp;amp;m) != EOF)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        long long pay = 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        st.clear();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int i = 0; i &amp;lt; n; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            scanf(&lt;span class=&quot;string&quot;&gt;&quot;%d&quot;&lt;/span&gt;, &amp;amp;blood[i]) ;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        sort(blood, blood+n, cmp1);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int i = 0; i &amp;lt; m; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            scanf(&lt;span class=&quot;string&quot;&gt;&quot;%d&quot;&lt;/span&gt;, &amp;amp;itv[i].second);//&lt;span class=&quot;built_in&quot;&gt;kill&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int i = 0; i &amp;lt; m; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            scanf(&lt;span class=&quot;string&quot;&gt;&quot;%d&quot;&lt;/span&gt;, &amp;amp;itv[i].first);//qb&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        sort(itv, itv+m, cmp2);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    int cnt = n;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int i = 0; i &amp;lt; n; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(j!=m &amp;amp;&amp;amp; itv[j].second &amp;gt;= blood[i])&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                st.insert(itv[j]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                j++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(st.empty())&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;No\n&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;built_in&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            pay += st.begin()-&amp;gt;first;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            st.erase(st.begin());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            cnt--;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(!cnt)&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%lld\n&quot;&lt;/span&gt;, pay);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    pay = 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
@@ -184,6 +211,8 @@
       <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
     
       <category term="STL" scheme="https://moemoemortimer.github.io/tags/STL/"/>
+    
+      <category term="贪心" scheme="https://moemoemortimer.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
   </entry>
   
@@ -541,46 +570,6 @@
     <summary type="html">
     
       &lt;p&gt;&lt;Excerpt in index | 首页摘要&gt;&lt;br&gt;     如何拯救不配图会死星人系列✧٩(ˊωˋ*)و✧&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="日常" scheme="https://moemoemortimer.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>论代码能力与食量的正比例关系</title>
-    <link href="https://moemoemortimer.github.io/2016/06/25/ACMgather/"/>
-    <id>https://moemoemortimer.github.io/2016/06/25/ACMgather/</id>
-    <published>2016-06-25T13:21:10.000Z</published>
-    <updated>2016-06-26T05:12:07.882Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;&lt;br&gt;    今天有集训队一年一度的聚餐~~众巨欢聚一堂，场面其乐融融，我们满含热泪，欢送即将毕业的学长学姐们。(～￣▽￣)～*（噗·····！好像哪里不对~）&lt;/excerpt&gt;&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;the rest=&quot;&quot; of=&quot;&quot; contents=&quot;&quot; |=&quot;&quot; 余下全文=&quot;&quot;&gt;
-
-&lt;p&gt;四个年级都在，我想每个人的心情都不一样吧。等到我毕业的时候，会不会舍不得呢？&lt;/p&gt;
-&lt;p&gt;总共有三桌，一桌全是14级的汉纸，他们······炒鸡能吃(●ˇ∀ˇ●)。一桌是老师队长和毕业学长们在的桌子，然后剩下的人又坐了一桌。&lt;/p&gt;
-&lt;p&gt;好吧，我真是太不争气了······去的时候不知道该坐哪整个人都要羞愤欲死了，然后就被“调剂”到老师组···全是陌生人···敲尴尬尴尬尴尬,,ԾㅂԾ,,（不过能有幸一览众巨风采···）&lt;/p&gt;
-&lt;p&gt;菜还是点少了，圆台转动的方向和时间基本上是由老湿控制的&amp;gt;o&amp;lt;他怎么总把好吃的往自己那边转(╯▔皿▔)╯我的炼乳小馒头转了没半圈呢就没了TAT&lt;/p&gt;
-&lt;p&gt;大家纷纷表示没次饱···我好方( ▼-▼ )尤其是纯汉纸辣桌···天哪···又能吃酒量又好···战斗力真强啊(⊙o⊙)&lt;/p&gt;
-&lt;p&gt;看他们嚷嚷着我要我要我还要，我觉得我的钱包在滴血థ౪థ&lt;/p&gt;
-&lt;p&gt;不过还是有点担心、、喝辣么多酒，真心···大丈夫？&lt;/p&gt;
-&lt;p&gt;最后·····诶豆······他们都在好奇这烤串为何频频空降宛如上天的特别优待，我差点就绷不住当场承认了···ORZ&lt;/p&gt;
-&lt;p&gt;（其实是我点的、和大鱿鱼一起、、只不过烧烤上的太慢了你们吃的太快了嗷嗷···థ౪థ）&lt;/p&gt;
-&lt;h2 id=&quot;脑洞&quot;&gt;&lt;a href=&quot;#脑洞&quot; class=&quot;headerlink&quot; title=&quot;脑洞&quot;&gt;&lt;/a&gt;脑洞&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;途中听到汉纸桌嚷嚷“娘子”···然后我就莫名想到自己的ID Nyanko（因为ko音在日文名里都是“什么什么子”）
-
-诶我脑洞是不是太大了···不过确实有点想解释一下呢~~~
-
-因为猫=ねこ（neko），demo···为了卖萌，我把neko改成nyanko（娘口33其实就是一个hin好的例子）
-
-所以 Nyanko Chan 就相当于“喵咪酱”“喵星银”的赶脚、、读起来也软软糯糯的，似不似很萌_(:3」∠❀)_
-&lt;/code&gt;&lt;/pre&gt;&lt;/the&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;Excerpt in index | 首页摘要&gt;&lt;br&gt;    今天有集训队一年一度的聚餐~~众巨欢聚一堂，场面其乐融融，我们满含热泪，欢送即将毕业的学长学姐们。(～￣▽￣)～*（噗·····！好像哪里不对~）&lt;/p&gt;
     
     </summary>
     
