@@ -15,16 +15,16 @@
 
 
 
-<meta name="description">
+<meta name="description" content="深度优先搜索，广度优先搜索学习笔记。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hdu-5742">
-<meta property="og:url" content="https://moemoemortimer.github.io/2016/07/23/hdu-5742/index.html">
+<meta property="og:title" content="深度优先搜索、广度优先搜索">
+<meta property="og:url" content="https://moemoemortimer.github.io/2016/07/25/study-bfs-dfs/index.html">
 <meta property="og:site_name" content="银月轻语">
-<meta property="og:description">
-<meta property="og:updated_time" content="2016-07-23T07:23:13.754Z">
+<meta property="og:description" content="深度优先搜索，广度优先搜索学习笔记。">
+<meta property="og:updated_time" content="2016-07-25T07:26:52.834Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hdu-5742">
-<meta name="twitter:description">
+<meta name="twitter:title" content="深度优先搜索、广度优先搜索">
+<meta name="twitter:description" content="深度优先搜索，广度优先搜索学习笔记。">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>hdu-5742 | 银月轻语</title>
+<title>深度优先搜索、广度优先搜索 | 银月轻语</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -243,11 +243,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-hdu-5742" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-study-bfs-dfs" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/07/23/hdu-5742/" class="article-date">
-      <time datetime="2016-07-23T07:23:13.000Z" itemprop="datePublished">2016-07-23</time>
+      <a href="/2016/07/25/study-bfs-dfs/" class="article-date">
+      <time datetime="2016-07-25T02:21:58.000Z" itemprop="datePublished">2016-07-25</time>
 </a>
 
 
@@ -262,7 +262,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      hdu-5742
+      深度优先搜索、广度优先搜索
     </h1>
   
 
@@ -272,6 +272,10 @@
         
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BFS/">BFS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DFS/">DFS</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -279,7 +283,54 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <p>深度优先搜索，广度优先搜索学习笔记。<br><a id="more"></a></p>
+<h2 id="深度优先搜索"><a href="#深度优先搜索" class="headerlink" title="深度优先搜索"></a>深度优先搜索</h2><p>问题1.部分和问题:<br>给定整数a1, a2, a3, …… , an,判断是否可以从中选出若干数，使他们的和恰好为k；可以输出Yes,否则输出No。<br>1&lt;=n&lt;=20;<br>-10e8&lt;=ai&lt;=10e8<br>-10e8&lt;=k&lt;=10e8<br>程序代码十分简单：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;stdio.h&gt;</span></span><br><span class="line">int n,k;</span><br><span class="line">int a[4] = &#123;1,2,4,7&#125;;</span><br><span class="line">bool dfs(int i, int sum)&#123;</span><br><span class="line">    <span class="keyword">if</span>(i == n)<span class="built_in">return</span> sum == k;</span><br><span class="line">    <span class="keyword">if</span>(dfs(i + 1, sum))<span class="built_in">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">if</span>(dfs(i + 1, sum + a[i]))<span class="built_in">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void <span class="function"><span class="title">solve</span></span>()&#123;</span><br><span class="line">    <span class="keyword">if</span>(dfs(0, 0))</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"Yes\n"</span>);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"No\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line">int <span class="function"><span class="title">main</span></span>()&#123;</span><br><span class="line">    k = 13;</span><br><span class="line">    n = 4;</span><br><span class="line">    solve();</span><br><span class="line">    <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>i表示项数，sum表示加或不加a[i]后的和；<br>我曾抱着怀疑的态度敲下这些代码然后运行，产生的唯一感觉就是好神奇。<br>那么，dfs函数具体做了什么呢？<br>于是我给dfs函数加几个“慢镜头”，如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">int dfs(int i, int sum)&#123;</span><br><span class="line">    <span class="keyword">if</span>(i == n)<span class="built_in">return</span> sum == k;</span><br><span class="line">    int x = dfs(i + 1, sum);</span><br><span class="line">    cout &lt;&lt; x &lt;&lt; <span class="string">"==="</span>&lt;&lt; i+1 &lt;&lt;endl;</span><br><span class="line">    <span class="keyword">if</span>(x)<span class="built_in">return</span> 1;</span><br><span class="line">    int y = dfs(i + 1, sum + a[i]);</span><br><span class="line">    cout &lt;&lt; y &lt;&lt;<span class="string">"==="</span>&lt;&lt; i+1 &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">if</span> (y)<span class="built_in">return</span> 1;</span><br><span class="line">    <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>输出以下结果；</p>
+<blockquote>
+<p>0===4<br>0===4<br>0===3<br>0===4<br>0===4<br>0===3<br>0===2<br>0===4<br>0===4<br>0===3<br>0===4<br>1===4<br>1===3<br>1===2<br>1===1<br>Yes<br>据此，搜索的顺序和返回的结果就很清晰了~~<br>对于dfs经常用到的递归函数，将lechain桑告诉我的话整理如下：<br>“所谓递归，是先进入再出来，进入叫做递归，出来叫做回溯。递归需要一个入口， 还需要边界条件。递归只要理解边界就好了，程序在达到边界条件之前都是一直进入递归，碰到了边界才会开始回溯。”</p>
+</blockquote>
+<p>问题2：输入一个数，输出1~n的全排列。<br>假设我们要把写着1~n的扑克牌放进n个盒子里，对每一个位置，手上有的扑克牌都按1~n的顺序来摆放，那么dfs函数如下：</p>
+<p>#include<stdio.h><br>int book[10],n;<br>int a[10] = {1,2,3};<br>void dfs(int step)//step表示现在站在第几个盒子前<br>{<br>    if(step == n)    //如果站在第n个盒子前，则表示前n个盒子已经放好扑克牌<br>        {<br>            for(int i = 0; i &lt; n; i++)<br>                printf(“%d”, a[i]);<br>            printf(“\n”);<br>            return;    //返回之前的一步<br>        }<br>    for(int i = 0; i &lt; n; i++)<br>    {<br>        //判断扑克牌i是否还在手上<br>        if(book[i] == 0)    //等于0表示i号扑克牌仍在手上<br>        {<br>            a[step] = i + 1;<br>            book[i] = 1;    //将book[i]设为1，表示i号扑克牌已经不在手上<br>            dfs(step + 1);        //下一个盒子<br>            book[i] = 0;        //这是非常重要的一步，一定要将刚才尝试的扑克牌收回，才能进行下一次尝试<br>        }<br>    }<br>}<br>int main(){<br>    scanf(“%d”,&amp;n);<br>    dfs(0);<br>    return 0;<br>}</stdio.h></p>
+<p>问题3.<a href="http://poj.org/problem?id=2386" target="_blank" rel="external">Poj 2386 Lake Counting</a><br>一个大小为N*M的园子，雨后积水，八连通的积水被认为是连在一起的（如样例左下）。请求出院子里共有多少水洼。<br>Sample Input</p>
+<p>10 12<br>W……..WW.<br>.WWW…..WWW<br>….WW…WW.<br>………WW.<br>………W..<br>..W……W..<br>.W.W…..WW.<br>W.W.W…..W.<br>.W.W……W.<br>..W…….W.</p>
+<p>Sample Output</p>
+<p>3</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;stdio.h&gt;</span></span><br><span class="line"><span class="comment">#include&lt;string.h&gt;</span></span><br><span class="line"><span class="comment">#define MAX_N 105</span></span><br><span class="line"><span class="comment">#define MAX_M 105</span></span><br><span class="line">int N,M;</span><br><span class="line">char field[MAX_N][MAX_M];	//园子</span><br><span class="line">//当前位置(x, y)</span><br><span class="line">void dfs(int x, int y)&#123;</span><br><span class="line">	//将现在位置转换为.</span><br><span class="line">    field[x][y] = <span class="string">'.'</span>;</span><br><span class="line">    //循环遍历移动8个方向</span><br><span class="line">    <span class="keyword">for</span>(int dx = -1;dx &lt;= 1;dx ++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(int dy = -1;dy &lt;= 1;dy ++)&#123;</span><br><span class="line">        	//向x方向移动dx，向y方向移动dy，移动的结果为(nx, ny)</span><br><span class="line">            int nx = x + dx, ny = y + dy;</span><br><span class="line">            //判断(nx, ny)是否在院子内以及是否有积水</span><br><span class="line">            <span class="keyword">if</span>(0 &lt;= nx &amp;&amp; nx &lt; N &amp;&amp; 0 &lt;= ny &amp;&amp; ny &lt; M &amp;&amp; field[nx][ny] == <span class="string">'W'</span>)</span><br><span class="line">                dfs(nx, ny);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void <span class="function"><span class="title">solve</span></span>()&#123;</span><br><span class="line">    int res = 0;</span><br><span class="line">    <span class="keyword">for</span>(int i = 0;i &lt;N;i ++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(int j = 0;j &lt; M;j ++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(field[i][j] == <span class="string">'W'</span>)&#123;</span><br><span class="line">            	//从有W的地方开始dfs</span><br><span class="line">                dfs(i,j);</span><br><span class="line">                res++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,res);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int <span class="function"><span class="title">main</span></span>()&#123;</span><br><span class="line">    <span class="keyword">while</span>(scanf(<span class="string">"%d%d"</span>,&amp;N,&amp;M) != EOF)&#123;</span><br><span class="line">        <span class="keyword">for</span>(int i = 0; i &lt; N; i ++)</span><br><span class="line">            scanf(<span class="string">"%s"</span>,field[i]);</span><br><span class="line">        solve();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="广度（宽度）优先搜索"><a href="#广度（宽度）优先搜索" class="headerlink" title="广度（宽度）优先搜索"></a>广度（宽度）优先搜索</h2><p>深度优先搜索（隐式地）利用了栈进行计算，而宽度优先搜索则利用了队列，搜索时首先将初始状态添加到队列里，此后从队列的最前端不断取出状态，把从该状态可以转移到的状态中尚未访问过的部分加入队列，如此往复，直至队列被取空或找到了问题的解。广度优先搜索按照距开始状态由近及远的顺序进行搜索，因此常用来求最短路径、最少操作之类问题的答案。只要将已经访问过的状态用标记管理起来，就可以做到由近及远的搜索。</p>
+<p>问题1: 给定一个大小为N*M的迷宫. 迷宫由通道和墙壁组成, 每一步可以向邻接的上下左右四格的通道移动.<br>请求出从起点到终点所需的最小步数. 请注意, 本题假定从起点一定可以移动到终点.</p>
+<p>使用宽度优先搜索算法(DFS), 依次遍历迷宫的四个方向, 当有可以走且未走过的方向时, 移动并且步数加一.<br>状态是目前所在位置的坐标，因此可以构造成pair或者编码成int来表示状态。<br>时间复杂度取决于迷宫的状态数, O(4<em>M</em>N)=O(M*N).<br>将已访问过的状态用标记管理起来，就可以很好地做到由近及远的搜索。<br>队列原则FIFO,所以最先访问到的终点一定最先出队，那么结束搜索时得到的d[gx][gy]就是最短路径。<br>```bash</p>
+<p>#include<iostream></iostream></p>
+<p>#include<queue></queue></p>
+<p>#include<stdio.h></stdio.h></p>
+<p>#define MAX_N 105</p>
+<p>#define MAX_M 105<br>using namespace std;<br>const int INF = 100000000;<br>typedef pair<int,int> P;<br>char maze[MAX_N][MAX_M+1];<br>int N,M;<br>int sx,sy;//start<br>int gx,gy;//goal</int,int></p>
+<p>int d[MAX_N][MAX_M];//把最短距离保存起来</p>
+<p>int dx[4] = {1, 0, -1, 0};<br>int dy[4] = {0, 1, 0, -1};<br>int bfs(){<br>    queue</p><p> que;<br>    //把所有位置都初始化为INF<br>    for(int i = 0;i &lt; N;i ++)<br>        for(int j = 0;j &lt; M; j ++)<br>            d[i][j] = INF;<br>        //将起点加入队列，并把这一地点的距离设为零<br>        que.push(P(sx, sy));<br>        d[sx][sy] = 0;</p>
+<pre><code>//不断循环直到队列的长度为0
+while(que.size()){
+    //从队列前端取出元素
+    P p = que.front();
+    que.pop();
+    //如果取出的状态已经是终点，结束搜索
+    if(p.first == gx &amp;&amp; p.second == gy)
+        break;
+    //四个方向的循环
+    for(int i = 0; i &lt; 4; i ++){
+        //移动后的位置记为(nx, ny)
+        int nx = p.first + dx[i], ny = p.second + dy[i];
+        if(nx &gt;= 0 &amp;&amp; nx &lt; N &amp;&amp; ny &gt;= 0 &amp;&amp; ny &lt; M &amp;&amp; maze[nx][ny] != &apos;#&apos; &amp;&amp; d[nx][ny] = INF){
+            //可以移动的话，则加入到队列，并且到该位置的距离确定为到p的距离加1
+            que.push(P(nx, ny));
+            d[nx][ny] = d[p.first][p.second] + 1;
+        }
+    }
+}
+return d[gx][gy];
+</code></pre><p>}</p>
+<p>void solve(){<br>    //输入略；<br>    int res = bfs();<br>    printf(“%d\n”, res);<br>}</p>
+<p>为什么没有用min()更新d[x][y], 因为最先访问到nx,ny的一定经过了最短的路径，以此类推，访问到终点的时候路径也是最短的了。</p>
+
       
     </div>
     
@@ -287,13 +338,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/07/23/hdu-5742/">hdu-5742</a></p>
+        <p><span>本文标题:</span><a href="/2016/07/25/study-bfs-dfs/">深度优先搜索、广度优先搜索</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Nyanko Chan</a></p>
-        <p><span>发布时间:</span>2016-07-23, 15:23:13</p>
-        <p><span>最后更新:</span>2016-07-23, 15:23:13</p>
+        <p><span>发布时间:</span>2016-07-25, 10:21:58</p>
+        <p><span>最后更新:</span>2016-07-25, 15:26:52</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/07/23/hdu-5742/" title="hdu-5742">https://moemoemortimer.github.io/2016/07/23/hdu-5742/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://moemoemortimer.github.io/2016/07/23/hdu-5742/　　作者: Nyanko Chan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/07/25/study-bfs-dfs/" title="深度优先搜索、广度优先搜索">https://moemoemortimer.github.io/2016/07/25/study-bfs-dfs/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://moemoemortimer.github.io/2016/07/25/study-bfs-dfs/　　作者: Nyanko Chan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -305,16 +356,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/07/23/codeforces-700A/">
-                    CodeForces 700A 解题报告
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/07/23/hdu-5723/">
-                    hdu-5723
+                <a href="/2016/07/23/codeforces-701C/">
+                    CodeForces 701C 解题报告
                 </a>
             </div>
         
@@ -325,7 +370,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#深度优先搜索"><span class="toc-number">1.</span> <span class="toc-text">深度优先搜索</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#广度（宽度）优先搜索"><span class="toc-number">2.</span> <span class="toc-text">广度（宽度）优先搜索</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn,
@@ -356,7 +401,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"hdu-5742　| 银月轻语　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"深度优先搜索、广度优先搜索　| 银月轻语　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -372,7 +417,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/07/23/hdu-5742/" data-title="hdu-5742" data-url="https://moemoemortimer.github.io/2016/07/23/hdu-5742/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/07/25/study-bfs-dfs/" data-title="深度优先搜索、广度优先搜索" data-url="https://moemoemortimer.github.io/2016/07/25/study-bfs-dfs/"></div>
     <script>
         var duoshuoQuery = {short_name:"moemoemortimer"};
         var loadComment = function(){
@@ -395,15 +440,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/07/23/codeforces-700A/" title="上一篇: CodeForces 700A 解题报告">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/07/23/hdu-5723/" title="下一篇: hdu-5723">
+            <a href="/2016/07/23/codeforces-701C/" title="下一篇: CodeForces 701C 解题报告">
                 <i class="fa fa-angle-right"></i>
             </a>
         
