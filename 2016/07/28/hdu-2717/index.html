@@ -17,13 +17,13 @@
 
 <meta name="description" content="这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UVA 11729 解题报告">
-<meta property="og:url" content="https://moemoemortimer.github.io/2016/07/19/uva-11729/index.html">
+<meta property="og:title" content="HDU 2717 解题报告">
+<meta property="og:url" content="https://moemoemortimer.github.io/2016/07/28/hdu-2717/index.html">
 <meta property="og:site_name" content="银月轻语">
 <meta property="og:description" content="这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_">
-<meta property="og:updated_time" content="2016-07-20T08:30:02.684Z">
+<meta property="og:updated_time" content="2016-07-27T17:34:33.483Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="UVA 11729 解题报告">
+<meta name="twitter:title" content="HDU 2717 解题报告">
 <meta name="twitter:description" content="这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
@@ -56,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>UVA 11729 解题报告 | 银月轻语</title>
+<title>HDU 2717 解题报告 | 银月轻语</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -243,11 +243,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-uva-11729" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-hdu-2717" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/07/19/uva-11729/" class="article-date">
-      <time datetime="2016-07-19T15:06:53.000Z" itemprop="datePublished">2016-07-19</time>
+      <a href="/2016/07/28/hdu-2717/" class="article-date">
+      <time datetime="2016-07-27T16:51:36.000Z" itemprop="datePublished">2016-07-28</time>
 </a>
 
 
@@ -262,7 +262,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      UVA 11729 解题报告
+      HDU 2717 解题报告
     </h1>
   
 
@@ -273,7 +273,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解题报告/">解题报告</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/贪心/">贪心</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BFS/">BFS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解题报告/">解题报告</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -284,8 +284,25 @@
       
           
         <p>这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_<br><a id="more"></a></p>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=2829" target="_blank" rel="external">题目传送门</a><br>大意：<br>N个部下，对第i个部下，主子要花Bi分钟交代任务，然后部下立即开始工作，完成任务要Ji分钟，多名部下可以同时工作。问所有任务完成所花的最短时间。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>交代任务的时间是一定要花费的，也就是说对J贪心就好了。不过B和J是联系在一起的，所以用pair数组会稍微方便一些吧？（嗷嗷用到了《挑战》上的小姿势好嗨森）<br>仅仅想得这么简单的话你就错了···<br>一次循环后我们得到的是</p><p style="background-color:#7FFFD4;padding:15px">最后一名部下工作完成后，总共经过了多长时间</p>，如果此时在他之前的其他部下也完成任务的话，那么这就是最短时间了，如果不是的话该怎么办？那就要从头开始检验一下了~~~<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iostream&gt;</span></span><br><span class="line"><span class="comment">#include&lt;algorithm&gt;</span></span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">pair&lt;int,int&gt; jb[10005];	//任务用时在前，安排用时在后</span><br><span class="line">int <span class="function"><span class="title">main</span></span>()&#123;</span><br><span class="line">    int n;</span><br><span class="line">    int cnt = 1;</span><br><span class="line">    int time = 0;</span><br><span class="line">    <span class="keyword">while</span>(cin &gt;&gt; n)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n == 0)<span class="built_in">return</span> 0;</span><br><span class="line">        <span class="keyword">for</span>(int i = 0;i &lt; n;i ++)</span><br><span class="line">            cin &gt;&gt; jb[i].second &gt;&gt; jb[i].first;</span><br><span class="line">        sort(jb, jb+n);    //对first(Ji)按字典序排序</span><br><span class="line">        <span class="keyword">for</span>(int i = 0;i &lt; n ;i ++)</span><br><span class="line">            time += jb[i].second;</span><br><span class="line">            time += jb[0].first;</span><br><span class="line">            int ans = time;</span><br><span class="line">            time = 0;</span><br><span class="line">        //开始检验</span><br><span class="line">        <span class="keyword">for</span>(int i = n-1;i &gt;= 0 ;i --)&#123;</span><br><span class="line">            time += jb[i].second;</span><br><span class="line">            <span class="keyword">if</span>(jb[i].first+time &gt; ans)</span><br><span class="line">                ans = jb[i].first + time;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt;<span class="string">"Case "</span>&lt;&lt; cnt &lt;&lt; <span class="string">": "</span> &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">        ans = time = 0;</span><br><span class="line">        cnt++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p></p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2717" target="_blank" rel="external">题目传送门</a><br>大意：<br>小人去抓猎物，给出小人坐标n，猎物坐标k，小人每次能前进一步，后退一步，或者将当前坐标换成2*n，问小人最少经过几次坐标变换才能抓到猎物。</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>按照框架穷竭广搜，甚至没有做剪枝，结构体中保存的是当前坐标（cur）和到当前坐标经过的最少变换数（step）</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>```bash</p>
+<p>#include<iostream></iostream></p>
+<p>#include<stdio.h></stdio.h></p>
+<p>#include<queue></queue></p>
+<p>#include<memory.h></memory.h></p>
+<p>#define MAX_K 100000<br>using namespace std;<br>struct Node { int cur,step; };<br>int s[500100];<br>int n, k, ans;</p>
+<p>void bfs(){<br>    queue<node> que;<br>    Node a, temp;<br>    a.cur = n;<br>    a.step = 0;<br>    que.push(a);<br>    memset(s, 0, sizeof(s));<br>    s[a.cur] = 1;<br>        while(que.size()){<br>            a = que.front();<br>            que.pop();<br>            if(a.cur == k){<br>                ans = a.step;<br>                return ;<br>            }<br>            //三个方向的循环<br>            for(int i = 0; i &lt; 3; i++){<br>                if(i == 0){<br>                    int next = a.cur - 1;<br>                    if(next &gt;= 0 &amp;&amp; next &lt;= MAX_K &amp;&amp; s[next] == 0){<br>                        temp.cur = next;<br>                        temp.step = a.step + 1;<br>                        s[next] = 1;<br>                        que.push(temp);<br>                    }<br>                }<br>                else if(i == 1){<br>                    int next = a.cur + 1;<br>                    if(next &gt;= 0 &amp;&amp; next &lt;= MAX_K &amp;&amp; s[next] == 0){<br>                        temp.cur = next;<br>                        temp.step = a.step + 1;<br>                        s[next] = 1;<br>                        que.push(temp);<br>                    }<br>                }<br>                else if(i == 2){<br>                    int next = a.cur*2;<br>                    if(next &gt;= 0 &amp;&amp; next &lt;= MAX_K &amp;&amp; s[next] == 0){<br>                        temp.cur = next;<br>                        temp.step = a.step + 1;<br>                        s[next] = 1;<br>                        que.push(temp);<br>                    }<br>                }<br>            }<br>        }<br>    return ;</node></p>
+<p>}<br>int main(){</p>
+<pre><code>while(scanf(&quot;%d%d&quot;, &amp;n, &amp;k) != EOF){
+    if(n &gt;= k){
+        printf(&quot;%d\n&quot;, n - k);
+        continue;
+    }
+    bfs();
+    printf(&quot;%d\n&quot;,ans);
+}
+</code></pre><p>return 0;<br>}</p>
 
       
     </div>
@@ -294,13 +311,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2016/07/19/uva-11729/">UVA 11729 解题报告</a></p>
+        <p><span>Title:</span><a href="/2016/07/28/hdu-2717/">HDU 2717 解题报告</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Nyanko Chan</a></p>
-        <p><span>Created:</span>2016-07-19, 23:06:53</p>
-        <p><span>Updated:</span>2016-07-20, 16:30:02</p>
+        <p><span>Created:</span>2016-07-28, 00:51:36</p>
+        <p><span>Updated:</span>2016-07-28, 01:34:33</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2016/07/19/uva-11729/" title="UVA 11729 解题报告">https://moemoemortimer.github.io/2016/07/19/uva-11729/</a>
-            <span class="copy-path" data-clipboard-text="From https://moemoemortimer.github.io/2016/07/19/uva-11729/　　By Nyanko Chan" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2016/07/28/hdu-2717/" title="HDU 2717 解题报告">https://moemoemortimer.github.io/2016/07/28/hdu-2717/</a>
+            <span class="copy-path" data-clipboard-text="From https://moemoemortimer.github.io/2016/07/28/hdu-2717/　　By Nyanko Chan" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -313,15 +330,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/07/19/codeforces-651A/">
-                    CodeForces 651A 解题报告
+                <a href="/2016/07/28/poj-3414/">
+                    POJ 3414 解题报告
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/07/19/uva-11292/">
-                    UVA 11292 解题报告
+                <a href="/2016/07/27/hdu-1181/">
+                    HDU 1181 解题报告
                 </a>
             </div>
         
@@ -332,7 +349,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目"><span class="toc-number">1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">2.</span> <span class="toc-text">代码</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目"><span class="toc-number">1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思路"><span class="toc-number">2.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn,
@@ -363,7 +380,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"UVA 11729 解题报告　| 银月轻语　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"HDU 2717 解题报告　| 银月轻语　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -379,7 +396,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/07/19/uva-11729/" data-title="UVA 11729 解题报告" data-url="https://moemoemortimer.github.io/2016/07/19/uva-11729/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/07/28/hdu-2717/" data-title="HDU 2717 解题报告" data-url="https://moemoemortimer.github.io/2016/07/28/hdu-2717/"></div>
     <script>
         var duoshuoQuery = {short_name:"moemoemortimer"};
         var loadComment = function(){
@@ -402,7 +419,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/07/19/codeforces-651A/" title="Pre: CodeForces 651A 解题报告">
+            <a href="/2016/07/28/poj-3414/" title="Pre: POJ 3414 解题报告">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -410,7 +427,7 @@
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/07/19/uva-11292/" title="Next: UVA 11292 解题报告">
+            <a href="/2016/07/27/hdu-1181/" title="Next: HDU 1181 解题报告">
                 <i class="fa fa-angle-right"></i>
             </a>
         

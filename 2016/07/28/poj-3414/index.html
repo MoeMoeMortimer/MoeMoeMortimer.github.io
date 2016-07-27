@@ -17,13 +17,13 @@
 
 <meta name="description" content="这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UVA 11729 解题报告">
-<meta property="og:url" content="https://moemoemortimer.github.io/2016/07/19/uva-11729/index.html">
+<meta property="og:title" content="POJ 3414 解题报告">
+<meta property="og:url" content="https://moemoemortimer.github.io/2016/07/28/poj-3414/index.html">
 <meta property="og:site_name" content="银月轻语">
 <meta property="og:description" content="这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_">
-<meta property="og:updated_time" content="2016-07-20T08:30:02.684Z">
+<meta property="og:updated_time" content="2016-07-27T18:00:22.296Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="UVA 11729 解题报告">
+<meta name="twitter:title" content="POJ 3414 解题报告">
 <meta name="twitter:description" content="这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
@@ -56,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>UVA 11729 解题报告 | 银月轻语</title>
+<title>POJ 3414 解题报告 | 银月轻语</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -243,11 +243,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-uva-11729" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-poj-3414" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/07/19/uva-11729/" class="article-date">
-      <time datetime="2016-07-19T15:06:53.000Z" itemprop="datePublished">2016-07-19</time>
+      <a href="/2016/07/28/poj-3414/" class="article-date">
+      <time datetime="2016-07-27T16:51:57.000Z" itemprop="datePublished">2016-07-28</time>
 </a>
 
 
@@ -262,7 +262,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      UVA 11729 解题报告
+      POJ 3414 解题报告
     </h1>
   
 
@@ -273,7 +273,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解题报告/">解题报告</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/贪心/">贪心</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DFS/">DFS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解题报告/">解题报告</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -284,8 +284,12 @@
       
           
         <p>这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_<br><a id="more"></a></p>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=2829" target="_blank" rel="external">题目传送门</a><br>大意：<br>N个部下，对第i个部下，主子要花Bi分钟交代任务，然后部下立即开始工作，完成任务要Ji分钟，多名部下可以同时工作。问所有任务完成所花的最短时间。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>交代任务的时间是一定要花费的，也就是说对J贪心就好了。不过B和J是联系在一起的，所以用pair数组会稍微方便一些吧？（嗷嗷用到了《挑战》上的小姿势好嗨森）<br>仅仅想得这么简单的话你就错了···<br>一次循环后我们得到的是</p><p style="background-color:#7FFFD4;padding:15px">最后一名部下工作完成后，总共经过了多长时间</p>，如果此时在他之前的其他部下也完成任务的话，那么这就是最短时间了，如果不是的话该怎么办？那就要从头开始检验一下了~~~<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iostream&gt;</span></span><br><span class="line"><span class="comment">#include&lt;algorithm&gt;</span></span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">pair&lt;int,int&gt; jb[10005];	//任务用时在前，安排用时在后</span><br><span class="line">int <span class="function"><span class="title">main</span></span>()&#123;</span><br><span class="line">    int n;</span><br><span class="line">    int cnt = 1;</span><br><span class="line">    int time = 0;</span><br><span class="line">    <span class="keyword">while</span>(cin &gt;&gt; n)&#123;</span><br><span class="line">        <span class="keyword">if</span>(n == 0)<span class="built_in">return</span> 0;</span><br><span class="line">        <span class="keyword">for</span>(int i = 0;i &lt; n;i ++)</span><br><span class="line">            cin &gt;&gt; jb[i].second &gt;&gt; jb[i].first;</span><br><span class="line">        sort(jb, jb+n);    //对first(Ji)按字典序排序</span><br><span class="line">        <span class="keyword">for</span>(int i = 0;i &lt; n ;i ++)</span><br><span class="line">            time += jb[i].second;</span><br><span class="line">            time += jb[0].first;</span><br><span class="line">            int ans = time;</span><br><span class="line">            time = 0;</span><br><span class="line">        //开始检验</span><br><span class="line">        <span class="keyword">for</span>(int i = n-1;i &gt;= 0 ;i --)&#123;</span><br><span class="line">            time += jb[i].second;</span><br><span class="line">            <span class="keyword">if</span>(jb[i].first+time &gt; ans)</span><br><span class="line">                ans = jb[i].first + time;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt;<span class="string">"Case "</span>&lt;&lt; cnt &lt;&lt; <span class="string">": "</span> &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">        ans = time = 0;</span><br><span class="line">        cnt++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p></p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>这好像是为POJ上的题写的第一篇解题报告~？嘿嘿~<br><a href="http://poj.org/problem?id=3414" target="_blank" rel="external">题目传送门</a><br>大意：<br>给两个杯子，容积x、y，对杯子里的水有三种操作：</p>
+<ul>
+<li>注满</li>
+<li>倒空</li>
+<li>从i向j中倒水，结果要么把j注满，要么把i倒空。<br>问如何经过最少的步数在某一个杯子中获得C升水。输出操作<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2>请仔细阅读cnilin的代码_(:3」∠❀)_<br>POT中是当前两个杯子里的水量，到达这一状态所需要的最小步数，以及每一步的操作。<br>movepot(POT a, int key)模拟每一次搜索操作，print()打印所有步骤。<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iostream&gt;</span></span><br><span class="line"><span class="comment">#include&lt;queue&gt;</span></span><br><span class="line"><span class="comment">#include&lt;cstdio&gt;</span></span><br><span class="line"><span class="comment">#include&lt;memory.h&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">struct POT&#123;</span><br><span class="line">    int x,y;</span><br><span class="line">    int step;</span><br><span class="line">    int wh[1000];</span><br><span class="line">&#125;;</span><br><span class="line">queue&lt;POT&gt; Q;</span><br><span class="line">int m, n, p;</span><br><span class="line">int dp[110][110];</span><br><span class="line">int movepot(POT a, int key)&#123;</span><br><span class="line">    POT b;</span><br><span class="line">    b = a;</span><br><span class="line">    b.step = a.step + 1;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(int i = 0; i &lt; b.step; i++)&#123;</span><br><span class="line">        b.wh[i] = a.wh[i];</span><br><span class="line">        b.wh[a.step] = key;</span><br><span class="line">        <span class="keyword">if</span>(key == 0)</span><br><span class="line">            b.x = 0;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(key == 1)</span><br><span class="line">            b.y = 0;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(key == 2)</span><br><span class="line">            b.x = m;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(key == 3)</span><br><span class="line">            b.y = n;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(key == 4)&#123;</span><br><span class="line">            <span class="keyword">if</span>((b.x + b.y) &gt; n)&#123;</span><br><span class="line">                b.x = (b.x + b.y) - n;</span><br><span class="line">                b.y = n;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                b.y = b.x + b.y;</span><br><span class="line">                b.x = 0;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(key == 5)&#123;</span><br><span class="line">            <span class="keyword">if</span>((b.x + b.y) &gt; m)&#123;</span><br><span class="line">                b.y = (b.x + b.y) - m;</span><br><span class="line">                b.x = m;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                b.x = b.x + b.y;</span><br><span class="line">                b.y = 0;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>((dp[b.x][b.y] &gt; b.step||dp[b.x][b.y] == 0) &amp;&amp; (b.x + b.y) != 0)&#123;</span><br><span class="line">            Q.push(b);</span><br><span class="line">            dp[b.x][b.y] = b.step;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int <span class="built_in">print</span>(POT a)&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, a.step);</span><br><span class="line">    <span class="keyword">for</span>(int i = 0; i &lt; a.step; i++)&#123;</span><br><span class="line">    	int q = a.wh[i];</span><br><span class="line">    	<span class="keyword">if</span>(q == 0)</span><br><span class="line">        	<span class="built_in">printf</span>(<span class="string">"DROP(1)\n"</span>);</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">if</span>(q == 1)</span><br><span class="line">        	<span class="built_in">printf</span>(<span class="string">"DROP(2)\n"</span>);</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">if</span>(q == 2)</span><br><span class="line">        	<span class="built_in">printf</span>(<span class="string">"FILL(1)\n"</span>);</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">if</span>(q == 3)</span><br><span class="line">    	    <span class="built_in">printf</span>(<span class="string">"FILL(2)\n"</span>);</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">if</span>(q == 4)</span><br><span class="line">       		<span class="built_in">printf</span>(<span class="string">"POUR(1,2)\n"</span>);</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">if</span>(q == 5)</span><br><span class="line">        	<span class="built_in">printf</span>(<span class="string">"POUR(2,1)\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int <span class="function"><span class="title">main</span></span>()&#123;</span><br><span class="line">    <span class="keyword">while</span>(scanf(<span class="string">"%d%d%d"</span>, &amp;m, &amp;n, &amp;p) != EOF)&#123;</span><br><span class="line">    POT a;</span><br><span class="line">    memset(dp, 0, sizeof(dp));</span><br><span class="line">    dp[0][0] = 1;</span><br><span class="line">    a.x = 0;</span><br><span class="line">    a.y = 0;</span><br><span class="line">    a.step = 0;</span><br><span class="line">    <span class="keyword">while</span>(!Q.empty())&#123;</span><br><span class="line">        Q.pop();</span><br><span class="line">    &#125;</span><br><span class="line">    Q.push(a);</span><br><span class="line">    int ok = 0;</span><br><span class="line">    <span class="keyword">while</span>(!Q.empty())&#123;</span><br><span class="line">        a = Q.front();</span><br><span class="line">        <span class="keyword">if</span>(a.x == p||a.y == p)&#123;</span><br><span class="line">            ok = 1;</span><br><span class="line">            <span class="built_in">print</span>(a);</span><br><span class="line">            <span class="built_in">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Q.pop();</span><br><span class="line">        <span class="keyword">for</span>(int i = 0; i &lt; 6; i++)</span><br><span class="line">            movepot(a, i);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(ok == 0)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"impossible\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
 
       
     </div>
@@ -294,13 +298,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2016/07/19/uva-11729/">UVA 11729 解题报告</a></p>
+        <p><span>Title:</span><a href="/2016/07/28/poj-3414/">POJ 3414 解题报告</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Nyanko Chan</a></p>
-        <p><span>Created:</span>2016-07-19, 23:06:53</p>
-        <p><span>Updated:</span>2016-07-20, 16:30:02</p>
+        <p><span>Created:</span>2016-07-28, 00:51:57</p>
+        <p><span>Updated:</span>2016-07-28, 02:00:22</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2016/07/19/uva-11729/" title="UVA 11729 解题报告">https://moemoemortimer.github.io/2016/07/19/uva-11729/</a>
-            <span class="copy-path" data-clipboard-text="From https://moemoemortimer.github.io/2016/07/19/uva-11729/　　By Nyanko Chan" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2016/07/28/poj-3414/" title="POJ 3414 解题报告">https://moemoemortimer.github.io/2016/07/28/poj-3414/</a>
+            <span class="copy-path" data-clipboard-text="From https://moemoemortimer.github.io/2016/07/28/poj-3414/　　By Nyanko Chan" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -312,16 +316,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/07/19/codeforces-651A/">
-                    CodeForces 651A 解题报告
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/07/19/uva-11292/">
-                    UVA 11292 解题报告
+                <a href="/2016/07/28/hdu-2717/">
+                    HDU 2717 解题报告
                 </a>
             </div>
         
@@ -332,7 +330,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目"><span class="toc-number">1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">2.</span> <span class="toc-text">代码</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目"><span class="toc-number">1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思路"><span class="toc-number">2.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn,
@@ -363,7 +361,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"UVA 11729 解题报告　| 银月轻语　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"POJ 3414 解题报告　| 银月轻语　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -379,7 +377,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/07/19/uva-11729/" data-title="UVA 11729 解题报告" data-url="https://moemoemortimer.github.io/2016/07/19/uva-11729/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/07/28/poj-3414/" data-title="POJ 3414 解题报告" data-url="https://moemoemortimer.github.io/2016/07/28/poj-3414/"></div>
     <script>
         var duoshuoQuery = {short_name:"moemoemortimer"};
         var loadComment = function(){
@@ -402,15 +400,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/07/19/codeforces-651A/" title="Pre: CodeForces 651A 解题报告">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
         
 
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/07/19/uva-11292/" title="Next: UVA 11292 解题报告">
+            <a href="/2016/07/28/hdu-2717/" title="Next: HDU 2717 解题报告">
                 <i class="fa fa-angle-right"></i>
             </a>
         
