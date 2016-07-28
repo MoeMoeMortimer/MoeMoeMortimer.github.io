@@ -17,13 +17,13 @@
 
 <meta name="description" content="这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HDU 5742 解题报告">
-<meta property="og:url" content="https://moemoemortimer.github.io/2016/07/23/hdu-5742/index.html">
+<meta property="og:title" content="HDU 1978 解题报告">
+<meta property="og:url" content="https://moemoemortimer.github.io/2016/07/28/hdu-1978/index.html">
 <meta property="og:site_name" content="银月轻语">
 <meta property="og:description" content="这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_">
-<meta property="og:updated_time" content="2016-07-27T17:28:45.210Z">
+<meta property="og:updated_time" content="2016-07-28T09:44:24.926Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HDU 5742 解题报告">
+<meta name="twitter:title" content="HDU 1978 解题报告">
 <meta name="twitter:description" content="这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
@@ -56,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>HDU 5742 解题报告 | 银月轻语</title>
+<title>HDU 1978 解题报告 | 银月轻语</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -243,11 +243,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-hdu-5742" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-hdu-1978" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/07/23/hdu-5742/" class="article-date">
-      <time datetime="2016-07-23T07:23:13.000Z" itemprop="datePublished">2016-07-23</time>
+      <a href="/2016/07/28/hdu-1978/" class="article-date">
+      <time datetime="2016-07-28T04:06:09.000Z" itemprop="datePublished">2016-07-28</time>
 </a>
 
 
@@ -262,7 +262,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      HDU 5742 解题报告
+      HDU 1978 解题报告
     </h1>
   
 
@@ -273,7 +273,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数学/">数学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解题报告/">解题报告</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DP/">DP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解题报告/">解题报告</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/记忆化搜索/">记忆化搜索</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -284,10 +284,17 @@
       
           
         <p>这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_<br><a id="more"></a></p>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5742" target="_blank" rel="external">题目传送门</a></p>
-<p>大意：<br>给你一串递减数列中几个位置上的数字，求a1+a2/sigma(an)的最大值。</p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>先处理好a1,a2,然后让根据数列递减这一条件，让分母尽量小就好了。<br>学到一个姿势，c++自带的求最大公约数的函数__gcd(a, b)，头文件<algorithm><br>注意输入也是有序的。</algorithm></p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iostream&gt;</span></span><br><span class="line"><span class="comment">#include&lt;algorithm&gt;</span></span><br><span class="line"><span class="comment">#include&lt;memory.h&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">typedef pair&lt;int, int&gt; P;</span><br><span class="line">int <span class="function"><span class="title">main</span></span>()&#123;</span><br><span class="line">    int t, n, m;</span><br><span class="line">    cin &gt;&gt; t;</span><br><span class="line">    <span class="keyword">while</span>(t--)&#123;</span><br><span class="line">        cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">        int know[105], son, mom, tag[105], flag;</span><br><span class="line">        memset(know, 0, sizeof(know));</span><br><span class="line">        memset(tag, 0, sizeof(tag));</span><br><span class="line">        <span class="keyword">for</span>(int i = 1; i &lt;= m; i++)&#123;</span><br><span class="line">            cin &gt;&gt; tag[i];</span><br><span class="line">            cin &gt;&gt; know[i];</span><br><span class="line">        &#125;</span><br><span class="line">       // cout &lt;&lt; tag[1] &lt;&lt; endl;</span><br><span class="line">        <span class="keyword">if</span>(tag[1] == 1 &amp;&amp; tag[2] == 2)</span><br><span class="line">            son = know[1] + know[2];</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(tag[1] == 1 &amp;&amp; tag[2] != 2)son = 2*know[1];</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(tag[1] == 2)son = 100 + know[1];</span><br><span class="line">        <span class="keyword">else</span> son = 200;</span><br><span class="line">        mom = son;</span><br><span class="line">       // cout &lt;&lt; son &lt;&lt; endl;</span><br><span class="line">        int ex = 2;</span><br><span class="line">        <span class="keyword">for</span>(int i = 1; i &lt;= m; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(tag[i] == 1|| tag[i] == 2)<span class="built_in">continue</span>;</span><br><span class="line">            mom += (tag[i]-ex)*know[i];</span><br><span class="line">            ex = tag[i];</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; son/__gcd(mom,son) &lt;&lt; <span class="string">"/"</span> &lt;&lt; mom/__gcd(mom, son) &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1978" target="_blank" rel="external">题目传送门</a><br>你控制一个机器人从一个棋盘的起始点(1,1)走到棋盘的终点(n,m)。游戏的规则描述如下：<br>1.机器人一开始在棋盘的起始点并有起始点所标有的能量。<br>2.机器人只能向右或者向下走，并且每走一步消耗一单位能量。<br>3.机器人不能在原地停留。<br>4.当机器人选择了一条可行路径后，当他走到这条路径的终点时，他将只有终点所标记的能量。<br>问题是机器人有多少种方式从起点走到终点。<br>注意理解题意，机器人可以在一条可行路径上选择任意一个点作为终点，就是说到达终点的时候能量不一定耗尽。</p>
+<p>##思路<br>解法一：记忆化搜索</p>
+<p>dp[i][j] = 当前点 (i, j) 在能量值为EP的情况下 能够走到终点的路径数目。终点路径初始化为1。<br>当前点(i, j)在能量EP的情况下能够走到终点的路径数目<br>等于(i, j)作为终点在拥有能量EP的情况下<br>能够到达的所有的点 (i+k, j+l) （k+l &lt;= val） 能够走到终点的路径数目的和<br>于是我们就将求dp[i][j]的情况分解成众多相同的子问题 dp[i][j] += dp[i+k][j+l] (k+l &lt;= EP)</p>
+<p>终止条件为</p>
+<ul>
+<li>一、 达到终点 (n, m) 则返回 1 因为路径为1</li>
+<li>二、 此时的 dp[i+k][j+l] 已经是 此点到达终点的路径个数了.直接返回当前路径数目就可(记忆化搜索)<br>&emsp;<br>&emsp;<br>解法二：动态规划<br>dp[i][j] = 表示可以到达(i, j)点的方法数。初始化起点方案数为1，每次枚举(i, j)能到达的所有点的位置，dp[i][j]为能到达它的点方案数和。在所有(i, j)可达的点加上从起始点到达点(i, j)的路径总数。</li>
+</ul>
+<p>PS:记忆化搜索要405ms，而DP只用了171ms(难道是我的搜索写的太挫了···？)</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h3 id="记忆化搜索"><a href="#记忆化搜索" class="headerlink" title="记忆化搜索"></a>记忆化搜索</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;bits/stdc++.h&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">int M[110][110], dp[110][110], n, m;</span><br><span class="line"></span><br><span class="line">int dfs(int x, int y)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(x == n &amp;&amp; y == m) <span class="built_in">return</span> 1;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(dp[x][y] != 0) <span class="built_in">return</span> dp[x][y];</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">    	int ep = M[x][y];</span><br><span class="line">    	<span class="keyword">for</span>(int i = 0; i &lt;= ep; i++ )</span><br><span class="line">        	<span class="keyword">for</span>(int j = 0; j &lt;= ep - i; j++ )</span><br><span class="line">            	<span class="keyword">if</span>(!(i == 0 &amp;&amp; j == 0) &amp;&amp; x + i &lt;= n &amp;&amp; y + j &lt;= m)&#123;</span><br><span class="line">            	// 由后往前 状态的迭代</span><br><span class="line">                dp[x][y] += dfs(x + i, y + j);</span><br><span class="line">                dp[x][y] %= 10000;</span><br><span class="line">                &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="built_in">return</span> dp[x][y];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int <span class="function"><span class="title">main</span></span>()</span><br><span class="line">&#123;</span><br><span class="line">    int T;scanf(<span class="string">"%d"</span>,&amp;T);</span><br><span class="line">    <span class="keyword">while</span>(T--)&#123;</span><br><span class="line">        memset(dp, 0, sizeof(dp));</span><br><span class="line">        scanf(<span class="string">"%d %d"</span>, &amp;n, &amp;m);</span><br><span class="line">        <span class="keyword">for</span>(int i = 1; i &lt;= n; i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(int j = 1; j &lt;= m; j++)&#123;</span><br><span class="line">                scanf(<span class="string">"%d"</span>, &amp;M[i][j]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, dfs(1, 1));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;bits/stdc++.h&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">int dp[210][210], n, m;</span><br><span class="line">int <span class="function"><span class="title">main</span></span>()&#123;</span><br><span class="line">  int T;</span><br><span class="line">  scanf(<span class="string">"%d"</span>, &amp;T);</span><br><span class="line">  <span class="keyword">while</span>(T--)&#123;</span><br><span class="line">    memset(dp, 0, sizeof(dp));</span><br><span class="line">    dp[0][0] = 1;</span><br><span class="line">    scanf(<span class="string">"%d %d"</span>, &amp;n, &amp;m);</span><br><span class="line">    <span class="keyword">for</span>(int i = 0; i &lt; n; i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(int j = 0; j &lt; m; j++)&#123;</span><br><span class="line">            int ep;</span><br><span class="line">            scanf(<span class="string">"%d"</span>, &amp;ep);</span><br><span class="line">            <span class="keyword">for</span>(int k = 0; k &lt;= ep; k++)&#123;</span><br><span class="line">                <span class="keyword">for</span>(int l = 0; l &lt;= ep - k; l++)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(l == 0 &amp;&amp; k == 0) <span class="built_in">continue</span>;</span><br><span class="line">                    dp[i+k][j+l] += dp[i][j];</span><br><span class="line">                    dp[i+k][j+l] %= 10000</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,dp[n-1][m-1]);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -295,13 +302,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/07/23/hdu-5742/">HDU 5742 解题报告</a></p>
+        <p><span>本文标题:</span><a href="/2016/07/28/hdu-1978/">HDU 1978 解题报告</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Nyanko Chan</a></p>
-        <p><span>发布时间:</span>2016-07-23, 15:23:13</p>
-        <p><span>最后更新:</span>2016-07-28, 01:28:45</p>
+        <p><span>发布时间:</span>2016-07-28, 12:06:09</p>
+        <p><span>最后更新:</span>2016-07-28, 17:44:24</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/07/23/hdu-5742/" title="HDU 5742 解题报告">https://moemoemortimer.github.io/2016/07/23/hdu-5742/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://moemoemortimer.github.io/2016/07/23/hdu-5742/　　作者: Nyanko Chan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/07/28/hdu-1978/" title="HDU 1978 解题报告">https://moemoemortimer.github.io/2016/07/28/hdu-1978/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://moemoemortimer.github.io/2016/07/28/hdu-1978/　　作者: Nyanko Chan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -313,16 +320,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/07/23/codeforces-700A/">
-                    CodeForces 700A 解题报告
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/07/23/hdu-5723/">
-                    HDU 5723 解题报告
+                <a href="/2016/07/28/hdu-4484/">
+                    hdu-4484
                 </a>
             </div>
         
@@ -333,7 +334,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目"><span class="toc-number">1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思路"><span class="toc-number">2.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目"><span class="toc-number">1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">2.</span> <span class="toc-text">代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#记忆化搜索"><span class="toc-number">2.1.</span> <span class="toc-text">记忆化搜索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#动态规划"><span class="toc-number">2.2.</span> <span class="toc-text">动态规划</span></a></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn,
@@ -364,7 +365,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"HDU 5742 解题报告　| 银月轻语　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"HDU 1978 解题报告　| 银月轻语　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -380,7 +381,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/07/23/hdu-5742/" data-title="HDU 5742 解题报告" data-url="https://moemoemortimer.github.io/2016/07/23/hdu-5742/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/07/28/hdu-1978/" data-title="HDU 1978 解题报告" data-url="https://moemoemortimer.github.io/2016/07/28/hdu-1978/"></div>
     <script>
         var duoshuoQuery = {short_name:"moemoemortimer"};
         var loadComment = function(){
@@ -403,15 +404,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/07/23/codeforces-700A/" title="上一篇: CodeForces 700A 解题报告">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/07/23/hdu-5723/" title="下一篇: HDU 5723 解题报告">
+            <a href="/2016/07/28/hdu-4484/" title="下一篇: hdu-4484">
                 <i class="fa fa-angle-right"></i>
             </a>
         
