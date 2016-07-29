@@ -21,7 +21,7 @@
 <meta property="og:url" content="https://moemoemortimer.github.io/2016/07/29/memory-search/index.html">
 <meta property="og:site_name" content="银月轻语">
 <meta property="og:description" content="这里是咸鱼的算法小教室_(:3」∠❀)_">
-<meta property="og:updated_time" content="2016-07-29T12:18:52.344Z">
+<meta property="og:updated_time" content="2016-07-29T12:31:59.096Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记忆化搜索与动态规划">
 <meta name="twitter:description" content="这里是咸鱼的算法小教室_(:3」∠❀)_">
@@ -291,9 +291,12 @@
 <li><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2602" target="_blank" rel="external">例题传送门 HDU 2602</a></p>
 </li>
 </ul>
+<p>在深搜里加一个记忆化数组dp如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iostream&gt;</span></span><br><span class="line"><span class="comment">#include&lt;queue&gt;</span></span><br><span class="line"><span class="comment">#include&lt;stdio.h&gt;</span></span><br><span class="line"><span class="comment">#include&lt;memory.h&gt;</span></span><br><span class="line"><span class="comment">#include&lt;algorithm&gt;</span></span><br><span class="line"><span class="comment">#define MAX_N 1005</span></span><br><span class="line"><span class="comment">#define MAX_W 1005</span></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int T, N, V;</span><br><span class="line">int w[MAX_N], v[MAX_N];</span><br><span class="line">int dp[MAX_N+1][MAX_W +1]; //记忆化数组</span><br><span class="line"></span><br><span class="line">int rec(int i, int j)&#123;</span><br><span class="line">    <span class="keyword">if</span>(dp[i][j] &gt;= 0)&#123;</span><br><span class="line">        //如果已经计算过的话，直接使用以前的结果</span><br><span class="line">        <span class="built_in">return</span> dp[i][j];</span><br><span class="line">    &#125;</span><br><span class="line">    int res;</span><br><span class="line">    <span class="keyword">if</span>(i == N)</span><br><span class="line">        //已经没有剩余物品了</span><br><span class="line">        res = 0;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(j &lt; w[i])</span><br><span class="line">        //无法挑选这个物品</span><br><span class="line">        res = rec(i + 1, j);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        res = max(rec(i + 1, j), rec(i + 1, j - w[i]) + v [i]);</span><br><span class="line">    //将结果记录在数组中</span><br><span class="line">    <span class="built_in">return</span> dp[i][j] = res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int <span class="function"><span class="title">main</span></span>()&#123;</span><br><span class="line">    scanf(<span class="string">"%d"</span>,&amp;T);</span><br><span class="line">    <span class="keyword">while</span>(T--)&#123;</span><br><span class="line">        scanf(<span class="string">"%d%d"</span>,&amp;N, &amp;V);</span><br><span class="line">        <span class="keyword">for</span>(int i = 0; i &lt; N; i++)</span><br><span class="line">            scanf(<span class="string">"%d"</span>,&amp;v[i]);</span><br><span class="line">        <span class="keyword">for</span>(int i = 0; i &lt; N; i++)</span><br><span class="line">            scanf(<span class="string">"%d"</span>,&amp;w[i]);</span><br><span class="line">        memset(dp, -1, sizeof(dp));</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, rec(0,V));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>记dp[i][j]为从第i个物品开始挑选总重小于j时，总价值的最大值。于是我们有如下递推式：</p>
 <p>dp[n][j] = 0</p>
-<p>dp[i][j] = $\lbracedp[i+1] \rbrace</p>
+<p>dp[i][j] = $\lbrace \cfrac{dp[i+1][j]       (j &lt; w_i)}{max(dp[i+1][j], dp[i+1][j-w[i]] + v[i])} \rbrace$</p>
+<p>```bash</p>
 
       
     </div>
@@ -305,7 +308,7 @@
         <p><span>本文标题:</span><a href="/2016/07/29/memory-search/">记忆化搜索与动态规划</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Nyanko Chan</a></p>
         <p><span>发布时间:</span>2016-07-29, 18:49:42</p>
-        <p><span>最后更新:</span>2016-07-29, 20:18:52</p>
+        <p><span>最后更新:</span>2016-07-29, 20:31:59</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/07/29/memory-search/" title="记忆化搜索与动态规划">https://moemoemortimer.github.io/2016/07/29/memory-search/</a>
             <span class="copy-path" data-clipboard-text="原文: https://moemoemortimer.github.io/2016/07/29/memory-search/　　作者: Nyanko Chan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -481,6 +484,27 @@
 
 
 
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 
 <div class="scroll" id="scroll">
