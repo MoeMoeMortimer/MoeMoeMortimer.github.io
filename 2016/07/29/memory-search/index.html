@@ -15,15 +15,16 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="银月轻语">
-<meta property="og:url" content="https://moemoemortimer.github.io/tags/贪心/index.html">
+<meta name="description" content="这里是咸鱼的算法小教室_(:3」∠❀)_">
+<meta property="og:type" content="article">
+<meta property="og:title" content="记忆化搜索与动态规划">
+<meta property="og:url" content="https://moemoemortimer.github.io/2016/07/29/memory-search/index.html">
 <meta property="og:site_name" content="银月轻语">
-<meta property="og:description">
+<meta property="og:description" content="这里是咸鱼的算法小教室_(:3」∠❀)_">
+<meta property="og:updated_time" content="2016-07-29T12:18:52.344Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="银月轻语">
-<meta name="twitter:description">
+<meta name="twitter:title" content="记忆化搜索与动态规划">
+<meta name="twitter:description" content="这里是咸鱼的算法小教室_(:3」∠❀)_">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -55,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Tag: 贪心 | 银月轻语</title>
+<title>记忆化搜索与动态规划 | 银月轻语</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -65,9 +66,9 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
+        isPost: true,
         isArchive: false,
-        isTag: true,
+        isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
@@ -242,287 +243,187 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-memory-search" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2016/07/29/memory-search/" class="article-date">
+      <time datetime="2016-07-29T10:49:42.000Z" itemprop="datePublished">2016-07-29</time>
+</a>
+
+
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      记忆化搜索与动态规划
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态规划/">动态规划</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/记忆化搜索/">记忆化搜索</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/07/23/codeforces-701A/" class="archive-article-date">
-      <time datetime="2016-07-23T10:06:02.000Z" itemprop="datePublished">07-23</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/23/codeforces-701A/">CodeForces 701A 解题报告</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
+    <div class="article-entry" itemprop="articleBody">
+      
           
+        <p>这里是咸鱼的算法小教室_(:3」∠❀)_<br><a id="more"></a></p>
+<h2 id="记忆化搜索"><a href="#记忆化搜索" class="headerlink" title="记忆化搜索"></a>记忆化搜索</h2><h3 id="记忆化搜索是什么"><a href="#记忆化搜索是什么" class="headerlink" title="记忆化搜索是什么"></a>记忆化搜索是什么</h3><p>简单来说，记忆化搜索就是保存之前计算过的状态，从时间复杂度上来讲，如果搜索的深度是n，而且每一层的搜索都需要两次分支，最坏就需要$O(2^n)$的时间。但改为记忆化搜索的话，对于同样的参数，只会在第一次被调用到时执行递归部分，第二次之后都会直接返回。参数的组合不过nW种，而函数内只调用两次递归，复杂度为O(nW)。</p>
+<h3 id="01背包问题"><a href="#01背包问题" class="headerlink" title="01背包问题"></a>01背包问题</h3><ul>
+<li><p>有n个重量和价值分别为$w_i$, $v_i$的物品。从这些物品中挑选出总重量不超过W的物品，求所有挑选方案中价值总和的最大值。</p>
+</li>
+<li><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2602" target="_blank" rel="external">例题传送门 HDU 2602</a></p>
+</li>
+</ul>
+<p>记dp[i][j]为从第i个物品开始挑选总重小于j时，总价值的最大值。于是我们有如下递推式：</p>
+<p>dp[n][j] = 0</p>
+<p>dp[i][j] = $\lbracedp[i+1] \rbrace</p>
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解题报告/">解题报告</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/贪心/">贪心</a></li></ul>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/07/29/memory-search/">记忆化搜索与动态规划</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Nyanko Chan</a></p>
+        <p><span>发布时间:</span>2016-07-29, 18:49:42</p>
+        <p><span>最后更新:</span>2016-07-29, 20:18:52</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/07/29/memory-search/" title="记忆化搜索与动态规划">https://moemoemortimer.github.io/2016/07/29/memory-search/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://moemoemortimer.github.io/2016/07/29/memory-search/　　作者: Nyanko Chan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
     </div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/07/28/hdu-1978/">
+                    HDU 1978 解题报告
+                </a>
+            </div>
+        
+    </nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/07/21/codeforces-587A/" class="archive-article-date">
-      <time datetime="2016-07-21T00:48:32.000Z" itemprop="datePublished">07-21</time>
-</a>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#记忆化搜索"><span class="toc-number">1.</span> <span class="toc-text">记忆化搜索</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#记忆化搜索是什么"><span class="toc-number">1.1.</span> <span class="toc-text">记忆化搜索是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#01背包问题"><span class="toc-number">1.2.</span> <span class="toc-text">01背包问题</span></a></li></ol></li></ol>
+</div>
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script>
+    yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+</script>
 
 
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
         </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/21/codeforces-587A/">CodeForces 587A 解题报告</a>
-    </h1>
-  
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"记忆化搜索与动态规划　| 银月轻语　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
 
-        <div class="article-info info-on-archive">
-          
+    
+</div>
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解题报告/">解题报告</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/贪心/">贪心</a></li></ul>
+
+
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <div id="comment-box" ></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/07/29/memory-search/" data-title="记忆化搜索与动态规划" data-url="https://moemoemortimer.github.io/2016/07/29/memory-search/"></div>
+    <script>
+        var duoshuoQuery = {short_name:"moemoemortimer"};
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
+
+        
+    </script>
+    
+    <script> loadComment(); </script>
+
+</div>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/07/28/hdu-1978/" title="下一篇: HDU 1978 解题报告">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
     </div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/07/20/codeforces-581C/" class="archive-article-date">
-      <time datetime="2016-07-20T10:09:32.000Z" itemprop="datePublished">07-20</time>
-</a>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/07/29/memory-search/">记忆化搜索与动态规划</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/hdu-1978/">HDU 1978 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/hdu-4484/">HDU 4484 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/hdu-1078/">HDU 1078 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/poj-3414/">POJ 3414 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/hdu-2717/">HDU 2717 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/27/hdu-1181/">HDU 1181 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/25/study-bfs-dfs/">深度优先搜索、广度优先搜索</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/codeforces-701C/">CodeForces 701C 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/codeforces-701B/">CodeForces 701B 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/codeforces-701A/">CodeForces 701A 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/codeforces-700A/">CodeForces 700A 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/hdu-5742/">HDU 5742 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/hdu-5723/">HDU 5723 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/hdu-5745/">HDU 5745 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/22/hdu-5734/">HDU 5734 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/22/hdu-2585/">HDU 2585 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/21/codeforces-448c/">CodeForces 448C 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/21/hdu-1007/">HDU 1007 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/21/codeforces-587A/">CodeForces 587A 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/stl-study-notes/">STL学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/codeforces-581C/">CodeForces 581C 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/hdu-4544/">HDU 4544 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/hdu-1873/">HDU 1873 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/codeforces-579B/">CodeForces 579B 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/codeforces-624B/">CodeForces 624B 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/trainning-diary/">暑期集训日记本✧٩(ˊωˋ*)و✧</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/codeforces-651A/">CodeForces 651A 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/uva-11729/">UVA 11729 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/uva-11292/">UVA 11292 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/18/short-holiday/">夏休み</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/03/death-flag/">都怪我作死</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/01/confession/">面壁思过，不知所措</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/27/aishite/">吃老夫一记安利</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/26/insert-video/">嗷~~宝宝解锁了新姿势(*//ω//*)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/26/photo/">图床ԅ(¯﹃¯ԅ)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/25/ACMgather/">论代码能力与食量的正比例关系</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/24/HELLO-HEXO/">Created my Private Castle</a></li></ul>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/20/codeforces-581C/">CodeForces 581C 解题报告</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/STL/">STL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解题报告/">解题报告</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/贪心/">贪心</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/07/20/hdu-4544/" class="archive-article-date">
-      <time datetime="2016-07-20T10:09:08.000Z" itemprop="datePublished">07-20</time>
-</a>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/20/hdu-4544/">HDU 4544 解题报告</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/STL/">STL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解题报告/">解题报告</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/贪心/">贪心</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/07/20/codeforces-624B/" class="archive-article-date">
-      <time datetime="2016-07-19T16:38:46.000Z" itemprop="datePublished">07-20</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/20/codeforces-624B/">CodeForces 624B 解题报告</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解题报告/">解题报告</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/贪心/">贪心</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/07/19/codeforces-651A/" class="archive-article-date">
-      <time datetime="2016-07-19T15:07:27.000Z" itemprop="datePublished">07-19</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/19/codeforces-651A/">CodeForces 651A 解题报告</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解题报告/">解题报告</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/贪心/">贪心</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/07/19/uva-11729/" class="archive-article-date">
-      <time datetime="2016-07-19T15:06:53.000Z" itemprop="datePublished">07-19</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/19/uva-11729/">UVA 11729 解题报告</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解题报告/">解题报告</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/贪心/">贪心</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/07/19/uva-11292/" class="archive-article-date">
-      <time datetime="2016-07-19T15:05:16.000Z" itemprop="datePublished">07-19</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/19/uva-11292/">UVA 11292 解题报告</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解题报告/">解题报告</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/贪心/">贪心</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">

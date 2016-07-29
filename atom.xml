@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://moemoemortimer.github.io/"/>
-  <updated>2016-07-28T09:44:24.926Z</updated>
+  <updated>2016-07-29T12:18:52.344Z</updated>
   <id>https://moemoemortimer.github.io/</id>
   
   <author>
@@ -14,6 +14,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记忆化搜索与动态规划</title>
+    <link href="https://moemoemortimer.github.io/2016/07/29/memory-search/"/>
+    <id>https://moemoemortimer.github.io/2016/07/29/memory-search/</id>
+    <published>2016-07-29T10:49:42.000Z</published>
+    <updated>2016-07-29T12:18:52.344Z</updated>
+    
+    <content type="html">&lt;p&gt;这里是咸鱼的算法小教室_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;记忆化搜索&quot;&gt;&lt;a href=&quot;#记忆化搜索&quot; class=&quot;headerlink&quot; title=&quot;记忆化搜索&quot;&gt;&lt;/a&gt;记忆化搜索&lt;/h2&gt;&lt;h3 id=&quot;记忆化搜索是什么&quot;&gt;&lt;a href=&quot;#记忆化搜索是什么&quot; class=&quot;headerlink&quot; title=&quot;记忆化搜索是什么&quot;&gt;&lt;/a&gt;记忆化搜索是什么&lt;/h3&gt;&lt;p&gt;简单来说，记忆化搜索就是保存之前计算过的状态，从时间复杂度上来讲，如果搜索的深度是n，而且每一层的搜索都需要两次分支，最坏就需要$O(2^n)$的时间。但改为记忆化搜索的话，对于同样的参数，只会在第一次被调用到时执行递归部分，第二次之后都会直接返回。参数的组合不过nW种，而函数内只调用两次递归，复杂度为O(nW)。&lt;/p&gt;
+&lt;h3 id=&quot;01背包问题&quot;&gt;&lt;a href=&quot;#01背包问题&quot; class=&quot;headerlink&quot; title=&quot;01背包问题&quot;&gt;&lt;/a&gt;01背包问题&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;有n个重量和价值分别为$w_i$, $v_i$的物品。从这些物品中挑选出总重量不超过W的物品，求所有挑选方案中价值总和的最大值。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=2602&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;例题传送门 HDU 2602&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;记dp[i][j]为从第i个物品开始挑选总重小于j时，总价值的最大值。于是我们有如下递推式：&lt;/p&gt;
+&lt;p&gt;dp[n][j] = 0&lt;/p&gt;
+&lt;p&gt;dp[i][j] = $\lbracedp[i+1] \rbrace&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这里是咸鱼的算法小教室_(:3」∠❀)_&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="记忆化搜索" scheme="https://moemoemortimer.github.io/tags/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/"/>
+    
+      <category term="算法" scheme="https://moemoemortimer.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="动态规划" scheme="https://moemoemortimer.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
   
   <entry>
     <title>HDU 1978 解题报告</title>
@@ -215,9 +250,9 @@
     </summary>
     
     
-      <category term="BFS" scheme="https://moemoemortimer.github.io/tags/BFS/"/>
-    
       <category term="DFS" scheme="https://moemoemortimer.github.io/tags/DFS/"/>
+    
+      <category term="BFS" scheme="https://moemoemortimer.github.io/tags/BFS/"/>
     
   </entry>
   
@@ -515,69 +550,6 @@
       <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
     
       <category term="贪心" scheme="https://moemoemortimer.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>STL学习笔记</title>
-    <link href="https://moemoemortimer.github.io/2016/07/20/stl-study-notes/"/>
-    <id>https://moemoemortimer.github.io/2016/07/20/stl-study-notes/</id>
-    <published>2016-07-20T10:10:08.000Z</published>
-    <updated>2016-07-22T14:48:56.837Z</updated>
-    
-    <content type="html">&lt;p&gt;被STL虐哭_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;C++ STL中标准关联容器set, multiset, map, multimap,其内部采用的是一种非常高效的平衡检索二叉树：红黑树，也成为RB树(Red-Black Tree)。RB树的统计性能要好于一般平衡二叉树，所以被STL选择作为了关联容器的内部结构。&lt;/p&gt;
-&lt;h2 id=&quot;set&quot;&gt;&lt;a href=&quot;#set&quot; class=&quot;headerlink&quot; title=&quot;set&quot;&gt;&lt;/a&gt;set&lt;/h2&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;名称&lt;/th&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;作用&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;begin()&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;返回set容器的第一个元素&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;end() 　&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;返回set容器的最后一个元素&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;clear()&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;删除set容器中的所有的元素&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;empty()&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;判断set容器是否为空&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;max_size()&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;返回set容器可能包含的元素最大个数&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;size()　&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;返回当前set容器中的元素个数&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;rbegin　&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;返回的值和end()相同&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;rend()　&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;返回的值和rbegin()相同&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;被STL虐哭_(:3」∠❀)_&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="STL" scheme="https://moemoemortimer.github.io/tags/STL/"/>
     
   </entry>
   
