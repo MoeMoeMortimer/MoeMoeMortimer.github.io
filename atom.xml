@@ -61,11 +61,11 @@
     <link href="https://moemoemortimer.github.io/2016/07/28/hdu-1978/"/>
     <id>https://moemoemortimer.github.io/2016/07/28/hdu-1978/</id>
     <published>2016-07-28T04:06:09.000Z</published>
-    <updated>2016-07-28T09:44:24.926Z</updated>
+    <updated>2016-07-29T13:38:19.084Z</updated>
     
     <content type="html">&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=1978&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;题目传送门&lt;/a&gt;&lt;br&gt;你控制一个机器人从一个棋盘的起始点(1,1)走到棋盘的终点(n,m)。游戏的规则描述如下：&lt;br&gt;1.机器人一开始在棋盘的起始点并有起始点所标有的能量。&lt;br&gt;2.机器人只能向右或者向下走，并且每走一步消耗一单位能量。&lt;br&gt;3.机器人不能在原地停留。&lt;br&gt;4.当机器人选择了一条可行路径后，当他走到这条路径的终点时，他将只有终点所标记的能量。&lt;br&gt;问题是机器人有多少种方式从起点走到终点。&lt;br&gt;注意理解题意，机器人可以在一条可行路径上选择任意一个点作为终点，就是说到达终点的时候能量不一定耗尽。&lt;/p&gt;
-&lt;p&gt;##思路&lt;br&gt;解法一：记忆化搜索&lt;/p&gt;
+&lt;h2 id=&quot;思路&quot;&gt;&lt;a href=&quot;#思路&quot; class=&quot;headerlink&quot; title=&quot;思路&quot;&gt;&lt;/a&gt;思路&lt;/h2&gt;&lt;p&gt;解法一：记忆化搜索&lt;/p&gt;
 &lt;p&gt;dp[i][j] = 当前点 (i, j) 在能量值为EP的情况下 能够走到终点的路径数目。终点路径初始化为1。&lt;br&gt;当前点(i, j)在能量EP的情况下能够走到终点的路径数目&lt;br&gt;等于(i, j)作为终点在拥有能量EP的情况下&lt;br&gt;能够到达的所有的点 (i+k, j+l) （k+l &amp;lt;= val） 能够走到终点的路径数目的和&lt;br&gt;于是我们就将求dp[i][j]的情况分解成众多相同的子问题 dp[i][j] += dp[i+k][j+l] (k+l &amp;lt;= EP)&lt;/p&gt;
 &lt;p&gt;终止条件为&lt;/p&gt;
 &lt;ul&gt;
@@ -256,9 +256,9 @@
     </summary>
     
     
-      <category term="BFS" scheme="https://moemoemortimer.github.io/tags/BFS/"/>
-    
       <category term="DFS" scheme="https://moemoemortimer.github.io/tags/DFS/"/>
+    
+      <category term="BFS" scheme="https://moemoemortimer.github.io/tags/BFS/"/>
     
   </entry>
   

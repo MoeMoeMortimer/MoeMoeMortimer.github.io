@@ -21,7 +21,7 @@
 <meta property="og:url" content="https://moemoemortimer.github.io/2016/07/28/hdu-1978/index.html">
 <meta property="og:site_name" content="银月轻语">
 <meta property="og:description" content="这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_">
-<meta property="og:updated_time" content="2016-07-28T09:44:24.926Z">
+<meta property="og:updated_time" content="2016-07-29T13:38:19.084Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HDU 1978 解题报告">
 <meta name="twitter:description" content="这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_">
@@ -285,7 +285,7 @@
           
         <p>这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_<br><a id="more"></a></p>
 <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1978" target="_blank" rel="external">题目传送门</a><br>你控制一个机器人从一个棋盘的起始点(1,1)走到棋盘的终点(n,m)。游戏的规则描述如下：<br>1.机器人一开始在棋盘的起始点并有起始点所标有的能量。<br>2.机器人只能向右或者向下走，并且每走一步消耗一单位能量。<br>3.机器人不能在原地停留。<br>4.当机器人选择了一条可行路径后，当他走到这条路径的终点时，他将只有终点所标记的能量。<br>问题是机器人有多少种方式从起点走到终点。<br>注意理解题意，机器人可以在一条可行路径上选择任意一个点作为终点，就是说到达终点的时候能量不一定耗尽。</p>
-<p>##思路<br>解法一：记忆化搜索</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>解法一：记忆化搜索</p>
 <p>dp[i][j] = 当前点 (i, j) 在能量值为EP的情况下 能够走到终点的路径数目。终点路径初始化为1。<br>当前点(i, j)在能量EP的情况下能够走到终点的路径数目<br>等于(i, j)作为终点在拥有能量EP的情况下<br>能够到达的所有的点 (i+k, j+l) （k+l &lt;= val） 能够走到终点的路径数目的和<br>于是我们就将求dp[i][j]的情况分解成众多相同的子问题 dp[i][j] += dp[i+k][j+l] (k+l &lt;= EP)</p>
 <p>终止条件为</p>
 <ul>
@@ -305,7 +305,7 @@
         <p><span>本文标题:</span><a href="/2016/07/28/hdu-1978/">HDU 1978 解题报告</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Nyanko Chan</a></p>
         <p><span>发布时间:</span>2016-07-28, 12:06:09</p>
-        <p><span>最后更新:</span>2016-07-28, 17:44:24</p>
+        <p><span>最后更新:</span>2016-07-29, 21:38:19</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/07/28/hdu-1978/" title="HDU 1978 解题报告">https://moemoemortimer.github.io/2016/07/28/hdu-1978/</a>
             <span class="copy-path" data-clipboard-text="原文: https://moemoemortimer.github.io/2016/07/28/hdu-1978/　　作者: Nyanko Chan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -340,7 +340,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目"><span class="toc-number">1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">2.</span> <span class="toc-text">代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#记忆化搜索"><span class="toc-number">2.1.</span> <span class="toc-text">记忆化搜索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#动态规划"><span class="toc-number">2.2.</span> <span class="toc-text">动态规划</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目"><span class="toc-number">1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思路"><span class="toc-number">2.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#记忆化搜索"><span class="toc-number">3.1.</span> <span class="toc-text">记忆化搜索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#动态规划"><span class="toc-number">3.2.</span> <span class="toc-text">动态规划</span></a></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn,
