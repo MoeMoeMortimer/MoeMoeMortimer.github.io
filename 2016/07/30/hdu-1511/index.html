@@ -17,13 +17,13 @@
 
 <meta name="description" content="这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_">
 <meta property="og:type" content="article">
-<meta property="og:title" content="POJ 1511 解题报告">
+<meta property="og:title" content="HDU 1511 解题报告">
 <meta property="og:url" content="https://moemoemortimer.github.io/2016/07/30/hdu-1511/index.html">
 <meta property="og:site_name" content="银月轻语">
 <meta property="og:description" content="这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_">
-<meta property="og:updated_time" content="2016-07-30T13:04:48.557Z">
+<meta property="og:updated_time" content="2016-07-31T16:27:56.292Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="POJ 1511 解题报告">
+<meta name="twitter:title" content="HDU 1511 解题报告">
 <meta name="twitter:description" content="这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
@@ -56,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>POJ 1511 解题报告 | 银月轻语</title>
+<title>HDU 1511 解题报告 | 银月轻语</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -262,7 +262,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      POJ 1511 解题报告
+      HDU 1511 解题报告
     </h1>
   
 
@@ -286,8 +286,10 @@
         <p>这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_<br><a id="more"></a></p>
 <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1151" target="_blank" rel="external">题目传送门</a></p>
 <p>给出n个结点m条有向路，组成DAG（有向无环图），各道路为单行路，伞兵降落位置不限。问最少需要几个人能遍历所有的结点。</p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>知道了问题分类之后就会发现这道题水的紧···话说学长为啥要出这么道题//债见.gif<br>它可以作为吾辈学习二分图最大匹配的入门涨信心题2333。</p>
-<p>DAG图上的最小路径覆盖数=N(顶点数)-最大匹配数。</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>知道了问题分类之后就会发现这道题水的紧···话说学长为啥要出这么道题//债见.gif<br>不过它可以作为吾辈学习二分图最大匹配的入门信心题2333。</p>
+<ul>
+<li>DAG图上的最小路径覆盖数=N(顶点数)-最大匹配数。</li>
+</ul>
 <h3 id="二分图定义"><a href="#二分图定义" class="headerlink" title="二分图定义"></a>二分图定义</h3><p>首先，二分图是无向图哟。<br>如果一个图的所有顶点可以被分成X和Y两个集合，并且所有边的两个顶点恰好一个属于集合X，另一个属于集合Y，即每个集合内的顶点没有边相连，那么此图就是二分图。</p>
 <p>二分图的最大匹配指的是配对数最多的方案，而找到一条增广路（增广的本质是一条路径的起点和终点都是未被配对的点），配对数就会加1。如果当前方案中再也找不到一条增广路，那么当前匹配就是最大匹配了。</p>
 <h3 id="dfs搜索最大匹配"><a href="#dfs搜索最大匹配" class="headerlink" title="dfs搜索最大匹配"></a>dfs搜索最大匹配</h3><ul>
@@ -314,12 +316,12 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/07/30/hdu-1511/">POJ 1511 解题报告</a></p>
+        <p><span>本文标题:</span><a href="/2016/07/30/hdu-1511/">HDU 1511 解题报告</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Nyanko Chan</a></p>
         <p><span>发布时间:</span>2016-07-30, 19:30:08</p>
-        <p><span>最后更新:</span>2016-07-30, 21:04:48</p>
+        <p><span>最后更新:</span>2016-08-01, 00:27:56</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/07/30/hdu-1511/" title="POJ 1511 解题报告">https://moemoemortimer.github.io/2016/07/30/hdu-1511/</a>
+            <span>原始链接:</span><a class="post-url" href="/2016/07/30/hdu-1511/" title="HDU 1511 解题报告">https://moemoemortimer.github.io/2016/07/30/hdu-1511/</a>
             <span class="copy-path" data-clipboard-text="原文: https://moemoemortimer.github.io/2016/07/30/hdu-1511/　　作者: Nyanko Chan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -383,7 +385,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"POJ 1511 解题报告　| 银月轻语　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"HDU 1511 解题报告　| 银月轻语　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -399,7 +401,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/07/30/hdu-1511/" data-title="POJ 1511 解题报告" data-url="https://moemoemortimer.github.io/2016/07/30/hdu-1511/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/07/30/hdu-1511/" data-title="HDU 1511 解题报告" data-url="https://moemoemortimer.github.io/2016/07/30/hdu-1511/"></div>
     <script>
         var duoshuoQuery = {short_name:"moemoemortimer"};
         var loadComment = function(){
@@ -436,7 +438,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/07/30/sort/">排序</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/30/hdu-1872/">HDU 1872 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/30/poj-2299/">POJ 2299 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/30/hdu-1511/">POJ 1511 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/30/cf-edu-15/">Educational Codeforces Round 15 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/29/memory-search/">记忆化搜索与动态规划</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/hdu-1978/">HDU 1978 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/hdu-4484/">HDU 4484 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/hdu-1078/">HDU 1078 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/poj-3414/">POJ 3414 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/hdu-2717/">HDU 2717 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/27/hdu-1181/">HDU 1181 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/25/study-bfs-dfs/">深度优先搜索、广度优先搜索</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/codeforces-701C/">CodeForces 701C 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/codeforces-701B/">CodeForces 701B 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/codeforces-701A/">CodeForces 701A 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/codeforces-700A/">CodeForces 700A 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/hdu-5742/">HDU 5742 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/hdu-5723/">HDU 5723 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/hdu-5745/">HDU 5745 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/22/hdu-5734/">HDU 5734 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/22/hdu-2585/">HDU 2585 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/21/codeforces-448c/">CodeForces 448C 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/21/hdu-1007/">HDU 1007 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/21/codeforces-587A/">CodeForces 587A 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/stl-study-notes/">STL学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/codeforces-581C/">CodeForces 581C 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/hdu-4544/">HDU 4544 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/hdu-1873/">HDU 1873 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/codeforces-579B/">CodeForces 579B 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/codeforces-624B/">CodeForces 624B 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/trainning-diary/">暑期集训日记本✧٩(ˊωˋ*)و✧</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/codeforces-651A/">CodeForces 651A 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/uva-11729/">UVA 11729 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/uva-11292/">UVA 11292 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/18/short-holiday/">夏休み</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/03/death-flag/">都怪我作死</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/01/confession/">面壁思过，不知所措</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/27/aishite/">吃老夫一记安利</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/26/insert-video/">嗷~~宝宝解锁了新姿势(*//ω//*)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/26/photo/">图床ԅ(¯﹃¯ԅ)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/25/ACMgather/">论代码能力与食量的正比例关系</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/24/HELLO-HEXO/">Created my Private Castle</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/07/30/sort/">排序</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/30/hdu-1872/">HDU 1872 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/30/poj-2299/">POJ 2299 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/30/hdu-1511/">HDU 1511 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/30/cf-edu-15/">Educational Codeforces Round 15 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/29/memory-search/">记忆化搜索与动态规划</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/hdu-1978/">HDU 1978 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/hdu-4484/">HDU 4484 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/hdu-1078/">HDU 1078 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/poj-3414/">POJ 3414 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/hdu-2717/">HDU 2717 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/27/hdu-1181/">HDU 1181 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/25/study-bfs-dfs/">深度优先搜索、广度优先搜索</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/codeforces-701C/">CodeForces 701C 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/codeforces-701B/">CodeForces 701B 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/codeforces-701A/">CodeForces 701A 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/codeforces-700A/">CodeForces 700A 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/hdu-5742/">HDU 5742 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/hdu-5723/">HDU 5723 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/hdu-5745/">HDU 5745 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/22/hdu-5734/">HDU 5734 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/22/hdu-2585/">HDU 2585 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/21/codeforces-448c/">CodeForces 448C 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/21/hdu-1007/">HDU 1007 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/21/codeforces-587A/">CodeForces 587A 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/stl-study-notes/">STL学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/codeforces-581C/">CodeForces 581C 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/hdu-4544/">HDU 4544 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/hdu-1873/">HDU 1873 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/codeforces-579B/">CodeForces 579B 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/codeforces-624B/">CodeForces 624B 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/trainning-diary/">暑期集训日记本✧٩(ˊωˋ*)و✧</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/codeforces-651A/">CodeForces 651A 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/uva-11729/">UVA 11729 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/uva-11292/">UVA 11292 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/18/short-holiday/">夏休み</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/03/death-flag/">都怪我作死</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/01/confession/">面壁思过，不知所措</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/27/aishite/">吃老夫一记安利</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/26/insert-video/">嗷~~宝宝解锁了新姿势(*//ω//*)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/26/photo/">图床ԅ(¯﹃¯ԅ)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/25/ACMgather/">论代码能力与食量的正比例关系</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/24/HELLO-HEXO/">Created my Private Castle</a></li></ul>
 
 
 
