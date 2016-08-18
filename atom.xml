@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://moemoemortimer.github.io/"/>
-  <updated>2016-08-18T05:52:39.822Z</updated>
+  <updated>2016-08-18T06:05:37.874Z</updated>
   <id>https://moemoemortimer.github.io/</id>
   
   <author>
@@ -20,14 +20,12 @@
     <link href="https://moemoemortimer.github.io/2016/08/18/repost/"/>
     <id>https://moemoemortimer.github.io/2016/08/18/repost/</id>
     <published>2016-08-18T05:02:00.000Z</published>
-    <updated>2016-08-18T05:52:39.822Z</updated>
+    <updated>2016-08-18T06:05:37.874Z</updated>
     
     <content type="html">&lt;p&gt;痛击我心的一篇ACM退役文。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;p&gt;&lt;a href=&quot;http://davidzai.blog.163.com/blog/static/1871262120101823540952/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;原文地址 @GDUT 3xian&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;3xian之所在&quot;&gt;&lt;a href=&quot;#3xian之所在&quot; class=&quot;headerlink&quot; title=&quot;3xian之所在&quot;&gt;&lt;/a&gt;3xian之所在&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;最后一天，漫天飘起了雪花，假装欢送我离去。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h2 id=&quot;3xian之所在&quot;&gt;&lt;a href=&quot;#3xian之所在&quot; class=&quot;headerlink&quot; title=&quot;3xian之所在&quot;&gt;&lt;/a&gt;3xian之所在&lt;/h2&gt;&lt;p&gt;&amp;gt;&lt;br&gt;最后一天，漫天飘起了雪花，假装欢送我离去。&lt;/p&gt;
 &lt;p&gt;这次WF之战不太顺利，早期的C题大概花了1秒钟构思，然而由于输出格式多了一个空格直到两个半小时才逃脱Wrong Answer的纠缠。还好lynncui在期间独挡一面过掉D。最终成绩不好，然而没有遗憾，从不遗憾。&lt;/p&gt;
 &lt;p&gt;相比之下，来自全球的队伍让我看到了很强大的实力，每一道题都有人过，包括SJTU欺骗性提交的H都被人干掉了。身为地球人我感到自豪。&lt;/p&gt;
 &lt;p&gt;WF之旅很奢华（Sample: 1300一晚的酒店，99一顿的早餐），活动很多，服务很好。但最终念念不舍的是各位一见如故的朋友们，至于为什么一见如故我也不得而知。按HH师傅说，That’s what ACM brings to us。也感激于HH师傅作为浙大教练，却为我们摄下了更多的赛场瞬间。&lt;/p&gt;
@@ -82,9 +80,7 @@
 &lt;p&gt;往后&lt;/p&gt;
 &lt;p&gt;以后ACM的事情跟我没太大关系。&lt;br&gt;就我认识的人来说，明年出线埃及几率很大的有梦翅@UESTC、小胡浩@HDU、t__nt@ZJU（这个没悬念吧）。祝他们达到自己的目标，埃及肯定比国内好玩。&lt;/p&gt;
 &lt;p&gt;最后&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;我还是在想，如果当年我不去掏垃圾筒里的招新传单，一切又会是什么样子。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;我还是在想，如果当年我不去掏垃圾筒里的招新传单，一切又会是什么样子。&lt;br&gt;&amp;gt;&lt;/p&gt;
 &lt;h3 id=&quot;一点碎碎念&quot;&gt;&lt;a href=&quot;#一点碎碎念&quot; class=&quot;headerlink&quot; title=&quot;一点碎碎念&quot;&gt;&lt;/a&gt;一点碎碎念&lt;/h3&gt;&lt;p&gt;忍不住找到了&lt;a href=&quot;http://davidzai.blog.163.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;他的博客&lt;/a&gt;，里面还有很多发人深省的文章。嗯，我发觉自己是有多浮躁了。前辈说的真是句句戳我痛处。我也应该多反思反思，毕竟开博客的初衷就是为了让自己有个独立思考的空间，博客里也别总塞些劣质的题解，说不定这以后会变成某种意义上的污点和耻辱。&lt;/p&gt;
 </content>
     
