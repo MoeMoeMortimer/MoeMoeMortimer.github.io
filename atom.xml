@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://moemoemortimer.github.io/"/>
-  <updated>2016-08-28T08:26:33.110Z</updated>
+  <updated>2016-08-29T07:19:47.407Z</updated>
   <id>https://moemoemortimer.github.io/</id>
   
   <author>
@@ -14,6 +14,78 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>将笔记本电脑设为无线热点</title>
+    <link href="https://moemoemortimer.github.io/2016/08/29/set-wifi-hotspot/"/>
+    <id>https://moemoemortimer.github.io/2016/08/29/set-wifi-hotspot/</id>
+    <published>2016-08-29T06:41:58.000Z</published>
+    <updated>2016-08-29T07:19:47.407Z</updated>
+    
+    <content type="html">&lt;p&gt;实训基地的破网吾辈实在是忍不了了。（怒摔！）（╯－＿－）╯╧╧&lt;br&gt;逆境催人进步QAQ&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;开头碎碎念&quot;&gt;&lt;a href=&quot;#开头碎碎念&quot; class=&quot;headerlink&quot; title=&quot;开头碎碎念&quot;&gt;&lt;/a&gt;开头碎碎念&lt;/h2&gt;&lt;p&gt;我在某宝上买了一个CMCC账号，还是蛮快的，但它只允许一个终端登录。那么怎样才能把福利分享给小伙伴呢？&lt;/p&gt;
+&lt;p&gt;360好像有类似的软件，可360实在是太可怕了，我不想给电脑下此无解强毒TAT。&lt;/p&gt;
+&lt;h2 id=&quot;要做什么&quot;&gt;&lt;a href=&quot;#要做什么&quot; class=&quot;headerlink&quot; title=&quot;要做什么&quot;&gt;&lt;/a&gt;要做什么&lt;/h2&gt;&lt;p&gt;我们要做的事情就是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在自己电脑上登陆CMCC账号（同理，校园网账号也可以）&lt;/li&gt;
+&lt;li&gt;将本机设为WIFI热点&lt;/li&gt;
+&lt;li&gt;其他小伙伴们搜索附近网络的时候，就会找到你设置好的热点名称，然后输入密码就好辣~~&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;目前我的笔记本使用的是 Windows 系统，通过简单的命令行操作即可把电脑变成 WiFi 热点，从而让其他设备接入无线网络。&lt;/p&gt;
+&lt;h2 id=&quot;实现步骤&quot;&gt;&lt;a href=&quot;#实现步骤&quot; class=&quot;headerlink&quot; title=&quot;实现步骤&quot;&gt;&lt;/a&gt;实现步骤&lt;/h2&gt;&lt;h3 id=&quot;连接WIFI&quot;&gt;&lt;a href=&quot;#连接WIFI&quot; class=&quot;headerlink&quot; title=&quot;连接WIFI&quot;&gt;&lt;/a&gt;连接WIFI&lt;/h3&gt;&lt;p&gt;首先本机要登陆上网账号，连好wifi。&lt;/p&gt;
+&lt;h3 id=&quot;打开命令提示符（管理员）&quot;&gt;&lt;a href=&quot;#打开命令提示符（管理员）&quot; class=&quot;headerlink&quot; title=&quot;打开命令提示符（管理员）&quot;&gt;&lt;/a&gt;打开命令提示符（管理员）&lt;/h3&gt;&lt;p&gt;按下 win+x 打开一个菜单，按下A或者单击打开命令提示符（管理员），在命令提示符窗口中输入如下内容并回车。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;netsh wlan set hostednetwork mode=allow ssid=[你的wifi热点名] key=[你的密码]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bjw1f7ambxdbo8j20id0483yz.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;mode ssid key 分别代表模式、别名、密码三个参数&lt;/p&gt;
+&lt;p&gt;接着输入以下内容并回车：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;netsh wlan start hostednetwork&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/c3c8eb1bjw1f7amovtk7gj20ia01smx4.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;打开网络和共享中心&quot;&gt;&lt;a href=&quot;#打开网络和共享中心&quot; class=&quot;headerlink&quot; title=&quot;打开网络和共享中心&quot;&gt;&lt;/a&gt;打开网络和共享中心&lt;/h3&gt;&lt;p&gt;右击任务栏上 Internet访问 小图标打开网络和共享中心，你会发现多出来一个 本地连接 ，别名就是我们刚刚创建好的那一个。&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bjw1f7amrjzx6bj205k01vweh.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;右击WLAN，更改设置&lt;br&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/c3c8eb1bjw1f7amrqph1wj20en08fab8.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;在“共享”一栏勾选“允许其他网络用户通过此计算机的 Internet 连接来连接（N）”&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bjw1f7amtn2shqj20bs0gpab7.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;点击确定，设置成功。&lt;/p&gt;
+&lt;h3 id=&quot;重新打开&quot;&gt;&lt;a href=&quot;#重新打开&quot; class=&quot;headerlink&quot; title=&quot;重新打开&quot;&gt;&lt;/a&gt;重新打开&lt;/h3&gt;&lt;p&gt;在刚才的命令提示符界面中输入：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;netsh wlan stop hostednetwork&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;回车，然后再输入：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;netsh wlan start hostednetwork&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;回车，就成功咯~&lt;/p&gt;
+&lt;p&gt;今后使用&lt;code&gt;netsh wlan start hostednetwork&lt;/code&gt;开启承载网络和&lt;code&gt;netsh wlan stop hostednetwork&lt;/code&gt;关闭这两个命令就可以辣_(:3」∠❀)_&lt;/p&gt;
+&lt;h2 id=&quot;咕嘿嘿嘿&quot;&gt;&lt;a href=&quot;#咕嘿嘿嘿&quot; class=&quot;headerlink&quot; title=&quot;咕嘿嘿嘿&quot;&gt;&lt;/a&gt;咕嘿嘿嘿&lt;/h2&gt;&lt;p&gt;旁友们，你们看到我老婆（WIFE）了嘛？？信号满格，任君采撷哟٩(๑´0`๑)۶&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;实训基地的破网吾辈实在是忍不了了。（怒摔！）（╯－＿－）╯╧╧&lt;br&gt;逆境催人进步QAQ&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="姿势" scheme="https://moemoemortimer.github.io/tags/%E5%A7%BF%E5%8A%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ドキドキ~追剧追剧</title>
+    <link href="https://moemoemortimer.github.io/2016/08/28/drama-tracking/"/>
+    <id>https://moemoemortimer.github.io/2016/08/28/drama-tracking/</id>
+    <published>2016-08-28T12:02:05.000Z</published>
+    <updated>2016-08-28T12:51:20.437Z</updated>
+    
+    <content type="html">&lt;p&gt;我把脑公们都藏在这里惹_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;こえ恋&quot;&gt;&lt;a href=&quot;#こえ恋&quot; class=&quot;headerlink&quot; title=&quot;こえ恋&quot;&gt;&lt;/a&gt;こえ恋&lt;/h2&gt;&lt;p&gt;ああ、このテレビドラマのヒロイン、ゆいこはとてもとても可愛いですわ！！&lt;br&gt;！&lt;br&gt;あの子の目がいつもキラキラて、すごく綺麗と思う。&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bjw1f79qbtu64dj20qh0exdid.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/c3c8eb1bjw1f79qcdhpuqj20ql0ey76v.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bjw1f79qcnu4jmj20qb0f80w4.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;メイド服(❤ ω ❤)！&lt;br&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/c3c8eb1bjw1f79qcwu79aj20qh0ew420.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f79ql0pexjj20qi0eywhu.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;次は、会長様～！！キヤああああ～！&lt;br&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/c3c8eb1bjw1f79quuht29j20qg0eytbs.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/c3c8eb1bjw1f79qsari8sj20qg0ew426.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bjw1f79qv39dqoj20qi0eytay.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/c3c8eb1bjw1f79qvi0ga8j20cr09tab1.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;今まで松原君の顔がまだ見えなかったから、男性の主役はかっこいいかかっこいくないか全然わからない！！&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我把脑公们都藏在这里惹_(:3」∠❀)_&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="电视剧" scheme="https://moemoemortimer.github.io/tags/%E7%94%B5%E8%A7%86%E5%89%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>『一个叫欧维的男人决定去死』</title>
@@ -705,65 +777,6 @@
       <category term="GCD" scheme="https://moemoemortimer.github.io/tags/GCD/"/>
     
       <category term="LCM" scheme="https://moemoemortimer.github.io/tags/LCM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HDU 2104 解题报告</title>
-    <link href="https://moemoemortimer.github.io/2016/08/15/hdu-2104/"/>
-    <id>https://moemoemortimer.github.io/2016/08/15/hdu-2104/</id>
-    <published>2016-08-15T04:40:38.000Z</published>
-    <updated>2016-08-15T05:13:49.649Z</updated>
-    
-    <content type="html">&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=2104&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;题目传送门&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;大意&quot;&gt;&lt;a href=&quot;#大意&quot; class=&quot;headerlink&quot; title=&quot;大意&quot;&gt;&lt;/a&gt;大意&lt;/h3&gt;&lt;p&gt;N人围成一个圈，haha从A开始，每隔M-1个盒子停一下。问他能不能访问到所有的盒子。&lt;/p&gt;
-&lt;h2 id=&quot;思路&quot;&gt;&lt;a href=&quot;#思路&quot; class=&quot;headerlink&quot; title=&quot;思路&quot;&gt;&lt;/a&gt;思路&lt;/h2&gt;&lt;p&gt;如果M是N的一个因数（为方便理解可以这么想，其实是“如果M和N有公因数时”），那么每圈haha总是会访问固定的那几个盒子，只有当gcd(M,N) == 1时才能访问所有的盒子。&lt;/p&gt;
-&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;algorithm&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;cstdio&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;using namespace std;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;/span&gt;()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    int n, m;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(scanf(&lt;span class=&quot;string&quot;&gt;&quot;%d%d&quot;&lt;/span&gt;, &amp;amp;n, &amp;amp;m) &amp;amp;&amp;amp; m != -1 &amp;amp;&amp;amp; n != -1)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(__gcd(n, m) == 1)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;YES\n&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;POOR Haha\n&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-    
-      <category term="GCD" scheme="https://moemoemortimer.github.io/tags/GCD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>POJ 3254 解题报告</title>
-    <link href="https://moemoemortimer.github.io/2016/08/12/poj-3254/"/>
-    <id>https://moemoemortimer.github.io/2016/08/12/poj-3254/</id>
-    <published>2016-08-12T10:39:42.000Z</published>
-    <updated>2016-08-12T11:08:42.367Z</updated>
-    
-    <content type="html">&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://poj.org/problem?id=3254&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;题目传送门&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;大意：&lt;br&gt;在m*n（m行n列）的田地里种玉米，0表示该位置贫瘠不能种植，1&lt;br&gt;表示可以种植，但是牛们不喜欢挨在一起吃玉米，所以一块玉米地的上下左右不能有相邻的玉米地。问最多解个数。&lt;/p&gt;
-&lt;h2 id=&quot;思路&quot;&gt;&lt;a href=&quot;#思路&quot; class=&quot;headerlink&quot; title=&quot;思路&quot;&gt;&lt;/a&gt;思路&lt;/h2&gt;&lt;p&gt;状压DP呀···诶呀呀 (～￣▽￣)→))&lt;em&gt;￣▽￣&lt;/em&gt;)o&lt;/p&gt;
-&lt;p&gt;状态压缩：把某一状态转换成二进制表示的一个数字存储下来，就比如说该题的田地，每一行都可以对应一个数字，这里就要注意使用状压dp的地图上列数最好不要超过32啊···因为int型也能就存个$2^32 - 1$这么多状态。&lt;/p&gt;
-&lt;p&gt;如上所述，首先我们要把每一行的土地状态用row[]存下来，作为基准。&lt;br&gt;其次，因为每一行相邻位置不能种，所以每一行可行的方案就会大大减少，按照这种方法粗略地找出每一行最大可行方案数，在函数init()中实现。&lt;/p&gt;
-&lt;p&gt;然后，怎样判断某种状态是否可行呢？&lt;br&gt;我们采用一行一行讨论的方式，用dp[i][j]表示处理到第i行第j种状态时的可行方案数。&lt;/p&gt;
-&lt;p&gt;设当前遍历到的状态为x（二进制数），该行基准为STD（同为二进制数），只有当$~STD &amp;amp; x == 0$时才符合要求（请在纸上自行演算）。&lt;br&gt;这一条件满足后，考虑上一行，上一行的某状态与x不出现相邻的1才算符合要求。那么遍历上一行所有状态k &amp;amp; x == 0 时符合要求。这时可以更新状态数了：dp[i][j] += dp[i-1][k]&lt;/p&gt;
-&lt;p&gt;注意：代码实现时if语句中不要用（位运算 == 0 ）这样的形式，我也不知道为什么没法判断==0，改成不为0时就continue就可以了。&lt;/p&gt;
-&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;cstdio&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;cstring&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#define MOD 100000000&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;using namespace std;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int n, m, top, row[13], state[1000];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int dp[13][1000];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//通过同行中不能有连续的1这一条件初始化得到可能出现的所有状态&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;void &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;init&lt;/span&gt;&lt;/span&gt;()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    int total = 1 &amp;lt;&amp;lt; n;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int i = 0; i &amp;lt; total; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(i &amp;amp; (i&amp;lt;&amp;lt;1))&lt;span class=&quot;built_in&quot;&gt;continue&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        state[top++] = i;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;/span&gt;()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(scanf(&lt;span class=&quot;string&quot;&gt;&quot;%d%d&quot;&lt;/span&gt;, &amp;amp;m, &amp;amp;n) != EOF)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int i = 0; i &amp;lt; m; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            row[i] = 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            int k;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            //二进制转化为十进制&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int j = n-1; j &amp;gt;= 0; j--)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                scanf(&lt;span class=&quot;string&quot;&gt;&quot;%d&quot;&lt;/span&gt;, &amp;amp;k);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                row[i] += k &amp;lt;&amp;lt; j;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        memset(dp,0,sizeof(dp));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        init();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int i = 0; i &amp;lt; top; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(~row[0] &amp;amp; state[i])&lt;span class=&quot;built_in&quot;&gt;continue&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            dp[0][i] = 1;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int i = 1; i &amp;lt; m; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int j  = 0; j &amp;lt; top; j++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(~row[i] &amp;amp; state[j])&lt;span class=&quot;built_in&quot;&gt;continue&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int k = 0; k &amp;lt; top; k++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(state[k] &amp;amp; state[j])&lt;span class=&quot;built_in&quot;&gt;continue&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    dp[i][j] += dp[i-1][k]%MOD;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        int ans = 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int i = 0; i &amp;lt; top; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            ans += dp[m-1][i]%MOD;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%d\n&quot;&lt;/span&gt;, ans%MOD);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-    
-      <category term="状态压缩DP" scheme="https://moemoemortimer.github.io/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9DP/"/>
     
   </entry>
   
