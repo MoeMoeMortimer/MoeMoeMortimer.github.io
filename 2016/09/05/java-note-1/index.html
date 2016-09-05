@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Nyanko Chan" />
+
+
+
+<meta name="description" content="各位观众老爷们大家好，这里是专题系列《Java从入门到放弃》~(●’◡’●)
+为您细细道来我是如何弃疗Java的。_(:3」∠❀)_
+第一话：封装，继承，抽象类与接口">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java从入门到放弃 ——第一话：封装，继承，抽象类与接口">
+<meta property="og:url" content="https://moemoemortimer.github.io/2016/09/05/java-note-1/index.html">
+<meta property="og:site_name" content="银月轻语">
+<meta property="og:description" content="各位观众老爷们大家好，这里是专题系列《Java从入门到放弃》~(●’◡’●)
+为您细细道来我是如何弃疗Java的。_(:3」∠❀)_
+第一话：封装，继承，抽象类与接口">
+<meta property="og:updated_time" content="2016-09-05T11:17:55.043Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java从入门到放弃 ——第一话：封装，继承，抽象类与接口">
+<meta name="twitter:description" content="各位观众老爷们大家好，这里是专题系列《Java从入门到放弃》~(●’◡’●)
+为您细细道来我是如何弃疗Java的。_(:3」∠❀)_
+第一话：封装，继承，抽象类与接口">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="银月轻语" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>Java从入门到放弃 ——第一话：封装，继承，抽象类与接口 | 银月轻语</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/lyy.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Nyanko Chan</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">前天看到了小兔子，昨天是小鹿，今天是你。</p>
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>Menu</li>
+                        <li>Tags</li>
+                        
+                        <li>Friends</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="/nyankochan611@gmail.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="/" title="GitHub"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/01背包/">01背包</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BFS/">BFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DFS/">DFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DP/">DP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GCD/">GCD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LCM/">LCM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/STL/">STL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中国剩余定理/">中国剩余定理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二分图最大匹配/">二分图最大匹配</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/几何/">几何</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分治/">分治</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动态规划/">动态规划</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/匈牙利算法/">匈牙利算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/双指针/">双指针</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/姿势/">姿势</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习笔记/">学习笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小说/">小说</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/归并/">归并</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/影评/">影评</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微分方程/">微分方程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/快速幂/">快速幂</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/扩展欧几里得/">扩展欧几里得</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排序/">排序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数学/">数学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数论/">数论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日常/">日常</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/暴力/">暴力</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最短路/">最短路</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/栈/">栈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模拟/">模拟</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/水题/">水题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/状态压缩DP/">状态压缩DP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电影/">电影</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电视剧/">电视剧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/背包/">背包</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/胡言乱语/">胡言乱语</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/解题报告/">解题报告</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/记忆化搜索/">记忆化搜索</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/读书笔记/">读书笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/贪心/">贪心</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/逆元/">逆元</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/递归/">递归</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Nyanko Chan</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/lyy.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Nyanko Chan</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">前天看到了小兔子，昨天是小鹿，今天是你。</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="/nyankochan611@gmail.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="/" title="GitHub"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+</nav>
+      <div class="body-wrap"><article id="post-java-note-1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/05/java-note-1/" class="article-date">
+      <time datetime="2016-09-05T11:13:08.000Z" itemprop="datePublished">2016-09-05</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Java从入门到放弃 ——第一话：封装，继承，抽象类与接口
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>各位观众老爷们大家好，这里是专题系列《Java从入门到放弃》~(●’◡’●)</p>
+<p>为您细细道来我是如何弃疗Java的。_(:3」∠❀)_</p>
+<p>第一话：封装，继承，抽象类与接口</p>
+<a id="more"></a>
+<h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>1.创建类时设计属性和方法，属性和方法属于该类 ，属性和方法结合为一个整体。<br>2.尽可能隐藏对象的内部实现细节，只提供外部的访问接口。</p>
+<h3 id="封装的实现"><a href="#封装的实现" class="headerlink" title="封装的实现"></a>封装的实现</h3><p>1.将需要隐藏的部分用private进行修饰；<br>2.公共的接口用public修饰；<br>3.对于java简单类，主要是实现属性私有化和公共的get,set方法。</p>
+<h3 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString()"></a>toString()</h3><p>官方给出的使用说明(在代码编辑区按下Ctrl，然后光标移到某个自己不明白的函数上，点击即可查看jdk源码)是酱紫的：<br>Returns a string representation of the object. In general, the{@code toString} method returns a string that “textually represents” this object. The result should be a concise but informative representation that is easy for a person to read.It is recommended that all subclasses override this method.</p>
+<p>说白了，toString()是对象的字符串表现形式，是Object类的方法，如果重写了toString(),在打印对象时会自动调用toString()方法。</p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>封装可以说是体现面向对象编程特性的基本和核心。在初学者的练习中，构建类时经常（最起码）会用到的是构造函数，get、set方法和toString()方法。</p>
+<h2 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h2><p>这里给出一个Student类的创建过程。在编辑区<code>右击——&gt;source</code>可以快速创建含参构造函数，get/set方法，toString方法。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">public class Student &#123;</span><br><span class="line">	private String name; 	// 姓名</span><br><span class="line">	private int sid; 		// 学号</span><br><span class="line"></span><br><span class="line">	public Student(String name, int sid) &#123;</span><br><span class="line">		super();</span><br><span class="line">		this.name = name;</span><br><span class="line">		this.sid = sid;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public String <span class="function"><span class="title">getName</span></span>() &#123;</span><br><span class="line">		<span class="built_in">return</span> name;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public void <span class="built_in">set</span>Name(String name) &#123;</span><br><span class="line">		this.name = name;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public int <span class="function"><span class="title">getSid</span></span>() &#123;</span><br><span class="line">		<span class="built_in">return</span> sid;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public void <span class="built_in">set</span>Sid(int sid) &#123;</span><br><span class="line">		this.sid = sid;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public String <span class="function"><span class="title">toString</span></span>() &#123;</span><br><span class="line">		<span class="built_in">return</span> <span class="string">"Student [name="</span> + name + <span class="string">", sid="</span> + sid + <span class="string">"]"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><h3 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h3><ol>
+<li>所有Java的类均是由java.lang.Object类继承而来的，所以Object是所有类的祖先类。</li>
+<li>继承是面向对象的程序中两个类之间的一种关系，即一个类可以从另一个类（即它的父类）继承属性和行为。被继承的类称为超类（父类），继承父类的类称为子类。</li>
+<li>继承使用extends关键字，例如：<br>`<br>public  class  A1   extends  A{</li>
+</ol>
+<p>}<br>`</p>
+<p>表示A1继承了A，A1是A的子类。</p>
+<h3 id="意义（为什么要用继承）"><a href="#意义（为什么要用继承）" class="headerlink" title="意义（为什么要用继承）"></a>意义（为什么要用继承）</h3><ol>
+<li>代码复用：子类继承了父类，则继承了父类的公有属性和方法，子类中可以直接调用。</li>
+<li>重写父类方法：将父类的方法重新实现，例如toString();</li>
+<li>扩展子类本身的方法。</li>
+<li>重点是对子类的应用。</li>
+</ol>
+<h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><p>如图</p>
+<h3 id="示例代码-1"><a href="#示例代码-1" class="headerlink" title="示例代码"></a>示例代码</h3><p>1.创建父类Animal<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br></pre></td><td class="code"><pre><span class="line">public class Animal &#123;</span><br><span class="line">	private String name;</span><br><span class="line">	private String sex;</span><br><span class="line">	private <span class="built_in">float</span> age = 10;</span><br><span class="line">	private <span class="built_in">float</span> weight;</span><br><span class="line"></span><br><span class="line">	/**</span><br><span class="line">	 * 构造方法的作用：初始化对象 对象的初始化顺序：即是构造方法的执行顺序</span><br><span class="line">	 */</span><br><span class="line">	public <span class="function"><span class="title">Animal</span></span>() &#123;</span><br><span class="line">		// 子类创建时会隐式的调用父类的构造方法，</span><br><span class="line">		// 如果显式声明需要写在构造方法内的第一行</span><br><span class="line">		super();</span><br><span class="line">		age = 20;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public Animal(String myColor, String mySex, int myAge, <span class="built_in">float</span> myWeight) &#123;</span><br><span class="line">		this.name = myColor;</span><br><span class="line">		this.sex = mySex;</span><br><span class="line">		this.age = myAge;</span><br><span class="line">		this.weight = myWeight;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	/**</span><br><span class="line">	 * get和<span class="built_in">set</span>方法</span><br><span class="line">	 */</span><br><span class="line">	public String <span class="function"><span class="title">getName</span></span>() &#123;</span><br><span class="line">		<span class="built_in">return</span> name;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public void <span class="built_in">set</span>Name(String myName) &#123;</span><br><span class="line">		name = myName;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public String <span class="function"><span class="title">getSex</span></span>() &#123;</span><br><span class="line">		<span class="built_in">return</span> sex;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public void <span class="built_in">set</span>Sex(String mySex) &#123;</span><br><span class="line">		sex = mySex;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public <span class="built_in">float</span> <span class="function"><span class="title">getAge</span></span>() &#123;</span><br><span class="line">		<span class="built_in">return</span> age;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public void <span class="built_in">set</span>Age(<span class="built_in">float</span> myAge) &#123;</span><br><span class="line">		<span class="keyword">if</span> (myAge &gt; 50) &#123;</span><br><span class="line">			System.out.println(<span class="string">"您输入的信息有误，请重新输入"</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			age = myAge;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public <span class="built_in">float</span> <span class="function"><span class="title">getWeight</span></span>() &#123;</span><br><span class="line">		<span class="built_in">return</span> weight;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public void <span class="built_in">set</span>Weight(<span class="built_in">float</span> myWeight) &#123;</span><br><span class="line">		weight = myWeight;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	/**</span><br><span class="line">	 * 类方法</span><br><span class="line">	 */</span><br><span class="line">	public void <span class="function"><span class="title">eat</span></span>() &#123;</span><br><span class="line">		System.out.println(<span class="string">"动物都会吃！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public void <span class="function"><span class="title">run</span></span>() &#123;</span><br><span class="line">		System.out.println(<span class="string">"动物都会跑！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public String <span class="function"><span class="title">toString</span></span>() &#123;</span><br><span class="line">		<span class="built_in">return</span> <span class="string">"Animal [name="</span> + name + <span class="string">", sex="</span> + sex + <span class="string">", age="</span> + age + <span class="string">", weight="</span> + weight + <span class="string">"]"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">2.接下来创建子类Dog</span><br><span class="line">```bash</span><br><span class="line">public class Dog extends Animal&#123;</span><br><span class="line">	private <span class="built_in">float</span> age = 30;		//会覆盖父类的age</span><br><span class="line">	</span><br><span class="line">	public <span class="function"><span class="title">Dog</span></span>()&#123;</span><br><span class="line">		super();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * @param myColor</span><br><span class="line">	 * @param mySex</span><br><span class="line">	 * @param myAge</span><br><span class="line">	 * @param myWeight</span><br><span class="line">	 * @param age</span><br><span class="line">	 */</span><br><span class="line">	public Dog(String myColor, String mySex, int myAge, <span class="built_in">float</span> myWeight, int age) &#123;</span><br><span class="line">		super(myColor, mySex, myAge, myWeight);</span><br><span class="line">		this.age = age;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	/**</span><br><span class="line">	 * 方法的重写：返回值类型、方法名、参数列表</span><br><span class="line">	 * 子类重写父类的方法</span><br><span class="line">	 * 1、符合方法重写规则</span><br><span class="line">	 * 2、子类方法会覆盖父类方法</span><br><span class="line">	 */</span><br><span class="line">	public void <span class="function"><span class="title">eat</span></span>()&#123;</span><br><span class="line">		System.out.println(<span class="string">"狗爱啃骨头！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	/**</span><br><span class="line">	 * super关键字，代表父类对象</span><br><span class="line">	 * super.属性</span><br><span class="line">	 * super.方法</span><br><span class="line">	 */</span><br><span class="line">	public void <span class="function"><span class="title">TestSuper</span></span>()&#123;</span><br><span class="line">		System.out.println(super.getAge());</span><br><span class="line">		super.eat();</span><br><span class="line">		eat();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>3.TestExtends类<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public class TestExtends &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Animal ani = new Animal();</span><br><span class="line">		Dog myDog = new Dog();</span><br><span class="line">		myDog.setName(<span class="string">"阿黄"</span>);</span><br><span class="line">		//myDog.setAge(5);</span><br><span class="line">		System.out.println(myDog.toString());//测试子类继承了父类的属性</span><br><span class="line">		myDog.eat();//测试子类继承父类的方法、方法的重写</span><br><span class="line">		System.out.println(ani instanceof Dog);//测试instanceof</span><br><span class="line">		System.out.println(myDog instanceof Dog);</span><br><span class="line">		System.out.println(myDog instanceof Animal);</span><br><span class="line">		myDog.TestSuper();//测试super关键字</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h3><p>重载(overload)和重写(override)</p>
+<ul>
+<li><p>方法重载：多个同名函数同时存在，具有不同的参数个数or类型。</p>
+</li>
+<li><p>方法重写：父类与子类之间的多态性，对父类的函数进行重新定义。如果在子类中定义某方法与其父类有相同的名称和参数，我们说该方法被重写 (Overriding)。在Java中，子类可继承父类中的方法，而不需要重新编写相同的方法。</p>
+</li>
+</ul>
+<h2 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h2><p>不确定某个方法的具体实现细节，将方法设置为abstract类型，则类也要设成abstract类型，</p>
+<h3 id="创建抽象父类Car"><a href="#创建抽象父类Car" class="headerlink" title="创建抽象父类Car"></a>创建抽象父类Car</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">package com.hpe.t5.testAbstract;</span><br><span class="line"></span><br><span class="line">public abstract class Car &#123;</span><br><span class="line">	private String brand;</span><br><span class="line">	private String color;</span><br><span class="line">	private <span class="built_in">float</span> price;</span><br><span class="line">	</span><br><span class="line">	public <span class="function"><span class="title">Car</span></span>() &#123;</span><br><span class="line">		super();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public String <span class="function"><span class="title">getBrand</span></span>() &#123;</span><br><span class="line">		<span class="built_in">return</span> brand;</span><br><span class="line">	&#125;</span><br><span class="line">	public void <span class="built_in">set</span>Brand(String brand) &#123;</span><br><span class="line">		this.brand = brand;</span><br><span class="line">	&#125;</span><br><span class="line">	public String <span class="function"><span class="title">getColor</span></span>() &#123;</span><br><span class="line">		<span class="built_in">return</span> color;</span><br><span class="line">	&#125;</span><br><span class="line">	public void <span class="built_in">set</span>Color(String color) &#123;</span><br><span class="line">		this.color = color;</span><br><span class="line">	&#125;</span><br><span class="line">	public <span class="built_in">float</span> <span class="function"><span class="title">getPrice</span></span>() &#123;</span><br><span class="line">		<span class="built_in">return</span> price;</span><br><span class="line">	&#125;</span><br><span class="line">	public void <span class="built_in">set</span>Price(<span class="built_in">float</span> price) &#123;</span><br><span class="line">		this.price = price;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	/*</span><br><span class="line">	 * 抽象方法没有具体实现就是没有大括号</span><br><span class="line">	 */</span><br><span class="line">    public abstract void run();</span><br><span class="line">	public abstract void stop();</span><br><span class="line">	public void <span class="function"><span class="title">speedDown</span></span>()&#123;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p><strong> 注意 </strong></p>
+<ol>
+<li><p>abstract只能修饰类和方法，不能修饰属性，因为不允许属性不确定<br> <code>private abstract float weight;</code> 出错</p>
+</li>
+<li><p>也不能修饰构造方法:</p>
+<ul>
+<li>因为：</li>
+<li>1.子类的构造方法无条件调用父类无参构造</li>
+<li>2.类通过构造方法创建对象</li>
+<li>所以构造方法不能没有实现<br><code>public abstract Car(String brand, String color, float price) {
+ super();
+ this.brand = brand;
+ this.color = color;
+ this.price = price;
+}</code><br>因此只能有一个无参构造，这样写会出错。</li>
+</ul>
+</li>
+<li><p>abstract不能和static连用</p>
+<ul>
+<li>因为：static 是静态的，属于类方法，子类也要沿用类方法。</li>
+<li>凡是静态的，当类加载到虚拟机（JVM）就直接执行。<br><code>public abstract static void speedUp();</code> 错错错</li>
+</ul>
+</li>
+<li><p>abstract不能和private连用</p>
+<ul>
+<li>不能对父类私有的方法进行重写，就不能对抽象进行实现</li>
+<li>子类能够继承父类的属性和方法，但是不能访问私有成员<br><code>private abstract  void speedUp();</code> 错错错</li>
+</ul>
+</li>
+</ol>
+<p>3 4 会出现的错误提示 The abstract method speedUp in type Car can only set a visibility modifier, one of public or protected</p>
+<h3 id="抽象类的派生类Automobile"><a href="#抽象类的派生类Automobile" class="headerlink" title="抽象类的派生类Automobile"></a>抽象类的派生类Automobile</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">package com.hpe.t5.testAbstract;</span><br><span class="line"></span><br><span class="line">public class Automobile extends Car &#123;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public void <span class="function"><span class="title">run</span></span>() &#123;</span><br><span class="line">		System.out.println(<span class="string">"汽车启动！！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public void <span class="function"><span class="title">stop</span></span>() &#123;</span><br><span class="line">		System.out.println(<span class="string">"汽车停止！！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="TestCar"><a href="#TestCar" class="headerlink" title="TestCar"></a>TestCar</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">package com.hpe.t5.testAbstract;</span><br><span class="line"></span><br><span class="line">public class TestCar &#123;</span><br><span class="line">	public static void main(String[] args) &#123;		</span><br><span class="line">		/*</span><br><span class="line">		 * 抽象类不能被实例化，但是可以通过抽象类的派生类创建对象</span><br><span class="line">		 */</span><br><span class="line">		//Car myCar = new Car();</span><br><span class="line">		Automobile am = new Automobile();</span><br><span class="line">		am.run();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="抽象类的特征"><a href="#抽象类的特征" class="headerlink" title="抽象类的特征"></a>抽象类的特征</h3><ol>
+<li>不能被实例化（不能new对象）</li>
+<li>有抽象方法的类一定是抽象类</li>
+<li>抽象类可以没有抽象方法</li>
+</ol>
+<h3 id="抽象类的用途"><a href="#抽象类的用途" class="headerlink" title="抽象类的用途"></a>抽象类的用途</h3><ol>
+<li>设计出父类，供子类继承，实现代码重用，同时给子类提供了模板。如果子类也不进行实现，那就将子类也设置成抽象类。</li>
+<li>设计类需要实现的功能（某些功能不具体），由派生类来具体实现。</li>
+<li>为了保护类的数据和方法，将类设为abstract类型，只有派生类才能创建对象。</li>
+<li>如果子类没有实现抽象方法，子类也要设置成abstract类型。</li>
+</ol>
+<h2 id="接口（interface）"><a href="#接口（interface）" class="headerlink" title="接口（interface）"></a>接口（interface）</h2><p><strong> 当所有方法都是抽象的，就把类定义成接口。 </strong></p>
+<ul>
+<li>接口中定义的方法必须是public abstract（可省略），即所有方法都没有方法体。</li>
+<li>接口中定义的属性必须也一定是public static final 类型，即都是常量，不允许修改。</li>
+<li>public和abstract修饰可以省略，属性public static final 修饰也可省略。</li>
+</ul>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ol>
+<li><p>先来一个Usb接口</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public interface Usb &#123;</span><br><span class="line"></span><br><span class="line">	int width = 12;</span><br><span class="line">	int heighet = 5;</span><br><span class="line"></span><br><span class="line">	void input();</span><br><span class="line"></span><br><span class="line">	void output();</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>然后在子类中实现接口中定义的方法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">public class UPan implements Usb &#123;</span><br><span class="line">	private String brand;</span><br><span class="line">	private String size;</span><br><span class="line"></span><br><span class="line">	public String <span class="function"><span class="title">getBrand</span></span>() &#123;</span><br><span class="line">		<span class="built_in">return</span> brand;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public void <span class="built_in">set</span>Brand(String myBrand) &#123;</span><br><span class="line">		this.brand = myBrand;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public void <span class="function"><span class="title">input</span></span>() &#123;</span><br><span class="line">		System.out.println(brand + <span class="string">"开始写入"</span>);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public void <span class="function"><span class="title">output</span></span>() &#123;</span><br><span class="line">		System.out.println(brand + <span class="string">"开始读取"</span>);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>做一个小测试</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public class TestUPan &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		UPan myUPan = new UPan();</span><br><span class="line">		myUPan.setBrand(<span class="string">"kingsdon"</span>);</span><br><span class="line">		myUPan.input();</span><br><span class="line">		myUPan.output();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="接口的用途"><a href="#接口的用途" class="headerlink" title="接口的用途"></a>接口的用途</h3><p>使用接口可以实现多继承，这样就解决了类的单一继承问题</p>
+<ol>
+<li>接口可以多继承——接口之间多重继承</li>
+<li>接口可以多实现——某个类实现多个接口</li>
+</ol>
+<hr>
+<p>下面用几个例子来具体说明。<br>准备工作：首先我们需要建立一个新的接口~<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public interface Vehicle &#123;</span><br><span class="line">	void run();</span><br><span class="line"></span><br><span class="line">	void stop();</span><br><span class="line"></span><br><span class="line">	void speedUp();</span><br><span class="line"></span><br><span class="line">	void input();</span><br><span class="line"></span><br><span class="line">	void speedDown();</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong> 示例1：</strong> <code>接口间可以多重继承</code><br>创建一个新的接口AA，同时它又继承了两个接口<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public interface AA extends Usb,Vehicle &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong> 示例2：</strong> <code>一个类可以实现多个接口</code><br>创建一个汽车类Car，作为Usb和Vehicle两个接口的子类，那么两个接口的方法在Car中都可以实现。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line"> * 一个类可以实现多个接口</span><br><span class="line"> */</span><br><span class="line">public class Che implements Usb, Vehicle &#123;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public void <span class="function"><span class="title">run</span></span>() &#123;</span><br><span class="line">		System.out.println(<span class="string">"车会跑！！"</span>);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public void <span class="function"><span class="title">stop</span></span>() &#123;</span><br><span class="line">		System.out.println(<span class="string">"车会停！！"</span>);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public void <span class="function"><span class="title">speedUp</span></span>() &#123;</span><br><span class="line">		System.out.println(<span class="string">"车会加速！！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public void <span class="function"><span class="title">speedDown</span></span>() &#123;</span><br><span class="line">		System.out.println(<span class="string">"车会减速！！"</span>);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public void <span class="function"><span class="title">input</span></span>() &#123;</span><br><span class="line">		System.out.println(<span class="string">"车里可以USB写入！！"</span>);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public void <span class="function"><span class="title">output</span></span>() &#123;</span><br><span class="line">		System.out.println(<span class="string">"车里可以USB读取！！"</span>);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong> 示例3：</strong> <code>继承一个类+实现一个接口</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line"> * 一个类可以既继承一个类 又实现一个接口</span><br><span class="line"> */</span><br><span class="line">public class BB extends Che implements AA &#123;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public void <span class="function"><span class="title">input</span></span>() &#123;</span><br><span class="line">		// TODO Auto-generated method stub</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public void <span class="function"><span class="title">output</span></span>() &#123;</span><br><span class="line">		// TODO Auto-generated method stub</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public void <span class="function"><span class="title">run</span></span>() &#123;</span><br><span class="line">		// TODO Auto-generated method stub</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public void <span class="function"><span class="title">stop</span></span>() &#123;</span><br><span class="line">		// TODO Auto-generated method stub</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public void <span class="function"><span class="title">speedUp</span></span>() &#123;</span><br><span class="line">		// TODO Auto-generated method stub</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	@Override</span><br><span class="line">	public void <span class="function"><span class="title">speedDown</span></span>() &#123;</span><br><span class="line">		// TODO Auto-generated method stub</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="一点碎碎念"><a href="#一点碎碎念" class="headerlink" title="一点碎碎念"></a>一点碎碎念</h3><p>在团队开发时，程序猿A写的类可能会调用程序猿B写的方法，因此实际开发中先写好接口，其他类可以调用接口的方法，哪怕该方法还没有完全实现。</p>
+<hr>
+<h2 id="END"><a href="#END" class="headerlink" title="END"></a>END</h2><p>呼~第一话终于结束了~我是不是写的有点多了…（捂脸逃~w</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>Title:</span><a href="/2016/09/05/java-note-1/">Java从入门到放弃 ——第一话：封装，继承，抽象类与接口</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">Nyanko Chan</a></p>
+        <p><span>Created:</span>2016-09-05, 19:13:08</p>
+        <p><span>Updated:</span>2016-09-05, 19:17:55</p>
+        <p>
+            <span>Full URL:</span><a class="post-url" href="/2016/09/05/java-note-1/" title="Java从入门到放弃 ——第一话：封装，继承，抽象类与接口">https://moemoemortimer.github.io/2016/09/05/java-note-1/</a>
+            <span class="copy-path" data-clipboard-text="From https://moemoemortimer.github.io/2016/09/05/java-note-1/　　By Nyanko Chan" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2016/09/05/java-note-2/">
+                    Java从入门到放弃 ——第二话：包和修饰符
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/08/29/set-wifi-hotspot/">
+                    将笔记本电脑设为无线WIFI热点
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#封装"><span class="toc-number">1.</span> <span class="toc-text">封装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#概念"><span class="toc-number">1.1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#封装的实现"><span class="toc-number">1.2.</span> <span class="toc-text">封装的实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#toString-NaN"><span class="toc-number">1.3.</span> <span class="toc-text">toString()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小结"><span class="toc-number">1.4.</span> <span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#示例代码"><span class="toc-number">2.</span> <span class="toc-text">示例代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#继承"><span class="toc-number">3.</span> <span class="toc-text">继承</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#概念-1"><span class="toc-number">3.1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#意义（为什么要用继承）"><span class="toc-number">3.2.</span> <span class="toc-text">意义（为什么要用继承）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用法"><span class="toc-number">3.3.</span> <span class="toc-text">用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#示例代码-1"><span class="toc-number">3.4.</span> <span class="toc-text">示例代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小结-1"><span class="toc-number">3.5.</span> <span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#抽象类"><span class="toc-number">4.</span> <span class="toc-text">抽象类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建抽象父类Car"><span class="toc-number">4.1.</span> <span class="toc-text">创建抽象父类Car</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#抽象类的派生类Automobile"><span class="toc-number">4.2.</span> <span class="toc-text">抽象类的派生类Automobile</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TestCar"><span class="toc-number">4.3.</span> <span class="toc-text">TestCar</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#抽象类的特征"><span class="toc-number">4.4.</span> <span class="toc-text">抽象类的特征</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#抽象类的用途"><span class="toc-number">4.5.</span> <span class="toc-text">抽象类的用途</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#接口（interface）"><span class="toc-number">5.</span> <span class="toc-text">接口（interface）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#示例"><span class="toc-number">5.1.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#接口的用途"><span class="toc-number">5.2.</span> <span class="toc-text">接口的用途</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一点碎碎念"><span class="toc-number">5.3.</span> <span class="toc-text">一点碎碎念</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#END"><span class="toc-number">6.</span> <span class="toc-text">END</span></a></li></ol>
+</div>
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+
+<script>
+    yiliaConfig.toc = ["Hide", "Show", !!"false"];
+</script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"Java从入门到放弃 ——第一话：封装，继承，抽象类与接口　| 银月轻语　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <div id="comment-box" ></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/09/05/java-note-1/" data-title="Java从入门到放弃 ——第一话：封装，继承，抽象类与接口" data-url="https://moemoemortimer.github.io/2016/09/05/java-note-1/"></div>
+    <script>
+        var duoshuoQuery = {short_name:"moemoemortimer"};
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
+
+        
+    </script>
+    
+    <script> loadComment(); </script>
+
+</div>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2016/09/05/java-note-2/" title="Pre: Java从入门到放弃 ——第二话：包和修饰符">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/08/29/set-wifi-hotspot/" title="Next: 将笔记本电脑设为无线WIFI热点">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/09/05/java-note-6/">Java从入门到放弃 ——第六话：IO</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/05/java-note-5/">Java从入门到放弃 ——第五话：异常处理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/05/java-note-4/">Java从入门到放弃 ——第四话：集合框架</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/05/java-note-3/">Java从入门到放弃 ——第三话：常用工具类</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/05/java-note-2/">Java从入门到放弃 ——第二话：包和修饰符</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/05/java-note-1/">Java从入门到放弃 ——第一话：封装，继承，抽象类与接口</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/29/set-wifi-hotspot/">将笔记本电脑设为无线WIFI热点</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/28/drama-tracking/">ドキドキ~追剧追剧</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/28/A-Man-Called-Ove/">『一个叫欧维的男人决定去死』</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/21/something-about-relationship/">如何得与凉风约，不与尘沙一起来。</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/21/Tamako-Love-Story/">《玉子爱情故事》——影评</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/18/hdu-2209/">HDU 2209 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/18/repost/">转载：3xian之所在</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/18/hdu-1548/">HDU 1548 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/16/just-nonsence/">单细胞生物の生存战争</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/codeforces-704A/">CodeForces 704A 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/dp/">动态规划</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/codeforces-705B/">CodeForces 705B 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/codeforces-703C/">CodeForces 703C 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/poj-1061/">POJ 1061 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/hdu-2669/">HDU 2669 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/hdu-5690/">HDU 5690 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/poj-1006/">POJ 1006 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/hdu-1576/">HDU 1576 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/hdu-2504/">HDU 2504 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/hdu-1019/">HDU 1019 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/hdu-2104/">HDU 2104 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/12/poj-3254/">POJ 3254 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/12/backpack/">背包问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/12/hdu-1203/">HDU 1203 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/12/hdu-2546/">HDU 2546 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/09/the-shortest-path/">最短路问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/09/poj-2240/">POJ 2240 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/09/poj-2387/">POJ 2387 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/09/hdu-2112/">HDU 2112 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/09/hdu-1874/">HDU 1874 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/09/hdu-2544/">HDU 2544 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/09/hdu-5761/">HDU 5761 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/04/number-theory/">数论专题</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/30/sort/">排序</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/30/hdu-1872/">HDU 1872 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/30/poj-2299/">POJ 2299 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/30/hdu-1511/">HDU 1151 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/30/cf-edu-15/">Educational Codeforces Round 15 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/29/memory-search/">记忆化搜索与动态规划</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/hdu-1978/">HDU 1978 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/hdu-4484/">HDU 4484 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/hdu-1078/">HDU 1078 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/poj-3414/">POJ 3414 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/hdu-2717/">HDU 2717 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/27/hdu-1181/">HDU 1181 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/25/study-bfs-dfs/">深度优先搜索、广度优先搜索</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/codeforces-701C/">CodeForces 701C 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/codeforces-701B/">CodeForces 701B 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/codeforces-701A/">CodeForces 701A 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/codeforces-700A/">CodeForces 700A 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/hdu-5742/">HDU 5742 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/hdu-5723/">HDU 5723 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/hdu-5745/">HDU 5745 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/22/hdu-5734/">HDU 5734 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/22/hdu-2585/">HDU 2585 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/21/codeforces-448c/">CodeForces 448C 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/21/hdu-1007/">HDU 1007 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/21/codeforces-587A/">CodeForces 587A 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/stl-study-notes/">STL学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/codeforces-581C/">CodeForces 581C 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/hdu-4544/">HDU 4544 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/hdu-1873/">HDU 1873 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/codeforces-579B/">CodeForces 579B 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/codeforces-624B/">CodeForces 624B 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/trainning-diary/">暑期集训日记本✧٩(ˊωˋ*)و✧</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/codeforces-651A/">CodeForces 651A 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/uva-11729/">UVA 11729 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/uva-11292/">UVA 11292 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/18/short-holiday/">夏休み</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/03/death-flag/">都怪我作死</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/01/confession/">面壁思过，不知所措</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/27/aishite/">吃老夫一记安利</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/26/insert-video/">嗷~~宝宝解锁了新姿势(*//ω//*)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/26/photo/">图床ԅ(¯﹃¯ԅ)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/25/ACMgather/">论代码能力与食量的正比例关系</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/24/HELLO-HEXO/">Created my Private Castle</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016 Nyanko Chan
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >Site Visitors: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">Page Hits: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哟~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现辣~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
