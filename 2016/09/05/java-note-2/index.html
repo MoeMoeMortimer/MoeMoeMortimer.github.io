@@ -26,7 +26,7 @@
 为您细细道来我是如何弃疗Java的。_(:3」∠❀)_
 第二话：包和修饰符">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/c3c8eb1bjw1f7hq5txv2vj20gk08ntb2.jpg">
-<meta property="og:updated_time" content="2016-09-05T11:17:54.288Z">
+<meta property="og:updated_time" content="2016-09-06T02:39:53.568Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java从入门到放弃 ——第二话：包和修饰符">
 <meta name="twitter:description" content="各位观众老爷们大家好，这里是专题系列《Java从入门到放弃》~(●’◡’●)
@@ -320,12 +320,41 @@
 </li>
 </ol>
 <h2 id="访问控制符"><a href="#访问控制符" class="headerlink" title="访问控制符"></a>访问控制符</h2><p>为什么要使用访问控制符？信息隐藏（隐藏内部实现细节，提供外部访问接口）是 OOP 最重要的功能之一，也是使用访问修饰符的原因。</p>
-<h3 id="JAVA访问控制符"><a href="#JAVA访问控制符" class="headerlink" title="JAVA访问控制符"></a>JAVA访问控制符</h3><pre><code>| 修饰类型      | 同一个类 | 同一个包内的类 | 不同包内的子类 | 不同包并且不是子类 |
-|:-------------:|:--------:|:--------------:|:--------------:|:------------------:|
-| private(默认) | 是       | 否             | 否             | 否                 |
-| protected     | 是       | 是             | 是             | 否                 |
-| public        | 是       | 是             | 是             | 是                 |
-</code></pre><p>通常用法：属性设置成private类型，方法设置成public类型或protected类型。</p>
+<h3 id="JAVA访问控制符"><a href="#JAVA访问控制符" class="headerlink" title="JAVA访问控制符"></a>JAVA访问控制符</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">修饰类型</th>
+<th style="text-align:center">同一个类</th>
+<th style="text-align:center">同一个包内的类</th>
+<th style="text-align:center">不同包内的子类</th>
+<th style="text-align:center">不同包并且不是子类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">private(默认)</td>
+<td style="text-align:center">是</td>
+<td style="text-align:center">否</td>
+<td style="text-align:center">否</td>
+<td style="text-align:center">否</td>
+</tr>
+<tr>
+<td style="text-align:center">protected</td>
+<td style="text-align:center">是</td>
+<td style="text-align:center">是</td>
+<td style="text-align:center">是</td>
+<td style="text-align:center">否</td>
+</tr>
+<tr>
+<td style="text-align:center">public</td>
+<td style="text-align:center">是</td>
+<td style="text-align:center">是</td>
+<td style="text-align:center">是</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
+<p>通常用法：属性设置成private类型，方法设置成public类型或protected类型。</p>
 <h2 id="非访问控制符"><a href="#非访问控制符" class="headerlink" title="非访问控制符"></a>非访问控制符</h2><h3 id="静态static"><a href="#静态static" class="headerlink" title="静态static"></a>静态static</h3><p>静态属性或方法属于类属性或类方法，即为整个类所有，不单独为某个对象使用。<br>静态数据保存在栈中，为所有对象共享内存空间，即只开辟一个存储空间。<br>使用方法：由类直接调用</p>
 <p><code>应用方式</code></p>
 <ol>
@@ -377,7 +406,7 @@
         <p><span>本文标题:</span><a href="/2016/09/05/java-note-2/">Java从入门到放弃 ——第二话：包和修饰符</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Nyanko Chan</a></p>
         <p><span>发布时间:</span>2016-09-05, 19:13:54</p>
-        <p><span>最后更新:</span>2016-09-05, 19:17:54</p>
+        <p><span>最后更新:</span>2016-09-06, 10:39:53</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/09/05/java-note-2/" title="Java从入门到放弃 ——第二话：包和修饰符">https://moemoemortimer.github.io/2016/09/05/java-note-2/</a>
             <span class="copy-path" data-clipboard-text="原文: https://moemoemortimer.github.io/2016/09/05/java-note-2/　　作者: Nyanko Chan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>

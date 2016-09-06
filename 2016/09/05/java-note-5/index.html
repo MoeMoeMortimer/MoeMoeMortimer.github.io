@@ -26,7 +26,7 @@
 为您细细道来我是如何弃疗Java的。_(:3」∠❀)_
 第五话：异常处理">
 <meta property="og:image" content="http://ww3.sinaimg.cn/large/c3c8eb1bjw1f75wjaqc9bj20lj0bh0vy.jpg">
-<meta property="og:updated_time" content="2016-09-05T11:17:51.519Z">
+<meta property="og:updated_time" content="2016-09-06T03:15:10.430Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java从入门到放弃 ——第五话：异常处理">
 <meta name="twitter:description" content="各位观众老爷们大家好，这里是专题系列《Java从入门到放弃》~(●’◡’●)
@@ -304,10 +304,8 @@
 </li>
 <li><p>异常的概念</p>
 <ul>
-<li>程序在运行时发生错误，程序终止并将控制交给操作系统，其余代码不再执行。<ul>
+<li>程序在运行时发生错误，程序终止并将控制交给操作系统，其余代码不再执行。</li>
 <li>Java中定义了很多异常类，每个异常类都代表了一种运行错误，类中包含了该运行错误的信息和处理错误的方法等内容。每当Java程序运行过程中发生一个可识别的运行错误时，系统都会产生一个相应的该异常类的对象，即产生一个异常。</li>
-</ul>
-</li>
 </ul>
 </li>
 </ol>
@@ -323,14 +321,10 @@
 <li>Exception类对象由应用程序处理或抛出，Error类对象由Java虚拟机生成并抛出；程序无法捕获。</li>
 <li>Throwable：java.lang.Throwable类是所有错误的父类。</li>
 <li>Error：非常严重的错误，往往来源于Java底层，例如虚拟机崩溃，无法对Error错误进行处理。</li>
-<li>Exception：(1) 还不是那么严重，有挽回的余地的错误。<pre><code>(2) 直接子类:ClassNotFoundException, IOException, SQLException.已检查异常，无法避免，必须处理。
-(3) RunntimeException：ArithmeticException, NullPointerException, NumberFormatException, ArrayIndexOutOfBoundsException。 运行时异常，未检查异常，在写程序过程中可以避免的异常。RunntimeException需要程序员在写代码过程中避免发生。
-</code></pre></li>
+<li>Exception：<br>  (1) 还不是那么严重，有挽回的余地的错误。<br>  (2) 直接子类:ClassNotFoundException, IOException, SQLException.已检查异常，无法避免，必须处理。<br>  (3) RunntimeException：ArithmeticException, NullPointerException, NumberFormatException, ArrayIndexOutOfBoundsException。 运行时异常，未检查异常，在写程序过程中可以避免的异常。RunntimeException需要程序员在写代码过程中避免发生。</li>
 </ul>
 <h2 id="异常规范"><a href="#异常规范" class="headerlink" title="异常规范"></a>异常规范</h2><p>java提供了一种异常规范，要求程序员在使用某些方法时必须对其进行异常处理。</p>
-<p>jdk提供的一些类的方法的声明上使用关键字throws来声明可能会产生哪些异常，方法声明异常格式如下：<br><code>修饰符  返回值类型  方法名（形式参数）throws 异常类{
-               方法体；
-   }</code></p>
+<p>jdk提供的一些类的方法的声明上使用关键字throws来声明可能会产生哪些异常，方法声明异常格式如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">修饰符  返回值类型  方法名（形式参数）throws 异常类&#123;</span><br><span class="line">               方法体；</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
 <p>例如File类中的createNewFile()方法：public boolean createNewFile() throws IOException{},当调用createNewFile()方法时必须对其进行处理。</p>
 <p>如果是用户写的方法使用throws抛出异常，当调用该方法时也必须对其进行处理。</p>
 <h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ol>
@@ -343,19 +337,12 @@
 </li>
 <li><p>try-catch处理</p>
 <ul>
-<li><p>一般形式<br>  `<br>  try {</p>
-<pre><code>// 要监控错误的代码块
-methodGeneratingException();
-
-} catch (Exception e) {
-    // Exception e 的异常处理程序
-}
-</code></pre><p>  `<br>  其运行机制为：try块中自上至下运行每一条语句，如果该语句发现异常，就跳至catch块中筛选对应的处理方法。然后再回try块继续向下执行。</p>
+<li><p>一般形式</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">try &#123;</span><br><span class="line">	// 要监控错误的代码块</span><br><span class="line">	methodGeneratingException();</span><br><span class="line"></span><br><span class="line">	&#125; catch (Exception e) &#123;</span><br><span class="line">		// Exception e 的异常处理程序</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>  其运行机制为：try块中自上至下运行每一条语句，如果该语句发现异常，就跳至catch块中筛选对应的处理方法。然后再回try块继续向下执行。</p>
 </li>
-<li><p>特征：(1) 处理异常后，不影响程序其他部分的运行；</p>
-<pre><code>(2) 当有多个异常要捕获时，需要写多个catch语句；
-(3) 注意捕获多个异常时，异常父类要放在后面。
-</code></pre></li>
+<li><p>特征：<br>  (1) 处理异常后，不影响程序其他部分的运行；<br>  (2) 当有多个异常要捕获时，需要写多个catch语句；<br>  (3) 注意捕获多个异常时，异常父类要放在后面。</p>
+</li>
 </ul>
 </li>
 </ol>
@@ -366,9 +353,7 @@ methodGeneratingException();
 </blockquote>
 <p>注意顺序。因为Exception类是所有异常类的父类，如果放在第一位，其他catch子句都无效了，因此要放在最后。</p>
 <h2 id="finally"><a href="#finally" class="headerlink" title="finally"></a>finally</h2><p>finally语句是try-catch语句的一个补充，在try-catch语句块后可以加一个finally语句块。finally语句块无论程序执行时是否发生异常，最终都会被执行。</p>
-<p><strong> 示例代码 </strong><br>`<br>package com.hpe.t11.exception;</p>
-<p>import java.io.File;<br>import java.io.FileInputStream;<br>import java.io.FileNotFoundException;<br>import java.io.IOException;</p>
-<p>public class TestFinally {<br>    public static void main(String[] args) {<br>        //读取d:\JAVA\newfile.txt中的内容：从磁盘-&gt;内存<br>        //1创建文件对象<br>        File f = new File(“d:\JAVA\newfile.txt”);<br>        FileInputStream fin = null;<br>        try {<br>            //2创建文件输入流<br>            fin = new FileInputStream(f);<br>            //3创建内存空间<br>            byte[] buf = new byte[1024];<br>            //4读取文件<br>            int length = fin.read(buf);<br>            String s = new String(buf, 0, length);<br>            System.out.println(s);<br>            return;<br>        } catch (FileNotFoundException e) {<br>            e.printStackTrace();<br>        } catch(IOException e){<br>            e.printStackTrace();<br>        } finally{<br>            //清理工作，finally语句块无论程序执行时是否发生异常，最终都会被执行<br>            try {<br>                System.out.println(“即使try块中有return语句，我也会执行~！”);<br>                fin.close();    //关闭流<br>            } catch (IOException e) {<br>                e.printStackTrace();<br>            }<br>        }<br>    }<br>}<br>`</p>
+<p><strong> 示例代码 </strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">package com.hpe.t11.exception;</span><br><span class="line"></span><br><span class="line">import java.io.File;</span><br><span class="line">import java.io.FileInputStream;</span><br><span class="line">import java.io.FileNotFoundException;</span><br><span class="line">import java.io.IOException;</span><br><span class="line"></span><br><span class="line">public class TestFinally &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		//读取d:\\JAVA\\newfile.txt中的内容：从磁盘-&gt;内存</span><br><span class="line">		//1创建文件对象</span><br><span class="line">		File f = new File(<span class="string">"d:\\JAVA\\newfile.txt"</span>);</span><br><span class="line">		FileInputStream fin = null;</span><br><span class="line">		try &#123;</span><br><span class="line">			//2创建文件输入流</span><br><span class="line">			fin = new FileInputStream(f);</span><br><span class="line">			//3创建内存空间</span><br><span class="line">			byte[] buf = new byte[1024];</span><br><span class="line">			//4读取文件</span><br><span class="line">			int length = fin.read(buf);</span><br><span class="line">			String s = new String(buf, 0, length);</span><br><span class="line">			System.out.println(s);</span><br><span class="line">			<span class="built_in">return</span>;</span><br><span class="line">		&#125; catch (FileNotFoundException e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125; catch(IOException e)&#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125; finally&#123;</span><br><span class="line">			//清理工作，finally语句块无论程序执行时是否发生异常，最终都会被执行</span><br><span class="line">			try &#123;</span><br><span class="line">				System.out.println(<span class="string">"即使try块中有return语句，我也会执行~！"</span>);</span><br><span class="line">				fin.close();    //关闭流</span><br><span class="line">			&#125; catch (IOException e) &#123;</span><br><span class="line">				e.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="try-catch-finally说明"><a href="#try-catch-finally说明" class="headerlink" title="try-catch-finally说明"></a>try-catch-finally说明</h2><ol>
 <li>try后必须有catch 或finally</li>
 <li>要监控的程序语句包含在 try 块内，catch 块中的代码用于捕获和处理异常。在方法返回之前必须执行的代码应放置在 finally 块中。</li>
@@ -376,7 +361,9 @@ methodGeneratingException();
 <li>finally不能被执行的唯一情况是：在被保护代码块中执行了System.exit(0);</li>
 <li>捕获异常后不影响其他程序。</li>
 </ol>
-<h2 id="异常类方法"><a href="#异常类方法" class="headerlink" title="异常类方法"></a>异常类方法</h2><h3 id="public-void-printStackTrace"><a href="#public-void-printStackTrace" class="headerlink" title="public void printStackTrace();"></a>public void printStackTrace();</h3><h3 id="public-String-getMessage"><a href="#public-String-getMessage" class="headerlink" title="public String getMessage();"></a>public String getMessage();</h3><h3 id="public-String-toString"><a href="#public-String-toString" class="headerlink" title="public String  toString();"></a>public String  toString();</h3>
+<h2 id="异常类方法"><a href="#异常类方法" class="headerlink" title="异常类方法"></a>异常类方法</h2><p>public void printStackTrace();<br>public String getMessage();<br>public String  toString(); </p>
+<p>常用的是第一个~</p>
+
       
     </div>
     
@@ -387,7 +374,7 @@ methodGeneratingException();
         <p><span>本文标题:</span><a href="/2016/09/05/java-note-5/">Java从入门到放弃 ——第五话：异常处理</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Nyanko Chan</a></p>
         <p><span>发布时间:</span>2016-09-05, 19:14:49</p>
-        <p><span>最后更新:</span>2016-09-05, 19:17:51</p>
+        <p><span>最后更新:</span>2016-09-06, 11:15:10</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/09/05/java-note-5/" title="Java从入门到放弃 ——第五话：异常处理">https://moemoemortimer.github.io/2016/09/05/java-note-5/</a>
             <span class="copy-path" data-clipboard-text="原文: https://moemoemortimer.github.io/2016/09/05/java-note-5/　　作者: Nyanko Chan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -422,7 +409,7 @@ methodGeneratingException();
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#异常的概念"><span class="toc-number">1.</span> <span class="toc-text">异常的概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#某些异常实例"><span class="toc-number">1.1.</span> <span class="toc-text">某些异常实例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#异常的分类"><span class="toc-number">2.</span> <span class="toc-text">异常的分类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#说明"><span class="toc-number">2.1.</span> <span class="toc-text">说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#异常规范"><span class="toc-number">3.</span> <span class="toc-text">异常规范</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#注意"><span class="toc-number">3.1.</span> <span class="toc-text">注意</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#异常处理-重点"><span class="toc-number">4.</span> <span class="toc-text"> 异常处理  -=重点=-</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#示例代码"><span class="toc-number">4.1.</span> <span class="toc-text">示例代码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#使用throws关键字抛出异常"><span class="toc-number">4.1.1.</span> <span class="toc-text">使用throws关键字抛出异常</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#try-catch语句"><span class="toc-number">4.1.2.</span> <span class="toc-text">try,catch语句</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#finally"><span class="toc-number">5.</span> <span class="toc-text">finally</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#try-catch-finally说明"><span class="toc-number">6.</span> <span class="toc-text">try-catch-finally说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#异常类方法"><span class="toc-number">7.</span> <span class="toc-text">异常类方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#public-void-printStackTrace"><span class="toc-number">7.1.</span> <span class="toc-text">public void printStackTrace();</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#public-String-getMessage"><span class="toc-number">7.2.</span> <span class="toc-text">public String getMessage();</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#public-String-toString"><span class="toc-number">7.3.</span> <span class="toc-text">public String  toString();</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#异常的概念"><span class="toc-number">1.</span> <span class="toc-text">异常的概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#某些异常实例"><span class="toc-number">1.1.</span> <span class="toc-text">某些异常实例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#异常的分类"><span class="toc-number">2.</span> <span class="toc-text">异常的分类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#说明"><span class="toc-number">2.1.</span> <span class="toc-text">说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#异常规范"><span class="toc-number">3.</span> <span class="toc-text">异常规范</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#注意"><span class="toc-number">3.1.</span> <span class="toc-text">注意</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#异常处理-重点"><span class="toc-number">4.</span> <span class="toc-text"> 异常处理  -=重点=-</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#示例代码"><span class="toc-number">4.1.</span> <span class="toc-text">示例代码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#使用throws关键字抛出异常"><span class="toc-number">4.1.1.</span> <span class="toc-text">使用throws关键字抛出异常</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#try-catch语句"><span class="toc-number">4.1.2.</span> <span class="toc-text">try,catch语句</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#finally"><span class="toc-number">5.</span> <span class="toc-text">finally</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#try-catch-finally说明"><span class="toc-number">6.</span> <span class="toc-text">try-catch-finally说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#异常类方法"><span class="toc-number">7.</span> <span class="toc-text">异常类方法</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn,
