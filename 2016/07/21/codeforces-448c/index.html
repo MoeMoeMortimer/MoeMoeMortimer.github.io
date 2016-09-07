@@ -283,7 +283,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_<br><a id="more"></a></p>
+        <script src="/assets/js/DPlayer.min.js"> </script><p>这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_<br><a id="more"></a></p>
 <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="http://codeforces.com/contest/448/problem/C" target="_blank" rel="external">题目传送门</a><br>大意：<br>一组栅栏有N块长为ai宽为1的木条，现在要刷漆，每次能刷宽为1长度任意的区域，可以横着刷竖着刷，同一块地方还能重复刷，问把栅栏刷完最少要几步。</p>
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>首先考虑一下两点：<br>（1）如果存在一道漆是横着刷的，那么这一条一定涂至最长的长度（贪心），而且&lt;下方的木板一定是被横着涂满的！&gt;；<br>（2）如果存在一条横着涂的，那么&lt;最短的那块板一定是被横着涂满的!&gt;<br>为什么？<br>用反证法可证：<br>（1）对于一块板，如果不存在横着涂的（竖着涂），那么这块板肯定要被竖着涂满才能得到最优解，1，那么所有横着涂的都会变成多余。矛盾。<br>（2）如果不存在横着涂的（全竖着），那么最短的板也一定是被竖着涂满的，显然矛盾。</p>
 <p>有以上两个条件之后，问题就可被拆分成两部分：ans = min{存在横着涂的，不存在横着涂的}，其中，存在横着涂的情况中只能确定最短板及与它等高区域是横着涂的，因此剩下的那部分又变成存在横涂和不存在横涂的最小值，递归开始。</p>

@@ -283,7 +283,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>这里是咸鱼的算法小教室_(:3」∠❀)_<br><a id="more"></a></p>
+        <script src="/assets/js/DPlayer.min.js"> </script><p>这里是咸鱼的算法小教室_(:3」∠❀)_<br><a id="more"></a></p>
 <h2 id="记忆化搜索"><a href="#记忆化搜索" class="headerlink" title="记忆化搜索"></a>记忆化搜索</h2><h3 id="记忆化搜索是什么"><a href="#记忆化搜索是什么" class="headerlink" title="记忆化搜索是什么"></a>记忆化搜索是什么</h3><p>简单来说，记忆化搜索就是保存之前计算过的状态，从时间复杂度上来讲，如果搜索的深度是n，而且每一层的搜索都需要两次分支，最坏就需要$O(2^n)$的时间。但改为记忆化搜索的话，对于同样的参数，只会在第一次被调用到时执行递归部分，第二次之后都会直接返回。参数的组合不过nW种，而函数内只调用两次递归，复杂度为O(nW)。</p>
 <h3 id="01背包问题"><a href="#01背包问题" class="headerlink" title="01背包问题"></a>01背包问题</h3><ul>
 <li><p>有n个重量和价值分别为$w_i$, $v_i$的物品。从这些物品中挑选出总重量不超过W的物品，求所有挑选方案中价值总和的最大值。</p>

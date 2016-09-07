@@ -283,7 +283,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_<br><a id="more"></a></p>
+        <script src="/assets/js/DPlayer.min.js"> </script><p>这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_<br><a id="more"></a></p>
 <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="http://codeforces.com/contest/581/problem/C" target="_blank" rel="external">题目传送门</a><br>大意：</p>
 <p>强化技能。<br>你有k点，可以给n个值为a1到an的技能强化。rank = 每个技能/10向下取整之和。<br>技能不能超过100，k可以不用完，问rank最大值</p>
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>cmp函数很巧妙，我们是对技能%10进行排序的；<br>最后如果给所有技能都加满到整十数了，k还有剩余，怎么判断加k后会不会超过100？<br>注意：rank的最大值就是10*n，据此判断即可。</p>

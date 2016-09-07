@@ -283,7 +283,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_<br><a id="more"></a></p>
+        <script src="/assets/js/DPlayer.min.js"> </script><p>这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_<br><a id="more"></a></p>
 <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=4544" target="_blank" rel="external">题目传送门</a></p>
 <p>大意：<br>第一行有两个整数N，M（1 &lt;= N, M &lt;= 100000），分别表示兔子的个数和箭的种类；<br>第二行有N个正整数，分别表示兔子的血量Bi（1 &lt;= i &lt;= N）；<br>第三行有M个正整数，表示每把箭所能造成的伤害值Di（1 &lt;= i &lt;= M）；<br>第四行有M个正整数，表示每把箭需要花费的QQ币Pi（1 &lt;= i &lt;= M）。<br>如果不能杀死所有兔子，请输出”No”，否则，请输出最少的QQ币数，每组输出一行。</p>
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>对兔叽血量从大到小排一遍，对剑的攻击力从大到小排一遍，然后逐个对比，能灭兔叽的箭收收好放进set（pair里first放QB，second放攻击，这样扔进set里的时候箭们就能按QB排序了）然后贪心。<br>感觉用cin，cout会超时，改scanf print安全些</p>

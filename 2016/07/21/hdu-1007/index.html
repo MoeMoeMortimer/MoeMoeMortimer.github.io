@@ -283,7 +283,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_<br><a id="more"></a></p>
+        <script src="/assets/js/DPlayer.min.js"> </script><p>这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_<br><a id="more"></a></p>
 <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1007" target="_blank" rel="external">题目传送门</a><br>大意：<br>给定平面上n个点，求最近两点的距离，输出距离的一半。</p>
 <p>和《挑战》上的题一模一样（除了数据范围？）<br>挑战上的是<a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1186" target="_blank" rel="external">UVa 10245 最近点对问题</a></p>
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>由于n比较大，直接暴力是不行的，因此要选用分治法。<br>我们把所有点按x坐标分为左右两半，那么最近点对的距离就是下面二者的最小值。<br>（1）两点同属一边时最小距离<br>（2）两点属于不同区域时最小距离<br>&emsp;<br>———————————我是分割线———————————<br>对于1可以递归计算，得到1的最小值d后，2就可以简化为两点属于不同区域时，距离小于d的值。<br>&emsp;<br>首先考虑x坐标。假设将点划分为左右两半的直线为L，其横坐标为x0， 那么到直线距离&gt;= d的点就没必要考虑了，只需要考虑x坐标满足x0 - d &lt; x &lt; x0 + d的点;接下来考虑y坐标， 只考虑那些y坐标不比自己大的点组成的点对， 即对于y坐标为yp的点， 我们只需考虑y坐标满足yp - d &lt; y &lt;= yp的点就好了。<br>为实现对x坐标的划分，我们可以在开始时先将所有点按x坐标排序。同时，为高效处理问题，我们在递归处理的同时，按y坐标进行归并排序。<br>递归的深度是O(log n)，而每一层有O(n)个操作，所以总复杂度是O(nlog n)。</p>
