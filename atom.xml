@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://moemoemortimer.github.io/"/>
-  <updated>2016-09-28T16:37:16.258Z</updated>
+  <updated>2016-09-29T10:40:57.128Z</updated>
   <id>https://moemoemortimer.github.io/</id>
   
   <author>
@@ -20,13 +20,13 @@
     <link href="https://moemoemortimer.github.io/2016/09/29/test-movie/"/>
     <id>https://moemoemortimer.github.io/2016/09/29/test-movie/</id>
     <published>2016-09-28T16:35:28.000Z</published>
-    <updated>2016-09-28T16:37:16.258Z</updated>
+    <updated>2016-09-29T10:40:57.128Z</updated>
     
-    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;div id=&quot;dplayer0&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer0 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer0&quot;),&quot;autoplay&quot;:false,&quot;theme&quot;:&quot;#FADFA3&quot;,&quot;loop&quot;:true,&quot;video&quot;:{&quot;url&quot;:&quot;https://pan.baidu.com/s/1c1AozmS&quot;,&quot;pic&quot;:&quot;http://devtest.qiniudn.com/若能绽放光芒.png&quot;},&quot;danmaku&quot;:{&quot;api&quot;:&quot;http://dplayer.daoapp.io&quot;,&quot;id&quot;:&quot;9E2E3368B56CD0B4&quot;,&quot;token&quot;:&quot;tokendemo&quot;}});&lt;/script&gt;</content>
+    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;script src=&quot;/crypto-js.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;/mcommon.js&quot;&gt;&lt;/script&gt;&lt;div id=&quot;security&quot;&gt;&lt;h4&gt;文章已经被加密，请输入密码进行查看。&lt;/h4&gt;&lt;div&gt;&lt;input id=&quot;pass&quot;&gt;&lt;/input&gt;&lt;input type=&quot;button&quot; id=&quot;submit&quot; value=&quot;解密&quot; onclick=&quot;decryptAES()&quot;&gt;&lt;/input&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id=&quot;encrypt-blog&quot; style=&quot;display:none&quot;&gt;U2FsdGVkX19SRa4AUCIWdjx3KeKmngnPdAVPmfTc/UkaQg1zCFwo+BhFjNLtF87vaW8jZ9nPRSSJ2ANbn6FTQ3nsH7bpQEW3rLCY52c9btLvvoFUI/JelXc+qavIbWEQLnguYkG3uuIQP1bTIDSOLwWVBOnQZrTYzE4tybg0dNH05hszE338GVnMiM7gNWic0pMUQyZyTTDHTZ/UubkK4KtptCD/LyEs9YiNbghJ1m5G3FWEntSM97hWvwyaP+dqewftdkBralnM0OJZPLcW+jWpO6lhSu/acVX+AyfbXo4z3YCMbyzHrMYUgk1xhJJAZCQmaKQHBhsVVUk/u1kncppPGVuX7t+CA6BbxmnFvI5gngJIN8M33JOZ0xzUVs+w5QHNJrPTMZMlR0/Gv8Psy7hYHeQCxG5HJpUboHoM2dlg6bNGxp65QPUaqqf3HB62B21JJx/ffBp6bCCjwsRsMU+ln3FJ5/I6j2JDFcvaHts7phUjPrdefwDi7jexs/Z4pEGC3PHqlVwZaL8+q/98ICSjhnIg3hFFpHBsjX4UfuIghpNICgsWhNPwELWnfmFrp3uoWnBKmAbhpKoiqPMHX02dVS3IA2vJvmoXZhzFiZKUBvJxJ1CrE+TRjOTZ9kdntndvhnU/c095TwumgI9GfFqWHIdj/nfXi7RHeig1X31Mlt90oovXBAEqomZ2T0ZMMdSiZkIqkX2iR7S6KnD8gSulztM1NKinh5YroEyX/dHgvbpAkWBZQwMznuqQ8Z/uopJoenVhW2ir6jVXBTeQZoqMFl1eptVyGvUyCcDLgx7R0ZZGf/3tqTwvUzAT6VfNo9rPvd0//GkCgUuVpByJDA==</content>
     
     <summary type="html">
     
-      &lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;div id=&quot;dplayer0&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer0
+      文章已经被加密，请在文章页输入密码进行查看。
     
     </summary>
     
@@ -240,9 +240,9 @@
     </summary>
     
     
-      <category term="Java" scheme="https://moemoemortimer.github.io/tags/Java/"/>
-    
       <category term="学习笔记" scheme="https://moemoemortimer.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Java" scheme="https://moemoemortimer.github.io/tags/Java/"/>
     
   </entry>
   
@@ -989,7 +989,7 @@ int  no = rd.nextInt(10);//0-9之间的随机数&lt;/code&gt;&lt;/p&gt;
     <link href="https://moemoemortimer.github.io/2016/08/21/something-about-relationship/"/>
     <id>https://moemoemortimer.github.io/2016/08/21/something-about-relationship/</id>
     <published>2016-08-21T10:50:41.000Z</published>
-    <updated>2016-08-24T10:48:54.940Z</updated>
+    <updated>2016-09-29T10:38:32.468Z</updated>
     
     <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;友達，是种怎样的存在呢。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
