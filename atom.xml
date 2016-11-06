@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://moemoemortimer.github.io/"/>
-  <updated>2016-10-07T13:55:24.872Z</updated>
+  <updated>2016-11-02T13:57:07.410Z</updated>
   <id>https://moemoemortimer.github.io/</id>
   
   <author>
@@ -14,6 +14,198 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LA3905</title>
+    <link href="https://moemoemortimer.github.io/2016/11/02/LA3905/"/>
+    <id>https://moemoemortimer.github.io/2016/11/02/LA3905/</id>
+    <published>2016-11-02T13:57:07.000Z</published>
+    <updated>2016-11-02T13:57:07.410Z</updated>
+    
+    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Codeforces 732C 解题报告</title>
+    <link href="https://moemoemortimer.github.io/2016/10/19/codeforces-732C/"/>
+    <id>https://moemoemortimer.github.io/2016/10/19/codeforces-732C/</id>
+    <published>2016-10-19T05:50:13.000Z</published>
+    <updated>2016-10-19T07:13:44.111Z</updated>
+    
+    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;h3 id=&quot;题目传送门&quot;&gt;&lt;a href=&quot;#题目传送门&quot; class=&quot;headerlink&quot; title=&quot;题目传送门&quot;&gt;&lt;/a&gt;题目传送门&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://codeforces.com/problemset/problem/732/C&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Codeforces 732C. Sanatorium 题目传送门&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;大意&quot;&gt;&lt;a href=&quot;#大意&quot; class=&quot;headerlink&quot; title=&quot;大意&quot;&gt;&lt;/a&gt;大意&lt;/h3&gt;&lt;p&gt;一个人去度假村旅游，给出他在度假村吃过的早午晚饭次数b,d,s,他可以选择任意时间来，而且他会从到达度假村的时刻起一直逗留直到离开。该人可以当天来当天走，问他最少耽误了几顿饭。&lt;/p&gt;
+&lt;h2 id=&quot;思路&quot;&gt;&lt;a href=&quot;#思路&quot; class=&quot;headerlink&quot; title=&quot;思路&quot;&gt;&lt;/a&gt;思路&lt;/h2&gt;&lt;p&gt;若 b d s 为 1 0 1 ，则他可以第一天晚上来第二天早上走，不错过一顿饭；&lt;br&gt;若 b d s 为 0 1 0 ，则他可以第一天中午来吃一顿午饭就走，结果也是0；&lt;br&gt;若 b d s 为 3 4 2 ，则他可以第一天中午来，吃午饭和晚饭，第二天待一整天，第三天一b一d，错过一s，第四天吃完b d后离开。答案为1；&lt;br&gt;由此我们可以发现，在度假村逗留的天数是b d s中的最大值（废话！=.=）其中，三餐均可彼此相连，如早饭可连接前一天的晚饭和当天的午饭，午饭可连接当天的早饭和晚饭，晚饭又可连接当天的午饭和第二天的早饭。那么为了得到最优解，我们要尽可能让多的时段相连。&lt;br&gt;那么先找出b d s中的最大值，假设为d，然后分别让s b与其首尾相连（在纸上横排写出三行b d s，s首连d首，b尾连d尾。意在分一个d给s，然后得错过的晚饭，然后分一个d给b，得错过的早饭）&lt;/p&gt;
+&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;meta-string&quot;&gt;&amp;lt;bits/stdc++.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;long&lt;/span&gt; LL;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;LL b, d, s;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(&lt;span class=&quot;built_in&quot;&gt;cin&lt;/span&gt; &amp;gt;&amp;gt; b &amp;gt;&amp;gt; d &amp;gt;&amp;gt; s)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        LL ans;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(b &amp;gt;= d &amp;amp;&amp;amp; b &amp;gt;= s)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            ans = max(&lt;span class=&quot;number&quot;&gt;0l&lt;/span&gt;l, b&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;-d) + max(&lt;span class=&quot;number&quot;&gt;0l&lt;/span&gt;l, b&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;-s);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(d &amp;gt;= b &amp;amp;&amp;amp; d &amp;gt;= s)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            ans = max(&lt;span class=&quot;number&quot;&gt;0l&lt;/span&gt;l, d&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;-b) + max(&lt;span class=&quot;number&quot;&gt;0l&lt;/span&gt;l, d&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;-s);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(s &amp;gt;= b &amp;amp;&amp;amp; s &amp;gt;= d)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            ans = max(&lt;span class=&quot;number&quot;&gt;0l&lt;/span&gt;l, s&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;-b) + max(&lt;span class=&quot;number&quot;&gt;0l&lt;/span&gt;l, s&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;-d);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; ans &amp;lt;&amp;lt; &lt;span class=&quot;built_in&quot;&gt;endl&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+      <category term="贪心" scheme="https://moemoemortimer.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>codeforces-727B</title>
+    <link href="https://moemoemortimer.github.io/2016/10/19/codeforces-727B/"/>
+    <id>https://moemoemortimer.github.io/2016/10/19/codeforces-727B/</id>
+    <published>2016-10-19T05:49:47.000Z</published>
+    <updated>2016-10-19T05:49:47.911Z</updated>
+    
+    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Codeforces 727A 解题报告</title>
+    <link href="https://moemoemortimer.github.io/2016/10/19/codeforces-727A/"/>
+    <id>https://moemoemortimer.github.io/2016/10/19/codeforces-727A/</id>
+    <published>2016-10-19T05:49:25.000Z</published>
+    <updated>2016-10-19T06:25:40.202Z</updated>
+    
+    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;h3 id=&quot;题目传送门&quot;&gt;&lt;a href=&quot;#题目传送门&quot; class=&quot;headerlink&quot; title=&quot;题目传送门&quot;&gt;&lt;/a&gt;题目传送门&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://codeforces.com/problemset/problem/727/A&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Codeforces 727A. Transformation: from A to B 题目传送门&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;大意&quot;&gt;&lt;a href=&quot;#大意&quot; class=&quot;headerlink&quot; title=&quot;大意&quot;&gt;&lt;/a&gt;大意&lt;/h3&gt;&lt;p&gt;问能否将一个数由a经有限次操作变为b，若能输出“YES”，最小操作次数及每一步的步骤，不能则输出“NO”。&lt;br&gt;提供如下两种操作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;x2&lt;/li&gt;
+&lt;li&gt;x10+1（在末尾添1）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;思路&quot;&gt;&lt;a href=&quot;#思路&quot; class=&quot;headerlink&quot; title=&quot;思路&quot;&gt;&lt;/a&gt;思路&lt;/h2&gt;&lt;p&gt;有两种方法：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;由b回推a&lt;br&gt;这种方法比较好想，实现起来也比较方便。对于b，如果末位是1则(b-1)/10，如果末位数是其他奇数则输出结果为“NO”（因为不会有任何操作能得到其他奇数），若为偶数则/2，用数组记录每次操作和操作次数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;深度优先搜索（dfs）&lt;br&gt;dfs则是由a推b，还是用一个数组记录每步的操作，一条路一条路地试，当走到递归终点时结果集唯一确定，开始输出。否则返回false。虽然dfs看起来高大上了一点，其实这个办法很笨，要我说还不如用第一种好，因为我们可以一次确定当前操作是什么。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/* 方法一 */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;meta-string&quot;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;meta-string&quot;&gt;&amp;lt;algorithm&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; ans[&lt;span class=&quot;number&quot;&gt;10000&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; INF = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;lt;&amp;lt;&lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; a, b;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(&lt;span class=&quot;built_in&quot;&gt;cin&lt;/span&gt; &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; n = b;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; dep = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        ans[dep] = b;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(n &amp;gt; a)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(n&amp;amp;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;((n&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;)%&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt; == &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)n = (n&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;)/&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                        dep = INF;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                        &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                n /= &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            ans[++dep] = n;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(n == a)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            ans[dep] = a;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&quot;YES&quot;&lt;/span&gt; &amp;lt;&amp;lt; &lt;span class=&quot;built_in&quot;&gt;endl&lt;/span&gt; &amp;lt;&amp;lt; dep+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &amp;lt;&amp;lt; &lt;span class=&quot;built_in&quot;&gt;endl&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = dep; i &amp;gt;= &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i--)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; ans[i] &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&quot; &quot;&lt;/span&gt; ;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; &lt;span class=&quot;built_in&quot;&gt;endl&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&quot;NO&quot;&lt;/span&gt; &amp;lt;&amp;lt; &lt;span class=&quot;built_in&quot;&gt;endl&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/* 方法二 */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;meta-string&quot;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;meta-string&quot;&gt;&amp;lt;algorithm&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;meta-string&quot;&gt;&amp;lt;cstdio&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;long&lt;/span&gt; ll;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ll a,b,c[&lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;],d;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;dfs&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(ll x,ll y)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(x &amp;gt; b) &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	c[y] = x;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(x == b)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;YES\n%I64d\n&quot;&lt;/span&gt;,y);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i &amp;lt; y; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%I64d &quot;&lt;/span&gt;, c[i]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%I64d\n&quot;&lt;/span&gt;, c[y]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; dfs(x&amp;lt;&amp;lt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, y+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;) | dfs(x*&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, y+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(&lt;span class=&quot;built_in&quot;&gt;scanf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%I64d%I64d&quot;&lt;/span&gt;,&amp;amp;a, &amp;amp;b) != EOF)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(!dfs(a,&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)) &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;NO\n&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+      <category term="DFS" scheme="https://moemoemortimer.github.io/tags/DFS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Intel Code Challenge Final Round 解题报告</title>
+    <link href="https://moemoemortimer.github.io/2016/10/09/cf-contest-724/"/>
+    <id>https://moemoemortimer.github.io/2016/10/09/cf-contest-724/</id>
+    <published>2016-10-09T13:49:24.000Z</published>
+    <updated>2016-10-09T15:05:43.723Z</updated>
+    
+    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;呜啊妹叽被虐得好惨啊哭唧唧థ౪థ&lt;br&gt;一般在老套又俗气的励志故事里都是怎么写的呢？猪脚卧薪尝胆痛定思痛躲在小角落里吭哧吭哧默默地刷完了所有题以求得安慰。啊真是老套又俗气。&lt;br&gt;嗯，妹叽也是，既老套又俗气_(:3」∠❀)_&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;A-Checking-the-Calendar&quot;&gt;&lt;a href=&quot;#A-Checking-the-Calendar&quot; class=&quot;headerlink&quot; title=&quot;A. Checking the Calendar&quot;&gt;&lt;/a&gt;A. Checking the Calendar&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://codeforces.com/contest/724/problem/A&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CodeForces 724A Checking the Calendar 题目传送门&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;大意&quot;&gt;&lt;a href=&quot;#大意&quot; class=&quot;headerlink&quot; title=&quot;大意&quot;&gt;&lt;/a&gt;大意&lt;/h3&gt;&lt;p&gt;对于非闰年，题目给出两个星期（一周里的任意两天），请你判断这两天是否是连续两个月的第一天对应的星期。&lt;/p&gt;
+&lt;h3 id=&quot;思路&quot;&gt;&lt;a href=&quot;#思路&quot; class=&quot;headerlink&quot; title=&quot;思路&quot;&gt;&lt;/a&gt;思路&lt;/h3&gt;&lt;p&gt;首先我列出了2015年和2017年每月第一天都是星期几，然后发现了一个规律。&lt;br&gt;2015:{4,7,7,3,5,1,3,6,2,4,7,2}&lt;br&gt;2017:{7,3,3,6,1,4,6,2,5,7,3,5}&lt;/p&gt;
+&lt;p&gt;发现这些星期中 间隔天数是固定的。&lt;br&gt;{3,0,3,2,3,2,3,3,2,3,2}&lt;/p&gt;
+&lt;p&gt;因此对于每一组数据，遍历一遍间隔天数，发现等于第二天了，输出YES，否则输出NO。&lt;/p&gt;
+&lt;h3 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;cstdio&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;stack&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;set&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;map&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;vector&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;algorithm&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;using namespace std;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int days[12] = &amp;#123;3,0,3,2,3,2,3,3,2,3,2,2&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;map&amp;lt;string, int&amp;gt; week;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;/span&gt;()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    string aa, bb;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    week[&lt;span class=&quot;string&quot;&gt;&quot;monday&quot;&lt;/span&gt;] = 1;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    week[&lt;span class=&quot;string&quot;&gt;&quot;tuesday&quot;&lt;/span&gt;] = 2;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    week[&lt;span class=&quot;string&quot;&gt;&quot;wednesday&quot;&lt;/span&gt;] = 3;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    week[&lt;span class=&quot;string&quot;&gt;&quot;thursday&quot;&lt;/span&gt;] = 4;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    week[&lt;span class=&quot;string&quot;&gt;&quot;friday&quot;&lt;/span&gt;] = 5;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    week[&lt;span class=&quot;string&quot;&gt;&quot;saturday&quot;&lt;/span&gt;] = 6;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    week[&lt;span class=&quot;string&quot;&gt;&quot;sunday&quot;&lt;/span&gt;] = 7;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(cin &amp;gt;&amp;gt; aa &amp;gt;&amp;gt; bb)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        int flag = 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        int first = week[aa];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        int second = week[bb];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int i = 0; i &amp;lt; 12; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;((first+days[i])%7 == second%7)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                flag = 1;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;built_in&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(flag) cout &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&quot;YES&quot;&lt;/span&gt; &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; cout &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&quot;NO&quot;&lt;/span&gt; &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;呜啊妹叽被虐得好惨啊哭唧唧థ౪థ&lt;br&gt;一般在老套又俗气的励志故事里都是怎么写的呢？猪脚卧薪尝胆痛定思痛躲在小角落里吭哧吭哧默默地刷完了所有题以求得安慰。啊真是老套又俗气。&lt;br&gt;嗯，妹叽也是，既老套又俗气_(:3」∠❀)_&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UVa 136 Ugly Numbers 解题报告</title>
+    <link href="https://moemoemortimer.github.io/2016/10/08/uva-136/"/>
+    <id>https://moemoemortimer.github.io/2016/10/08/uva-136/</id>
+    <published>2016-10-08T09:32:35.000Z</published>
+    <updated>2016-10-09T15:06:05.234Z</updated>
+    
+    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;page=show_problem&amp;amp;problem=72&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;UVa 136 丑数 题目传送门&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;大意&quot;&gt;&lt;a href=&quot;#大意&quot; class=&quot;headerlink&quot; title=&quot;大意&quot;&gt;&lt;/a&gt;大意&lt;/h3&gt;&lt;p&gt;丑数是指不能被除2，3，5以外的其他素数整除的数。将丑数从小到大排列起来，可得：1，2，3，4，5，6，8，9，10，12，15，…&lt;br&gt;求第1500个丑数。&lt;/p&gt;
+&lt;h2 id=&quot;思路&quot;&gt;&lt;a href=&quot;#思路&quot; class=&quot;headerlink&quot; title=&quot;思路&quot;&gt;&lt;/a&gt;思路&lt;/h2&gt;&lt;p&gt;如果x是丑数，那么2x，3x，5x也是丑数。&lt;br&gt;使用一个优先队列存所有丑数，由队列的FIFO原则，每次令最小的丑数出队，分别乘2，3，5后加在后边，这里要注意一个细节，在添加丑数时可能会有这个数已经在队列中的情况，所以我们还要用一个set存队列里已有的元素，每次加之前先看看这个数之前有没有加过。&lt;/p&gt;
+&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;meta-string&quot;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;meta-string&quot;&gt;&amp;lt;set&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;meta-string&quot;&gt;&amp;lt;queue&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;meta-string&quot;&gt;&amp;lt;algorithm&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;long&lt;/span&gt; LL;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; a[&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;] = &amp;#123;&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    priority_queue&amp;lt;LL, &lt;span class=&quot;built_in&quot;&gt;vector&lt;/span&gt;&amp;lt;LL&amp;gt;, greater&amp;lt;LL&amp;gt; &amp;gt; pq;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt;&amp;lt;LL&amp;gt; s;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    pq.push(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    s.insert(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; ; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        LL x = pq.top();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        pq.pop();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(i == &lt;span class=&quot;number&quot;&gt;1500&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&quot;The 1500&#39;th ugly number is &quot;&lt;/span&gt; &amp;lt;&amp;lt; x &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&quot;.\n&quot;&lt;/span&gt; &amp;lt;&amp;lt; &lt;span class=&quot;built_in&quot;&gt;endl&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; j = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; j &amp;lt; &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;; j++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            LL x2 = x * a[j];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(!s.count(x2))&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                pq.push(x2);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                s.insert(x2);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+      <category term="STL" scheme="https://moemoemortimer.github.io/tags/STL/"/>
+    
+      <category term="优先队列" scheme="https://moemoemortimer.github.io/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UVa 12096 集合栈计算机 解题报告</title>
+    <link href="https://moemoemortimer.github.io/2016/10/08/uva-12096/"/>
+    <id>https://moemoemortimer.github.io/2016/10/08/uva-12096/</id>
+    <published>2016-10-08T08:41:08.000Z</published>
+    <updated>2016-10-09T14:49:46.999Z</updated>
+    
+    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告。_(:3」∠❀)_&lt;/p&gt;
+&lt;p&gt;听说这道题极其重要。_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;page=show_problem&amp;amp;problem=3248&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;UVa 12096 The SetStack Computer 题目传送门&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;大意&quot;&gt;&lt;a href=&quot;#大意&quot; class=&quot;headerlink&quot; title=&quot;大意&quot;&gt;&lt;/a&gt;大意&lt;/h3&gt;&lt;p&gt;有一个专门为了集合运算设计的栈，该栈初始为空，并支持以下操作。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PUSH: 空集“{}” 入栈&lt;/li&gt;
+&lt;li&gt;DUP: 把当前栈顶元素复制一份后再入栈&lt;/li&gt;
+&lt;li&gt;UNION: 出栈两个集合，然后把二者的并集入栈&lt;/li&gt;
+&lt;li&gt;INTERSECT: 出栈两个集合，然后把二者的交集入栈&lt;/li&gt;
+&lt;li&gt;ADD: 出栈两个集合，然后把先出栈的集合加入到后出栈的集合中，把结果入栈。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;每次出栈后，输出栈顶集合大小（即元素个数）。&lt;br&gt;输入不超过2000个操作，并且保证操作均能顺利进行（不需要对空栈进行出栈操作）&lt;/p&gt;
+&lt;h2 id=&quot;思路&quot;&gt;&lt;a href=&quot;#思路&quot; class=&quot;headerlink&quot; title=&quot;思路&quot;&gt;&lt;/a&gt;思路&lt;/h2&gt;&lt;p&gt;该题中集合里的元素还是集合，于是我们给每个集合分配一个ID，而每个集合都能表示成所含元素的ID集合。&lt;br&gt;首先用&lt;code&gt;map&amp;lt;set&amp;lt;int&amp;gt;, int&amp;gt;&lt;/code&gt;将集合映射成ID&lt;br&gt;然后用一个&lt;code&gt;vector&amp;lt;set&amp;lt;int&amp;gt; &amp;gt;&lt;/code&gt;存放所有集合，其中的每一个set作为一个集合单元，存放所含元素的ID，&lt;br&gt;整个栈则是一个&lt;code&gt;stack&amp;lt;int&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;cstdio&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;stack&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;set&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;map&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;vector&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;algorithm&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;using namespace std;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;typedef &lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt;&amp;lt;int&amp;gt; Set ;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;map&amp;lt;Set, int&amp;gt; IDcache;  //将集合映射成ID&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;vector&amp;lt;Set&amp;gt; Setcache;   //根据ID取集合&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#define ALL(x) x.begin(), x.end()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#define INS(x) inserter(x, x.begin())&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//查找给定集合x的ID，如果找不到就分配一个新ID&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int ID(Set x)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(IDcache.count(x)) &lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; IDcache[x];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Setcache.push_back(x);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; IDcache[x] = Setcache.size() - 1;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;/span&gt;()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    int t;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    cin &amp;gt;&amp;gt; t;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(t--)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        stack&amp;lt;int&amp;gt; s;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        int n;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        cin &amp;gt;&amp;gt; n;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int i = 0; i &amp;lt; n; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            string op;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            cin &amp;gt;&amp;gt; op;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(op[0] == &lt;span class=&quot;string&quot;&gt;&#39;P&#39;&lt;/span&gt;) s.push(ID(Set()));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(op[0] == &lt;span class=&quot;string&quot;&gt;&#39;D&#39;&lt;/span&gt;) s.push(s.top());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            Set x1 = Setcache[s.top()]; s.pop();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            Set x2 = Setcache[s.top()]; s.pop();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            Set x;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(op[0] == &lt;span class=&quot;string&quot;&gt;&#39;U&#39;&lt;/span&gt;) &lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt;_union(ALL(x1), ALL(x2), INS(x));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(op[0] == &lt;span class=&quot;string&quot;&gt;&#39;I&#39;&lt;/span&gt;) &lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt;_intersection(ALL(x1), ALL(x2), INS(x));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(op[0] == &lt;span class=&quot;string&quot;&gt;&#39;A&#39;&lt;/span&gt;) &amp;#123; x = x2; x.insert(ID(x1)); &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            s.push(ID(x));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        cout &amp;lt;&amp;lt; Setcache[s.top()].size() &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        cout &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&quot;***&quot;&lt;/span&gt; &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这里是nyanko sama亲手调教出来的解题报告。_(:3」∠❀)_&lt;/p&gt;
+&lt;p&gt;听说这道题极其重要。_(:3」∠❀)_&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+      <category term="STL" scheme="https://moemoemortimer.github.io/tags/STL/"/>
+    
+  </entry>
   
   <entry>
     <title>HDU 1166 敌兵布阵 解题报告</title>
@@ -303,11 +495,11 @@
     </summary>
     
     
-      <category term="学习笔记" scheme="https://moemoemortimer.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="MySQL" scheme="https://moemoemortimer.github.io/tags/MySQL/"/>
     
       <category term="数据库" scheme="https://moemoemortimer.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+      <category term="学习笔记" scheme="https://moemoemortimer.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -365,9 +557,9 @@
     </summary>
     
     
-      <category term="学习笔记" scheme="https://moemoemortimer.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="Java" scheme="https://moemoemortimer.github.io/tags/Java/"/>
+    
+      <category term="学习笔记" scheme="https://moemoemortimer.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -1031,335 +1223,6 @@ int  no = rd.nextInt(10);//0-9之间的随机数&lt;/code&gt;&lt;/p&gt;
     
     
       <category term="姿势" scheme="https://moemoemortimer.github.io/tags/%E5%A7%BF%E5%8A%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ドキドキ~追剧追剧</title>
-    <link href="https://moemoemortimer.github.io/2016/08/28/drama-tracking/"/>
-    <id>https://moemoemortimer.github.io/2016/08/28/drama-tracking/</id>
-    <published>2016-08-28T12:02:05.000Z</published>
-    <updated>2016-08-30T02:19:47.506Z</updated>
-    
-    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;我把脑公们都藏在这里惹_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;こえ恋&quot;&gt;&lt;a href=&quot;#こえ恋&quot; class=&quot;headerlink&quot; title=&quot;こえ恋&quot;&gt;&lt;/a&gt;こえ恋&lt;/h2&gt;&lt;p&gt;ああ、このテレビドラマのヒロイン、ゆいこはとてもとても可愛いですわ！！&lt;br&gt;！&lt;br&gt;あの子の目がいつもキラキラて、すごく綺麗と思う。&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bjw1f79qbtu64dj20qh0exdid.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/c3c8eb1bjw1f79qcdhpuqj20ql0ey76v.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bjw1f79qcnu4jmj20qb0f80w4.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;メイド服(❤ ω ❤)！&lt;br&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/c3c8eb1bjw1f79qcwu79aj20qh0ew420.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f79ql0pexjj20qi0eywhu.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;次は、会長様～！！キヤああああ～！&lt;br&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/c3c8eb1bjw1f79quuht29j20qg0eytbs.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/c3c8eb1bjw1f79qsari8sj20qg0ew426.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bjw1f79qv39dqoj20qi0eytay.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;今まで松原君の顔がまだ見えなかったから、男性の主役はかっこいいかかっこいくないか全然わからない！！&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;我把脑公们都藏在这里惹_(:3」∠❀)_&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="电视剧" scheme="https://moemoemortimer.github.io/tags/%E7%94%B5%E8%A7%86%E5%89%A7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>『一个叫欧维的男人决定去死』</title>
-    <link href="https://moemoemortimer.github.io/2016/08/28/A-Man-Called-Ove/"/>
-    <id>https://moemoemortimer.github.io/2016/08/28/A-Man-Called-Ove/</id>
-    <published>2016-08-28T06:21:47.000Z</published>
-    <updated>2016-08-28T08:26:33.110Z</updated>
-    
-    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;一个让人笑了又哭，哭了又笑的故事。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;『一个叫欧维的男人决定去死』影评&quot;&gt;&lt;a href=&quot;#『一个叫欧维的男人决定去死』影评&quot; class=&quot;headerlink&quot; title=&quot;『一个叫欧维的男人决定去死』影评&quot;&gt;&lt;/a&gt;『一个叫欧维的男人决定去死』影评&lt;/h2&gt;&lt;p&gt;欧维是个脾气暴躁的古怪老头，有着洁癖+重度强迫症。&lt;/p&gt;
-&lt;p&gt;在58岁时，因爱妻去世，觉得人生索然无味，于是想要随她而去。&lt;br&gt;他决定去死，可是4次上吊，汽油，卧轨，吞枪，都失败了。&lt;/p&gt;
-&lt;p&gt;他无奈地跑去和妻子抱怨：“自杀没有想象中的那么容易啊。”&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bjw1f79gwrdgt6j21kw0nptj7.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;自杀没有想象中的那么容易，并不是因为他那“愚蠢的邻居”总是在他自杀到一半的时候突然冒出来，而是因为欧维是个充满爱的男人，他比谁都热爱生活，所以割舍不下，从扔掉冰箱里所有的食物，在昏暗的充满与妻子一同生活的痕迹的房子里孤独地上吊开始，到邻居搬来，借梯子，送食物，小女孩，肥猫，鲁内家的暖气片，妻子的学生······牵住他的都是一些微不足道的小事和小人物。&lt;/p&gt;
-&lt;p&gt;随着影片的展开，你会越来越发现欧维是个多么好的人，而在好感度直线上升的同时，你又会看到他经历过多少令人痛彻心扉的变故。心里面忍不住就感动地一塌糊涂，尽管有这么多令人心碎的事情，他仍然以一片赤诚之心接待这个世界。&lt;/p&gt;
-&lt;p&gt;幼年丧母&lt;br&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f79ht6am96j21kw0nwdnl.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;在他刚体会到真正的自由时，又失去了父亲。&lt;br&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/c3c8eb1bjw1f79htpm4erj21kw0nv10h.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;紧接着，亲手盖起的房子也被烧毁了。他曾对索尼娅说，他最喜欢的就是房子了。&lt;br&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/c3c8eb1bjw1f79hvdabn2j21kw0nunap.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;亲手盖房子什么的距离我这一代人已经有点遥远了，我的姥爷的房子是自己盖的，我觉得这真的真的是个神圣而伟大的工程。&lt;/p&gt;
-&lt;p&gt;欧维的父亲是一个特别好的人，他很少开口，很少表现自己的爱，但却教会他许多。&lt;/p&gt;
-&lt;p&gt;在小欧维差一点被火车撞的时候，他冲过去紧紧地把儿子抱在怀里，并且任由欧维一直抱着爸爸直到上床睡觉。&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bjw1f79i1bh6l8j21kw0rsgwn.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;他说诚实是最好的美德，但诚实也需要一些帮助（帮儿子打了汤姆），同时教导儿子“不要谈论别人的所作所为”。&lt;br&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f79i6eyz1hj21kw0rrqdg.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;这个男人是笨拙的，笨拙而又浪漫得很。每次自杀前都会换下他那一身厚重的外套，换上笔挺的西装，配一条相衬领带，请允许我称之为浪漫吧~“索尼娅会喜欢我这样去见她的吧？”我猜他一定会这么想。即使爱妻已亡，他仍把婚戒戴在手上。两人第一次约会时他送她的花他一直记得，在妻子的墓碑上刻下这么一朵花，每天去看她时也会买这样一束花。&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bjw1f79hl7duibj21kw0ndti4.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f79jgu8v7ij21kw0nygxw.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;他不擅表达自己。初次约会时在餐厅里他简直像头笨鹅，可美丽而聪慧的索尼娅最终还是选择了欧维。&lt;br&gt;-『你几乎没吃什么东西。』&lt;br&gt;-『不，我在家吃过了。』&lt;br&gt;-『是吗，你为什么要在家吃？』&lt;br&gt;-『那样你就可以点你想吃的了。』&lt;br&gt;如初见时索尼娅所说，好可爱=w=&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bjw1f79hqu4yogj21kw0s5don.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;搬新家时，索尼娅有很多书，他说：我再去做一个书架。&lt;br&gt;索尼娅告诉他她怀孕了，他说：我去做个摇篮车。&lt;br&gt;索尼娅把他的手放到自己的肚子上让他感受小宝宝在踢她的肚子时，他狼狈地跑去厕所偷偷抹掉激动的眼泪。&lt;br&gt;因事故而残疾的妻子只能靠轮椅走动时，他把所有家具的高度都改低。&lt;br&gt;学校不愿收残疾人做老师，对他们的修斜坡请求置之不理，他就花了一整晚的时间冒雨在楼梯旁边修了个斜坡以便妻子上下班。&lt;/p&gt;
-&lt;p&gt;我们一生何其幸运，能遇到挚爱的人。&lt;/p&gt;
-&lt;p&gt;他真的把邻居帕瓦妮一家当作自己的亲人对待，特别是帕瓦妮，就像他的女儿一样。&lt;/p&gt;
-&lt;p&gt;帕瓦妮的宝宝出生了，老爷子一脸感动地小心翼翼把它抱在怀里。&lt;br&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f79iu13i71j21kw0nn46e.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;对小女孩说的话，如同当年父亲对他说这话情景一模一样。&lt;br&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/c3c8eb1bjw1f79ix7untxj21kw0rnk02.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f79j0m80l8j21kw0ro46s.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;那天，白雪覆盖大地，8点已过他依旧未醒，猫咪在他肚子上安详地睡着，而他……&lt;br&gt;葬礼时，与父母葬礼时不同的是，社区里所有人都来了。&lt;br&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/c3c8eb1bjw1f79j8l99ufj21kw0nndoz.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;此生无论我们做了什么，都逃不开人生。&lt;/p&gt;
-&lt;h2 id=&quot;还有几个戳笑点的地方&quot;&gt;&lt;a href=&quot;#还有几个戳笑点的地方&quot; class=&quot;headerlink&quot; title=&quot;还有几个戳笑点的地方&quot;&gt;&lt;/a&gt;还有几个戳笑点的地方&lt;/h2&gt;&lt;p&gt;虽然总想把那只流浪猫赶出自己的领地，看到有人拿石子打它立马跳出来救它，最后还让这只肥猫住进了自己家，一天两顿金枪鱼罐头惯着23333&lt;br&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/c3c8eb1bjw1f79i9bw762j21kw0rotj9.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;这里的喝茶群众简直了2333&lt;br&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/c3c8eb1bjw1f79ivjzlqjj21kw0nrk1y.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;还有第四次上吊时绳子断了，带着脖子上的勒痕怒气冲冲地去找售货员，售货员一脸蒙蔽的问他“你用它做什么了？”23333&lt;/p&gt;
-&lt;h2 id=&quot;书评&quot;&gt;&lt;a href=&quot;#书评&quot; class=&quot;headerlink&quot; title=&quot;书评&quot;&gt;&lt;/a&gt;书评&lt;/h2&gt;&lt;p&gt;等我买到书了再来填坑。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;一个让人笑了又哭，哭了又笑的故事。&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="电影" scheme="https://moemoemortimer.github.io/tags/%E7%94%B5%E5%BD%B1/"/>
-    
-      <category term="影评" scheme="https://moemoemortimer.github.io/tags/%E5%BD%B1%E8%AF%84/"/>
-    
-      <category term="小说" scheme="https://moemoemortimer.github.io/tags/%E5%B0%8F%E8%AF%B4/"/>
-    
-      <category term="读书笔记" scheme="https://moemoemortimer.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何得与凉风约，不与尘沙一起来。</title>
-    <link href="https://moemoemortimer.github.io/2016/08/21/something-about-relationship/"/>
-    <id>https://moemoemortimer.github.io/2016/08/21/something-about-relationship/</id>
-    <published>2016-08-21T10:50:41.000Z</published>
-    <updated>2016-09-29T10:38:32.468Z</updated>
-    
-    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;友達，是种怎样的存在呢。&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;我的微信被泄露了，微信里仅有的几个大学同学似乎没什么理由透露我的信息，稍稍推断一下可得另外一种可能，大概是从实习报名表上得到我的手机号的，但是那也得知道我的名字才能查到手机啊。或者还有其他可能。总之，来者何人，用意何在，这不得不引起我高度的戒备。&lt;/p&gt;
-&lt;p&gt;马上又到新生入校的日子了，我一直没有加新生群，不知道这种选择之后会不会让我吃亏，但自己确实不喜欢新生群里学长学姐男扮女女扮男，或者假扮新生，起哄新生爆照，套路满满的流氓样子。做人要厚道，多一点真诚好不好。&lt;/p&gt;
-&lt;p&gt;今天和舍友散步时候又说到我们今年的新生群，似乎新人们自己又搞了个只有自己人的新群，她对这点颇有微词，说不和学长学姐们搞好关系，还想不想混了昂。&lt;/p&gt;
-&lt;p&gt;我怔了下，其实这话是开玩笑的我明白，但这种想法，我之前也有过的。&lt;/p&gt;
-&lt;p&gt;我高三毕业那个寒假没进什么新生群，是来了之后才加的，记得当时有一个社团纳新，电话面试的时候问我自认为有什么缺点，我说自己对别人总是恭恭敬敬的很有礼貌，但时常会将自己的姿态摆的过低，近乎卑微。感觉电话那边好像愣了一下（装逼成功2333）实话说这个答案也是突然窜到脑海中的，说是这么说的，但后来我确实对学长学姐很…客气。可能是初来乍到，安全感极度匮乏之下的心理状态吧。&lt;/p&gt;
-&lt;p&gt;大学里班主任的作用被极大地弱化，唯一的消息来源就是学长学姐们了，但我发觉自己真的是路人甲那一类的，学长学姐帮忙选课，带着逛校园啊，要不就是部长谈心什么的这些事我都没经历过，尽管如此能多认识一个人，好友列表里又多了一个人，心里面也是蛮开心的。唉…怎么觉得自己好闷骚。&lt;/p&gt;
-&lt;p&gt;不过越到后来，我就越纳闷：&lt;/p&gt;
-&lt;p&gt;明明大家都差不了一两岁，学识心智也差不了多少，为什么非得学姐学长学弟学妹地相互称来道去呢？是不是这样能以较低的成本拉近关系？毕竟谁不希望别人对自己客客气气的。&lt;/p&gt;
-&lt;p&gt;我真的应该好好感谢学长学姐们没有对我爱搭不理的。哈哈，说不定是由于我态度诚恳。可是最近也很好奇如果我是个学长，是怎么看待接近我的学妹的。原谅我的敏感，我认为“学妹”二字尤为暧昧，而且认为将自己摆在学长之位喜欢摆架子的人必定会轻视向他们寻求帮助的学妹。&lt;/p&gt;
-&lt;p&gt;那么这种关系就是不对等的。朋友一定是在精神平等的基础上建立起来的。&lt;/p&gt;
-&lt;p&gt;我深知不能随意轻视别人，因为这往往是因为自己无知。&lt;/p&gt;
-&lt;p&gt;可是连脸还认不清就开始套路别人，是觉得学妹有多好骗啊==b&lt;/p&gt;
-&lt;p&gt;至此为止，我的大学真是蛮孤独的。soul mate列表里至今没有大学里认识的朋友，没什么能真正愿意和我交流的人。我总觉得交流思想是加深友谊一个很重要的环节，这样可以发现价值观的不同之处，但这种差异又不会像男女朋友那样引起矛盾，反而会提供一面审视自己的镜子。以此互补或者得到长足的进步。也可能是自己是个女生的缘故，有很多时候放不太开。这能怪谁去？只能怪我咯。&lt;/p&gt;
-&lt;p&gt;突然想到了高中时候在语文练习册上看到了一篇文章，当时自己把它撕下来送给了某人，不过最后还是没能做成真正意义上的朋友（我认为的）。&lt;/p&gt;
-&lt;p&gt;我真的很喜欢这篇文，可今天怎么也百度不到，也必应不到（因为网速太慢了google根本上不去，自己也记不太清具体的内容），最后的最后终于在教室人少了一半的时候网速变快了，谷歌娘真是我亲娘TAT！！MUA=3=!!&lt;/p&gt;
-&lt;h2 id=&quot;交往的距离-——马德&quot;&gt;&lt;a href=&quot;#交往的距离-——马德&quot; class=&quot;headerlink&quot; title=&quot;交往的距离  ——马德&quot;&gt;&lt;/a&gt;交往的距离  ——马德&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;交往的质量在于距离。&lt;/p&gt;
-&lt;p&gt;在友谊的框架内，你第一个想起的人，一定是最好的朋友。当然，他若第一个想起的也是你，那么，你俩一定是两心相悦的至交。&lt;/p&gt;
-&lt;p&gt;你会发现，你与那个一辈子都要好的朋友之间，是有距离的。这个距离，不远，也不近；不疏，也不密。是一颗心对另一颗心的不绝欣赏，是一段情对另一段情的永恒仰望。&lt;/p&gt;
-&lt;p&gt;交往过度其实是很致命的。这有点像吃饭，无论多么可口的佳肴，都是不能总吃的。胃不说什么，大大咧咧，但一颗敏感的心，早已变得挑剔、厌烦。这时候，极平常的一句话，极微小的一件事，都会引起交往的一次海啸。&lt;/p&gt;
-&lt;p&gt;是的，山珍海味也有吃腻的时候。在交往的理想结果上，你不要期待永远的如胶似漆，你能不断地接近与契合，就够了。&lt;/p&gt;
-&lt;p&gt;平素间，推杯换盏，称兄道弟，鞍前马后，阿谀奉承的人，不是朋友，是利益的结合体。超出常情的亲密无间，不是在交往，是在勾结，在利用，在狼狈为奸。这样的结合体，聚得快，散得也快，刚才还好得一塌糊涂，转眼间，就可以翻脸到分崩离析。&lt;/p&gt;
-&lt;p&gt;费了心思的交往，叫周旋，累；耍了心机的交往，叫算计，阴。真正的交往，是至简至真的，一扇春天的门开了，一扇含笑的门阖上，然后，天地淡然。&lt;/p&gt;
-&lt;p&gt;如果一个人一辈子都没有与别人真正交往过，不是孤高自傲太过超脱，就是品性猥琐不被人所容。当然了，若许多人都是你结交的朋友，恐怕更多的是狐朋狗友。佛无至爱，只有众亲，我们不是佛，我们的心里，一辈子真正接纳的，只会是有限的几个人，更多的都成了我们生命中的匆匆过客。&lt;/p&gt;
-&lt;p&gt;我觉得最好的交往，不是双方有意识的吸附与粘合，而是彼此间无意识的渗透与融入。吸附与粘合，常常怀有目的性和功利欲，或含蓄，或浓烈，总之，看起来，有些心怀鬼胎；而渗透与融入，则不然。云淡风轻的，风倏忽间来，云恬淡着去，无欲无求，是心灵最真挚的握手，是情感最纯净的需求。&lt;/p&gt;
-&lt;p&gt;历史上，俞伯牙与钟子期，高山流水，贵为知音。钟子期死后，俞伯牙黯然地把琴摔了。也许，在他看来，世界上再美的乐声，如果无知音来赏，不如任天籁的香魂归去，让它成为绝唱。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;不过他写的太过理想化了，能遇到有相同喜好的志同道合的伙伴已实属不易，比这更进一步的知己真是太难得了。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;友達，是种怎样的存在呢。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="胡言乱语" scheme="https://moemoemortimer.github.io/tags/%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《玉子爱情故事》——影评</title>
-    <link href="https://moemoemortimer.github.io/2016/08/21/Tamako-Love-Story/"/>
-    <id>https://moemoemortimer.github.io/2016/08/21/Tamako-Love-Story/</id>
-    <published>2016-08-21T08:05:33.000Z</published>
-    <updated>2016-08-28T06:22:27.151Z</updated>
-    
-    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;一直想看的，很萌很治愈的一部电影。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f729bifclpj21kw0vuadg.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;契机&quot;&gt;&lt;a href=&quot;#契机&quot; class=&quot;headerlink&quot; title=&quot;契机&quot;&gt;&lt;/a&gt;契机&lt;/h2&gt;&lt;p&gt;最初是在B站几个MAD里面看到的这部电影的几个素材，男女主用纸杯电话交流，感觉很有爱，打开弹幕知道了这是出自《玉子爱情故事》。今天终于有机会看完它了~~&lt;br&gt;《玉子爱情故事》是京都动画制作的TV动画《玉子市场》的剧场版动画，于2014年上映。坊间有京阿尼出品，必属精品的传言(?)比如当年备受好评的《日常》，不过京阿尼的动画我还真没看过几部。听说京都动画对妹子一直很优待，确实，《玉子》制作还算精良，几个妹子的角色刻画得都很萌，玉子那三根会跳舞的呆毛直直戳中我心。还有声优也是一大加分项。嗯嗯，还有不得不说的是，男主这人设也挺帅的呀(●’◡’●)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/c3c8eb1bjw1f729qkby4cj21kw0w1wlo.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;楔子&quot;&gt;&lt;a href=&quot;#楔子&quot; class=&quot;headerlink&quot; title=&quot;楔子&quot;&gt;&lt;/a&gt;楔子&lt;/h2&gt;&lt;p&gt;讲真，没看过TV版的我看到开头这只鸟的番外还是挺蒙逼的，特别是它它它捏麻糬的时候！！&lt;/p&gt;
-&lt;p&gt;纳尼？！卧槽吓得我平板都掉了，这是啥？&lt;br&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/c3c8eb1bjw1f728zdys8uj21kw0vuqax.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;所有脑子里给出的答案是欧派的你们，都！是！hen！tai！&lt;/p&gt;
-&lt;p&gt;因为正面是这样的~&lt;br&gt;多么卡哇伊~~&amp;gt;o&amp;lt;&lt;br&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/c3c8eb1bjw1f7294pypl3j21kw0vxagv.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;面对这种不按套路出牌的剧场版前言，我只能说：女人，你成功地引起了本王的注意_(:3」∠❀)_&lt;/p&gt;
-&lt;h2 id=&quot;故事主线&quot;&gt;&lt;a href=&quot;#故事主线&quot; class=&quot;headerlink&quot; title=&quot;故事主线&quot;&gt;&lt;/a&gt;故事主线&lt;/h2&gt;&lt;p&gt;《玉子爱情故事》的男主和女主是青梅竹马。&lt;br&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/c3c8eb1bjw1f72961mk29j21kw0vywkv.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f7296r3hk9j21kw0w1qba.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bjw1f729b0w61aj21kw0w47cc.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;本片将时间背景设在高三。神菜提议要在高中最后一个夏天与棒舞社的大家制造回忆，然后从书包里掏粗一个单子。&lt;/p&gt;
-&lt;p&gt;这个酥包的抖M脸，2333红红火火恍恍惚惚。&lt;br&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/c3c8eb1bjw1f72cd3pvcgj21kw0vxtdr.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;还有这个突然中二起来的热血台词~&lt;br&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/c3c8eb1bjw1f729ilvzb6j21kv0vytik.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;关于“制造回忆”&quot;&gt;&lt;a href=&quot;#关于“制造回忆”&quot; class=&quot;headerlink&quot; title=&quot;关于“制造回忆”&quot;&gt;&lt;/a&gt;关于“制造回忆”&lt;/h3&gt;&lt;p&gt;日本的影视剧好像很喜欢提这个说法（或许是我不太接触大陆脑残剧的缘故？），而且每次提到这个词都给我留下很深的印象。比如《一吻定情》直树和琴子在高三暑假最后一天终于制造的回忆（诶诶居然也是高三的夏天…诶果然这种浪漫因子只会在二次元里出现啊），还有最近追的《心有所属》MISAKI在烟花大会上想制造与千秋前辈的美好回忆。从某种角度来说，只有制造了回忆，人物的关系才能发展，电视剧才能拍的下去，观众们也好有个看头啊。不过有一点我还是不太明白，回忆为什么要被制造出来呢？那些美好的瞬间，让其自然发生不是很好么~那些事情是值得回忆的，难道人们在事前已经预判了么？那多残忍，有些不经意的小事，偶然袭上心头的时候，才会蓦然发现其可贵之处。不过这种心态也不乏其积极之处，事前做好准备，机会来了就牢牢把握，在向未来前进的时候，能够顾及到身后，让当下变得有意义的同时，能在寂寞失落时给自己留一个念想聊以慰籍。&lt;/p&gt;
-&lt;p&gt;在小绿的助攻下，饼藏终于表白了~&lt;br&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f72af70i9xj21kw0vq450.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;这里的『めっちゃくっちゃ』(mechakucha)译作“非常非常”，有感情胡乱地出现而且喷薄而出之意，这种强烈的感情色彩在含蓄的日语里是很少见的，搭配少男少女真是再好不过惹~&lt;/p&gt;
-&lt;p&gt;然后玉子就被吓得…掉进了水里~！&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bjw1f72cu0xskej21kw0vx148.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;之后整个人就傻了~丧失所有行为能力，因为麻糬和饼藏的读音很像，所以她把所有的麻糬都说成了饼藏~~&lt;br&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f728fert05j21kw0vvn5w.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;因为玉子的逃避，饼藏变得越来越苦恼和难为情~咖啡店的老板一席话让他把加砂糖的勺子放了回去，不加糖的咖啡，大概就是在说“青春的苦涩”吧~~&lt;br&gt;“年轻人总是急于求成，就连等待一匙砂糖彻底溶解的耐心都没有。”&lt;/p&gt;
-&lt;p&gt;“后悔所带来的苦涩，恰好印证了你曾经有所作为。这一点一滴都将点缀为人生的味道。”&lt;/p&gt;
-&lt;p&gt;饼藏要求撤回自己表白的话，玉子反而因此而沮丧。她问朋友们什么时候人会撤回自己说过的话呢？神菜说大概就是觉得很难为情希望对方全部忘掉的时候吧。对于该如何答复饼藏的问题，神菜给出了无敌提案，天哪这里简直萌哭了！！&lt;/p&gt;
-&lt;p&gt;“当看到大路同学在斜45度角时，就这样挡住路（摔倒在地2333），以此为契机，”之前的事  谢谢你，你能这么看待我  我很高兴，下次来帮我造房子吧！！” ”&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bjw1f72cf61bx7j21kw0w5jzi.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;之后就是各种助攻，然后又是一轮日剧跑上线，100次里才能接到1次的玉子这次稳稳地接住了纸杯电话~然后~~&lt;br&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/c3c8eb1bjw1f72chd9yyaj21kw0vy44n.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bjw1f72cgrgdmkj21kw0w212c.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f72b3tnrsvj21kw0vydp7.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;『最喜欢饼藏了！请讲、』&lt;/p&gt;
-&lt;h3 id=&quot;关于未来&quot;&gt;&lt;a href=&quot;#关于未来&quot; class=&quot;headerlink&quot; title=&quot;关于未来&quot;&gt;&lt;/a&gt;关于未来&lt;/h3&gt;&lt;p&gt;我觉得这是青春题材的日影日剧必不可少的一个话题~《一吻》里面有看到周围人都找到了自己的梦想而着急的琴子（虽然寻找梦想这几集变成了整部剧一个不大不小的bug），《玉子爱情故事》里的玉子和琴子很像啊~不过电影就没那么多篇幅交待之后的事情了~这可以算作是青春电影的教育意义？总之就是人要为自己定下清晰的目标，就算现在还有些迷惘，有喜欢的人陪伴也一定会跨过重重阻碍的。&lt;/p&gt;
-&lt;h2 id=&quot;其他有爱的point&quot;&gt;&lt;a href=&quot;#其他有爱的point&quot; class=&quot;headerlink&quot; title=&quot;其他有爱的point~&quot;&gt;&lt;/a&gt;其他有爱的point~&lt;/h2&gt;&lt;p&gt;cat on&lt;br&gt;cannon23333&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bjw1f72cfubo1ij21kw0w10yc.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;变态麻糬娘（来自官方吐槽23333）~&lt;br&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/c3c8eb1bjw1f728dquq60j21kw0vx12i.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;还有走错片场的有马公生君~&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bjw1f72ckm0gegj21kw0vxgtl.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;搓脸~小小的玉子好软yoooo&lt;br&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/c3c8eb1bjw1f72cg4ubfzj21kw0w1dmk.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;END&quot;&gt;&lt;a href=&quot;#END&quot; class=&quot;headerlink&quot; title=&quot;END&quot;&gt;&lt;/a&gt;END&lt;/h2&gt;&lt;p&gt;其实电影本身没有什么大道理大悬念，只是简简单单干干净净的爱情故事，但叙事十分流畅，没有什么拖沓感，让人心里面软乎乎的感觉很舒服(～￣▽￣～)&lt;/p&gt;
-&lt;p&gt;一部软妹香气满满的讲述青梅竹马爱情故事的激萌的片子，安利给你~~&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bjw1f729n8ke6hj21kw0vxtgz.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;一直想看的，很萌很治愈的一部电影。&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="电影" scheme="https://moemoemortimer.github.io/tags/%E7%94%B5%E5%BD%B1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HDU 2209 解题报告</title>
-    <link href="https://moemoemortimer.github.io/2016/08/18/hdu-2209/"/>
-    <id>https://moemoemortimer.github.io/2016/08/18/hdu-2209/</id>
-    <published>2016-08-18T13:05:28.000Z</published>
-    <updated>2016-08-18T13:17:03.802Z</updated>
-    
-    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=2209&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;题目传送门&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;algorithm&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;cstring&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;using namespace std;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;const int INF = 1 &amp;lt;&amp;lt; 20;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;char s[25], t[25];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int ans = INF;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;/span&gt;()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(scanf(&lt;span class=&quot;string&quot;&gt;&quot;%s&quot;&lt;/span&gt;, s) != EOF)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        int len = strlen(s);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int i = 0; i &amp;lt; len; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            t[i] = s[i] -= &lt;span class=&quot;string&quot;&gt;&#39;0&#39;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        int ans = INF, num = 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int i = 1; i &amp;lt; len; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(s[i-1])&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                s[i-1] = 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                s[i] = !s[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                s[i+1] = !s[i+1];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                num++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(!s[len-1])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            ans = min(ans, num);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        t[0] = !t[0];t[1] = !t[1];num = 1;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int i = 1; i &amp;lt; len; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(t[i-1])&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                t[i-1] = 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                t[i] = !t[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                t[i+1] = !t[i+1];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                num++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(!t[len-1])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            ans = min(ans, num);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(ans == INF)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;NO\n&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%d\n&quot;&lt;/span&gt;, ans);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>转载：3xian之所在</title>
-    <link href="https://moemoemortimer.github.io/2016/08/18/repost/"/>
-    <id>https://moemoemortimer.github.io/2016/08/18/repost/</id>
-    <published>2016-08-18T05:02:00.000Z</published>
-    <updated>2016-08-18T06:25:22.318Z</updated>
-    
-    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;痛击我心的一篇ACM退役文。&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;&lt;a href=&quot;http://davidzai.blog.163.com/blog/static/1871262120101823540952/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;原文地址 @GDUT 3xian&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;3xian之所在&quot;&gt;&lt;a href=&quot;#3xian之所在&quot; class=&quot;headerlink&quot; title=&quot;3xian之所在&quot;&gt;&lt;/a&gt;3xian之所在&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;最后一天，漫天飘起了雪花，假装欢送我离去。&lt;/p&gt;
-&lt;p&gt;这次WF之战不太顺利，早期的C题大概花了1秒钟构思，然而由于输出格式多了一个空格直到两个半小时才逃脱Wrong Answer的纠缠。还好lynncui在期间独挡一面过掉D。最终成绩不好，然而没有遗憾，从不遗憾。&lt;/p&gt;
-&lt;p&gt;相比之下，来自全球的队伍让我看到了很强大的实力，每一道题都有人过，包括SJTU欺骗性提交的H都被人干掉了。身为地球人我感到自豪。&lt;/p&gt;
-&lt;p&gt;WF之旅很奢华（Sample: 1300一晚的酒店，99一顿的早餐），活动很多，服务很好。但最终念念不舍的是各位一见如故的朋友们，至于为什么一见如故我也不得而知。按HH师傅说，That’s what ACM brings to us。也感激于HH师傅作为浙大教练，却为我们摄下了更多的赛场瞬间。&lt;/p&gt;
-&lt;p&gt;早早就打算把今年作为退役战，因为我相信，大学生涯完全耗散在一门竞赛上是不太妥当的事情。然这次的经历让我特别舍不得各路朋友们，如果有机会还是很想拉大伙喝一些酒，谈一下天。虽说退役，此后我仍然会找有趣的题目做做，仍然会投入很多时间在算法之中，但不再关心比赛的事情。&lt;/p&gt;
-&lt;p&gt;最后一天，脑海里全是这两年ACM生涯的片段。其实早就想记下ACM生涯中复杂的情绪，可担心把事情说得太明白会破坏一些友谊。如今想来，倘若批判不是直白的，那么赞美就是没有意义的。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;初出茅庐&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;刚踏入大学校门的时候，并没有听说过ACM。跟班里大都数同学一样，大一接触C语言，但中学时候对ASP和Flash的AS比较熟悉。大一被fyj老师看中，进了一个研究生为主的项目团队，并没有给我什么任务，只让我学东西，事实上也没学什么东西，倒是里头一个师兄给我接了一些私活，我一个人包做ASP的商城、论坛之类，完成一项大概花三个星期，报酬1000+。赚了一些钱之后就翘了一大片课，买机票去厦门跟前女友过日子。回想起来觉得有点不可思议。那时候确实过得很潇洒，平时做各种各样喜欢做的事情，班里还有人拜我为师学吉他。&lt;/p&gt;
-&lt;p&gt;大一上学期的期末，跟4h去喝酒的时候他首次提起ACM（其实他指的是OJ），我马上表示这是一种很有趣的事物，公平而富有挑战性。当晚回去就跑到HDOJ尝试，下面这个是处女交。&lt;/p&gt;
-&lt;p&gt;419087    2007-12-04 20:19:32    Wrong Answer    1000    0MS    0K    82 B    C    3xian&lt;/p&gt;
-&lt;p&gt;PS：HDOJ的A+B确实比较折腾，对于不了解OJ模式的人来说，哪里知道用EOF来做什么。&lt;/p&gt;
-&lt;p&gt;接下来的几天很快就做掉了最大子串和，高精度加法什么的。当初想按题号顺序做，很容易想象，活生生被1007卡死了（二维最近欧几里得点对）。那时候大号小号一共交了两百多次，最后是给水过去的——随便按两个方向排序，然后只比较相邻的点。话说回来，即便是水过去已经不容易了，一个不知算法为何物的土人，要想出经典的分治法和扫面线法都是不太可能的事情，更别说线性筛法。而这个题目给我的最大启发是：原来C语言有qsort这种东西。&lt;/p&gt;
-&lt;p&gt;晚些找4h单挑了几次，随机抽题号，比谁AC得快，战战兢兢地全胜。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;入队&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;第二个学期的时候，在公共垃圾桶里瞄见了一张ACM队招新传单，是的，是垃圾桶，我把它从垃圾桶里掏出来了。必须的，跟4h一起去面试。问，挂过科没有。 我说我挂了历史之类的。（其实还挂了高数，但是“之类”是一个海纳百川的辞法……所以不算欺骗。一年之后领队发现我挂过高数，一脸想踢我出队的样子。）接着，我被考到快排的时间复杂度，4h抢答nlogn。我说，我已经在杭电做了一百题了，够不。曰，到时候看你校赛的表现。&lt;/p&gt;
-&lt;p&gt;后来校赛拿了第3名，前两名大三的至今搞不清是谁。其实校赛里头有一道最大子串和，我没读懂题意，否则估计就夺冠了？反正是顺利入队，并直接被扔去省赛作敢死队。当时我跟领队说过这样一句话让他觉得特无聊，我说，明年的这个时候我肯定是我们学校最猛的。&lt;/p&gt;
-&lt;p&gt;另外当时队里最受宠的是06级的wjs，我又悄悄跟4h说，明年的这个时候，06级最猛的不是wjs，而是ccf。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;ziliang&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;不得不提到这个人。ziliang是广工ACM近代史的鼻祖，07年为广工夺得了的地区赛的首牌和首银。一路以来给我们指引方向，尽管细节上没指点太多，其实也没必要指点太多。在我看来他的思维能力比现在的一批人高一个档次，估计也是属于百年孤独的类型。&lt;br&gt;从我入队开始ziliang就开始忽悠每一个人。比如一开始假装师姐来掏我们的底细，当时她（他）问我是不是搞过OI，我答：OI？OJ吧……&lt;br&gt;然ziliang的影响力之大也造成了不好的影响。队里的人都膜拜他，膜拜到每天都陪他在Q群里吹水。平均下来每天要吹两三个小时甚至更多，这算不算是变相自杀。早期我试图融入这样一种氛围，毕竟孤立难以生存。后来发现融得很不舒服，权衡之后选择了屏蔽Q群。事实上队里的这种现象归根结底跟ziliang是无关的，不是他不知道自己在干什么，而是各位队员不知道自己在干什么。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;周赛&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;进队之后我们新生被组织起来参加周赛，也正是从这个时候开始，刚进队的我就对整个团队失去了归属感。本来按我入队时候的实力来说，甩开第二名几题应该没有什么问题，但事实上有时候我连冠军的位置都不保。是的，从网上找代码作弊的人太多了。不想点名也没必要点名，男生很猖狂，女生也很猖狂。当时我看到很多可悲的现象，比如有些没作弊的人因为被人狂虐而丧失信心而淡出ACM，比如有的人自己作弊之后私底下还跟我说谁谁谁作弊，比如带队老师根本就不关心我们这儿发生了什么。总的来说就是，广工当时这么菜的ACM队，大家居然还挖空心思通过坑自己人来满足那点可怜的虚荣，真他妈作孽。&lt;/p&gt;
-&lt;p&gt;最初参加周赛的时候，我是无比的紧张，无比的投入，以至于后来无比的失望。之后无论是各种周赛，我看到ranklist上熟悉的账号们我就不想再摸键盘。去年秋天我收取集训总结的时候看到很多人都说我周赛的时候总是“火星般消失”，这个简单的原因，没人体会得到。&lt;/p&gt;
-&lt;p&gt;尽管如此，周赛之中还是有一些搞笑的回忆，比如Lynncui敢于随机敢于打表，比如wjs用一次不回溯的DFS水过了最短路，比如yqj企图用long double过各种高精度，比如我大一比赛的时候“发明“了Prim、Disjoint Set，比如我从牙缝里刷出芝麻的时候才发现爸爸妈妈在我周赛的时候做了各种补充能量的点心。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;长进&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;从开始到现在，我迷恋于算法，而最终并没有成为一个优秀的ACMer。这一点跟ziliang相反，他不喜欢站在巨人肩上，他知道比赛最重要的是战术和技巧。必须要看到，玩ACM跟玩算法是不同的事情，ACM是考验智慧、考验综合素质的，我敢大言不惭地说，ACM玩得好甚至不需要去刻意学什么算法。虽然我们偶尔见到一些题目需要一些成熟的经典的算法，那些题目是我喜欢的题目，但是那些题目属于最垃圾的ACM题目。另一角度来说，很多人觉得自己ACM出成绩了就代表自己算法不错了，这是一种错误观念，当你深入任何一个方向的算法领域的时候，你会发现ACM那点东西太小儿科了，太不入流了。说白了，ACM是打着算法的幌子来让大家比脑子。&lt;/p&gt;
-&lt;p&gt;粗略统计，鄙人两年来做题1.6K，看国内外论文200+，看书十来本。最终变成现在这个样子……什么样子我自己就不评论了，你觉得是什么样子就是什么样子。&lt;/p&gt;
-&lt;p&gt;对于ACMer来说，Matrix67早已放过话，“USACO你老老实实一个字也别看解题报告，做完你就无敌了”。我们随处可见一些做了很多很多题目实力还上不去的人，此类八成是是有看解题报告的习惯，其中包括想都没想就冲进discuss里头瞄来瞄去。&lt;/p&gt;
-&lt;p&gt;不由得想起一个人。08年秋天，ACM圈子冒出了一个博客点击率很高的家伙，叫zfy。他的出现让不少人长了见识，不得不表示称赞。本来他是一个作风不错的人，但是在一定程度上让一些人养成了新的坏习惯——做不出题就找论文，这跟找解题报告有什么区别呢，就名字不同。我们学校肯定也有人觉得，三鲜是不是脑子被驴舔了，做个破题用不用看那么多论文。事实上我基本不在做题的时候碰论文，倘若两者糅合在一起，最终结果基本就是这头感受不到论文的内涵，那头题目也白做了。&lt;/p&gt;
-&lt;p&gt;其实在我们这种环境下提高还是比较不容易的，一来身边没什么人可以提供帮助，二来各路大牛也不喜欢搭理菜鸟。很多时候就需要死磕，一个人死磕。记得当初通宵磕V图，通宵磕动态树，过年回老家旁边开几围麻将窗外小屁孩放炮竹我在黑灯瞎火翻译后缀树。如之前所说这些东西其实跟ACM关系不大，但我心里总会有一种感觉，人家OI的娃们随手拈来的东西你写不出来就没法跟人家比。好比08年地区赛的网络赛那回，人家纷纷秒杀的题目，我们全校没一个人听说过那些个算法的名字。&lt;/p&gt;
-&lt;p&gt;后来比赛经历得多了，也慢慢给自己有了定位。时常在网上看到很多人比完赛唉声叹气，也有些人号称“本来有夺金的实力”、“没发挥好”。我曾经也有段时间神勇地跑去做掉很多难题，一度以为自己到了登堂入室的水平，后来发现完全不是这么一回事。真正的高手是什么样的，他们不需要吃饭时候的冥想，不需要靠洗澡时候的灵光一闪，他们比赛的时候坐在那儿就能熟练地做出各种难题，他们在读错题的时候能保证成绩，在数据错的时候能保证成绩，在没人敢提交的时候果断提交，在比赛快结束的时候冷静编码。简单来说就是，他们不仅仅是做题能力强，而更是综合素质强。比赛之后说太多“本来”、“如果”的人，属于心理素质欠佳，这是综合素质重要的一块，也是阻碍长进的一块。因此，当你没有达到预期的目标，根本就不应该想着你丢了一块牌，而应该想想自己是否真的值那一块牌。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;境内境外&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这个话题我以前写过，但是删掉了。&lt;/p&gt;
-&lt;p&gt;国内的ACM圈子总是表现出一种浮躁的风气，尽管不缺乏超强的人，但强人都很低调，或者说，强校更多是闭门造车。可以去看看国内ACM最火的POJ论坛，琳琅满目的欠揍的东西：求/贴数据的、求/贴代码的、叫人家来查错的、日题目的、炫耀的、留名的、二三流人物相互膜拜的。看看站内信，多少是求代码的（我的原则是问我思路的一定悉心回答，要代码的一律无视）。再看看百度到的解题报告，多少是相互抄袭不求甚解的。&lt;/p&gt;
-&lt;p&gt;而国外，我不敢说得太完美，毕竟我对国外了解不算太多。首先一点，国外的OJ很少上述欠揍的东西。自从把做题重心放到国外的OJ，用邮件跟一些外国选手联系得越来越多，他们发邮件的时候会非常严谨，几乎每一句都会给出证明，至少会有一个简单的交代，有时候附件里头会附上几篇论文。他们从来不贴代码，但如果你脑筋实在转不过来，人家会问你是否需要代码。尤其是在SPOJ，我结识了俄罗斯/巴西/印度/美国/加拿大的朋友们，感谢他们给我带来的所有的解题思路的启发和做人态度的启发。这里说一个小插曲，曾经有一位朋友赐我两篇俄文的极品论文，全文翻译成中文之后俨然成为天书，全文翻译成英文之后仍然是天书，人肉翻译成中文还是读不下去，最终人肉翻译成英文然后反复阅读，终有所成……当时的壮举让宿舍里直呼我是世界级一流选手。&lt;/p&gt;
-&lt;p&gt;我认为，国内信息学竞赛成绩强劲，而IT行业不见得强，从ACM这块就看出端倪。我们这儿大环境是明显不如人的。我作一个不负责任的假设，假设全球所有闭门造车的经典强校都不准参加ACM比赛，那中国队伍就是集体被虐。而行业的发展并不能仅仅依靠强校的寥寥数人。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Lynncui&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;该讲讲我的队友了。首先最要感谢的就是队友Lynncui，一直以来他对我都无比信任，而我却总是在比赛的关键时刻表现出毛躁的一面，在此表示愧疚。由于Lynncui年纪偏小，我很奇妙地见证了他这两年从一个胡闹的毛孩变为成熟青年的过程。在我们还没入队的时候，招新群里最高调的就是他，我很清楚地记得当时他咬定PE是因为源代码格式不对……于是我直接把他归为傻逼一类，万没想到Lynncui在未来会成为我最最好的搭档。&lt;/p&gt;
-&lt;p&gt;他属于很清楚自己在做什么的人，因此没有动不动就看discuss、解题报告的陋习。尽管我有时候觉得他比较懒，并没有花太多的精力在ACM之中，但由于他的清醒和踏实，只要做一点，就能进步一点，只要花心思，就能见效果。我在我们学校讨论问题，基本上除了ziliang我就只找过Lynncui。无论是练习还是比赛，他都能保持清晰的思路，尽管有时候向他灌输一种新思想会感觉他硬得像石头一样。于是我们队有一招最常用最有效的战术：我有想法了就往Lynncui脑袋里灌……艰难地让他认可之后基本上就是无误的，然后他坐我旁边看着我写，一交一个准。不幸的是WF的后半场我自己已经坐不稳了，也没能说服他什么。&lt;/p&gt;
-&lt;p&gt;当然，Lynncui的个人实力也不是盖的，他的强项就是以穷人的身份参加各种编程比赛赢取衣服。上次GCJ好像排一百多名来着。&lt;/p&gt;
-&lt;p&gt;不管怎么说，以他的做事习惯来看，以后肯定不差钱。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;4h&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这是我最老的搭档，我的每一场ACM比赛都跟他相伴。同时他是我的酒友和玩伴，相比之下ACM队友这个身份反倒是有点逊色。4h入队时候的天赋和知识背景都是很高的，但似乎终究没把ACM当回事。而且怎么说呢，做题比较急功近利，以至于后期进步不明显。曾经瞅见他下数据之后把过不了的数据直接打表AC的猥琐事……甚是愤慨。不管怎么说，他一直能轻松地留在TEAM ONE，这就是他的本事，换个角度看，也是广工ACM队的悲哀。&lt;/p&gt;
-&lt;p&gt;对我来说，4h在我的大学生涯扮演者重要的角色。如果不是他跟我喝酒，晚上跟我到处去玩，广工这地方真的不容易呆下去。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;DieIng&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这又是一个很信任我的人，感谢他。广工里头，DieIng对ACM的热情仅亚于我，混迹于各大ACM神群，膜拜过各路神牛。DieIng比我们3个晚几个月进入集训队，几乎没有计算机的基础。这家伙也有不少坏习惯，但是特别勤奋，以至于有今天的成绩。我们集训队里大家听得最多的一句话就是DieIng说：又被三鲜鄙视了。我总喜欢挑他的坏毛病，因为我不忍心看着他的热情在做无用功，但他好像觉得特委屈。&lt;/p&gt;
-&lt;p&gt;在很长一段时间里，广工就只有我们4个在继续走ACM的路（而且4个还都是同一届，这种狗屎状况今年地区赛还两个队伍夺金，玄妙无比），忘记是谁给我们起了个绰号，曰，四大护法。于是DieIng总是最不幸的，因为一个队是3个人，而他总被排在第4，搞得他的队友要么就是老东西，要么就是小朋友。而我觉得，是DieIng没有冲破自己的那一关，只要他敢站出来朝领队说一句，我不信我比他们3个弱！那么数轮PK之后淘汰的也不一定是他。&lt;/p&gt;
-&lt;p&gt;去年我本来打算跟DieIng组队，毕竟2+2比3+1显得有点人性，但最终领队为了成绩还是选择了3+1。还记得跟DieIng为数不多的组队练习中，只要是个题他都说是网络流……没想到后来DieIng领衔出征的哈尔滨地区赛还真的出现了网络流，并且一出就是两道，毫无悬念地，立马就被我们Dieling童鞋秒杀，顺利夺金。这事太不可思议，但无论如何，在自己专注的事情之中取得好成绩是可喜可贺的事情，表示热烈祝贺DieIng。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;招新&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;去年我们ACM队招新，挺滑稽，主力都是大二，招的都是大一。更滑稽的是，我大一时候从垃圾桶里掏出来的招新传单被委任由我来重新设计。当时设计得很精致，还有淡雅背景（打印出来就不见了……），弄了一个赛马的面试题来吸引新生（假装考智力，其实是刷掉那些从网上抄答案的家伙）。&lt;/p&gt;
-&lt;p&gt;由于宣传到位，面试的时候来了两百多人，但领队采取了一种愚蠢的模式——分成5条队，分别打分。我心想，我们这儿入门的人都不够5个。之后果然就出现了更愚蠢的事情。当时要求是给每个人打几个分，各项满分是10分，而除了我和DieIng这条队之外，每条队打的分全是7分/7.5分/8分，我当时差点就对其他4个队的人爆粗，这到底是搞永不落空的抽奖还是什么，作为一个筛选环节，优秀的人就应该给9分10分，不行的人就应该大胆往低分打，0分都没有任何问题。最终就是大多数人都无法区分，采取随机晋级。&lt;/p&gt;
-&lt;p&gt;招进来的这帮人如今已经是大二了，我没见到有太大成绩。我曾经多次跟他们强调，要把我们的BBS利用起来，大家一起进步才能进步，至今还是凄冷一片。至今这一批人也没有跟我探讨过任何算法问题，仅仅是偶尔找我帮他们的代码查错，找我要标程。&lt;/p&gt;
-&lt;p&gt;罢。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;往后&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;以后ACM的事情跟我没太大关系。&lt;br&gt;就我认识的人来说，明年出线埃及几率很大的有梦翅@UESTC、小胡浩@HDU、t__nt@ZJU（这个没悬念吧）。祝他们达到自己的目标，埃及肯定比国内好玩。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;最后&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;我还是在想，如果当年我不去掏垃圾筒里的招新传单，一切又会是什么样子。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;一点碎碎念&quot;&gt;&lt;a href=&quot;#一点碎碎念&quot; class=&quot;headerlink&quot; title=&quot;一点碎碎念&quot;&gt;&lt;/a&gt;一点碎碎念&lt;/h3&gt;&lt;p&gt;忍不住找到了&lt;a href=&quot;http://davidzai.blog.163.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;他的博客&lt;/a&gt;，里面还有很多发人深省的文章。嗯，我发觉自己是有多浮躁了。前辈说的真是句句戳我痛处。我也应该多反思反思，毕竟开博客的初衷就是为了让自己有个独立思考的空间，博客里也别总塞些劣质的题解，说不定这以后会变成某种意义上的污点和耻辱。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;痛击我心的一篇ACM退役文。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="日常" scheme="https://moemoemortimer.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HDU 1548 解题报告</title>
-    <link href="https://moemoemortimer.github.io/2016/08/18/hdu-1548/"/>
-    <id>https://moemoemortimer.github.io/2016/08/18/hdu-1548/</id>
-    <published>2016-08-18T00:20:33.000Z</published>
-    <updated>2016-08-18T00:25:22.372Z</updated>
-    
-    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=1548&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;题目传送门&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;大意&quot;&gt;&lt;a href=&quot;#大意&quot; class=&quot;headerlink&quot; title=&quot;大意&quot;&gt;&lt;/a&gt;大意&lt;/h3&gt;&lt;p&gt;一部电梯有N层，每层对应一个$K_i$,只能上或下$K_i$层，当然，小于1和大于N是无效的，问到达指定楼层最少需要几步。&lt;/p&gt;
-&lt;h2 id=&quot;思路&quot;&gt;&lt;a href=&quot;#思路&quot; class=&quot;headerlink&quot; title=&quot;思路&quot;&gt;&lt;/a&gt;思路&lt;/h2&gt;&lt;p&gt;简单的BFS&lt;/p&gt;
-&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;queue&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;memory.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#define MAX_K 210&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;using namespace std;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;const int INF = 1000000000;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int N, a, b;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int d[MAX_K];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int k[MAX_K];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int dx[2] = &amp;#123;1, -1&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;bfs&lt;/span&gt;&lt;/span&gt;()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    queue&amp;lt;int&amp;gt; que;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int i = 1; i &amp;lt;= N; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        d[i] = INF;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    que.push(a);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    d[a] = 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(que.size())&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        	//从队列前端取出元素&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            int p = que.front();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            que.pop();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            //如果取出的状态已经是终点，结束搜索&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(p == b)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;built_in&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            //上下两个方向的循环&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int i = 0; i &amp;lt; 2; i ++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            	//移动后的位置记为(nx, ny)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                int nx = p + k[p]*dx[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(nx &amp;gt;= 1 &amp;amp;&amp;amp; nx &amp;lt;= N &amp;amp;&amp;amp; d[nx] == INF)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;					//可以移动的话，则加入到队列，并且到该位置的距离确定为到p的距离加1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    que.push(nx);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    d[nx] = d[p] + 1;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; d[b];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;/span&gt;()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(scanf(&lt;span class=&quot;string&quot;&gt;&quot;%d%d%d&quot;&lt;/span&gt;, &amp;amp;N, &amp;amp;a, &amp;amp;b) &amp;amp;&amp;amp; N)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int i = 1; i &amp;lt;= N; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            scanf(&lt;span class=&quot;string&quot;&gt;&quot;%d&quot;&lt;/span&gt;, &amp;amp;k[i]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    int res = bfs();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(res == INF) &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;-1\n&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%d\n&quot;&lt;/span&gt;, res);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-    
-      <category term="BFS" scheme="https://moemoemortimer.github.io/tags/BFS/"/>
     
   </entry>
   
