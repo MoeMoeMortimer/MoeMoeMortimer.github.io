@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://moemoemortimer.github.io/"/>
-  <updated>2016-12-10T07:53:58.832Z</updated>
+  <updated>2016-12-11T12:35:22.552Z</updated>
   <id>https://moemoemortimer.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://moemoemortimer.github.io/2016/12/10/kiminonawa/"/>
     <id>https://moemoemortimer.github.io/2016/12/10/kiminonawa/</id>
     <published>2016-12-10T05:23:05.000Z</published>
-    <updated>2016-12-10T07:53:58.832Z</updated>
+    <updated>2016-12-11T12:35:22.552Z</updated>
     
     <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;从你的前前前世开始，我便一直追寻着你。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -38,9 +38,9 @@
 &lt;p&gt;大学的时候再在快递单子上写下一个个名字的时候，一大股想念的感情就会喷涌而出，诶呀，无论对方喜不喜欢你寄去的东西，你知道对方一定会喜欢你给他/她寄东西的，那种感觉就已经很棒了~&lt;/p&gt;
 &lt;p&gt;再就基本上没有要写别人名字的情况了，要联系直接上秋秋说就好了。想想还有些寂寞呢。&lt;/p&gt;
 &lt;p&gt;最后放上收藏的这几首主题曲吧，歌词真的炒鸡赞。&lt;/p&gt;
-&lt;h2 id=&quot;前前前世-–-RADWIMPS&quot;&gt;&lt;a href=&quot;#前前前世-–-RADWIMPS&quot; class=&quot;headerlink&quot; title=&quot;前前前世 – RADWIMPS&quot;&gt;&lt;/a&gt;前前前世 – RADWIMPS&lt;/h2&gt;&lt;h3 id=&quot;original-ver&quot;&gt;&lt;a href=&quot;#original-ver&quot; class=&quot;headerlink&quot; title=&quot;original ver&quot;&gt;&lt;/a&gt;original ver&lt;/h3&gt;&lt;div id=&quot;dplayer0&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer0 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer0&quot;),&quot;autoplay&quot;:false,&quot;theme&quot;:&quot;#FADFA3&quot;,&quot;loop&quot;:true,&quot;video&quot;:{&quot;url&quot;:&quot;http://112.253.22.164/3/c/n/w/u/cnwunlkymtxptdxkobyorsajwxkuhn/hc.yinyuetai.com/87D901589089E48FCB290CA0CB70B61F.mp4&quot;,&quot;pic&quot;:&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f8efg02v6tj20rs0f3tdp.jpg&quot;},&quot;danmaku&quot;:{&quot;api&quot;:&quot;http://dplayer.daoapp.io&quot;,&quot;id&quot;:&quot;9E2E3968B56C00B4&quot;,&quot;token&quot;:&quot;tokendemo&quot;}});&lt;/script&gt;
-&lt;h3 id=&quot;女声cover&quot;&gt;&lt;a href=&quot;#女声cover&quot; class=&quot;headerlink&quot; title=&quot;女声cover&quot;&gt;&lt;/a&gt;女声cover&lt;/h3&gt;&lt;div id=&quot;dplayer1&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer1 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer1&quot;),&quot;autoplay&quot;:false,&quot;theme&quot;:&quot;#FADFA3&quot;,&quot;loop&quot;:true,&quot;video&quot;:{&quot;url&quot;:&quot;http://hc.yinyuetai.com/uploads/videos/common/2D000156B50C0A23DB47CEBBCB2C4ED7.flv&quot;,&quot;pic&quot;:&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f8fh191pabj20rs0fl7bz.jpg&quot;},&quot;danmaku&quot;:{&quot;api&quot;:&quot;http://dplayer.daoapp.io&quot;,&quot;id&quot;:&quot;9E2E3308B56C00B4&quot;,&quot;token&quot;:&quot;tokendemo&quot;}});&lt;/script&gt;
-&lt;blockquote&gt;
+&lt;h2 id=&quot;前前前世-–-RADWIMPS&quot;&gt;&lt;a href=&quot;#前前前世-–-RADWIMPS&quot; class=&quot;headerlink&quot; title=&quot;前前前世 – RADWIMPS&quot;&gt;&lt;/a&gt;前前前世 – RADWIMPS&lt;/h2&gt;&lt;h3 id=&quot;original-ver&quot;&gt;&lt;a href=&quot;#original-ver&quot; class=&quot;headerlink&quot; title=&quot;original ver&quot;&gt;&lt;/a&gt;original ver&lt;/h3&gt;&lt;div id=&quot;dplayer0&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer0 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer0&quot;),&quot;video&quot;:{&quot;url&quot;:&quot;http://112.253.22.164/3/c/n/w/u/cnwunlkymtxptdxkobyorsajwxkuhn/hc.yinyuetai.com/87D901589089E48FCB290CA0CB70B61F.mp4&quot;,&quot;pic&quot;:&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f8efg02v6tj20rs0f3tdp.jpg&quot;}});&lt;/script&gt;
+&lt;h3 id=&quot;女声cover&quot;&gt;&lt;a href=&quot;#女声cover&quot; class=&quot;headerlink&quot; title=&quot;女声cover&quot;&gt;&lt;/a&gt;女声cover&lt;/h3&gt;&lt;div id=&quot;dplayer1&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer1 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer1&quot;),&quot;video&quot;:{&quot;url&quot;:&quot;http://hc.yinyuetai.com/uploads/videos/common/2D000156B50C0A23DB47CEBBCB2C4ED7.flv&quot;,&quot;pic&quot;:&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f8fh191pabj20rs0fl7bz.jpg&quot;}});&lt;/script&gt;
+&lt;h3 id=&quot;歌词&quot;&gt;&lt;a href=&quot;#歌词&quot; class=&quot;headerlink&quot; title=&quot;歌词&quot;&gt;&lt;/a&gt;歌词&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;やっと眼を覚ましたかい それなのになぜ眼も合わせやしないんだい？&lt;br&gt;总算醒了吗 可为何不与我对视呢？&lt;br&gt;「遅いよ」と怒る君 これでもやれるだけ飛ばしてきたんだよ&lt;br&gt;你生气地抱怨说“太迟了啦” 可是我已经竭尽全力飞到你身边了哦&lt;/p&gt;
 &lt;p&gt;心が身体を追い越してきたんだよ&lt;br&gt;我的心甚至超越身体赶到你面前&lt;/p&gt;
 &lt;p&gt;君の髪や瞳だけで胸が痛いよ&lt;br&gt;仅仅看到你的发梢和眼眸 胸口就隐隐作痛&lt;br&gt;同じ時を吸いこんで離したくないよ&lt;br&gt;想和你在同一时空下呼吸 不愿意分离&lt;br&gt;遥か昔から知る その声に&lt;br&gt;听见那从遥远的过去就熟知的声音&lt;br&gt;生まれてはじめて 何を言えばいい？&lt;br&gt;有生以来第一次 该说些什么好呢&lt;/p&gt;
