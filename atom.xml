@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://moemoemortimer.github.io/"/>
-  <updated>2017-03-11T08:56:28.036Z</updated>
+  <updated>2017-03-12T13:19:55.494Z</updated>
   <id>https://moemoemortimer.github.io/</id>
   
   <author>
@@ -16,20 +16,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>upgraded-eight-queens</title>
+    <title>八皇后问题加强版【回溯】</title>
     <link href="https://moemoemortimer.github.io/2017/03/11/upgraded-eight-queens/"/>
     <id>https://moemoemortimer.github.io/2017/03/11/upgraded-eight-queens/</id>
     <published>2017-03-11T08:56:27.000Z</published>
-    <updated>2017-03-11T08:56:28.036Z</updated>
+    <updated>2017-03-12T13:19:55.494Z</updated>
     
-    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;</content>
+    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;题目来自今天的天梯赛校内选拔赛，目前还没有打开传送门。现场没能做出来，因此我也不知道自己的答案是否正确。&lt;/p&gt;
+&lt;h3 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h3&gt;&lt;p&gt;八皇后问题的基本要求是：在$N&lt;em&gt;N$的棋盘上放置N个皇后，使得N个棋子中任意2个都不在同一行、同一列以及同一斜线上。&lt;br&gt;现给出$n&lt;/em&gt;m$大小的棋盘，问最多可以放置多少个皇后？&lt;/p&gt;
+&lt;h3 id=&quot;输入&quot;&gt;&lt;a href=&quot;#输入&quot; class=&quot;headerlink&quot; title=&quot;输入&quot;&gt;&lt;/a&gt;输入&lt;/h3&gt;&lt;p&gt;第一行测试数据组数T&lt;br&gt;第二行n, m $1&amp;lt;=n,m&amp;lt;=8$&lt;/p&gt;
+&lt;h3 id=&quot;输出&quot;&gt;&lt;a href=&quot;#输出&quot; class=&quot;headerlink&quot; title=&quot;输出&quot;&gt;&lt;/a&gt;输出&lt;/h3&gt;&lt;p&gt;可以放置的最多皇后数目（不要求输出方案）&lt;/p&gt;
+&lt;h3 id=&quot;TEST-CASE&quot;&gt;&lt;a href=&quot;#TEST-CASE&quot; class=&quot;headerlink&quot; title=&quot;TEST CASE&quot;&gt;&lt;/a&gt;TEST CASE&lt;/h3&gt;&lt;p&gt;Sample Input&lt;br&gt;2&lt;br&gt;5 5&lt;br&gt;1 3&lt;/p&gt;
+&lt;p&gt;Sample Output&lt;br&gt;5&lt;br&gt;1&lt;/p&gt;
+&lt;h2 id=&quot;思路&quot;&gt;&lt;a href=&quot;#思路&quot; class=&quot;headerlink&quot; title=&quot;思路&quot;&gt;&lt;/a&gt;思路&lt;/h2&gt;&lt;p&gt;使用递归方法解决问题&lt;br&gt;用vis数组限制以下四个条件&lt;br&gt;同一列：横坐标相同&lt;br&gt;同一行：纵坐标相同&lt;br&gt;主对角线：横纵坐标差相同&lt;br&gt;副对角线：横纵坐标和相同&lt;/p&gt;
+&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;p&gt;我真的要哭死了，怎么也调不出来哭哭&lt;/p&gt;
+</content>
     
     <summary type="html">
     
-      &lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;
+      &lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;
     
     </summary>
     
+    
+      <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+      <category term="递归" scheme="https://moemoemortimer.github.io/tags/%E9%80%92%E5%BD%92/"/>
     
   </entry>
   
@@ -38,19 +51,23 @@
     <link href="https://moemoemortimer.github.io/2017/03/11/atarashijibun/"/>
     <id>https://moemoemortimer.github.io/2017/03/11/atarashijibun/</id>
     <published>2017-03-11T04:23:16.000Z</published>
-    <updated>2017-03-11T12:54:23.444Z</updated>
+    <updated>2017-03-12T13:22:14.055Z</updated>
     
-    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;为了能让自己冲破心理障碍，我找出几个主要矛盾进行自问自答，希望可以平复心情。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;为了能让自己冲破心理障碍，我找出几个主要矛盾进行自问自答。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;问题一&quot;&gt;&lt;a href=&quot;#问题一&quot; class=&quot;headerlink&quot; title=&quot;问题一&quot;&gt;&lt;/a&gt;问题一&lt;/h2&gt;&lt;p&gt;Q:为什么会生气不开心&lt;br&gt;A:嫌我碍眼可以自己搬走，凭什么要动我的东西。动也就算了不要随便破坏好吗，搬我东西的时候难道是连扔带砸的吗？这得带着多大的怨气啊。就如同离婚后男趁女未回家将女的行李收拾好了扔到门外告诉她东西我帮你收拾好了，你直接走就行了不用谢我。然后怕女的回来赶紧让新人住进来。然而我招你惹你了？莫名其妙什么鬼啊，完全击溃我的底线，能不顾情谊做出这么过分的事情，太可怕了。&lt;/p&gt;
 &lt;h2 id=&quot;问题二&quot;&gt;&lt;a href=&quot;#问题二&quot; class=&quot;headerlink&quot; title=&quot;问题二&quot;&gt;&lt;/a&gt;问题二&lt;/h2&gt;&lt;p&gt;Q:怎样才可以恢复心情&lt;br&gt;A:把占我位置的人赶走（反正不是实验室的），把做出如此强盗行径的人的东西全部扔进垃圾桶，或者让原主子lgm把他自己的地方抢回来。那地方我坐不成别人也别想坐。&lt;/p&gt;
 &lt;h2 id=&quot;问题三&quot;&gt;&lt;a href=&quot;#问题三&quot; class=&quot;headerlink&quot; title=&quot;问题三&quot;&gt;&lt;/a&gt;问题三&lt;/h2&gt;&lt;p&gt;Q:你敢这样做么，可能么&lt;br&gt;A:不敢也不可能。我讨厌争端。害怕被敌对，无论对方比我强还是弱，因此只敢逞口舌之快，开开脑洞而已。我真TM是个胆小鬼，去实验室的时候都得考虑会不会遭到报复需不需要随身带刀。而且想法自私幼稚，损人不利己。子曰己所不欲勿施于人，卢小鱼说怨怨相报何时了哇。最和平的解决办法就是我乖乖让出来另寻他处，从此井水不犯河水。等到什么时候他退役了我再回去。&lt;/p&gt;
 &lt;h2 id=&quot;问题四&quot;&gt;&lt;a href=&quot;#问题四&quot; class=&quot;headerlink&quot; title=&quot;问题四&quot;&gt;&lt;/a&gt;问题四&lt;/h2&gt;&lt;p&gt;Q:你会让现在糟糕的情绪持续多久？&lt;br&gt;A:妈妈不在身边安全感就会降好几个level，加上身边没有可倾诉的人，负面情绪积压久了就会越来越严重。但我会努力克服尽量自我治愈，这学期事情不少，没时间捧着一颗玻璃心顾影自怜。屁嘞！劳资哪有什么玻璃心！！&lt;/p&gt;
 &lt;h2 id=&quot;结论&quot;&gt;&lt;a href=&quot;#结论&quot; class=&quot;headerlink&quot; title=&quot;结论&quot;&gt;&lt;/a&gt;结论&lt;/h2&gt;&lt;p&gt;世界不是围绕着我转的，我没那么重要，保护好自己的小确幸就够了。人生不如意事十有八九，没有时间回溯的能力就要努力适应现状。为路人生气伤心屁用没有，而且完全无法改变现状。摒除杂念是第一要务，快点找到自己喜欢的东西，投入进去就好了。&lt;/p&gt;
+&lt;p&gt;时间安排&lt;br&gt;3.26日 第一轮——编程大赛（竞赛考察范围：数据结构、基本算法；参赛语言包括C++、C和Java）&lt;br&gt;第二轮——项目竞技（AI竞技）。&lt;/p&gt;
+&lt;p&gt;报名形式&lt;br&gt;以团队（3名以下）为参赛单位&lt;br&gt;初级组：本科一二年级   高级组：本科三四年级、研究生&lt;/p&gt;
+&lt;p&gt;奖项设置&lt;br&gt;一等奖三名 奖金3000元   二等奖六名 奖金2000元&lt;br&gt;三等奖九名 奖金1000元   最佳女队奖两名 奖金1000元&lt;/p&gt;
+&lt;p&gt;报名方式&lt;br&gt;将个人填写报名表发送到734108507@qq.com&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;为了能让自己冲破心理障碍，我找出几个主要矛盾进行自问自答，希望可以平复心情。&lt;br&gt;
+      &lt;p&gt;为了能让自己冲破心理障碍，我找出几个主要矛盾进行自问自答。&lt;br&gt;
     
     </summary>
     
@@ -58,6 +75,86 @@
       <category term="日常" scheme="https://moemoemortimer.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
     
       <category term="自我治愈" scheme="https://moemoemortimer.github.io/tags/%E8%87%AA%E6%88%91%E6%B2%BB%E6%84%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>巴渝行小记</title>
+    <link href="https://moemoemortimer.github.io/2017/02/25/trip-to-chongqing/"/>
+    <id>https://moemoemortimer.github.io/2017/02/25/trip-to-chongqing/</id>
+    <published>2017-02-25T05:32:22.000Z</published>
+    <updated>2017-03-12T13:19:26.773Z</updated>
+    
+    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;记录第一次独自出游~~_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;做出决定是在过年的时候，已经好久没见欧尼酱了，所以想去看看他&amp;gt;o&amp;lt;&lt;/p&gt;
+&lt;p&gt;所以也不完全是独自游辣(●’◡’●)&lt;/p&gt;
+&lt;p&gt;PS老夫是第一次坐灰机hhhhh真的各种鸡冻滴说&lt;/p&gt;
+&lt;p&gt;xx机场只有KFC,价格巨贵而且不让用优惠券~然而没办法，饭还是要吃的，而且我还买了圣代喔吼吼吼，吃了这杯冰淇淋我就知道我的嗓子已经好了~&lt;/p&gt;
+&lt;p&gt;因为没经验差点误机，我是倒数第二个上去的，好险。。。到重庆的时候是深夜，看到欧尼酱的我立马笑成了一朵菊花hhhhhh❀&lt;/p&gt;
+&lt;p&gt;回到酒店简单收拾收拾就赶紧睡了，第二天是周六，早晨起得太晚误了酒店的早点，只好出门觅食&lt;/p&gt;
+&lt;h2 id=&quot;第一顿饭-——-豌杂面&quot;&gt;&lt;a href=&quot;#第一顿饭-——-豌杂面&quot; class=&quot;headerlink&quot; title=&quot;第一顿饭 —— 豌杂面&quot;&gt;&lt;/a&gt;第一顿饭 —— 豌杂面&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdk8aelsrsj21kw23vqv5&quot; alt=&quot;豌杂面&quot;&gt;&lt;br&gt;第一次看见豌杂这个名字…&lt;del&gt;好像&lt;/del&gt;肯定是豌豆做的，不过应该还加了别的东西，反正很新奇，但哥哥说还不够正宗~恰好拍到他赏我一块牛肉2333，店面很小，为了盛下更多的人，老板买的桌子炒鸡小&lt;/p&gt;
+&lt;p&gt;重庆的妹纸们个头一般比较小，把我放在人堆里看…我居然算是正常身高…哇我好感动，感动得要哭了嘤嘤嘤QAQ&lt;/p&gt;
+&lt;h2 id=&quot;口怕的树&quot;&gt;&lt;a href=&quot;#口怕的树&quot; class=&quot;headerlink&quot; title=&quot;口怕的树&quot;&gt;&lt;/a&gt;口怕的树&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdk8ho2ts2j21kw16ob2b&quot; alt=&quot;口怕的树&quot;&gt;&lt;br&gt;是不是很6？不止这一棵，后来我还发现好多类似的树，树根巴在墙上，哇…不知道是怎么长的…厉害了树哥！&lt;/p&gt;
+&lt;h2 id=&quot;安逸的doge&quot;&gt;&lt;a href=&quot;#安逸的doge&quot; class=&quot;headerlink&quot; title=&quot;安逸的doge&quot;&gt;&lt;/a&gt;安逸的doge&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdk8lexd0dj21kw23vu0x&quot; alt=&quot;&quot;&gt;&lt;br&gt;随手拍的，嘿嘿&lt;/p&gt;
+&lt;h2 id=&quot;天友酸奶&quot;&gt;&lt;a href=&quot;#天友酸奶&quot; class=&quot;headerlink&quot; title=&quot;天友酸奶&quot;&gt;&lt;/a&gt;天友酸奶&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdk8nsh935j21kw23vhbq&quot; alt=&quot;&quot;&gt;&lt;br&gt;这个是重庆本地的“天友酸奶”，特别好喝wuaaaaa，这种玻璃瓶装的6块钱。&lt;br&gt;酒店的早餐也有提供，反正我和哥哥喝了好多~~&lt;/p&gt;
+&lt;h2 id=&quot;磁器口&quot;&gt;&lt;a href=&quot;#磁器口&quot; class=&quot;headerlink&quot; title=&quot;磁器口&quot;&gt;&lt;/a&gt;磁器口&lt;/h2&gt;&lt;p&gt;磁器口在重庆沙坪坝区，像一个繁华的小镇，有很多条小街，街边是各 种各样的店~&lt;/p&gt;
+&lt;p&gt;人炒鸡多！！&lt;/p&gt;
+&lt;p&gt;差点就被困在里面粗不去了哭唧唧TAT&lt;/p&gt;
+&lt;h3 id=&quot;转运楼&quot;&gt;&lt;a href=&quot;#转运楼&quot; class=&quot;headerlink&quot; title=&quot;转运楼&quot;&gt;&lt;/a&gt;转运楼&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdka6h2xnqj21kw23v4qr&quot; alt=&quot;&quot;&gt;&lt;br&gt;转运楼是磁器口的一家戏楼，我们在这里看了川剧《白蛇传》，其实票价是有点贵的，感觉被坑了…..但演出还是蛮精彩，白娘子身段美，行头更美~还有唱词，借着字幕都听懂了~&lt;/p&gt;
+&lt;p&gt;我真是越来越喜欢四川那边的方言了23333&lt;/p&gt;
+&lt;h3 id=&quot;满天星&quot;&gt;&lt;a href=&quot;#满天星&quot; class=&quot;headerlink&quot; title=&quot;满天星&quot;&gt;&lt;/a&gt;满天星&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdkafktl4cj21kw23v4qs&quot; alt=&quot;满天星&quot;&gt;&lt;/p&gt;
+&lt;p&gt;这是某家文艺的小花店，这条小街整体都很文艺，有很多个性的咖啡厅，有的老板就坐在店里弹吉他唱民谣。&lt;/p&gt;
+&lt;p&gt;她家的满天星特别好看，这是门口开得最灿烂的一簇，但心疼钱包所以没买。哥哥说这玩意可以自己种，他就种过，我说我上学期在宿舍养了多肉，期末的时候死了…..吾兄甚是惊讶(⊙o⊙)“多肉你还养不活？！！”&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdkal752enj21kw23vnpd&quot; alt=&quot;&quot;&gt;&lt;br&gt;这是另一家花店了，直译什么的还是有点可爱的23333&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdkam7gmo8j21kw23vkjm&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdkan50kbhj21kw16o7wj&quot; alt=&quot;&quot;&gt;&lt;br&gt;翻手机发现好像拍了很多花，人眼总是会被鲜艳的颜色所吸引吧~？&lt;/p&gt;
+&lt;h2 id=&quot;翻转屋&quot;&gt;&lt;a href=&quot;#翻转屋&quot; class=&quot;headerlink&quot; title=&quot;翻转屋&quot;&gt;&lt;/a&gt;翻转屋&lt;/h2&gt;&lt;p&gt;这个屋子炒鸡好玩，因为所有的东西都是倒过来的23333&lt;br&gt;从外面看，是酱紫的&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdkapu7lprj21kw23vqv5&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;其实也没什么，就是适合拍照然后吓唬小伙伴~&lt;br&gt;当时没发现，现在想想我拍照的姿势不正确啊。。。应该拍全身（把脚拍到），然后倒过来，那效果。。。啧啧啧&amp;gt;o&amp;lt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdkarm86apj21kw0w0jzr&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdkauq7wqdj21kw0w0an2&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;解放碑&quot;&gt;&lt;a href=&quot;#解放碑&quot; class=&quot;headerlink&quot; title=&quot;解放碑&quot;&gt;&lt;/a&gt;解放碑&lt;/h2&gt;&lt;p&gt;解放碑应该算是重庆的地标式建筑了，它应该在一片巨大的商业区中心（？）这个碑…比我想象的要高大上一些，因为是晚上去的，有灯照着碑体就很漂酿~周围还种着郁金香~&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdkbl9ec11j20qo0zkwow&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;我能说这辈子第一次看到LV实体店么…还有Tiffany…店外墙的装饰灯也是薄荷绿色…wuaaa &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdkbpkn9arj20qo0zkn5q&quot; alt=&quot;&quot;&gt;&lt;br&gt;吃到大肉串的我,,,呵呵呵地笑成了一个傻x&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdkbqx7cq6j21401z4dt8&quot; alt=&quot;&quot;&gt;&lt;br&gt;欧尼酱说这家店最近很火&lt;/p&gt;
+&lt;p&gt;然而….吃了肉串+酸奶的我，第二天就开始闹肚子了&amp;gt;o&amp;lt;&lt;/p&gt;
+&lt;p&gt;蓝后哥哥带我去一家商场里，他说这里有一个钢琴楼梯~！&lt;br&gt;一级一级地踏上去，会发出do re mi fa so la xi 的声音！&lt;br&gt;啊啊啊心花怒放地走了两遍，第二遍拜托他帮我拍了小视频咕嘿嘿嘿&lt;/p&gt;
+&lt;h2 id=&quot;洪崖洞&quot;&gt;&lt;a href=&quot;#洪崖洞&quot; class=&quot;headerlink&quot; title=&quot;洪崖洞&quot;&gt;&lt;/a&gt;洪崖洞&lt;/h2&gt;&lt;p&gt;看知乎的一个答案说，从远处拍就像电影《千与千寻》里的场景一样~&lt;br&gt;拍照的时候觉得，真是这样~！&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdkbyg7bzdj21kw0w0k9w&quot; alt=&quot;&quot;&gt;&lt;br&gt;重庆的夜景真的是…好美啊~！&lt;/p&gt;
+&lt;h2 id=&quot;筷子楼&quot;&gt;&lt;a href=&quot;#筷子楼&quot; class=&quot;headerlink&quot; title=&quot;筷子楼&quot;&gt;&lt;/a&gt;筷子楼&lt;/h2&gt;&lt;p&gt;顾名思义，这栋楼就像用筷子横横竖竖搭起来的~&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdkc2lbh68j20qo0zkdok&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;四川美术学院（黄桷坪校区）&quot;&gt;&lt;a href=&quot;#四川美术学院（黄桷坪校区）&quot; class=&quot;headerlink&quot; title=&quot;四川美术学院（黄桷坪校区）&quot;&gt;&lt;/a&gt;四川美术学院（黄桷坪校区）&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdkcfhxpmjj21kw16oe83&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;哥哥去上班了，我一个人粗来耍，这个也是看了知乎上的安利才来的，感觉街边建筑上的涂鸦并不能足够引起我的共鸣…校园里有很多雕塑~重庆美术馆也在这里，于是着重参观了美术馆，“陶冶”了一下情操2333&lt;/p&gt;
+&lt;h3 id=&quot;《承露》&quot;&gt;&lt;a href=&quot;#《承露》&quot; class=&quot;headerlink&quot; title=&quot;《承露》&quot;&gt;&lt;/a&gt;《承露》&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdkc8gq7rsj21kw16ou0x&quot; alt=&quot;&quot;&gt;&lt;br&gt;这是最吸引我的一幅画，也是我唯一仔细看了名字并记住的一幅画。很暖很元气的感觉(●’◡’●)&lt;/p&gt;
+&lt;h3 id=&quot;其他喜欢的画&quot;&gt;&lt;a href=&quot;#其他喜欢的画&quot; class=&quot;headerlink&quot; title=&quot;其他喜欢的画&quot;&gt;&lt;/a&gt;其他喜欢的画&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdkcb8nxrij21kw16oqv5&quot; alt=&quot;&quot;&gt;&lt;br&gt;感觉光影和配色都很舒服！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdkcc9woaqj21kw16oqv5&quot; alt=&quot;&quot;&gt;&lt;br&gt;莫名喜感啊哈哈哈哈！咸鱼的凝视…23333笑疯我了&lt;br&gt;对不起我不该亵渎艺术（逃…&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdkcdvj1wpj21kw16ox6p&quot; alt=&quot;&quot;&gt;&lt;br&gt;有种妖怪奇谈的感觉…还有这美腻的水手服 (～￣▽￣)→))&lt;em&gt;￣▽￣&lt;/em&gt;)o&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdkcaitc5tj21kw23ve81&quot; alt=&quot;&quot;&gt;&lt;br&gt;不知怎的就想到了《春光乍泄》…&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdkcfwkbyvj21kw23v7wh&quot; alt=&quot;&quot;&gt;&lt;br&gt;我记得名字好像是关于夏天的，嘻嘻猫咪肥嘟嘟的真的好萌啊、还有那只多肉~和我养的一模一样(～￣▽￣)～*&lt;br&gt;再来张大图&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdkchiht14j21kw16oqv5&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;雕塑&quot;&gt;&lt;a href=&quot;#雕塑&quot; class=&quot;headerlink&quot; title=&quot;雕塑&quot;&gt;&lt;/a&gt;雕塑&lt;/h3&gt;&lt;p&gt;好喜欢这组！&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdkciadymtj21kw16o4qp&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdkciili30j21kw16okjl&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;吃吃喝喝&quot;&gt;&lt;a href=&quot;#吃吃喝喝&quot; class=&quot;headerlink&quot; title=&quot;吃吃喝喝&quot;&gt;&lt;/a&gt;吃吃喝喝&lt;/h2&gt;&lt;p&gt;除了第一天吃的面，串串和酸奶牛，还吃到了欧尼酱做的面条，还有粥！天啦噜！幸福度爆表=w=&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdkcs1miuaj20u01hc7j0&quot; alt=&quot;&quot;&gt;&lt;br&gt;当然也吃了重庆小面，比我想象中的要油好多！面上一层厚厚的油，二餐二楼的那家根本不能比_(:3」∠❀)_&lt;/p&gt;
+&lt;p&gt;除此之外，还跟着哥哥的漂亮小姐姐各种下馆子=u=&lt;br&gt;demo全是他掏钱…唉好心疼TAT&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdkcnzffp4j21kw23vu0x&quot; alt=&quot;&quot;&gt;&lt;br&gt;这是…新疆菜馆&lt;/p&gt;
+&lt;p&gt;因为我的喉咙不争气，所以没吃成重庆火锅，遗憾啊遗憾QAQ&lt;br&gt;街上好多火锅店，那味道真香啊~下次去一定要呲个爽233333&lt;/p&gt;
+&lt;h2 id=&quot;住的地方&quot;&gt;&lt;a href=&quot;#住的地方&quot; class=&quot;headerlink&quot; title=&quot;住的地方&quot;&gt;&lt;/a&gt;住的地方&lt;/h2&gt;&lt;p&gt;不知道是因为有欧尼酱在还是怎的，我觉得这是我出来玩住的最好睡得最好的一次。&lt;/p&gt;
+&lt;p&gt;我觉得培训时住的酒店已经够好了，然而我错了…..&lt;/p&gt;
+&lt;p&gt;每晚300+….条件炒鸡赞&lt;/p&gt;
+&lt;p&gt;没有家长在，我们随意折腾~简直不能更自由o(&lt;em&gt;￣▽￣&lt;/em&gt;)ブ&lt;/p&gt;
+&lt;p&gt;然而我是个懒人&lt;br&gt;哥哥平时要上班，周末好不容易能休息&lt;/p&gt;
+&lt;p&gt;于是两个懒人在酒店里各种“修生养息”&lt;/p&gt;
+&lt;p&gt;其实我比他还懒…..加上生病的时候基本上是天天睡，生物钟一下子还没调过来….&lt;/p&gt;
+&lt;p&gt;其实也挺好的嘛，旅游开心就好了，怎么舒服怎么来卅~&lt;/p&gt;
+&lt;p&gt;经常会有如下情形的逗比对话&lt;br&gt;欧尼酱：“你眼镜多少度？”&lt;br&gt;我：“已经500度辣555”&lt;br&gt;欧尼酱：“才500度？！你有没有好好学习？！”&lt;br&gt;我：（啊嘞？这是什么套路TAT）&lt;/p&gt;
+&lt;h2 id=&quot;肥家&quot;&gt;&lt;a href=&quot;#肥家&quot; class=&quot;headerlink&quot; title=&quot;肥家&quot;&gt;&lt;/a&gt;肥家&lt;/h2&gt;&lt;p&gt;由于华北地区接连下雪，回家那天飞机延误了好久…&lt;br&gt;真是…好大的客机呀(⊙o⊙)&lt;br&gt;爸爸接我回家的时候路面有一层冰…简直吓人…开得炒鸡小心&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdkcjqcoapj21kw16o7wh&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录第一次独自出游~~_(:3」∠❀)_&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="日常" scheme="https://moemoemortimer.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+      <category term="游记" scheme="https://moemoemortimer.github.io/tags/%E6%B8%B8%E8%AE%B0/"/>
     
   </entry>
   
@@ -237,8 +334,8 @@
 &lt;p&gt;大学的时候再在快递单子上写下一个个名字的时候，一大股想念的感情就会喷涌而出，诶呀，无论对方喜不喜欢你寄去的东西，你知道对方一定会喜欢你给他/她寄东西的，那种感觉就已经很棒了~&lt;/p&gt;
 &lt;p&gt;再就基本上没有要写别人名字的情况了，要联系直接上秋秋说就好了。想想还有些寂寞呢。&lt;/p&gt;
 &lt;p&gt;最后放上收藏的这几首主题曲吧，歌词真的炒鸡赞。&lt;/p&gt;
-&lt;h2 id=&quot;前前前世-–-RADWIMPS&quot;&gt;&lt;a href=&quot;#前前前世-–-RADWIMPS&quot; class=&quot;headerlink&quot; title=&quot;前前前世 – RADWIMPS&quot;&gt;&lt;/a&gt;前前前世 – RADWIMPS&lt;/h2&gt;&lt;h3 id=&quot;original-ver&quot;&gt;&lt;a href=&quot;#original-ver&quot; class=&quot;headerlink&quot; title=&quot;original ver&quot;&gt;&lt;/a&gt;original ver&lt;/h3&gt;&lt;div id=&quot;dplayer0&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer0 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer0&quot;),&quot;video&quot;:{&quot;url&quot;:&quot;http://112.253.22.164/3/c/n/w/u/cnwunlkymtxptdxkobyorsajwxkuhn/hc.yinyuetai.com/87D901589089E48FCB290CA0CB70B61F.mp4&quot;,&quot;pic&quot;:&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f8efg02v6tj20rs0f3tdp.jpg&quot;}});&lt;/script&gt;
-&lt;h3 id=&quot;女声cover&quot;&gt;&lt;a href=&quot;#女声cover&quot; class=&quot;headerlink&quot; title=&quot;女声cover&quot;&gt;&lt;/a&gt;女声cover&lt;/h3&gt;&lt;div id=&quot;dplayer1&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer1 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer1&quot;),&quot;video&quot;:{&quot;url&quot;:&quot;http://hc.yinyuetai.com/uploads/videos/common/2D000156B50C0A23DB47CEBBCB2C4ED7.flv&quot;,&quot;pic&quot;:&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f8fh191pabj20rs0fl7bz.jpg&quot;}});&lt;/script&gt;
+&lt;h2 id=&quot;前前前世-–-RADWIMPS&quot;&gt;&lt;a href=&quot;#前前前世-–-RADWIMPS&quot; class=&quot;headerlink&quot; title=&quot;前前前世 – RADWIMPS&quot;&gt;&lt;/a&gt;前前前世 – RADWIMPS&lt;/h2&gt;&lt;h3 id=&quot;original-ver&quot;&gt;&lt;a href=&quot;#original-ver&quot; class=&quot;headerlink&quot; title=&quot;original ver&quot;&gt;&lt;/a&gt;original ver&lt;/h3&gt;&lt;div id=&quot;dplayer1&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer1 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer1&quot;),&quot;video&quot;:{&quot;url&quot;:&quot;http://112.253.22.164/3/c/n/w/u/cnwunlkymtxptdxkobyorsajwxkuhn/hc.yinyuetai.com/87D901589089E48FCB290CA0CB70B61F.mp4&quot;,&quot;pic&quot;:&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f8efg02v6tj20rs0f3tdp.jpg&quot;}});&lt;/script&gt;
+&lt;h3 id=&quot;女声cover&quot;&gt;&lt;a href=&quot;#女声cover&quot; class=&quot;headerlink&quot; title=&quot;女声cover&quot;&gt;&lt;/a&gt;女声cover&lt;/h3&gt;&lt;div id=&quot;dplayer2&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer2 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer2&quot;),&quot;video&quot;:{&quot;url&quot;:&quot;http://hc.yinyuetai.com/uploads/videos/common/2D000156B50C0A23DB47CEBBCB2C4ED7.flv&quot;,&quot;pic&quot;:&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f8fh191pabj20rs0fl7bz.jpg&quot;}});&lt;/script&gt;
 &lt;h3 id=&quot;歌词&quot;&gt;&lt;a href=&quot;#歌词&quot; class=&quot;headerlink&quot; title=&quot;歌词&quot;&gt;&lt;/a&gt;歌词&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;やっと眼を覚ましたかい それなのになぜ眼も合わせやしないんだい？&lt;br&gt;总算醒了吗 可为何不与我对视呢？&lt;br&gt;「遅いよ」と怒る君 これでもやれるだけ飛ばしてきたんだよ&lt;br&gt;你生气地抱怨说“太迟了啦” 可是我已经竭尽全力飞到你身边了哦&lt;/p&gt;
 &lt;p&gt;心が身体を追い越してきたんだよ&lt;br&gt;我的心甚至超越身体赶到你面前&lt;/p&gt;
@@ -815,101 +912,7 @@
     </summary>
     
     
-      <category term="Java" scheme="https://moemoemortimer.github.io/tags/Java/"/>
-    
       <category term="学习笔记" scheme="https://moemoemortimer.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java从入门到放弃 ——第五话：异常处理</title>
-    <link href="https://moemoemortimer.github.io/2016/09/05/java-note-5/"/>
-    <id>https://moemoemortimer.github.io/2016/09/05/java-note-5/</id>
-    <published>2016-09-05T11:14:49.000Z</published>
-    <updated>2016-09-07T07:00:23.128Z</updated>
-    
-    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;各位观众老爷们大家好，这里是专题系列《Java从入门到放弃》~(●’◡’●)&lt;/p&gt;
-&lt;p&gt;为您细细道来我是如何弃疗Java的。_(:3」∠❀)_&lt;/p&gt;
-&lt;p&gt;第五话：异常处理&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;异常的概念&quot;&gt;&lt;a href=&quot;#异常的概念&quot; class=&quot;headerlink&quot; title=&quot;异常的概念&quot;&gt;&lt;/a&gt;异常的概念&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;编程中的错误&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;编译错误：编译错误是由于所编写的程序存在语法问题，未能通过由源代码到目标码（Java语言中由源代码到字节码）的编译过程而产生的，它由语言的编译系统负责检测和报告。&lt;/li&gt;
-&lt;li&gt;逻辑运行错误：逻辑运行错误是指程序不能实现编程人员的设计意图和设计功能而产生的错误，例如排序时不能正确排序。&lt;/li&gt;
-&lt;li&gt;系统运行错误：系统运行错误是指程序在执行过程中发生的错误，它会中断程序的正常执行。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;异常的概念&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;程序在运行时发生错误，程序终止并将控制交给操作系统，其余代码不再执行。&lt;/li&gt;
-&lt;li&gt;Java中定义了很多异常类，每个异常类都代表了一种运行错误，类中包含了该运行错误的信息和处理错误的方法等内容。每当Java程序运行过程中发生一个可识别的运行错误时，系统都会产生一个相应的该异常类的对象，即产生一个异常。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&quot;某些异常实例&quot;&gt;&lt;a href=&quot;#某些异常实例&quot; class=&quot;headerlink&quot; title=&quot;某些异常实例&quot;&gt;&lt;/a&gt;某些异常实例&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;public class TextException &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	public static void main(String[] args) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		/**&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		 * 输出：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		 * 程序开始&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		 * 123&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		 * 程序结束&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		 */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//		System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;程序开始&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//		String s = &lt;span class=&quot;string&quot;&gt;&quot;123&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//		int i = Integer.parseInt(s);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//		System.out.println(i);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//		System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;程序结束&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		/**&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		 * 如下是程序运行情况：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		 * 编译时通过，运行时出现异常。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		 * 对java.lang包里的东西我们无法改动&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		 * 最后一行找到主程序错误信息，点击会定位到出错行&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		 */&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//		程序开始&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//		Exception &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; thread &lt;span class=&quot;string&quot;&gt;&quot;main&quot;&lt;/span&gt; java.lang.NumberFormatException: For input string: &lt;span class=&quot;string&quot;&gt;&quot;123a&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//			at java.lang.NumberFormatException.forInputString(Unknown Source)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//			at java.lang.Integer.parseInt(Unknown Source)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//			at java.lang.Integer.parseInt(Unknown Source)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//			at com.hpe.t11.exception.TextException.main(TextException.java:18)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;程序开始&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		String s = &lt;span class=&quot;string&quot;&gt;&quot;123a&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		int i = Integer.parseInt(s);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		System.out.println(i);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;程序结束&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;public class TextException &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	public static int devide(int dividend, int divisor)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		//取整运算，dividend被除数, divisor除数&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		int result = dividend/divisor;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; result;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	public static void main(String[] args) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;程序开始运行&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		int result = devide(3, 0);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;结果为：&quot;&lt;/span&gt;+result);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;程序运行结束&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;结果如下&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;程序开始运行&lt;br&gt;Exception in thread “main” java.lang.ArithmeticException: / by zero&lt;br&gt;    at com.hpe.t11.exception.TextException.devide(TextException.java:6)&lt;br&gt;    at com.hpe.t11.exception.TextException.main(TextException.java:11)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;//当对象是null时，还去引用该对象的方法，一定会出现空指针异常。(java.lang.NullPointerException)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		String s = null;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		System.out.println(s.length());&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;异常的分类&quot;&gt;&lt;a href=&quot;#异常的分类&quot; class=&quot;headerlink&quot; title=&quot;异常的分类&quot;&gt;&lt;/a&gt;异常的分类&lt;/h2&gt;&lt;p&gt;&lt;strong&gt; JAVA异常类层次结构 &lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/c3c8eb1bjw1f75wjaqc9bj20lj0bh0vy.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot; title=&quot;说明&quot;&gt;&lt;/a&gt;说明&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Exception类对象由应用程序处理或抛出，Error类对象由Java虚拟机生成并抛出；程序无法捕获。&lt;/li&gt;
-&lt;li&gt;Throwable：java.lang.Throwable类是所有错误的父类。&lt;/li&gt;
-&lt;li&gt;Error：非常严重的错误，往往来源于Java底层，例如虚拟机崩溃，无法对Error错误进行处理。&lt;/li&gt;
-&lt;li&gt;Exception：&lt;br&gt;  (1) 还不是那么严重，有挽回的余地的错误。&lt;br&gt;  (2) 直接子类:ClassNotFoundException, IOException, SQLException.已检查异常，无法避免，必须处理。&lt;br&gt;  (3) RunntimeException：ArithmeticException, NullPointerException, NumberFormatException, ArrayIndexOutOfBoundsException。 运行时异常，未检查异常，在写程序过程中可以避免的异常。RunntimeException需要程序员在写代码过程中避免发生。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;异常规范&quot;&gt;&lt;a href=&quot;#异常规范&quot; class=&quot;headerlink&quot; title=&quot;异常规范&quot;&gt;&lt;/a&gt;异常规范&lt;/h2&gt;&lt;p&gt;java提供了一种异常规范，要求程序员在使用某些方法时必须对其进行异常处理。&lt;/p&gt;
-&lt;p&gt;jdk提供的一些类的方法的声明上使用关键字throws来声明可能会产生哪些异常，方法声明异常格式如下：&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;修饰符  返回值类型  方法名（形式参数）throws 异常类&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;               方法体；&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;例如File类中的createNewFile()方法：public boolean createNewFile() throws IOException{},当调用createNewFile()方法时必须对其进行处理。&lt;/p&gt;
-&lt;p&gt;如果是用户写的方法使用throws抛出异常，当调用该方法时也必须对其进行处理。&lt;/p&gt;
-&lt;h3 id=&quot;注意&quot;&gt;&lt;a href=&quot;#注意&quot; class=&quot;headerlink&quot; title=&quot;注意&quot;&gt;&lt;/a&gt;注意&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;抛出的异常类通常是系统定义的已检查异常，即非RunntimeException，也可以是用户自定义异常类。&lt;/li&gt;
-&lt;li&gt;一个方法可以抛出多个异常，各异常类之间用逗号隔开。&lt;/li&gt;
-&lt;li&gt;在java API中许多类的方法都抛出了异常，要求我们在调用该方法时要做对异常的处理。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;异常处理-重点&quot;&gt;&lt;a href=&quot;#异常处理-重点&quot; class=&quot;headerlink&quot; title=&quot; 异常处理  -=重点=-&quot;&gt;&lt;/a&gt;&lt;strong&gt; 异常处理 &lt;/strong&gt; -=重点=-&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Add Throws继续抛出异常。&lt;br&gt; java允许以该种方式处理异常，最终会抛给虚拟机处理（JVM），虚拟机发现异常后会终止程序运行。实际应用中也会使用这种方式，但通常是抛到某一级之后进行try,catch处理（有时会在某一层统一进行try,catch处理），因为不能由于某些小异常将整个大工程抛给虚拟机。（直接终止，因小失大）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;try-catch处理&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;一般形式&lt;/p&gt;
-  &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;try &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	// 要监控错误的代码块&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	methodGeneratingException();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125; catch (Exception e) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		// Exception e 的异常处理程序&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;  其运行机制为：try块中自上至下运行每一条语句，如果该语句发现异常，就跳至catch块中筛选对应的处理方法。然后再回try块继续向下执行。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;特征：&lt;br&gt;  (1) 处理异常后，不影响程序其他部分的运行；&lt;br&gt;  (2) 当有多个异常要捕获时，需要写多个catch语句；&lt;br&gt;  (3) 注意捕获多个异常时，异常父类要放在后面。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&quot;示例代码&quot;&gt;&lt;a href=&quot;#示例代码&quot; class=&quot;headerlink&quot; title=&quot;示例代码&quot;&gt;&lt;/a&gt;示例代码&lt;/h3&gt;&lt;h4 id=&quot;使用throws关键字抛出异常&quot;&gt;&lt;a href=&quot;#使用throws关键字抛出异常&quot; class=&quot;headerlink&quot; title=&quot;使用throws关键字抛出异常&quot;&gt;&lt;/a&gt;使用throws关键字抛出异常&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;package com.hpe.t11.exception;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;import java.io.File;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;import java.io.IOException;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public class TestIOException &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	public static void main(String[] args) throws IOException &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;程序开始运行&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		File f = new File(&lt;span class=&quot;string&quot;&gt;&quot;d:\\JAVA\\newfile.txt&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(!f.exists())&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			//创建新文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			f.createNewFile();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;程序运行结束&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;try-catch语句&quot;&gt;&lt;a href=&quot;#try-catch语句&quot; class=&quot;headerlink&quot; title=&quot;try,catch语句&quot;&gt;&lt;/a&gt;try,catch语句&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;package com.hpe.t11.exception;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;import java.io.File;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;import java.io.IOException;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public class TextException &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	public static int devide(int dividend, int divisor) throws Exception &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		// 取整运算，dividend被除数, divisor除数&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		int result = dividend / divisor;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; result;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	public static void main(String[] args) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;程序开始运行&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		int result = 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		try &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			// 把可能产生异常的代码放在一起，然后用多个catch来捕获&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			result = devide(3, 0);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			File f = new File(&lt;span class=&quot;string&quot;&gt;&quot;d:\\JAVA\\newfile.txt&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!f.exists()) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				// 创建新文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				f.createNewFile();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125; catch (IOException e) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			e.printStackTrace(); // 打印异常栈信息&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125; catch (Exception e) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			e.printStackTrace();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;运算结果为：&quot;&lt;/span&gt; + result);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;程序运行结束&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;p&gt;一个快捷键：try alt+/&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;注意顺序。因为Exception类是所有异常类的父类，如果放在第一位，其他catch子句都无效了，因此要放在最后。&lt;/p&gt;
-&lt;h2 id=&quot;finally&quot;&gt;&lt;a href=&quot;#finally&quot; class=&quot;headerlink&quot; title=&quot;finally&quot;&gt;&lt;/a&gt;finally&lt;/h2&gt;&lt;p&gt;finally语句是try-catch语句的一个补充，在try-catch语句块后可以加一个finally语句块。finally语句块无论程序执行时是否发生异常，最终都会被执行。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt; 示例代码 &lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;package com.hpe.t11.exception;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;import java.io.File;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;import java.io.FileInputStream;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;import java.io.FileNotFoundException;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;import java.io.IOException;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public class TestFinally &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	public static void main(String[] args) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		//读取d:\\JAVA\\newfile.txt中的内容：从磁盘-&amp;gt;内存&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		//1创建文件对象&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		File f = new File(&lt;span class=&quot;string&quot;&gt;&quot;d:\\JAVA\\newfile.txt&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		FileInputStream fin = null;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		try &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			//2创建文件输入流&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			fin = new FileInputStream(f);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			//3创建内存空间&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			byte[] buf = new byte[1024];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			//4读取文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			int length = fin.read(buf);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			String s = new String(buf, 0, length);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			System.out.println(s);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125; catch (FileNotFoundException e) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			e.printStackTrace();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125; catch(IOException e)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			e.printStackTrace();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125; finally&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			//清理工作，finally语句块无论程序执行时是否发生异常，最终都会被执行&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			try &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;即使try块中有return语句，我也会执行~！&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				fin.close();    //关闭流&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125; catch (IOException e) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				e.printStackTrace();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h2 id=&quot;try-catch-finally说明&quot;&gt;&lt;a href=&quot;#try-catch-finally说明&quot; class=&quot;headerlink&quot; title=&quot;try-catch-finally说明&quot;&gt;&lt;/a&gt;try-catch-finally说明&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;try后必须有catch 或finally&lt;/li&gt;
-&lt;li&gt;要监控的程序语句包含在 try 块内，catch 块中的代码用于捕获和处理异常。在方法返回之前必须执行的代码应放置在 finally 块中。&lt;/li&gt;
-&lt;li&gt;即使try代码块或者catch代码块中使用了return语句退出当前方法，finally都要执行。&lt;/li&gt;
-&lt;li&gt;finally不能被执行的唯一情况是：在被保护代码块中执行了System.exit(0);&lt;/li&gt;
-&lt;li&gt;捕获异常后不影响其他程序。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;异常类方法&quot;&gt;&lt;a href=&quot;#异常类方法&quot; class=&quot;headerlink&quot; title=&quot;异常类方法&quot;&gt;&lt;/a&gt;异常类方法&lt;/h2&gt;&lt;p&gt;public void printStackTrace();&lt;br&gt;public String getMessage();&lt;br&gt;public String  toString(); &lt;/p&gt;
-&lt;p&gt;常用的是第一个~&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;各位观众老爷们大家好，这里是专题系列《Java从入门到放弃》~(●’◡’●)&lt;/p&gt;
-&lt;p&gt;为您细细道来我是如何弃疗Java的。_(:3」∠❀)_&lt;/p&gt;
-&lt;p&gt;第五话：异常处理&lt;br&gt;
-    
-    </summary>
-    
     
       <category term="Java" scheme="https://moemoemortimer.github.io/tags/Java/"/>
     
