@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://moemoemortimer.github.io/"/>
-  <updated>2017-03-18T11:52:11.160Z</updated>
+  <updated>2017-03-18T14:07:38.826Z</updated>
   <id>https://moemoemortimer.github.io/</id>
   
   <author>
@@ -14,6 +14,63 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>不为人知的py交易日记【第一话：基础】</title>
+    <link href="https://moemoemortimer.github.io/2017/03/18/py-trade-dairy-1/"/>
+    <id>https://moemoemortimer.github.io/2017/03/18/py-trade-dairy-1/</id>
+    <published>2017-03-18T12:00:43.000Z</published>
+    <updated>2017-03-18T14:07:38.826Z</updated>
+    
+    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;这里是Nyanko桑的py交易记录，嘿嘿嘿⸜(&lt;em&gt; ॑꒳ ॑&lt;/em&gt; )⸝&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;环境配置&quot;&gt;&lt;a href=&quot;#环境配置&quot; class=&quot;headerlink&quot; title=&quot;环境配置&quot;&gt;&lt;/a&gt;环境配置&lt;/h2&gt;&lt;p&gt;请到官网&lt;a href=&quot;https://www.python.org/downloads/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.python.org/downloads/&lt;/a&gt;下载python3（知乎上好像有人说python3正在毁了py，不知道为什么会这么说…）&lt;/p&gt;
+&lt;p&gt;一路保持默认选项，顺利完成，没毛病、&lt;/p&gt;
+&lt;p&gt;然后尝试一下hello world作为第一个py交易（？），cmd和IDLE（Python GUI 图形化界面）都试一下&lt;/p&gt;
+&lt;p&gt;code只有一行：&lt;code&gt;print(&amp;quot;hello~&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&quot;配合sublime-text食用&quot;&gt;&lt;a href=&quot;#配合sublime-text食用&quot; class=&quot;headerlink&quot; title=&quot;配合sublime text食用&quot;&gt;&lt;/a&gt;配合sublime text食用&lt;/h3&gt;&lt;p&gt;其实我的第一个py程序是在sublime text上写的，试了试居然运行成功了（鸡冻），但是有一点不好….不能在它的console里输入…为解决输入问题，google出一个ST的插件2333&lt;/p&gt;
+&lt;p&gt;打开ST ——&amp;gt; Ctrl+shift+P ——&amp;gt; PCI （打开 Package Control: Install Package）——&amp;gt; SublimeREPL&lt;/p&gt;
+&lt;p&gt;安装SublimeREPL这个插件之后，你可以&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Tools &amp;gt; SublimeREPL &amp;gt; Python &amp;gt; Python 在新窗口中打开类似IDLE的交互式开发环境&lt;/li&gt;
+&lt;li&gt;通过同菜单下的 Python - RUN current file 运行当前文件。&lt;/li&gt;
+&lt;li&gt;添加快捷键（这里的姿势来自&lt;a href=&quot;http://blog.yzyzsun.me/sublime-text-for-mac/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这篇博文&lt;/a&gt;）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;以 Python - RUN current file 为例，设置与 Python IDLE 相同的快捷键 F5。&lt;br&gt;打开 Sublime Text &amp;gt; Preferences &amp;gt; Key Bindings - User，在文件中输入：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;quot;keys&amp;quot;: [&amp;quot;f5&amp;quot;],&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;quot;caption&amp;quot;: &amp;quot;SublimeREPL: Python - RUN current file&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;quot;command&amp;quot;: &amp;quot;run_existing_window_command&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;quot;args&amp;quot;: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;quot;id&amp;quot;: &amp;quot;repl_python_run&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;quot;file&amp;quot;: &amp;quot;config/Python/Main.sublime-menu&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;语法初步&quot;&gt;&lt;a href=&quot;#语法初步&quot; class=&quot;headerlink&quot; title=&quot;语法初步&quot;&gt;&lt;/a&gt;语法初步&lt;/h2&gt;&lt;h3 id=&quot;缩进&quot;&gt;&lt;a href=&quot;#缩进&quot; class=&quot;headerlink&quot; title=&quot;缩进&quot;&gt;&lt;/a&gt;缩进&lt;/h3&gt;&lt;p&gt;1个缩进 = 4个空格&lt;br&gt;体现代码间的层次关系，是表明程序框架的唯一手段。&lt;br&gt;（此处应@游标卡尺梗）&lt;/p&gt;
+&lt;h3 id=&quot;注释&quot;&gt;&lt;a href=&quot;#注释&quot; class=&quot;headerlink&quot; title=&quot;注释&quot;&gt;&lt;/a&gt;注释&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;单行注释以#开头&lt;/li&gt;
+&lt;li&gt;多行注释以** &lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;（三个单引号）开头和结尾&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;### 变量命名规则&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;1. 使用大小写字母、数字和下划线的组合，但首字母只能是大小写字母或下划线，不能使用空格。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2. 中文等非字母符号也可以作为名字&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3. 不能与保留字相同（共33个，见下图）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;![](http://ww1.sinaimg.cn/large/c3c8eb1bly1fdrb1wl1juj20f808kaav.jpg)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;### 输入函数&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Input()函数从控制台获得用户输入&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;变量&amp;gt; = input(&amp;lt;提示性文字&amp;gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;获得的用户输入以字符串形式保存在变量中&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;例如：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;`val = input(&amp;quot;请输入你的名字：&amp;quot;)`&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;运行后&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;![](http://ww1.sinaimg.cn/large/c3c8eb1bly1fdrb8xu1kgj20fn01djrf.jpg)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;### 表达式&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;1. 字符串&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;操作符+可以连接两个串&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;![](http://ww1.sinaimg.cn/large/c3c8eb1bly1fdrbhe8omgj20hf01xaa8.jpg)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-------&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;字符串可理解为字符数组，若长度为L，第一个字节索引为0或-L，最后一个字节索引为L-1或-1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;可以以区间形式获得字符串的一段，这里的区间是个左闭右开区间。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;![](http://ww1.sinaimg.cn/large/c3c8eb1bly1fdrbupa93ej20gk06hmxl.jpg)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;### 分支语句&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;``` python&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;if &amp;lt;条件1成立&amp;gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;表达式组1&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;elif &amp;lt;条件2成立&amp;gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;表达式组2&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;......&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;else:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;表达式组N&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;赋值语句&quot;&gt;&lt;a href=&quot;#赋值语句&quot; class=&quot;headerlink&quot; title=&quot;赋值语句&quot;&gt;&lt;/a&gt;赋值语句&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;用等号给变量赋值&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如：val = 1.8*float(input_str) + 32&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;同步赋值语句&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;先运算右侧n个表达式，然后同时将表达式结果赋给左侧&lt;/p&gt;
+&lt;p&gt;&amp;lt;变量1&amp;gt;,…, &amp;lt;变量N&amp;gt; = &amp;lt;表达式1&amp;gt;,…, &amp;lt;表达式N&amp;gt;&lt;/p&gt;
+&lt;p&gt;这里有一个很有趣的例子：交换两个变量的值&lt;br&gt;一种方法是引入一个中间变量temp，然而python有一个更神奇的方法：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;x, y = y, x&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;这样也可以Σ(*ﾟдﾟﾉ)ﾉ&lt;/p&gt;
+&lt;h3 id=&quot;输出函数&quot;&gt;&lt;a href=&quot;#输出函数&quot; class=&quot;headerlink&quot; title=&quot;输出函数&quot;&gt;&lt;/a&gt;输出函数&lt;/h3&gt;&lt;p&gt;print()函数用来输出字符信息，或以字符形式输出变量&lt;/p&gt;
+&lt;p&gt;print()函数可以输出各种类型变量的值&lt;/p&gt;
+&lt;p&gt;print()函数通过%来选择要输出的变量&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdrchq8nebj20lr06hwfl.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;循环语句&quot;&gt;&lt;a href=&quot;#循环语句&quot; class=&quot;headerlink&quot; title=&quot;循环语句&quot;&gt;&lt;/a&gt;循环语句&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;for i in range(&amp;lt;计数值&amp;gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;表达式&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这里是Nyanko桑的py交易记录，嘿嘿嘿⸜(&lt;em&gt; ॑꒳ ॑&lt;/em&gt; )⸝&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="python" scheme="https://moemoemortimer.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>2017年读书笔记</title>
@@ -370,8 +427,8 @@
 &lt;p&gt;大学的时候再在快递单子上写下一个个名字的时候，一大股想念的感情就会喷涌而出，诶呀，无论对方喜不喜欢你寄去的东西，你知道对方一定会喜欢你给他/她寄东西的，那种感觉就已经很棒了~&lt;/p&gt;
 &lt;p&gt;再就基本上没有要写别人名字的情况了，要联系直接上秋秋说就好了。想想还有些寂寞呢。&lt;/p&gt;
 &lt;p&gt;最后放上收藏的这几首主题曲吧，歌词真的炒鸡赞。&lt;/p&gt;
-&lt;h2 id=&quot;前前前世-–-RADWIMPS&quot;&gt;&lt;a href=&quot;#前前前世-–-RADWIMPS&quot; class=&quot;headerlink&quot; title=&quot;前前前世 – RADWIMPS&quot;&gt;&lt;/a&gt;前前前世 – RADWIMPS&lt;/h2&gt;&lt;h3 id=&quot;original-ver&quot;&gt;&lt;a href=&quot;#original-ver&quot; class=&quot;headerlink&quot; title=&quot;original ver&quot;&gt;&lt;/a&gt;original ver&lt;/h3&gt;&lt;div id=&quot;dplayer0&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer0 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer0&quot;),&quot;video&quot;:{&quot;url&quot;:&quot;http://112.253.22.164/3/c/n/w/u/cnwunlkymtxptdxkobyorsajwxkuhn/hc.yinyuetai.com/87D901589089E48FCB290CA0CB70B61F.mp4&quot;,&quot;pic&quot;:&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f8efg02v6tj20rs0f3tdp.jpg&quot;}});&lt;/script&gt;
-&lt;h3 id=&quot;女声cover&quot;&gt;&lt;a href=&quot;#女声cover&quot; class=&quot;headerlink&quot; title=&quot;女声cover&quot;&gt;&lt;/a&gt;女声cover&lt;/h3&gt;&lt;div id=&quot;dplayer1&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer1 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer1&quot;),&quot;video&quot;:{&quot;url&quot;:&quot;http://hc.yinyuetai.com/uploads/videos/common/2D000156B50C0A23DB47CEBBCB2C4ED7.flv&quot;,&quot;pic&quot;:&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f8fh191pabj20rs0fl7bz.jpg&quot;}});&lt;/script&gt;
+&lt;h2 id=&quot;前前前世-–-RADWIMPS&quot;&gt;&lt;a href=&quot;#前前前世-–-RADWIMPS&quot; class=&quot;headerlink&quot; title=&quot;前前前世 – RADWIMPS&quot;&gt;&lt;/a&gt;前前前世 – RADWIMPS&lt;/h2&gt;&lt;h3 id=&quot;original-ver&quot;&gt;&lt;a href=&quot;#original-ver&quot; class=&quot;headerlink&quot; title=&quot;original ver&quot;&gt;&lt;/a&gt;original ver&lt;/h3&gt;&lt;div id=&quot;dplayer1&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer1 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer1&quot;),&quot;video&quot;:{&quot;url&quot;:&quot;http://112.253.22.164/3/c/n/w/u/cnwunlkymtxptdxkobyorsajwxkuhn/hc.yinyuetai.com/87D901589089E48FCB290CA0CB70B61F.mp4&quot;,&quot;pic&quot;:&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f8efg02v6tj20rs0f3tdp.jpg&quot;}});&lt;/script&gt;
+&lt;h3 id=&quot;女声cover&quot;&gt;&lt;a href=&quot;#女声cover&quot; class=&quot;headerlink&quot; title=&quot;女声cover&quot;&gt;&lt;/a&gt;女声cover&lt;/h3&gt;&lt;div id=&quot;dplayer2&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer2 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer2&quot;),&quot;video&quot;:{&quot;url&quot;:&quot;http://hc.yinyuetai.com/uploads/videos/common/2D000156B50C0A23DB47CEBBCB2C4ED7.flv&quot;,&quot;pic&quot;:&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f8fh191pabj20rs0fl7bz.jpg&quot;}});&lt;/script&gt;
 &lt;h3 id=&quot;歌词&quot;&gt;&lt;a href=&quot;#歌词&quot; class=&quot;headerlink&quot; title=&quot;歌词&quot;&gt;&lt;/a&gt;歌词&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;やっと眼を覚ましたかい それなのになぜ眼も合わせやしないんだい？&lt;br&gt;总算醒了吗 可为何不与我对视呢？&lt;br&gt;「遅いよ」と怒る君 これでもやれるだけ飛ばしてきたんだよ&lt;br&gt;你生气地抱怨说“太迟了啦” 可是我已经竭尽全力飞到你身边了哦&lt;/p&gt;
 &lt;p&gt;心が身体を追い越してきたんだよ&lt;br&gt;我的心甚至超越身体赶到你面前&lt;/p&gt;
@@ -738,159 +795,6 @@
       <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
     
       <category term="数学" scheme="https://moemoemortimer.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL从入门到狗带 ——第一话：MySQL入门篇</title>
-    <link href="https://moemoemortimer.github.io/2016/09/25/mysql-note-1/"/>
-    <id>https://moemoemortimer.github.io/2016/09/25/mysql-note-1/</id>
-    <published>2016-09-25T15:49:48.000Z</published>
-    <updated>2016-09-27T09:56:22.105Z</updated>
-    
-    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;各位观众老爷们大家好，这里是新专题《MySQL从入门到狗带》~(●’◡’●)&lt;/p&gt;
-&lt;p&gt;珍爱生命，远离MySQL。_(:3」∠❀)_&lt;/p&gt;
-&lt;p&gt;第一话: MySQL入门篇&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;基本概念&quot;&gt;&lt;a href=&quot;#基本概念&quot; class=&quot;headerlink&quot; title=&quot;基本概念&quot;&gt;&lt;/a&gt;基本概念&lt;/h2&gt;&lt;p&gt;几种常见关系型数据库：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;SqlServer：是微软公司数据库，适用于windows平台，服务器需要付费。&lt;/li&gt;
-&lt;li&gt;MySql：是Oracle公司数据库，性能不错，社区版免费，其体积小、速度快、总体拥有成本低，且为开源项目，适用平台有windows, linux, unix。&lt;/li&gt;
-&lt;li&gt;DB2：IBM公司的数据库，大型数据库系统。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;吾辈学习的是MySQL~嗯、、贴个简介？&lt;br&gt;MySQL是一个关系型数据库管理系统，由瑞典 MySQL AB 公司开发，目前属于 Oracle 旗下公司。MySQL是最流行的关系型数据库管理系统，在 WEB 应用方面 MySQL 是最好的 RDBMS (Relational Database Management System，关系数据库管理系统) 应用软件之一。MySQL 是一种关联数据库管理系统，关联数据库将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就增加了速度并提高了灵活性。MySQL 所使用的 SQL 语言是用于访问数据库的最常用标准化语言。MySQL 软件采用了双授权政策，它分为社区版和商业版，由于其体积小、速度快、总体拥有成本低，尤其是开放源码这一特点，一般中小型网站的开发都选择 MySQL 作为网站数据库。由于其社区版的性能卓越，搭配 PHP 和 Apache 可组成良好的开发环境。&lt;/p&gt;
-&lt;h2 id=&quot;MySql数据库的下载和安装&quot;&gt;&lt;a href=&quot;#MySql数据库的下载和安装&quot; class=&quot;headerlink&quot; title=&quot;MySql数据库的下载和安装&quot;&gt;&lt;/a&gt;MySql数据库的下载和安装&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://dev.mysql.com/downloads/mysql/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;社区版下载地址&lt;/a&gt;，你也可以去官网自行挑选~&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;本来不想把这些废话写上来的，但我真的忍不住要吐槽，MySQL的下载真他喵的有毒！有毒！！&lt;br&gt;吾辈遇到的唯一一道槛(或许不是槛，称其为无法翻越的大山更为贴切QAQ)就是在安装过程中Starting Server处卡死。因为MySQL的安装会在很多个文件夹里添加相关文件，有隐藏的有可见的，但是如果出现问题需要重装的话，就需要把之前所有的程序都卸载，所有文件都删除。具体步骤：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;控制面板——&amp;gt;程序和功能——&amp;gt;删除所有安装的mysql程序&lt;/li&gt;
-&lt;li&gt;到C:\删除所有相关文件（这里我是在搜索栏直接输MYSQL找的）有些文件是隐藏的，你需要文件夹选项-&amp;gt;查看-&amp;gt;显示隐藏文件。&lt;/li&gt;
-&lt;li&gt;打开命令行窗口（cmd）,输入regedit（注册表编辑器），ctrl+F查找MySQL，如有以下三个文件，统统删掉。(因为吾辈失败了很多次，所以之后在这一步把能查到的所有MySQL相关的东西全删了，但好像有两个无法对其进行更改)&lt;br&gt; &lt;code&gt;HKEY_LOCAL_MACHINE/SYSTEM/ControlSet001/Services/Eventlog/Applications/MySQL
- HKEY_LOCAL_MACHINE/SYSTEM/ControlSet002/Services/Eventlog/Applications/MySQL
- HKEY_LOCAL_MACHINE/SYSTEM/CurrentControlSet/Services/Eventlog/Applications/MySQL&lt;/code&gt;&lt;br&gt;至此就删的差不多了，你要明白，如果想重装成功，之前的MySQL一定要清理得干干净净渣都不剩QAQ（因为是重要的话所以此处要x3）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;如果还是不行的话(●’◡’●)&lt;/p&gt;
-&lt;p&gt;建议更换一个版本~&lt;/p&gt;
-&lt;p&gt;因为我就是这么成功的(●’◡’●)&lt;/p&gt;
-&lt;p&gt;（经此一劫，吾辈真的想换系统了QAQ）&lt;/p&gt;
-&lt;h3 id=&quot;注意&quot;&gt;&lt;a href=&quot;#注意&quot; class=&quot;headerlink&quot; title=&quot;注意&quot;&gt;&lt;/a&gt;注意&lt;/h3&gt;&lt;p&gt;锵锵锵~进度条走到这里，我们已经把MySQL成功抱回家惹~~&lt;/p&gt;
-&lt;p&gt;接下来还有几处小细节~&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;设置数据库字符集为utf8&lt;/li&gt;
-&lt;li&gt;查看数据库字符集：show variables like ‘%char%’;&lt;/li&gt;
-&lt;li&gt;修改&lt;ul&gt;
-&lt;li&gt;打开my.ini文件&lt;/li&gt;
-&lt;li&gt;添加：default-character-set=utf8 和 character-set-server=utf8&lt;/li&gt;
-&lt;li&gt;重启服务器&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;MySql数据库基本操作&quot;&gt;&lt;a href=&quot;#MySql数据库基本操作&quot; class=&quot;headerlink&quot; title=&quot;MySql数据库基本操作&quot;&gt;&lt;/a&gt;MySql数据库基本操作&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;服务器的启动与停止&lt;br&gt; 在任务栏搜索“服务”，找到MySQL，右击，可以查看服务端状态，MySQL处在启动状态的时候，客户端才能连上。&lt;/li&gt;
-&lt;li&gt;MySql客户端登录：启动客户端程序后默认root用户登录，输入安装时root的密码，回车。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/c3c8eb1bjw1f78k6cyrtnj20hu06baaw.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;code&gt;一个简单的show databases;命令，别忘了分号yooo~&lt;/code&gt;&lt;br&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/c3c8eb1bjw1f78k79vi5rj20ht054aa6.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;MySQL命令行客户端&lt;/li&gt;
-&lt;/ol&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;命令&lt;/th&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;作用&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;show databases;&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;显示所有数据库&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;use 数据库名;&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;切换到指定数据库&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;show tables;&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;显示当前数据库中所有表名&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;select * from 表名;&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;select * from 表名&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&quot;数据库软件组成&quot;&gt;&lt;a href=&quot;#数据库软件组成&quot; class=&quot;headerlink&quot; title=&quot;数据库软件组成&quot;&gt;&lt;/a&gt;数据库软件组成&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;服务端&lt;ul&gt;
-&lt;li&gt;存储数据&lt;/li&gt;
-&lt;li&gt;解析和执行命令&lt;/li&gt;
-&lt;li&gt;服务端需要保持启动状态&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;客户端&lt;ul&gt;
-&lt;li&gt;首先连接服务器&lt;/li&gt;
-&lt;li&gt;编写sql命令发送到服务器&lt;/li&gt;
-&lt;li&gt;客户端软件&lt;ul&gt;
-&lt;li&gt;1) mysql自带的命令行（Command Line Client）,即可视化客户端&lt;/li&gt;
-&lt;li&gt;2) 第三方客户端，例如Navicat&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;Navicat-for-MySQL&quot;&gt;&lt;a href=&quot;#Navicat-for-MySQL&quot; class=&quot;headerlink&quot; title=&quot;Navicat for MySQL&quot;&gt;&lt;/a&gt;Navicat for MySQL&lt;/h2&gt;&lt;p&gt;Navicat for MySql是一款非常实用的客户端管理工具，以图形界面的形式来管理MySql数据库。它也是吾辈学习时主要依赖的工具。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;连接服务器&lt;br&gt; 打开Navicat for MySql，单击左上角连接，输入密码，测试，成功即可连接&lt;br&gt; 如果不成功，就将localhost改为127.0.0.1:本机的回路地址。&lt;/li&gt;
-&lt;li&gt;查看数据库&lt;ul&gt;
-&lt;li&gt;双击数据库，可以查看数据库包含的对象&lt;/li&gt;
-&lt;li&gt;查看表 ：展开表可以查看当前数据库中都有哪些表，双击表名可以看表中数据&lt;/li&gt;
-&lt;li&gt;查看表结构： 右击表-设计表，可以对表中字段重新设计&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;创建数据库&lt;ul&gt;
-&lt;li&gt;右击服务器-新建数据库，输入数据库名，字符集和排序规则选择utf8（不然可能会出现中文无法识别的现象）&lt;/li&gt;
-&lt;li&gt;创建表：右击表-新建表，打开表设计器，设计表的字段 &lt;/li&gt;
-&lt;li&gt;设计好后保存表&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;操作表数据&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;增加：insert into 表名(形参(字段)列表) values(实参(字段值));按顺序一一对应，varchar类型要用用单引号引起来&lt;/li&gt;
-&lt;li&gt;删除：delete from 表名 where 条件（如果不加条件，整个表都会被删掉）&lt;/li&gt;
-&lt;li&gt;修改：update 表名 set 字段名1=值1, 字段名2=值2, ……  where 条件&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;查询&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;查询所有：查询所有： select * from 表名&lt;/li&gt;
-&lt;li&gt;查询指定条件的行： select * from 表名 where 条件&lt;/li&gt;
-&lt;li&gt;查询某些列： select 字段1, 字段2, ……, from 表名 where 条件&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;数据库迁移&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;数据库脚本导出：右击数据库-转储SQL文件&lt;/li&gt;
-&lt;li&gt;数据库脚本导入：先建立&lt;strong&gt; 同名数据库 &lt;/strong&gt;，然后右击数据库（处于打开状态）- 运行SQL文件&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;END&quot;&gt;&lt;a href=&quot;#END&quot; class=&quot;headerlink&quot; title=&quot;END&quot;&gt;&lt;/a&gt;END&lt;/h2&gt;&lt;p&gt;第一话就这样结束惹~和JAVA那个比起来素不素少了很多～～&lt;br&gt;啊～因为是第一话嘛、肯定是一些基础的东西(●’◡’●)&lt;br&gt;有的时候会出现自己也不知道自己在写啥的钝感TAT&lt;br&gt;可能自己的思维模式还不够成熟、我会努力做到条理清晰的～～&lt;br&gt;我也在学习中~&lt;br&gt;希望能与你一起进步(～￣▽￣)～*&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;各位观众老爷们大家好，这里是新专题《MySQL从入门到狗带》~(●’◡’●)&lt;/p&gt;
-&lt;p&gt;珍爱生命，远离MySQL。_(:3」∠❀)_&lt;/p&gt;
-&lt;p&gt;第一话: MySQL入门篇&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="学习笔记" scheme="https://moemoemortimer.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="MySQL" scheme="https://moemoemortimer.github.io/tags/MySQL/"/>
-    
-      <category term="数据库" scheme="https://moemoemortimer.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
   </entry>
   
