@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://moemoemortimer.github.io/"/>
-  <updated>2017-03-30T14:11:01.909Z</updated>
+  <updated>2017-04-29T13:36:33.052Z</updated>
   <id>https://moemoemortimer.github.io/</id>
   
   <author>
@@ -14,6 +14,553 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HDU 5241 Friends 【高精度乘法+快速幂】</title>
+    <link href="https://moemoemortimer.github.io/2017/04/29/hdu5241/"/>
+    <id>https://moemoemortimer.github.io/2017/04/29/hdu5241/</id>
+    <published>2017-04-29T10:01:51.000Z</published>
+    <updated>2017-04-29T13:36:33.052Z</updated>
+    
+    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;h3 id=&quot;题目传送门&quot;&gt;&lt;a href=&quot;#题目传送门&quot; class=&quot;headerlink&quot; title=&quot;题目传送门&quot;&gt;&lt;/a&gt;题目传送门&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=5241&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HDU 5241 Friends 题目传送门&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h3&gt;&lt;p&gt;给出全集Mike中元素个数，对于Mike的9个子集，给出了子集间的包含关系（例如a的子集是b的父集），问满足题述关系的情况一共有多少种。&lt;/p&gt;
+&lt;h3 id=&quot;输入&quot;&gt;&lt;a href=&quot;#输入&quot; class=&quot;headerlink&quot; title=&quot;输入&quot;&gt;&lt;/a&gt;输入&lt;/h3&gt;&lt;p&gt;全集Mike中元素个数n&lt;br&gt;（子集的个数以及各集合之间的关系已经在题目中给出）&lt;/p&gt;
+&lt;h3 id=&quot;输出&quot;&gt;&lt;a href=&quot;#输出&quot; class=&quot;headerlink&quot; title=&quot;输出&quot;&gt;&lt;/a&gt;输出&lt;/h3&gt;&lt;p&gt;符合要求的情况数&lt;/p&gt;
+&lt;h2 id=&quot;思路&quot;&gt;&lt;a href=&quot;#思路&quot; class=&quot;headerlink&quot; title=&quot;思路&quot;&gt;&lt;/a&gt;思路&lt;/h2&gt;&lt;p&gt;设Mike中元素个数n时答案为$ans(n)$, 考虑如下递推过程:&lt;/p&gt;
+&lt;p&gt;$ans(n) = ans(n-1)*ans(1)$&lt;br&gt;全集有n-1个元素与全集有1个元素的某种状态做一次并运算就可得到全集有n个元素时的某种可行情况。&lt;/p&gt;
+&lt;p&gt;全集有n个元素时的全部可行情况数就是ans(n-1)*ans(1)。&lt;/p&gt;
+&lt;p&gt;通过给出的样例（n=0, ans=1; n=2, ans=1024）或者简单枚举可知$ans(1) = 32 = 2^5$&lt;/p&gt;
+&lt;p&gt;那么问题及转化为，给定n，计算$2^(5*n)$&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+      <category term="快速幂" scheme="https://moemoemortimer.github.io/tags/%E5%BF%AB%E9%80%9F%E5%B9%82/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>叉姐200题【搬运】</title>
+    <link href="https://moemoemortimer.github.io/2017/04/28/ftiasch-200-problemset/"/>
+    <id>https://moemoemortimer.github.io/2017/04/28/ftiasch-200-problemset/</id>
+    <published>2017-04-28T04:36:32.000Z</published>
+    <updated>2017-04-29T13:45:47.173Z</updated>
+    
+    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;来自ftiasch在&lt;a href=&quot;https://gist.github.com/ftiasch/007a7732456cc8f88ba6&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;贴出的题。有些公式看着不太舒服，就移到这里了。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PublicTransitHard &lt;a href=&quot;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=13797&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=13797&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;SimilarNames &lt;a href=&quot;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=12868&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=12868&lt;/a&gt;&lt;br&gt;n个字符串s_1, s_2, …, s_n，m个条件(a_i, b&lt;em&gt;i)，统计满足s&lt;/em&gt;{p(a&lt;em&gt;i)}是s&lt;/em&gt;{p(b_i)}前缀的排列p_1, p_2, …, p_n数量&lt;br&gt;n &amp;lt;= 50, |s_i| &amp;lt;= 50, m &amp;lt;= 8 &lt;/p&gt;
+&lt;p&gt;BichromeSky &lt;a href=&quot;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=13711&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=13711&lt;/a&gt;&lt;br&gt;n个红点，m个蓝点，没有三点共线，第i个红点以p_i的概率出现，求红点的凸包包含所有蓝点的概率&lt;br&gt;n, m &amp;lt;= 100 &lt;/p&gt;
+&lt;p&gt;InverseRMQ &lt;a href=&quot;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=13235&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=13235&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;TreeDistance &lt;a href=&quot;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=13369&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=13369&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;TreePuzzle &lt;a href=&quot;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=13185&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=13185&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;EagleInZoo &lt;a href=&quot;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=13117&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=13117&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;EllysLamps &lt;a href=&quot;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=11906&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=11906&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;SimilarSequencesAnother &lt;a href=&quot;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=12742&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=12742&lt;/a&gt;&lt;br&gt;(A, B) 是相似的，当且仅当A, B各删不超过2个字符后相等。给定长度n和字符集m，问相似(A, B)数量。&lt;br&gt;n &amp;lt;= 100 &lt;/p&gt;
+&lt;p&gt;TaroCheckers &lt;a href=&quot;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=12996&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=12996&lt;/a&gt;&lt;br&gt;n * m的棋盘，第i行前l[i]个格子有一个棋子，后r[i]个格子有一个棋子，每列最多有一个棋子，问方案数。&lt;br&gt;n &amp;lt;= 50, m &amp;lt;= 200 &lt;/p&gt;
+&lt;p&gt;OneDimensionalRobot &lt;a href=&quot;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=12999&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=12999&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;PerfectSquare &lt;a href=&quot;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=13145&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=13145&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;AlienAndPermutation &lt;a href=&quot;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=12949&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=12949&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;Perfect Matching &lt;a href=&quot;http://www.spoj.com/problems/MATCH/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.spoj.com/problems/MATCH/&lt;/a&gt;&lt;br&gt;n个点的二分图，假设完备匹配的数量是x，判断x = 0 (mod 2)&lt;br&gt;n &amp;lt;= 300 &lt;/p&gt;
+&lt;p&gt;(False) Face &lt;a href=&quot;https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=360&amp;amp;page=show_problem&amp;amp;problem=2625&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=360&amp;amp;page=show_problem&amp;amp;problem=2625&lt;/a&gt;&lt;br&gt;n个点的二分图，假设完备匹配的数量是x，判断x = 0 (mod 4)&lt;br&gt;n &amp;lt;= 300 &lt;/p&gt;
+&lt;p&gt;Little Elephant and Broken Sorting &lt;a href=&quot;http://codeforces.com/contest/258/problem/D&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://codeforces.com/contest/258/problem/D&lt;/a&gt;&lt;br&gt;长度为n的排列，m次交换a_i, b_i，每个交换a_i, b_i有50%的概率不发生，问逆序数的期望&lt;br&gt;n, m &amp;lt;= 1000 &lt;/p&gt;
+&lt;p&gt;Inversions problem &lt;a href=&quot;http://codeforces.com/problemset/problem/513/G3&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://codeforces.com/problemset/problem/513/G3&lt;/a&gt;&lt;br&gt;长度为n的排列，每次随机一个子段翻转，问m轮后逆序数的期望&lt;br&gt;n &amp;lt;= 300, m &amp;lt;= 10^9 &lt;/p&gt;
+&lt;h1 id=&quot;Cliquers-PA-2008-Round-5&quot;&gt;&lt;a href=&quot;#Cliquers-PA-2008-Round-5&quot; class=&quot;headerlink&quot; title=&quot;Cliquers [PA 2008, Round 5]&quot;&gt;&lt;/a&gt;Cliquers [PA 2008, Round 5]&lt;/h1&gt;&lt;p&gt;求$n$个点有标号的无向图的数量，要求每个连通分量都是团。 &lt;/p&gt;
+&lt;p&gt;$n \leq 200000$ &lt;/p&gt;
+&lt;h1 id=&quot;Isomorphism-SGU-282&quot;&gt;&lt;a href=&quot;#Isomorphism-SGU-282&quot; class=&quot;headerlink&quot; title=&quot;Isomorphism [SGU 282]&quot;&gt;&lt;/a&gt;Isomorphism [SGU 282]&lt;/h1&gt;&lt;p&gt;$n$个点的完全图$m$染色，问同构意义下有多少种染色方案。 &lt;/p&gt;
+&lt;p&gt;$n \leq 53, m \leq 1000$ &lt;/p&gt;
+&lt;h1 id=&quot;Writing-n-as-the-product-of-k-distinct-positive-integers-PE-495&quot;&gt;&lt;a href=&quot;#Writing-n-as-the-product-of-k-distinct-positive-integers-PE-495&quot; class=&quot;headerlink&quot; title=&quot;Writing n as the product of k distinct positive integers [PE 495]&quot;&gt;&lt;/a&gt;Writing n as the product of k distinct positive integers [PE 495]&lt;/h1&gt;&lt;p&gt;求$n!$写成$k$个不同的数的乘积的方案数。 &lt;/p&gt;
+&lt;p&gt;$n \leq 10^4, k \leq 30$ &lt;/p&gt;
+&lt;h1 id=&quot;Partition-HDOJ-4651&quot;&gt;&lt;a href=&quot;#Partition-HDOJ-4651&quot; class=&quot;headerlink&quot; title=&quot;Partition [HDOJ 4651]&quot;&gt;&lt;/a&gt;Partition [HDOJ 4651]&lt;/h1&gt;&lt;p&gt;求$n$的拆分数$p_n$。 &lt;/p&gt;
+&lt;p&gt;$n \leq 10^5$ &lt;/p&gt;
+&lt;p&gt;$$\prod&lt;em&gt;{n = 1}^{\infty} (1 - x^n) = \sum&lt;/em&gt;{k = 0}^{\infty} x^{\frac{k(3k \pm 1)}{2}}$$ &lt;/p&gt;
+&lt;h1 id=&quot;Integer-Partition-HDOJ-4658&quot;&gt;&lt;a href=&quot;#Integer-Partition-HDOJ-4658&quot; class=&quot;headerlink&quot; title=&quot;Integer Partition [HDOJ 4658]&quot;&gt;&lt;/a&gt;Integer Partition [HDOJ 4658]&lt;/h1&gt;&lt;p&gt;求$n$的拆分数，要求数字出现不超过$k$次。 &lt;/p&gt;
+&lt;p&gt;$k \leq n \leq 10^5$ &lt;/p&gt;
+&lt;h1 id=&quot;Little-Elephant-and-Broken-Sorting-CF-258D&quot;&gt;&lt;a href=&quot;#Little-Elephant-and-Broken-Sorting-CF-258D&quot; class=&quot;headerlink&quot; title=&quot;Little Elephant and Broken Sorting [CF 258D]&quot;&gt;&lt;/a&gt;Little Elephant and Broken Sorting [CF 258D]&lt;/h1&gt;&lt;p&gt;$1, 2, \dots, n$的排列$p$。 &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;for i := 1 .. m do 
+if random() mod 2 == 0 
+swap(p[a[i]], p[b[i]]) 
+end 
+end
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;求逆序对数量的期望。 &lt;/p&gt;
+&lt;p&gt;$n, m \leq 1000$ &lt;/p&gt;
+&lt;h1 id=&quot;Inversions-problem-CF-513G&quot;&gt;&lt;a href=&quot;#Inversions-problem-CF-513G&quot; class=&quot;headerlink&quot; title=&quot;Inversions problem [CF 513G]&quot;&gt;&lt;/a&gt;Inversions problem [CF 513G]&lt;/h1&gt;&lt;p&gt;$1, 2, \dots, n$的排列。&lt;br&gt;等概率地选择一个连续子串，将其翻转。&lt;br&gt;求$m$次操作后逆序对数量的期望。 &lt;/p&gt;
+&lt;p&gt;$n \leq 300, m \leq 10^9$ &lt;/p&gt;
+&lt;h1 id=&quot;BichromeSky-SRM-655-Hard&quot;&gt;&lt;a href=&quot;#BichromeSky-SRM-655-Hard&quot; class=&quot;headerlink&quot; title=&quot;BichromeSky [SRM 655 Hard]&quot;&gt;&lt;/a&gt;BichromeSky [SRM 655 Hard]&lt;/h1&gt;&lt;p&gt;$n$个红点，$m$个蓝点，没有三点共线。&lt;br&gt;第i个红点以p_i的概率出现，求红点的凸包包含所有蓝点的概率。 &lt;/p&gt;
+&lt;p&gt;$n, m \leq 100$ &lt;/p&gt;
+&lt;h1 id=&quot;Chocolate-triangles&quot;&gt;&lt;a href=&quot;#Chocolate-triangles&quot; class=&quot;headerlink&quot; title=&quot;Chocolate triangles&quot;&gt;&lt;/a&gt;Chocolate triangles&lt;/h1&gt;&lt;p&gt;求$n$边型剖分中恰好有$k$个三角形的方案数。 &lt;/p&gt;
+&lt;p&gt;$n, k \leq 300$ &lt;/p&gt;
+&lt;h1 id=&quot;Perfect-Matching-SPOJ-MATCH&quot;&gt;&lt;a href=&quot;#Perfect-Matching-SPOJ-MATCH&quot; class=&quot;headerlink&quot; title=&quot;Perfect Matching [SPOJ MATCH]&quot;&gt;&lt;/a&gt;Perfect Matching [SPOJ MATCH]&lt;/h1&gt;&lt;p&gt;$n$个点的二分图，假设完备匹配的数量是$x$，判断$x \equiv 0 \pmod 2$。 &lt;/p&gt;
+&lt;p&gt;$n \leq 300$ &lt;/p&gt;
+&lt;h1 id=&quot;False-Face-CERC-2009F&quot;&gt;&lt;a href=&quot;#False-Face-CERC-2009F&quot; class=&quot;headerlink&quot; title=&quot;(False) Face [CERC 2009F]&quot;&gt;&lt;/a&gt;(False) Face [CERC 2009F]&lt;/h1&gt;&lt;p&gt;$n$个点的二分图，假设完备匹配的数量是$x$，判断$x \equiv 0 \pmod 4$。 &lt;/p&gt;
+&lt;p&gt;$n \leq 300$ &lt;/p&gt;
+&lt;h1 id=&quot;SWERC-2014-Problem-J-The-Big-Painting&quot;&gt;&lt;a href=&quot;#SWERC-2014-Problem-J-The-Big-Painting&quot; class=&quot;headerlink&quot; title=&quot;SWERC 2014 Problem J The Big Painting&quot;&gt;&lt;/a&gt;SWERC 2014 Problem J The Big Painting&lt;/h1&gt;&lt;p&gt;给出矩阵$A, B$，问$A$在$B$中出现了多少次。 &lt;/p&gt;
+&lt;h1 id=&quot;SWERC-2014-Problem-H-Money-Transfers&quot;&gt;&lt;a href=&quot;#SWERC-2014-Problem-H-Money-Transfers&quot; class=&quot;headerlink&quot; title=&quot;SWERC 2014 Problem H Money Transfers&quot;&gt;&lt;/a&gt;SWERC 2014 Problem H Money Transfers&lt;/h1&gt;&lt;p&gt;给出$n$个点$m$条边的无向图，和一个顶点集$M$，现在给所有边的权值增加$c$，使得$1$到$n$的最短路只包含$M$中的点，求$c$的最小值。 &lt;/p&gt;
+&lt;p&gt;$n, m \leq 1000$ &lt;/p&gt;
+&lt;h1 id=&quot;CERC-2014-Problem-F-Vocabulary&quot;&gt;&lt;a href=&quot;#CERC-2014-Problem-F-Vocabulary&quot; class=&quot;headerlink&quot; title=&quot;CERC 2014 Problem F Vocabulary&quot;&gt;&lt;/a&gt;CERC 2014 Problem F Vocabulary&lt;/h1&gt;&lt;p&gt;给出$3$个包含&lt;code&gt;?&lt;/code&gt;的字符串$A$, $B$, $C$，问有多少种把&lt;code&gt;?&lt;/code&gt;替换为小写字母的方案，使得$A &amp;lt; B &amp;lt; C$，答案模$(10^9+9)$ &lt;/p&gt;
+&lt;p&gt;$|A|, |B|, |C| \leq 10^6$ &lt;/p&gt;
+&lt;h1 id=&quot;CERC-2014-Problem-E-Can’t-stop-playing&quot;&gt;&lt;a href=&quot;#CERC-2014-Problem-E-Can’t-stop-playing&quot; class=&quot;headerlink&quot; title=&quot;CERC 2014 Problem E Can’t stop playing&quot;&gt;&lt;/a&gt;CERC 2014 Problem E Can’t stop playing&lt;/h1&gt;&lt;p&gt;你正在玩$1$维版本的2048游戏。数字$2^{a_1}, 2^{a_2}, \dots, 2^{a_n}$依次出现，你可以选择加到左边还是右边，问最后能不能只剩$1$个，输出方案。 &lt;/p&gt;
+&lt;p&gt;$n \leq 1000, 2^{a_1} + 2^{a_2} + \dots + 2^{a_n} \leq 2^13$ &lt;/p&gt;
+&lt;h1 id=&quot;CERC-2014-Problem-L-Outer-space-invader&quot;&gt;&lt;a href=&quot;#CERC-2014-Problem-L-Outer-space-invader&quot; class=&quot;headerlink&quot; title=&quot;CERC 2014 Problem L Outer space invader&quot;&gt;&lt;/a&gt;CERC 2014 Problem L Outer space invader&lt;/h1&gt;&lt;p&gt;有$n$个怪物，第$i$个怪物于第$a_i$秒出现，第$b_i$秒消失，高度是$d_i$。你可以使用威力是$x$的炸弹，消灭高度不超过$x$的所有怪物，代价是$x$。&lt;br&gt;问消灭所有怪物的最小的总代价。 &lt;/p&gt;
+&lt;p&gt;$n \leq 300$ &lt;/p&gt;
+&lt;h1 id=&quot;CERC-2014-Problem-J-Pork-barrel&quot;&gt;&lt;a href=&quot;#CERC-2014-Problem-J-Pork-barrel&quot; class=&quot;headerlink&quot; title=&quot;CERC 2014 Problem J Pork barrel&quot;&gt;&lt;/a&gt;CERC 2014 Problem J Pork barrel&lt;/h1&gt;&lt;p&gt;给出$n$个点$m$条边的无向图，&lt;strong&gt;在线&lt;/strong&gt;回答$q$个询问$(l_i, r_i)$，求只考虑长度在$[l_i, r_i]$内的边时，最小生成树的大小。 &lt;/p&gt;
+&lt;p&gt;$n \leq 1000, m \leq 10^5, q \leq 10^6$ &lt;/p&gt;
+&lt;h1 id=&quot;CERC-2014-Problem-G-Virus-synthesis&quot;&gt;&lt;a href=&quot;#CERC-2014-Problem-G-Virus-synthesis&quot; class=&quot;headerlink&quot; title=&quot;CERC 2014 Problem G Virus synthesis&quot;&gt;&lt;/a&gt;CERC 2014 Problem G Virus synthesis&lt;/h1&gt;&lt;p&gt;给出字符串$S$，可以进行$2$种操作： &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在某端删除一个字符 &lt;/li&gt;
+&lt;li&gt;如果$S$是偶数长度的回文串，删除左半边/右半边 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;问得到空串最少要几步。 &lt;/p&gt;
+&lt;p&gt;$|S| \leq 10^5$ &lt;/p&gt;
+&lt;h1 id=&quot;CERC-2014-Problem-B-Mountainous-landscape&quot;&gt;&lt;a href=&quot;#CERC-2014-Problem-B-Mountainous-landscape&quot; class=&quot;headerlink&quot; title=&quot;CERC 2014 Problem B Mountainous landscape&quot;&gt;&lt;/a&gt;CERC 2014 Problem B Mountainous landscape&lt;/h1&gt;&lt;p&gt;$n$条线段组成的山，对于每条线段，输出站在它上面时，所能看到的第一个顶点 &lt;/p&gt;
+&lt;p&gt;$n \leq 10^5$ &lt;/p&gt;
+&lt;p&gt;Subarray Cuts &lt;a href=&quot;http://codeforces.com/problemset/problem/513/E2&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://codeforces.com/problemset/problem/513/E2&lt;/a&gt;&lt;br&gt;数组a_1, a_2, …, a_n，选择k个不相交的连续段，设（从左到右）的和分别是s_1, s_2, …, s_k，最大化|s_1 - s_2| + |s_2 - s&lt;em&gt;3| + … + |s&lt;/em&gt;{k - 1} - s_k|&lt;br&gt;n &amp;lt;= 30000, k &amp;lt;= 200 &lt;/p&gt;
+&lt;p&gt;Permanent &lt;a href=&quot;http://acdream.info/problem?pid=1027&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://acdream.info/problem?pid=1027&lt;/a&gt;&lt;br&gt;A是n * n的矩阵，计算perm(A)&lt;br&gt;n &amp;lt;= 20 &lt;/p&gt;
+&lt;p&gt;Permutation &lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=4917&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://acm.hdu.edu.cn/showproblem.php?pid=4917&lt;/a&gt;&lt;br&gt;n个点m条边的有向图，统计拓扑排序的数量&lt;br&gt;n &amp;lt;= 40, m &amp;lt;= 20 &lt;/p&gt;
+&lt;p&gt;SimilarNames &lt;a href=&quot;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=12868&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=12868&lt;/a&gt;&lt;br&gt;n个字符串s_1, s_2, …, s_n，m个条件(a_i, b&lt;em&gt;i)，统计满足s&lt;/em&gt;{p(a&lt;em&gt;i)}是s&lt;/em&gt;{p(b_i)}前缀的排列p_1, p_2, …, p_n数量&lt;br&gt;n &amp;lt;= 50, |s_i| &amp;lt;= 50, m &amp;lt;= 8 &lt;/p&gt;
+&lt;p&gt;Perfect Matching &lt;a href=&quot;http://www.spoj.com/problems/MATCH/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.spoj.com/problems/MATCH/&lt;/a&gt;&lt;br&gt;n个点的二分图，假设完备匹配的数量是x，判断x = 0 (mod 2)&lt;br&gt;n &amp;lt;= 300 &lt;/p&gt;
+&lt;p&gt;(False) Face &lt;a href=&quot;https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=360&amp;amp;page=show_problem&amp;amp;problem=2625&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=360&amp;amp;page=show_problem&amp;amp;problem=2625&lt;/a&gt;&lt;br&gt;n个点的二分图，假设完备匹配的数量是x，判断x = 0 (mod 4)&lt;br&gt;n &amp;lt;= 300 &lt;/p&gt;
+&lt;p&gt;Permanent &lt;a href=&quot;http://codeforces.com/problemset/problem/468/E&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://codeforces.com/problemset/problem/468/E&lt;/a&gt;&lt;br&gt;A是n * n的矩阵，除了给定的k个位置以外都是1，计算perm(A)&lt;br&gt;n &amp;lt;= 10^5, k &amp;lt;= 50 &lt;/p&gt;
+&lt;p&gt;Little Elephant and Broken Sorting &lt;a href=&quot;http://codeforces.com/contest/258/problem/D&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://codeforces.com/contest/258/problem/D&lt;/a&gt;&lt;br&gt;长度为n的排列，m次交换a_i, b_i，每个交换a_i, b_i有50%的概率不发生，问逆序数的期望&lt;br&gt;n, m &amp;lt;= 1000 &lt;/p&gt;
+&lt;p&gt;Inversions problem &lt;a href=&quot;http://codeforces.com/problemset/problem/513/G3&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://codeforces.com/problemset/problem/513/G3&lt;/a&gt;&lt;br&gt;长度为n的排列，每次随机一个子段翻转，问m轮后逆序数的期望&lt;br&gt;n &amp;lt;= 300, m &amp;lt;= 10^9 &lt;/p&gt;
+&lt;p&gt;WinterAndSnowmen Kai!&lt;br&gt;X, Y \subset {1, 2, …, n}，f({x_1, x_2, …, x_n}= x_1 xor x_2 xor … xor x_n，求f(X) &amp;lt;= f(Y)的方案数&lt;br&gt;n &amp;lt;= 5000 &lt;/p&gt;
+&lt;p&gt;WinterAndSnowmen &lt;a href=&quot;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=12891&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=12891&lt;/a&gt;&lt;br&gt;X \subset {1, 2, …, n}, Y \subset {1, 2, …, m}，f({x_1, x_2, …, x_n}= x_1 xor x_2 xor … xor x_n，求f(X) &amp;lt;= f(Y)的方案数&lt;br&gt;n, m &amp;lt;= 2000 &lt;/p&gt;
+&lt;p&gt;Everlasting L &lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=5116&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://acm.hdu.edu.cn/showproblem.php?pid=5116&lt;/a&gt;&lt;br&gt;n * m的有障碍的棋盘，求放2个L的不同方案数，要求L的两边长度互质&lt;br&gt;n, m &amp;lt;= 200 &lt;/p&gt;
+&lt;p&gt;ThreeLLogo &lt;a href=&quot;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=13059&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=13059&lt;/a&gt;&lt;br&gt;n * m的有障碍的棋盘，求放3个L的不同方案数&lt;br&gt;n, m &amp;lt;= 30 &lt;/p&gt;
+&lt;p&gt;BichromeSky &lt;a href=&quot;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=13711&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=13711&lt;/a&gt;&lt;br&gt;n个红点，m个蓝点，没有三点共线，第i个红点以p_i的概率出现，求红点的凸包包含所有蓝点的概率&lt;br&gt;n, m &amp;lt;= 100 &lt;/p&gt;
+&lt;p&gt;Chocolate triangles&lt;br&gt;求n边型剖分（不一定是三角剖分）中恰好有k个三角形的方案数&lt;br&gt;n, k &amp;lt;= 300 &lt;/p&gt;
+&lt;p&gt;FencingPenguins &lt;a href=&quot;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=12339&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://community.topcoder.com/stat?c=problem_statement&amp;amp;pm=12339&lt;/a&gt;&lt;br&gt;正N边型内有M个企鹅，选择一些顶点建立围栏，要求： &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;围栏不能相交 &lt;/li&gt;
+&lt;li&gt;每个围栏至少包含1个企鹅&lt;/li&gt;
+&lt;li&gt;企鹅都被包围 &lt;/li&gt;
+&lt;li&gt;同色企鹅在同一围栏&lt;br&gt;求方案数。&lt;br&gt;N &amp;lt;= 222, M &amp;lt;= 50 &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;An easy problem about trees &lt;a href=&quot;http://codeforces.com/problemset/problem/457/F&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://codeforces.com/problemset/problem/457/F&lt;/a&gt;&lt;br&gt;Mr. Kitayuta’s Gift &lt;a href=&quot;http://codeforces.com/problemset/problem/506/E&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://codeforces.com/problemset/problem/506/E&lt;/a&gt;&lt;br&gt;Deja Vu &lt;a href=&quot;http://codeforces.com/problemset/problem/331/E2&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://codeforces.com/problemset/problem/331/E2&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;Tree and Table &lt;a href=&quot;http://codeforces.com/problemset/problem/251/E&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://codeforces.com/problemset/problem/251/E&lt;/a&gt;&lt;br&gt;Buy One, Get One Free &lt;a href=&quot;http://codeforces.com/problemset/problem/335/F&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://codeforces.com/problemset/problem/335/F&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;Triangles 3000 &lt;a href=&quot;http://codeforces.com/problemset/problem/528/E&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://codeforces.com/problemset/problem/528/E&lt;/a&gt;&lt;br&gt;3k条直线，等概率挑选3条，求围成三角形面积的期望 &lt;/p&gt;
+&lt;p&gt;Fox and Meteor Shower &lt;a href=&quot;http://codeforces.com/problemset/problem/388/E&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://codeforces.com/problemset/problem/388/E&lt;/a&gt;&lt;br&gt;1k条3维直线，求最大的两两相交的子集 &lt;/p&gt;
+&lt;p&gt;Gena and Second Distance &lt;a href=&quot;http://codeforces.com/problemset/problem/442/E&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://codeforces.com/problemset/problem/442/E&lt;/a&gt;&lt;br&gt;1k个点，求次近的点最远的点 &lt;/p&gt;
+&lt;p&gt;Drawing Circles is Fun &lt;a href=&quot;http://codeforces.com/problemset/problem/372/E&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://codeforces.com/problemset/problem/372/E&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;OI论文 &lt;/p&gt;
+&lt;p&gt;（有用）的论文有两类，第一类是讲授知识方法的，第二类是习题的堆砌。 &lt;/p&gt;
+&lt;p&gt;知识方法型：&lt;br&gt;漆子超《分治算法在树的路径问题中的应用》&lt;br&gt;罗穗骞《后缀数组——处理字符串的有力工具》&lt;br&gt;姜碧野《SPFA算法的优化及应用》&lt;br&gt;金斌《欧几里得算法的应用》&lt;br&gt;贾志豪《组合游戏略述——浅谈SG游戏的若干拓展及变形》&amp;lt;— 有些民科，但是内容还是不错的&lt;br&gt;徐持衡《浅谈几类背包题》&lt;br&gt;陈丹琦《基于连通性状态压缩的动态规划问题》&lt;br&gt;汪一宁《1D/1D动态规划优化初步》&lt;br&gt;杨哲《凸完全单调性的一个加强与应用》&amp;lt;— 有些不明觉厉&lt;br&gt;杨弋《Hash在信息学竞赛中的一类应用》&lt;br&gt;周冬《生成树的计数及其应用》&amp;lt;— Matrix Tree&lt;br&gt;胡伯涛《最小割模型在信息学竞赛中的应用》&amp;lt;— 最小割的一个里程碑&lt;br&gt;罗剑桥 《浅谈分块思想在一类数据处理问题中的应用》&lt;br&gt;王子昱 《分块方法的应用》&lt;br&gt;陈立杰 《重量平衡树和后缀平衡树在信息学奥赛中的应用》&amp;lt;— ICPC短期内还不会出现&lt;br&gt;陈立杰《可持久化数据结构研究》&lt;br&gt;王钦石《浅析一类二分方法》 &lt;/p&gt;
+&lt;p&gt;习题型：&lt;br&gt;乔明达 《搜索问题中的meet in the middle技巧》&lt;br&gt;曹钦翔《数据结构的提炼与压缩》&lt;br&gt;俞华程《矩阵乘法在信息学中的应用》&lt;br&gt;刘聪《浅谈数位类统计问题》&amp;lt;— 他的数位DP方法不够优秀，不应该学&lt;br&gt;汤可因《浅析竞赛中一类数学期望问题的解决方法》&lt;br&gt;徐源盛《对一类动态规划问题的研究》&lt;br&gt;张昆玮《数学归纳法与解题之道》 &lt;/p&gt;
+&lt;p&gt;向量&lt;br&gt;cross product, dot product&lt;/p&gt;
+&lt;p&gt;对象&lt;br&gt;点，直线（线段、射线），圆，多边形（简单多边形、凸多边形） &lt;/p&gt;
+&lt;p&gt;点 在 直线（线段、射线）上&lt;br&gt;点 在 圆 内&lt;br&gt;点 在 简单多边形 内&lt;br&gt;点 在 凸多边形内 O(log N) &lt;/p&gt;
+&lt;p&gt;直线 和 直线 的夹角 &lt;/p&gt;
+&lt;p&gt;直线 和 直线 的交点&lt;br&gt;直线 和 圆 的交点&lt;br&gt;直线 和 凸多边形的交点 O(log N)&lt;br&gt;圆 和 圆 的交点&lt;br&gt;凸多边形 和 凸多边形 的交 O(N log N) / O(N) &lt;/p&gt;
+&lt;p&gt;点 和 圆 的切线&lt;br&gt;圆 和 圆 的切线&lt;/p&gt;
+&lt;p&gt;圆 和 简单多边形 的交 &lt;/p&gt;
+&lt;p&gt;点 到 直线 的投影&lt;br&gt;点 关于 直线的对称&lt;br&gt;平移&lt;br&gt;关于原点的旋转&lt;br&gt;对偶&lt;br&gt;反演 &lt;/p&gt;
+&lt;p&gt;点 到 点 的距离&lt;br&gt;点 到 线段 的距离 &lt;/p&gt;
+&lt;p&gt;角 的 平分线&lt;br&gt;三角形 的 外心，内心 &lt;/p&gt;
+&lt;p&gt;凸多边形的最大内切圆 O(N log N) &lt;/p&gt;
+&lt;p&gt;平面图的对偶图 &lt;/p&gt;
+&lt;p&gt;圆凸包 &lt;/p&gt;
+&lt;p&gt;kd-tree &lt;/p&gt;
+&lt;p&gt;最小圆覆盖&lt;br&gt;欧几里得距离最小生成树&lt;/p&gt;
+&lt;p&gt;最近点对&lt;br&gt;最小周长三角形 &lt;/p&gt;
+&lt;p&gt;最远点对&lt;br&gt;最大面积三角形 &lt;/p&gt;
+&lt;p&gt;Timus 1469 No Smoking!&lt;br&gt;Timus 1464 Light&lt;br&gt;四边形面积统计&lt;br&gt;TCO 2012 Round 3B PQHull &lt;/p&gt;
+&lt;p&gt;三维几何 &lt;/p&gt;
+&lt;p&gt;维护数组A，支持Q次操作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;add(a, b, v) for all a &amp;lt;= i &amp;lt;= b, A[i] += v &lt;/li&gt;
+&lt;li&gt;query(a, b) 求#{i : a &amp;lt;= i &amp;lt;= b and A[i] &amp;gt; 0} &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Codeforces 15E Holes&lt;br&gt;维护有根树，支持Q次操作： &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;parent[v] := p，保证p &amp;gt; v &lt;/li&gt;
+&lt;li&gt;询问点v的深度&lt;br&gt;$n, q &amp;lt;= 10^5$ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Codeforces 348C&lt;br&gt;$n$个元素，$m$个集合$S_1, S_2, …, S_m$，$q$次操作： &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;把集合$S_i$的元素权值+= v &lt;/li&gt;
+&lt;li&gt;询问集合$S_i$元素的权值和&lt;br&gt;$n, |S_1| + |S_2| + … + |S_m|, q &amp;lt;= 10^5$ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Chengdu 2012 Problem D / HDOJ 4467&lt;br&gt;$n$个点$m$条边的无向图，点有2种颜色，边有权值，$q$次操作： &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;改变点$v$的颜色 &lt;/li&gt;
+&lt;li&gt;查询端点颜色是$(a, b)$的边权值之和&lt;br&gt;$n, m, q &amp;lt;= 10^5$ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Chengdu 2013 Problem G / HDOJ 4787&lt;br&gt;&lt;strong&gt; 在线 &lt;/strong&gt; 维护字符串集合$S$，$q$次操作： &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在$S$中插入$s$ &lt;/li&gt;
+&lt;li&gt;查询$t$在$S$中的子串数&lt;br&gt;$s$总长$10^5$，$t$总长$5 * 10^6$&lt;br&gt;(2~3 solutions will be presented) &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;SPOJ UNTITLE1&lt;br&gt;维护数组$A$，支持$q$次操作： &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;add(a, b, v) for all a &amp;lt;= i &amp;lt;= b, A[i] += v &lt;/li&gt;
+&lt;li&gt;query(a, b) 求max{S[i] : a &amp;lt;= i &amp;lt;= b}，其中S[i] = A[1] + A[2] + … + A[i]&lt;br&gt;$|A|, q &amp;lt;= 50000$ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;BZOJ 2724&lt;br&gt;&lt;strong&gt;在线&lt;/strong&gt;查询区间众数。&lt;br&gt;(an elegant algorithm to count occurrence) &lt;/p&gt;
+&lt;p&gt;BZOJ 2741&lt;br&gt;&lt;strong&gt;在线&lt;/strong&gt;查询区间最大连续异或和。 &lt;/p&gt;
+&lt;p&gt;BZOJ 巧克力王国&lt;br&gt;查询半平面内点权的和。 &lt;/p&gt;
+&lt;p&gt;Codechef March14 GERALD07&lt;br&gt;无向图，询问编号在$[L_i, R_i]$的边组成子图的连通块数量。 &lt;/p&gt;
+&lt;p&gt;Codeforces 19E&lt;br&gt;无向图，询问有多少条边，删掉之后的图是二分图。 &lt;/p&gt;
+&lt;p&gt;SPOJ COT2&lt;br&gt;查询树上路径不同颜色数量。&lt;br&gt;(2 solutions will be presented) &lt;/p&gt;
+&lt;p&gt;SPOJ COT3 Combat on a tree&lt;br&gt;SPOJ RECTANGL Rectangles&lt;br&gt;POJ 3145 Harmony Forever&lt;/p&gt;
+&lt;p&gt;POJ 1741 Tree&lt;/p&gt;
+&lt;p&gt;统计树上距离不超过$k$的点对数量。 &lt;/p&gt;
+&lt;p&gt;SPOJ FTOU2&lt;br&gt;点有黑白两色，边有长度，求黑点数量&amp;lt;= K的最长路径。 &lt;/p&gt;
+&lt;p&gt;HDU 4812 / Nanjing 2013 K&lt;br&gt;点有权，求权值之积 mod (10^6 + 3) = K的路径数量。 &lt;/p&gt;
+&lt;p&gt;TYVJ 1953&lt;br&gt;等概率地选择点作为剖分中心，求复杂度的期望。 &lt;/p&gt;
+&lt;p&gt;WC 2010 重建计划&lt;br&gt;求长度在[L, R]之间的，平均数最大的路径。 &lt;/p&gt;
+&lt;p&gt;Codeforces 150E&lt;br&gt;求长度在[L, R]之间的，中位数最大的路径。 &lt;/p&gt;
+&lt;p&gt;Codeforces 193E&lt;br&gt;统计距离不超过L，权值之和不超过W的点对数量。 &lt;/p&gt;
+&lt;p&gt;SPOJ QTREE4&lt;br&gt;点有黑白两色，支持(a)修改点的颜色；(b)询问白点对的最大距离。 &lt;/p&gt;
+&lt;p&gt;Codeforces 342E&lt;br&gt;点有黑白两色，支持(a)把点变成黑色；(b)询问距离v点最近的黑点距离。 &lt;/p&gt;
+&lt;p&gt;SPOJ QTREE5&lt;br&gt;点有黑白两色，支持(a)修改点的颜色；(b)询问距离v点最远的白点距离。&lt;br&gt;— &lt;/p&gt;
+&lt;p&gt;SPOJ QTREE&lt;br&gt;边有权值，支持(a)修改边的权值；(b)询问路径上权值的最大值。 &lt;/p&gt;
+&lt;p&gt;Codeforces 117E&lt;br&gt;章鱼图，支持(a)修改ab最短路上边的状态（存在、不存在互换）(b)询问连通块数量。 &lt;/p&gt;
+&lt;p&gt;BZOJ 3083&lt;br&gt;点有权值，支持(a)修改路径上的权值；(b)修改根节点；(c)询问子树的最大值。&lt;br&gt;— &lt;/p&gt;
+&lt;p&gt;BZOJ 2049 / SDOI 2008&lt;br&gt;支持(a)插入、删除边；(b)询问ab是否连通。保证中间结果是森林。&lt;br&gt;（LCT or ETT） &lt;/p&gt;
+&lt;p&gt;SPOJ OTOCI&lt;br&gt;支持(a)插入边；(b)询问路径上的权值之和。强制在线。 &lt;/p&gt;
+&lt;p&gt;Topcoder Open 2013 Round 2A ThePowers&lt;br&gt;给出A, B，问集合{a^b : 1 &amp;lt;= a &amp;lt;= A, 1 &amp;lt;= b &amp;lt;= B}的大小。&lt;br&gt;A, B &amp;lt;= 10^9 &lt;/p&gt;
+&lt;p&gt;SGU 550 Tree Queries Online&lt;br&gt;在线维护一棵树，支持删除边，并把它的边权乘在较小的连通块，加在较大的连通块。 &lt;/p&gt;
+&lt;p&gt;HDU 4621 Life Game&lt;br&gt;N * M的点阵，对于点(i, j)，将其指定为A类型有A(i, j)的收益，指定为B类型有B(i, j)的收益。R个要求，如果矩形(L_i, D_i) — (R_i, U_i)全是A（或全是B），则获得W_i的收益，问最大收益。&lt;br&gt;N, M &amp;lt;= 50, R &amp;lt;= 50000 &lt;/p&gt;
+&lt;p&gt;HDU 4673 Pirate’s Chest&lt;br&gt;N个箱子，对于i号箱子，要么使用A_i号钥匙打开，要么使用B_i号撬棍打开，要么付出D_i点血打开。&lt;br&gt;M层的塔，每一层塔有入口，怪物，至多两个工具，且一定同类型，可以在任意地点上下楼。&lt;br&gt;你讨厌上楼梯，现在有H点血，问最少上到几层可以打开所有箱子，同时要求掉血最少。&lt;br&gt;N &amp;lt;= 30000, M &amp;lt;= 1000 &lt;/p&gt;
+&lt;p&gt;HDU 4679 Terrorist’s destroy&lt;br&gt;N个点的树，删除一条边，使得边权和剩下的树的直径乘积最小。&lt;br&gt;N &amp;lt;= 10^5 &lt;/p&gt;
+&lt;p&gt;HDU 4689 Derangement&lt;br&gt;给出数列A_1, A_2, …, A_N，A_i in {+1, -1}，求满足(P_i - i) * A_i &amp;gt; 0的排列P数量。&lt;br&gt;N &amp;lt;= 1000 &lt;/p&gt;
+&lt;p&gt;Single Round Match 566 FencingPenguins&lt;br&gt;正N边型内有M个企鹅，选择一些顶点建立围栏，要求： &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;围栏不能相交 &lt;/li&gt;
+&lt;li&gt;每个围栏至少包含1个企鹅&lt;/li&gt;
+&lt;li&gt;企鹅都被包围 &lt;/li&gt;
+&lt;li&gt;同色企鹅在同一围栏&lt;br&gt;求方案数。&lt;br&gt;N &amp;lt;= 222, M &amp;lt;= 50 &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Single Round Match 565 UnknownTree&lt;br&gt;N + 3个点的树，给出disA[i], disB[i], disC[i]表示1 &amp;lt;= i &amp;lt;= N号点到A, B, C的距离，求可能的树的方案数。&lt;br&gt;N &amp;lt;= 50 &lt;/p&gt;
+&lt;p&gt;Single Round Match 561 Orienteering&lt;br&gt;N个点的树，随机选择K个点，问遍历K个点最短路径的期望。&lt;br&gt;K &amp;lt;= N &amp;lt;= 300 &lt;/p&gt;
+&lt;p&gt;SCOI 2013 数数&lt;br&gt;求[L, R]的数字B进制表示的所有子串的和。&lt;br&gt;1 &amp;lt;= L &amp;lt;= R &amp;lt; B^100000, B &amp;lt;= 10^5 &lt;/p&gt;
+&lt;p&gt;SCOI 2012 Blinker的仰慕者 &lt;a href=&quot;http://www.lydsy.com/JudgeOnline/problem.php?id=2757&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.lydsy.com/JudgeOnline/problem.php?id=2757&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;Codeforces 273D Dima and Figure&lt;br&gt;N * M的点阵，问凸的点集的数量，mod (10^9 + 7)。&lt;br&gt;(N, M &amp;lt;= 150) &lt;/p&gt;
+&lt;p&gt;Codeforces 375E Red and Black Tree&lt;br&gt;N个点的树。点有黑、白2种颜色。任意交换点的颜色，使得对于任一个点，距离它D以内都至少有一个黑点，求最少的交换次数。&lt;br&gt;N &amp;lt;= 500 &lt;/p&gt;
+&lt;p&gt;Codeforces 392E Deleting Substrings&lt;br&gt;序列{A_1, A_2, …, A_N}。每次删除连续的子序列{x_1, x_2, …, x_k}，要求 &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;|x_{i + 1} - x_i| = 1， &lt;/li&gt;
+&lt;li&gt;2 x&lt;em&gt;i &amp;gt;= x&lt;/em&gt;{i - 1} + x_{i + 1}，&lt;br&gt;收益W_k，求删除整个序列的最大收益。&lt;br&gt;N &amp;lt;= 400 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;NEERC Eastern Subregional Contest 2013 Problem C CVS&lt;br&gt;支持Q次操作： &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;learn(i, j) &lt;/li&gt;
+&lt;li&gt;rollback(i) &lt;/li&gt;
+&lt;li&gt;relearn(i) &lt;/li&gt;
+&lt;li&gt;clone(i) &lt;/li&gt;
+&lt;li&gt;check(i)&lt;br&gt;Q &amp;lt;= 10^5 &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;NEERC Northern Subregional Contest 2013 Problem L Lonely Mountain&lt;/p&gt;
+&lt;p&gt;JAG Summer 2012 Problem G Presentation&lt;/p&gt;
+&lt;p&gt;N &amp;lt;= 10^5 &lt;/p&gt;
+&lt;p&gt;Single Round Match 570 CurvyonRails&lt;/p&gt;
+&lt;p&gt;unhappy = 1, 0 &lt;/p&gt;
+&lt;p&gt;M * M棋盘上有N个有缺陷的皇后（只能攻击主对角线），求被至少1个皇后攻击的格子数量。&lt;br&gt;N, M &amp;lt;= 10^5 &lt;/p&gt;
+&lt;p&gt;给出串P, T，求T的连续子串S，使得hamming(S, P)最小。&lt;br&gt;|P|, |T| &amp;lt;= 10^5，|Sigma| &amp;lt;= 10 &lt;/p&gt;
+&lt;p&gt;给出串P, T（可能带有通配符?），求P在T中所有匹配位置。&lt;br&gt;|P|, |T| &amp;lt;= 10^5 &lt;/p&gt;
+&lt;p&gt;胡渊鸣 城市规划&lt;br&gt;计算N个点带标号的连通图数量，答案模1004535809(= 479 * 2^21 + 1)。&lt;br&gt;N &amp;lt;= 130000&lt;br&gt;O(N log^2 N) &lt;/p&gt;
+&lt;p&gt;给出A_1, A_2, …, A&lt;em&gt;N，求min&lt;/em&gt;{i, j} popcount(A_i xor A_j)。&lt;br&gt;A_i &amp;lt;= 10^6 &lt;/p&gt;
+&lt;p&gt;(FWT)&lt;br&gt;Topcoder Open 2012 Round 2A EvenPaths&lt;br&gt;N个点的有向无环图，K个点可能有障碍。&lt;br&gt;合法当且仅当点0到点1恰有偶数条路径。&lt;br&gt;求2^K种可能中合法的图的数量。&lt;br&gt;N &amp;lt;= 50, K &amp;lt;= 32 &lt;/p&gt;
+&lt;p&gt;HDOJ 4656 Evaluation&lt;br&gt;给出A_0, A&lt;em&gt;1, …, A&lt;/em&gt;{N - 1}, 求f(B * C^{2k} + D)，答案模(10^6 + 3)，其中f(x) = sum_i A_i x^i。&lt;br&gt;N &amp;lt;= 10^5, A_i, B, C, D &amp;lt;= 10^6&lt;/p&gt;
+&lt;p&gt;Number theory &lt;/p&gt;
+&lt;p&gt;求x^2 = 1 (mod M)的所有解。&lt;br&gt;求x^K = x (mod M)的解的数量。&lt;br&gt;求P / Q在B进制下的循环节。 &lt;/p&gt;
+&lt;p&gt;SPOJ MOD Power Modulo Inverted&lt;br&gt;给出A, B, M，求最小的x &amp;gt;= 0，使得A^x = B (mod M)。&lt;br&gt;A, B, M &amp;lt;= 10^9 &lt;/p&gt;
+&lt;p&gt;Petrozavodsk Summer 2011 Kyiv + Kharkiv NU Contest Problem A A Lot&lt;br&gt;给出P，Q组询问(A, B)，求最小x &amp;gt;= 0满足A^x = B (mod P)。&lt;br&gt;P &amp;lt;= 10^8, Q &amp;lt;= 10^4 &lt;/p&gt;
+&lt;p&gt;求A x^2 + B x + C = 0 (mod P)的解。 &lt;/p&gt;
+&lt;p&gt;Project Euler 457 A polynomial modulo the square of a prime&lt;br&gt;设f(p)表示最小的n满足n^2 - 3n - 1 = 0(mod p^2)，求sum_{p is prime, p &amp;lt;= N} f(p)。&lt;br&gt;N &amp;lt;= 10^7 &lt;/p&gt;
+&lt;p&gt;Codeforces 193E Fibonacci Number&lt;br&gt;给出F，求最小的n，使得fib(n) = F (mod 10^13)。&lt;br&gt;F &amp;lt; 10^13 &lt;/p&gt;
+&lt;p&gt;Petrozavodsk Winter 2008 Warsaw Contest Problem J Sum of a subsequence&lt;br&gt;给出A_1, A&lt;em&gt;2, …, A&lt;/em&gt;{2N}，求它的N元子集，满足元素和是N的倍数。&lt;br&gt;N = 10^k，k &amp;lt;= 5&lt;/p&gt;
+&lt;p&gt;Codeforces 62E World Evil&lt;br&gt;n * m的点阵，如下图，求左边到右边的最大流。&lt;br&gt;n &amp;lt;= 5, m &amp;lt;= 10^5 &lt;/p&gt;
+&lt;p&gt;Single Round Match 608 BigO&lt;br&gt;N个点的有向图，假设在上面走x步的方案数是O(x^K)的，求K的最小值。&lt;br&gt;N &amp;lt;= 50 &lt;/p&gt;
+&lt;p&gt;Single Round Match 607 CombinationLockDiv1&lt;br&gt;给出两个10进制串A, B，每次可以选择一段数字rotate，求把A变成B的最小操作次数。&lt;br&gt;|A|, |B| &amp;lt;= 50 &lt;/p&gt;
+&lt;p&gt;Single Round Match 592 LittleElephantAndPermutationDiv1&lt;br&gt;设a_1, a_2, …, a_N和b_1, b_2, …, b_N是两个1, 2, …, N的排列，&lt;br&gt;问max{a_1, b_1} + max{a_2, b_2} + … + max{a_N, b_N} &amp;gt;= K的排列数量。&lt;br&gt;N &amp;lt;= 50, K &amp;lt;= 2500 &lt;/p&gt;
+&lt;p&gt;Single Round Match 588 KeyDungeonDiv1&lt;br&gt;N个房间，每个房间需要doorRed[i]把红钥匙，doorGreen[i]把绿钥匙，房间里面有roomRed[i], roomGreen[i], roomWhite[i]把红、绿、白钥匙。白钥匙可以作为红、蓝钥匙使用。初始有keys[]把三种钥匙，打开一些房间，问手上最多的钥匙数。&lt;br&gt;N &amp;lt;= 12, 钥匙数 &amp;lt;= 10 &lt;/p&gt;
+&lt;p&gt;Single Round Match 582 ColorfulBuilding&lt;br&gt;N个矩形，第i个矩形的高度是i，颜色是color[i]，问所有排列中从左到右能看到K次颜色变化的数量。&lt;br&gt;K &amp;lt;= N &amp;lt;= 36 * 36  &lt;/p&gt;
+&lt;p&gt;Codeforces 258D Little Elephant and Broken Sorting&lt;br&gt;N个数，M次交换操作，每次交换操作有1/2概率进行，问最终序列逆序对的期望。&lt;br&gt;N, M &amp;lt;= 1000 &lt;/p&gt;
+&lt;p&gt;Single Round Match 577 EllysChessboard&lt;br&gt;8 * 8的棋盘上，在指定位置放棋子，放棋子的代价是到曼哈顿距离最远的棋子距离，问最小的总代价。 &lt;/p&gt;
+&lt;p&gt;Topcoder Open 2012 Round 3B ElevenMultiples&lt;br&gt;N个10进制数字片段P_1, P_2, …, P_n，问有多少种方法使得连接之后是11的倍数。&lt;br&gt;N &amp;lt;= 50 &lt;/p&gt;
+&lt;p&gt;Single Round Match 601 WinterAndShopping&lt;br&gt;N个商店卖球。第i个商店在第first[i]天开业，有red[i]个红球，green[i]个绿球，blue[i]个蓝球。商店每天卖1个球，所有商店卖的球颜色相同。同时营业的商店不超过2个。求方案数。&lt;br&gt;N &amp;lt;= 50，red[i], green[i], blue[i] &amp;lt;= 100，first[i] + red[i] + green[i] + blue[i] &amp;lt;= 500 &lt;/p&gt;
+&lt;p&gt;Single Round Match 594 FoxAndAvatar&lt;br&gt;1, 2, …, N以行为主序排列在宽度是W的矩阵上。每次可以删除一个子矩形中的所有数字，并重新排列剩余数字。问最后留下数字X的最小操作次数。&lt;br&gt;W &amp;lt;= N &amp;lt;= 3000 &lt;/p&gt;
+&lt;p&gt;Single Round Match 593 WolfDelaymasterHard&lt;br&gt;定义形如0^n1^n的串是好的，好串的连接是好的。长度为N的字符串，包含0、1、？三种字符，替换？为0、1，使得形成的串是好的。求方案数。&lt;br&gt;N &amp;lt;= 2 * 10^6 &lt;/p&gt;
+&lt;p&gt;Single Round Match 591 StringPath&lt;br&gt;给出字符串A, B，问有多少N * M的字符矩形，使得存在两条(1, 1)到(N, M)的路径上面的字符串恰好是A, B。&lt;br&gt;N, M &amp;lt;= 8 &lt;/p&gt;
+&lt;p&gt;Single Round Match 589 FlippingBitsDiv1&lt;br&gt;给出长度为n的01串和常数M，通过下面两种操作使得长度为N - M的前后缀相等： &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;翻转某位 &lt;/li&gt;
+&lt;li&gt;翻转长度k * M的前缀(k &amp;gt;= 1)&lt;br&gt;求最少的操作次数。&lt;br&gt;N &amp;lt;= 300 &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Single Round Match 583 RandomPaintingOnABoard&lt;br&gt;N &lt;em&gt; M的矩阵P，每次以P[i][j] / sum{P[i][j]}的概率选择格子(i, j)，问每行每列都被选择至少一次所需要的步数期望。&lt;br&gt;N, M &amp;lt;= 21, N &lt;/em&gt; M &amp;lt;= 50, P[i][j] &amp;lt; 10 &lt;/p&gt;
+&lt;p&gt;Topcoder Open 2013 Round 3A TrickyInequality&lt;br&gt;M个整数变量x_1, x_2, …, x_M满足： &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;x_1, x_2, …, x_M &amp;gt;= 1 &lt;/li&gt;
+&lt;li&gt;x_1 + x_2 + … + x_M &amp;lt;= S &lt;/li&gt;
+&lt;li&gt;x_1, x_2, …, x_N &amp;lt;= T&lt;br&gt;求方案数模(10^9 + 7)。&lt;br&gt;M &amp;lt;= 10^9, M - N &amp;lt;= 100, T &amp;lt;= 10^5, N * T &amp;lt;= S &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Single Round Match 578 DeerInZooDivOne&lt;br&gt;n个点的树，求两颗不相交的子树，它们同构同时大小最大。&lt;br&gt;n &amp;lt;= 50 &lt;/p&gt;
+&lt;p&gt;Single Round Match 573 WolfPack&lt;br&gt;求从(X_1, Y_1)移动M步到(X_2, Y_2)的方案数，每次移动可以往上下左右移动一格。&lt;br&gt;M &amp;lt;= 100000 &lt;/p&gt;
+&lt;p&gt;Single Round Match 569 MegaFactorial&lt;br&gt;定义f(n, k)满足： &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;f(n, k) = f(n - 1, k) * f(n, k - 1) &lt;/li&gt;
+&lt;li&gt;f(0, k) = 1 &lt;/li&gt;
+&lt;li&gt;f(n, 0) = n&lt;br&gt;求f(N, K)在B进制下末尾0的数量。结果模(10^9 + 7)。&lt;br&gt;N &amp;lt;= 10^9, K &amp;lt;= 16, B &amp;lt;= 10 &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Single Round Match 566 FencingPenguins&lt;br&gt;正N边型内有M个企鹅，选择一些顶点建立围栏，要求： &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;围栏不能相交 &lt;/li&gt;
+&lt;li&gt;每个围栏至少包含1个企鹅&lt;/li&gt;
+&lt;li&gt;企鹅都被包围 &lt;/li&gt;
+&lt;li&gt;同色企鹅在同一围栏&lt;br&gt;求方案数。&lt;br&gt;N &amp;lt;= 222, M &amp;lt;= 50 &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Single Round Match 562 InducedSubgraphs&lt;br&gt;N个点的树，问有多少种标号方式，使得对所有1 &amp;lt;= i &amp;lt;= N - K + 1，点集{i, i + 1, …, i + K- 1}是连通的。&lt;br&gt;N &amp;lt;= 40 &lt;/p&gt;
+&lt;p&gt;Single Round Match 560 BoundedOptimization&lt;br&gt;N个变量x_i，满足L_i &amp;lt;= x_i &amp;lt;= R_i，且X_1 + X_2 + … + X_n &amp;lt;= S，求一个特殊二次式的最大值（无平方项，无一次项，系数都是1）。&lt;br&gt;N &amp;lt;= 13 &lt;/p&gt;
+&lt;p&gt;Single Round Match 550 ConversionMachine&lt;br&gt;给出只包含abc 3种字符的串A和串B，把a -&amp;gt; b的花费是cost[0]，b -&amp;gt; c是cost[1]，c -&amp;gt; a是cost[2]，问在总费用不超过M的情况下，有多少方式能让A变换到B。&lt;br&gt;|A|, |B| &amp;lt;= 11 &lt;/p&gt;
+&lt;p&gt;POJ 2793 / NEERC 2005&lt;br&gt;求仙人掌的生成仙人掌数量。 &lt;/p&gt;
+&lt;p&gt;IOI 2008 Islands&lt;br&gt;求章鱼图的直径。 &lt;/p&gt;
+&lt;p&gt;POJ 3567 / NEERC 2007&lt;br&gt;求仙人掌图的直径。 &lt;/p&gt;
+&lt;p&gt;POJ 3961 / NEERC 2010&lt;br&gt;把仙人掌图分成N / K个连通块，每个连通块大小恰好是K。 &lt;/p&gt;
+&lt;p&gt;Codeforces 379G&lt;br&gt;仙人掌，可以把涂成黑白两色（可以不涂），相邻的点不能有相同的颜色。对于所有的1 &amp;lt;= a &amp;lt;= n，求最多能放的白点数量。  &lt;/p&gt;
+&lt;p&gt;Fast Fourier Transformation and related topics&lt;/p&gt;
+&lt;p&gt;Division of polynomials&lt;br&gt;胡渊鸣 城市规划&lt;br&gt;计算N个点带标号的连通图数量，答案模1004535809(= 479 * 2^21 + 1)。&lt;br&gt;N &amp;lt;= 130000 &lt;/p&gt;
+&lt;p&gt;Project Euler 416 A frog’s trip&lt;br&gt;N个格子，一只青蛙1 -&amp;gt; N -&amp;gt; 1，重复M次。&lt;br&gt;青蛙每次只能跳跃1、2、3个格子，问至多只有1个格子没被访问过的路径数量。&lt;br&gt;N &amp;lt;= 10^12, M &amp;lt;= 10 &lt;/p&gt;
+&lt;p&gt;Number theoretical transformation&lt;br&gt;伍一鸣 Binomial&lt;br&gt;给出N, P，计算C(r) = # of k where 0 &amp;lt;= k &amp;lt; N and binom(N, k) = r (mod P)，答案模29。&lt;br&gt;P = 51061, N &amp;lt; P^10 &lt;/p&gt;
+&lt;p&gt;SRM 518 Nim&lt;br&gt;统计满足以下条件的(x_1, x_2, …, x_K)的数量： &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;x_i是质数 &lt;/li&gt;
+&lt;li&gt;x_i &amp;lt;= L &lt;/li&gt;
+&lt;li&gt;x_1 xor x_2 xor … xor x_K = 0&lt;br&gt;K &amp;lt;= 10^9, L &amp;lt;= 5 * 10^4 &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Single Round Match 601 WinterAndShopping&lt;br&gt;N个商店卖球。第i个商店在第first[i]天开业，有red[i]个红球，green[i]个绿球，blue[i]个蓝球。商店每天卖1个球，所有商店卖的球颜色相同。同时营业的商店不超过2个。求方案数。&lt;br&gt;N &amp;lt;= 50，red[i], green[i], blue[i] &amp;lt;= 100，first[i] + red[i] + green[i] + blue[i] &amp;lt;= 500 &lt;/p&gt;
+&lt;p&gt;Single Round Match 594 FoxAndAvatar&lt;br&gt;1, 2, …, N以行为主序排列在宽度是W的矩阵上。每次可以删除一个子矩形中的所有数字，并重新排列剩余数字。问最后留下数字X的最小操作次数。&lt;br&gt;W &amp;lt;= N &amp;lt;= 3000 &lt;/p&gt;
+&lt;p&gt;Topcoder Open 2012 Round 2B SequenceTransmission&lt;br&gt;将A + B, A &lt;em&gt; 2 + B, …, A &lt;/em&gt; N + B的二进制表示连接，问相邻两位不同的数量。&lt;br&gt;A &amp;lt;= 40000，B &amp;lt;= 10^18, N &amp;lt;= 10^12 &lt;/p&gt;
+&lt;p&gt;Project Euler 439 Sum of sum of divisors&lt;br&gt;设d(n)表示n的约数和，给出N，求sum&lt;em&gt;{1 &amp;lt;= i &amp;lt;= N} sum&lt;/em&gt;{1 &amp;lt;= j &amp;lt;= N} d(i * j)。&lt;br&gt;N &amp;lt;= 10^11 &lt;/p&gt;
+&lt;p&gt;Mobius inversion&lt;/p&gt;
+&lt;p&gt;SPOJ LCMSUM&lt;br&gt;给出N，求lcm(N, 1) + lcm(N, 2) + … + lcm(N, 3)。&lt;br&gt;N &amp;lt;= 1000000, 300000组数据 &lt;/p&gt;
+&lt;p&gt;贾志鹏 Crash的数字表格&lt;br&gt;给出N, M, 求sun&lt;em&gt;{1 &amp;lt;= i &amp;lt;= N} sum&lt;/em&gt;{1 &amp;lt;= j &amp;lt;= M} lcm(i, j)，答案模20101009。&lt;br&gt;N, M &amp;lt;= 10^7 &lt;/p&gt;
+&lt;p&gt;顾昱洲 JZPKIL&lt;br&gt;给出N, A, B，求sum_{1 &amp;lt;= i &amp;lt;= N} gcd(N, i)^A lcm(N, i)^B$，答案模(10^9 + 7)。&lt;br&gt;N &amp;lt;= 10^9, A, B &amp;lt;= 3000 &lt;/p&gt;
+&lt;p&gt;**Power sums&lt;/p&gt;
+&lt;p&gt;POI X Trinomial&lt;br&gt;求(1 + x + x^2)^N展开式中x^K的系数，答案模3。 &lt;/p&gt;
+&lt;p&gt;SRM 536 BinaryPolynomialDivOne&lt;br&gt;求多项式P(x)^M中x^K的系数，答案模2。&lt;br&gt;deg P &amp;lt; 50, M &amp;lt;= 10^18 &lt;/p&gt;
+&lt;p&gt;TCO 2013 3A TrickyInequality&lt;br&gt;M个整数变量x_1, x_2, …, x_M满足： &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;x_1, x_2, …, x_M &amp;gt;= 1 &lt;/li&gt;
+&lt;li&gt;x_1 + x_2 + … + x_M &amp;lt;= S &lt;/li&gt;
+&lt;li&gt;x_1, x_2, …, x_N &amp;lt;= T&lt;br&gt;求方案数模(10^9 + 7)。&lt;br&gt;M &amp;lt;= 10^9, M - N &amp;lt;= 100, T &amp;lt;= 10^5, N * T &amp;lt;= S &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;HDOJ 4658 Partition&lt;br&gt;求N的拆分数，要求相同的数出现次数小于K。&lt;br&gt;N, K &amp;lt;= 10^5，10^5组数据 &lt;/p&gt;
+&lt;p&gt;Topcoder Open 2012 Round 3A CowsMooing&lt;br&gt;N头牛，第i头牛按照pattern_i moo，求count[i]表示50!内恰好有i头牛moo的时间，答案模$10^9+7$。&lt;br&gt;N &amp;lt;= 30, |pattern_i| &amp;lt;= 50 &lt;/p&gt;
+&lt;p&gt;BOI 2010 Candy&lt;br&gt;定义distinct({a_1, a_2, …, a_n}) = # of {sum_i a_i x_i : x_i in {0, 1}}.&lt;br&gt;给出a_1, a_2, …, a_n，求distinct({a_1, a_2, …, a_n} \ {a_i} + {x})的最大值，和(i, x)字典序最小的解。&lt;br&gt;n &amp;lt;= 100&lt;br&gt;1 &amp;lt;= a_i &amp;lt;= 7000 &lt;/p&gt;
+&lt;p&gt;SRM 478 RandomApple&lt;br&gt;n个盒子，m种苹果，第i个盒子里第j种苹果的数量是A(i, j)。&lt;br&gt;等概率地选择盒子的子集，等概率地选择前一步选中的苹果，求prob(1), prob(2), …, prob(m)。其中prob(i)表示选中第i种苹果的概率。&lt;br&gt;n, m &amp;lt;= 50, 0 &amp;lt;= A(i, j) &amp;lt; 200&lt;/p&gt;
+&lt;p&gt;SPOJ LIS2&lt;br&gt;给出(x_1, y_1), (x_2, y_2), …, (x_n, y_n)，求i_1 &amp;lt; i_2 &amp;lt; … &amp;lt; i&lt;em&gt;k，满足&lt;br&gt;x&lt;/em&gt;{i&lt;em&gt;1} &amp;lt; x&lt;/em&gt;{i&lt;em&gt;2} &amp;lt; … &amp;lt; x&lt;/em&gt;{i&lt;em&gt;k}&lt;br&gt;y&lt;/em&gt;{i&lt;em&gt;1} &amp;lt; y&lt;/em&gt;{i&lt;em&gt;2} &amp;lt; … &amp;lt; y&lt;/em&gt;{i_k}，求k的最大值。&lt;br&gt;n &amp;lt;= 10^5 &lt;/p&gt;
+&lt;p&gt;SRM 610 MiningGoldHard&lt;br&gt;给出(x_1, y_1), (x_2, y_2), …, (x_n, y_n), {a_1, a&lt;em&gt;2, …, a&lt;/em&gt;{n - 1}), (b_1, b&lt;em&gt;2, …, b&lt;/em&gt;{n - 1})，&lt;br&gt;求(x’_1, y’_1), (x_2’, y_2’), …, (x’_n, y’_n)满足：&lt;br&gt;¥    0 &amp;lt;= x’_i &amp;lt; A, 0 &amp;lt;= y’_i &amp;lt; B&lt;/p&gt;
+&lt;p&gt;¥    |x’_{i + 1} - x’_i| &amp;lt;= a&lt;em&gt;i, |y’&lt;/em&gt;{i + 1} - y’_i| &amp;lt;= b_i&lt;/p&gt;
+&lt;p&gt;求sum_i |x_i - x’_i| + |y_i - y’_i|的最小值。&lt;br&gt;n &amp;lt;= 1000&lt;br&gt;A, B &amp;lt;= 10^6 &lt;/p&gt;
+&lt;p&gt;IOI 2004 Hermes&lt;br&gt;按顺序访问(x_1, y_1), (x_2, y_2), …, (x_n, y_n)，只要横或者纵坐标相当即算访问，问曼哈顿距离的最小值。&lt;br&gt;n &amp;lt;= 2000, |x_i|, |y_i| &amp;lt;= 1000 &lt;/p&gt;
+&lt;p&gt;IOI 2002 Batch Scheduling&lt;br&gt;n个任务顺序执行，第i个任务所需时间time[i]，权重是weight[i]。&lt;br&gt;任务分批进行，每批任务所需时间是sum time[i] + T。&lt;br&gt;在t时刻完成任务i的代价是t * weight[i]，求总代价的最小值。&lt;br&gt;n &amp;lt;= 10000 &lt;/p&gt;
+&lt;p&gt;POI XIII Frogs (Simplified)&lt;br&gt;n * m的棋盘，k个障碍，对于每个点，求其欧几里得距离最近的障碍。&lt;br&gt;n, m &amp;lt;= 1000 &lt;/p&gt;
+&lt;p&gt;World Finals 2011 Machine Works&lt;br&gt;m天，初始有c元。n个机器可以购买，对于第i个机器，只有在第day[i]天可以购买，买入的价格是buy[i]，卖出的价格是sell[i]，每天的利润是profit[i]。&lt;br&gt;开始、结束都没有机器，同时最多拥有1个机器，求最大的利润。&lt;br&gt;n &amp;lt;= 100000 &lt;/p&gt;
+&lt;p&gt;PA 2011 Drilling&lt;br&gt;给出c_1, c_2, …, c&lt;em&gt;n，求f(1, n)。&lt;br&gt;其中f(i, j) = min&lt;/em&gt;{i &amp;lt; k &amp;lt; j} {max{f(i, k), f(k, j)} + c[k]}。&lt;br&gt;n &amp;lt;= 2000 &lt;/p&gt;
+&lt;p&gt;Codeforces 321E&lt;br&gt;n个人顺序分成k组，使同组人之间的关系之和最大。&lt;br&gt;n &amp;lt;= 4000,  k &amp;lt;= 800 &lt;/p&gt;
+&lt;p&gt;SRM 478 KiwiJuice&lt;br&gt;n个杯子，容量是c，初始的水量是c_1, c_2, …, c_n。可以互相倒水，每次只能在空或满时停止。卖掉一个水量是x的杯子获得value[x]元，问最多获得的钱数。&lt;br&gt;n &amp;lt;= 15 &lt;/p&gt;
+&lt;p&gt;SPOJ TLE&lt;br&gt;给出c_1, c_2, …, c_n，求x_1, x_2, …, x_n的方案数，满足：&lt;br&gt;¥    0 &amp;lt;= x_i &amp;lt; 2^m&lt;/p&gt;
+&lt;p&gt;¥    x_i mod c_i != 0&lt;/p&gt;
+&lt;p&gt;¥    a_{i + 1} &amp;amp; a_i = 0&lt;/p&gt;
+&lt;p&gt;n &amp;lt;= 50, m &amp;lt;= 15 &lt;/p&gt;
+&lt;p&gt;SGU 327 Yet Another Palindrome&lt;br&gt;n个字符串s_1, s_2, …, s_n，找包含它们作为子串的最短回文串。&lt;br&gt;n &amp;lt;= 14, |s_i| &amp;lt;= 30 &lt;/p&gt;
+&lt;p&gt;Codeforces 86C Genetic engineering&lt;br&gt;m个模板串s_1, s_2, …, s_m，求长度为n的序列，使得能被完全覆盖。&lt;br&gt;m &amp;lt;= 10, |s_i| &amp;lt;= 10, n &amp;lt;= 1000, s_i in {A, C, T, G}^+ &lt;/p&gt;
+&lt;p&gt;Codeforces 55D Beautiful numbers&lt;br&gt;求[L, R]中能被非零数位整除的数。&lt;br&gt;L, R &amp;lt;= 9 * 10^18 &lt;/p&gt;
+&lt;p&gt;SGU 258 Almost Lucky Numbers&lt;br&gt;数x是幸运的，当且仅当它的前、后半的数位和相等。数x几乎是幸运的，当且仅当至多修改1位之后是幸运的。&lt;br&gt;求[L, R]中几乎幸运的数。&lt;br&gt;L, R &amp;lt;= 10^9 &lt;/p&gt;
+&lt;p&gt;SGU 390 Tickets&lt;br&gt;依次考虑[L, R]的数，每次把x的数位和加进计数器counter，如果counter &amp;gt;= K则counter清零，问counter清零的次数。&lt;br&gt;L, R &amp;lt;= 10^18, K &amp;lt;= 1000 &lt;/p&gt;
+&lt;p&gt;SPOJ ININT&lt;br&gt;对于数字x，每次可以将它加上它的一位。求1变到n的最小次数，并求方案数。&lt;br&gt;n &amp;lt;= 10^9 &lt;/p&gt;
+&lt;p&gt;POI XVII Crystals&lt;br&gt;给出a_1, a_2, …, a_n，求x_1, x_2, …, x_n的数量满足：&lt;br&gt;¥    0 &amp;lt;= x_i &amp;lt; a_i&lt;br&gt;¥    a_1 xor a_2 xor … xor a_n = 0&lt;br&gt;¥    n &amp;lt;= 50, 0 &amp;lt; a_i &amp;lt; 2^32 &lt;/p&gt;
+&lt;p&gt;SGU 542 Gena vs Petya&lt;br&gt;给出a_1, a_2, …, a_n，求x的数量满足(a_1 - x) xor (a_2 - x) xor … xor (a_n - x) = 0。&lt;br&gt;n &amp;lt;= 2 * 10^5, a_i &amp;lt;= 10^18 &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://main.edu.pl/en/archive/oi/13/tan&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://main.edu.pl/en/archive/oi/13/tan&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Project Euler 355 Maximal coprime subset&lt;br&gt;给出N，在{1, 2, …, N}中挑选一个两两互素的子集，使得元素的总和最大。&lt;br&gt;N &amp;lt;= 200000 &lt;/p&gt;
+&lt;p&gt;计算sum_{0 &amp;lt;= i &amp;lt; n} [(a i + b) / c]。&lt;/p&gt;
+&lt;p&gt;Project Euler 452 Long Products&lt;br&gt;统计x_1 &lt;em&gt; x_2 &lt;/em&gt; … * x_N &amp;lt;= M，答案模1234567891。&lt;br&gt;N, M &amp;lt;= 10^9 &lt;/p&gt;
+&lt;p&gt;Winter Camp 2012 糖果公园 &lt;/p&gt;
+&lt;p&gt;SGU 529 It’s Time to Repair the Roads&lt;br&gt;无向图，修改边权，询问最小生成树。&lt;/p&gt;
+&lt;p&gt;BOI 2010 Candy&lt;br&gt;定义distinct({a_1, a_2, …, a_n}) = # of {sum_i a_i x_i : x_i in {0, 1}}.&lt;br&gt;给出a_1, a_2, …, a_n，求distinct({a_1, a_2, …, a_n} \ {a_i} + {x})的最大值，和(i, x)字典序最小的解。&lt;br&gt;n &amp;lt;= 100&lt;br&gt;1 &amp;lt;= a_i &amp;lt;= 7000 &lt;/p&gt;
+&lt;p&gt;Tsinsen 1321 Attack (Chao Li)&lt;br&gt;2维平面上$n$个点，支持$q$次操作： &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;修改点权&lt;/li&gt;
+&lt;li&gt;询问平行于坐标轴的矩形区域内点权第$k$小的值&lt;br&gt;$n &amp;lt;= 60000, q &amp;lt;= 10000$  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$k$-th number with insertion&lt;/p&gt;
+&lt;p&gt;PA 2011 Kangaroos&lt;br&gt;给出${(A_1, B_1), (A_2, B_2), …, (A_n, B_n)}$，$q$次询问$[l, r]$，询问满足$l &amp;lt;= A_i &amp;lt;= B_i &amp;lt;= r$的最长连续i数量。&lt;br&gt;$n &amp;lt;= 50000, m &amp;lt;= 200000$  &lt;/p&gt;
+&lt;p&gt;CTSC 2010 jewelry&lt;br&gt;树，点上有字符，定义$ps(x, y)$表示点$x$到点$y$唯一路径上字母的连接，$count(p, t)$表示串$p$在$t$中的出现次数。给定$T$，求$sum_{x, y} count(ps(x, y), T)$ &lt;/p&gt;
+&lt;p&gt;Knapsack [Unpublished problem]&lt;br&gt;$n$个数$A_1, A_2, …, A_n$，对于所有$s$，求和恰好是$s$的子集个数。&lt;br&gt;($n, A_1 + A_2 + … + A_n &amp;lt;= 10^5$) &lt;/p&gt;
+&lt;p&gt;Codeforces 235E Number Challenge&lt;br&gt;设sigma(n)表示n的约数个数，给出A, B, C，求sum_{1 &amp;lt;= i &amp;lt;= A, 1 &amp;lt;= j &amp;lt;= B, 1 &amp;lt;= k &amp;lt;= C} d(i &lt;em&gt; j &lt;/em&gt; k)。&lt;br&gt;A, B, C &amp;lt;= 2000 &lt;/p&gt;
+&lt;p&gt;SGU 542 Gena vs Petya&lt;br&gt;给出A_1, A_2, …, A_N，求满足0 &amp;lt;= x &amp;lt;= min{A_1, A_2, …, A_N}且(A_1 - x) xor (A_2 - x) xor … xor (A_N - x) = 0的x数量。&lt;br&gt;N &amp;lt;= 10^5, A_i &amp;lt;= 10^18 &lt;/p&gt;
+&lt;p&gt;HDU 4626 Jinkeloid&lt;br&gt;字符串|S|，Q个询问T = {T(i, 1), T(i, 2), …, T(i, C_i)}，有多少子串T中字符出现了偶数次。&lt;br&gt;|S| &amp;lt;= 10^5, Q &amp;lt;= 10^5，|Sigma| &amp;lt;= 20, C_i &amp;lt;= 5 &lt;/p&gt;
+&lt;p&gt;Single Round Match 593 WolfDelaymasterHard&lt;br&gt;定义形如0^n1^n的串是好的，好串的连接是好的。长度为N的字符串，包含0、1、？三种字符，替换？为0、1，使得形成的串是好的。求方案数。&lt;br&gt;N &amp;lt;= 2 * 10^6 &lt;/p&gt;
+&lt;p&gt;Single Round Match 573 WolfPack&lt;br&gt;求从(X_1, Y_1)移动M步到(X_2, Y_2)的方案数，每次移动可以往上下左右移动一格。&lt;br&gt;M &amp;lt;= 100000 &lt;/p&gt;
+&lt;p&gt;Single Round Match 569 MegaFactorial&lt;br&gt;定义f(n, k)满足： &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;f(n, k) = f(n - 1, k) * f(n, k - 1) &lt;/li&gt;
+&lt;li&gt;f(0, k) = 1 &lt;/li&gt;
+&lt;li&gt;f(n, 0) = n&lt;br&gt;求f(N, K)在B进制下末尾0的数量。结果模(10^9 + 7)。&lt;br&gt;N &amp;lt;= 10^9, K &amp;lt;= 16, B &amp;lt;= 10 &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Single Round Match 562 InducedSubgraphs&lt;br&gt;N个点的树，问有多少种标号方式，使得对所有1 &amp;lt;= i &amp;lt;= N - K + 1，点集{i, i + 1, …, i + K- 1}是连通的。&lt;br&gt;N &amp;lt;= 40 &lt;/p&gt;
+&lt;p&gt;Single Round Match 550 ConversionMachine&lt;br&gt;给出只包含abc 3种字符的串A和串B，把a -&amp;gt; b的花费是cost[0]，b -&amp;gt; c是cost[1]，c -&amp;gt; a是cost[2]，问在总费用不超过M的情况下，有多少方式能让A变换到B。&lt;br&gt;|A|, |B| &amp;lt;= 11 &lt;/p&gt;
+&lt;p&gt;Single Round Match 596 BitwiseAnd&lt;br&gt;集合S是好的，当且仅当： &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;任意x, y in S, x &amp;amp; y &amp;gt; 0 &lt;/li&gt;
+&lt;li&gt;任意x, y, z in S, x &amp;amp; y &amp;amp; z = 0&lt;br&gt;给出T，求T \subset S \subset [2^60 - 1]，使得S是好的，而且字典序最小。 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Single Round Match 596 SparseFactorial&lt;br&gt;定义sparse factorial f(n) = n &lt;em&gt; (n - 1^2) &lt;/em&gt; (n - 2^2) &lt;em&gt; … &lt;/em&gt; (n - k^2) where k^2 &amp;lt; n &amp;lt;= (k + 1)^2。&lt;br&gt;求满足L &amp;lt;= n &amp;lt;=R且f(n) % D = 0的n的数量。&lt;br&gt;L, R &amp;lt;= 10^12，D &amp;lt;= 10^6 &lt;/p&gt;
+&lt;p&gt;PQHull &lt;/p&gt;
+&lt;p&gt;Chengdu 2012 Problem I / HDOJ 4472&lt;br&gt;统计满足$1 &amp;lt;= x &lt;em&gt; y &lt;/em&gt; z &amp;lt;= n$的$(x, y, z)$&lt;br&gt;$n &amp;lt;= 10^11$ &lt;/p&gt;
+&lt;p&gt;Project Euler 381&lt;br&gt;统计满足$1 &amp;lt;= lcm(x, y) &amp;lt;= n$的$(x, y)$&lt;br&gt;$n = 10^12$ &lt;/p&gt;
+&lt;p&gt;POI XIV Queries&lt;br&gt;$n$个询问形如$(a, b, d)$，统计满足$1 &amp;lt;= x &amp;lt;= a, 1 &amp;lt;= y &amp;lt;= b$且$gcd(x, y) = d$的$(x, y)$&lt;br&gt;$n, a, b, d &amp;lt;= 50000$ &lt;/p&gt;
+&lt;p&gt;SPOJ PGCD&lt;br&gt;$t$个询问形如$(n, m)$，统计满足$1 &amp;lt;= x &amp;lt;= n, 1 &amp;lt;= y &amp;lt;= m$且$gcd(x, y)$是质数的$(x, y)$&lt;br&gt;$t &amp;lt;= 10, n, m &amp;lt;= 10^7$ &lt;/p&gt;
+&lt;p&gt;Hangzhou 2013 Online / HDOJ 4746&lt;br&gt;定义$p(n)$表示$n$的&lt;strong&gt;不同&lt;/strong&gt;质因子个数。&lt;br&gt;$q$个询问形如$(n, m, k)$，统计满足$1 &amp;lt;= x &amp;lt;= n, 1 &amp;lt;= y &amp;lt;= m$且$p(gcd(x, y)) &amp;lt;= k$的$(x, y)$&lt;br&gt;$q &amp;lt;= 5000, n, m, k &amp;lt;= 5 * 10^5$ &lt;/p&gt;
+&lt;p&gt;Project Euler 388&lt;br&gt;统计满足$1 &amp;lt;= x, y, z &amp;lt;= n$且$gcd(x, y, z) = 1$的$(x, y, z)$&lt;br&gt;$n = 10^10$  &lt;/p&gt;
+&lt;p&gt;Project Euler 402 Integer-valued polynomial&lt;br&gt;定义$M(a, b, c) = \gcd{n^4 + a n^3 + b n^2 + c n : n in \mathbb{N}}$，例如$M(4, 2, 5) = 6$。&lt;br&gt;$S(n) = \sum&lt;em&gt;{0 &amp;lt; a, b, c \leq n} M(a, b, c)$。&lt;br&gt;求$sum&lt;/em&gt;{2 &amp;lt;= k &amp;lt;= K} S(fib_k) \bmod 10^9$。  &lt;/p&gt;
+&lt;p&gt;TCO 2013 2B LitPanels&lt;br&gt;$n &lt;em&gt; m$的矩形，把若干格子点亮，要求点亮的格子能被$2$个$a &lt;/em&gt; b$的覆盖，求方案数。&lt;br&gt;Project Euler 453&lt;br&gt;$n \times m$的点阵，统计非退化的四边形数量，答案mod 135707531。 &lt;/p&gt;
+&lt;p&gt;SRM 600 LotsOfLines&lt;br&gt;给出$A, B$，考虑所有直线$y = ax + b$满足$0 &amp;lt;= a &amp;lt; A, 0 &amp;lt;= b &amp;lt; B$，问平面被分成了几块。&lt;br&gt;$A, B &amp;lt;= 1200$ &lt;/p&gt;
+&lt;p&gt;HDOJ 4609&lt;br&gt;给出$A_1, A_2, …, A_n$，统计有多少对$(i, j, k)$满足$A_i, A_j, A_k$是三角形的三边。&lt;br&gt;$n, A_i &amp;lt;= 10^5$ &lt;/p&gt;
+&lt;p&gt;SRM 603 SumOfArrays&lt;br&gt;给出长度为$n$的数组$A, B$，安排一个顺序，使得$A[i] + B[i]$的众数最大。&lt;br&gt;$1 &amp;lt;= n &amp;lt;= 10^5, 0 &amp;lt;= A[i], B[i] &amp;lt;= 10^5$ 数据随机 &lt;/p&gt;
+&lt;p&gt;HDOJ 4624&lt;br&gt;给出一棵树，求$E(u) = sum_v (dist(u, v))^k$，答案模$10007$。&lt;br&gt;$n &amp;lt;= 50000, k &amp;lt;= 500$ &lt;/p&gt;
+&lt;p&gt;SRM 583 RandomPaintingOnABoard&lt;br&gt;$n \times m$的矩阵$P$，每次以$P[i][j] / sum P$的概率选择格子$(i, j)$，问每行每列都被选择至少一次所需要的步数期望。&lt;br&gt;$n, m &amp;lt;= 21, n * m &amp;lt;= 50, P[i][j] &amp;lt; 10$ &lt;/p&gt;
+&lt;p&gt;HDOJ 4624&lt;br&gt;$n$个白球，每次随机段区间染黑，问染成全黑的期望次数。&lt;br&gt;$n &amp;lt;= 50$ &lt;/p&gt;
+&lt;p&gt;SRM 560 BoundedOptimization&lt;br&gt;$n$个变量$x_i$，满足$l_i &amp;lt;= x_i &amp;lt;= r_i$，且$x_1 + x_2 + … + x_n &amp;lt;= S$，求一个特殊二次式的最大值（无平方项，无一次项，系数都是1）。&lt;br&gt;$n &amp;lt;= 13$ &lt;/p&gt;
+&lt;p&gt;维护数组$A$，支持$q$次操作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;add(a, b, v) for all a &amp;lt;= i &amp;lt;= b, A[i] += v &lt;/li&gt;
+&lt;li&gt;query(a, b) 求#{i : a &amp;lt;= i &amp;lt;= b and A[i] &amp;gt; 0} &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Codeforces 15E Holes&lt;br&gt;维护有根树，支持$q$次操作： &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;parent[v] := p，保证p &amp;gt; v &lt;/li&gt;
+&lt;li&gt;询问点v的深度&lt;br&gt;$n, q &amp;lt;= 10^5$ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Codeforces 348C&lt;br&gt;$n$个元素，$m$个集合$S_1, S_2, …, S_m$，$q$次操作： &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;把集合$S_i$的元素权值+= v &lt;/li&gt;
+&lt;li&gt;询问集合$S_i$元素的权值和&lt;br&gt;$n, |S_1| + |S_2| + … + |S_m|, q &amp;lt;= 10^5$ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Chengdu 2012 Problem D / HDOJ 4467&lt;br&gt;$n$个点$m$条边的无向图，点有2种颜色，边有权值，$q$次操作： &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;改变点$v$的颜色 &lt;/li&gt;
+&lt;li&gt;查询端点颜色是$(a, b)$的边权值之和&lt;br&gt;$n, m, q &amp;lt;= 10^5$ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Chengdu 2013 Problem G / HDOJ 4787&lt;br&gt;&lt;strong&gt; 在线 &lt;/strong&gt; 维护字符串集合$S$，$q$次操作： &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在$S$中插入$s$ &lt;/li&gt;
+&lt;li&gt;查询$t$在$S$中的子串数&lt;br&gt;$s$总长$10^5$，$t$总长$5 * 10^6$&lt;br&gt;(2~3 solutions will be presented) &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;SPOJ UNTITLE1&lt;br&gt;维护数组$A$，支持$q$次操作： &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;add(a, b, v) for all a &amp;lt;= i &amp;lt;= b, A[i] += v &lt;/li&gt;
+&lt;li&gt;query(a, b) 求max{S[i] : a &amp;lt;= i &amp;lt;= b}，其中S[i] = A[1] + A[2] + … + A[i]&lt;br&gt;$|A|, q &amp;lt;= 50000$ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;BZOJ 2724&lt;br&gt;&lt;strong&gt;在线&lt;/strong&gt;查询区间众数。&lt;br&gt;(an elegant algorithm to count occurrence) &lt;/p&gt;
+&lt;p&gt;BZOJ 2741&lt;br&gt;&lt;strong&gt;在线&lt;/strong&gt;查询区间最大连续异或和。 &lt;/p&gt;
+&lt;p&gt;BZOJ 巧克力王国&lt;br&gt;查询半平面内点权的和。 &lt;/p&gt;
+&lt;p&gt;Codechef March14 GERALD07&lt;br&gt;无向图，询问编号在$[L_i, R_i]$的边组成子图的连通块数量。 &lt;/p&gt;
+&lt;p&gt;Codeforces 19E&lt;br&gt;无向图，询问有多少条边，删掉之后的图是二分图。 &lt;/p&gt;
+&lt;p&gt;SPOJ COT2&lt;br&gt;查询树上路径不同颜色数量。&lt;br&gt;(2 solutions will be presented, the online version will also be discussed) &lt;/p&gt;
+&lt;p&gt;Tsinsen 1321 Attack (Chao Li)&lt;br&gt;2维平面上$n$个点，支持$q$次操作： &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;修改点权&lt;/li&gt;
+&lt;li&gt;询问平行于坐标轴的矩形区域内点权第$k$小的值&lt;br&gt;$n &amp;lt;= 60000, q &amp;lt;= 10000$  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$k$-th number with insertion&lt;/p&gt;
+&lt;p&gt;PA 2011 Kangaroos&lt;br&gt;给出${(A_1, B_1), (A_2, B_2), …, (A_n, B_n)}$，$q$次询问$[l, r]$，询问满足$l &amp;lt;= A_i &amp;lt;= B_i &amp;lt;= r$的最长连续i数量。&lt;br&gt;$n &amp;lt;= 50000, m &amp;lt;= 200000$  &lt;/p&gt;
+&lt;p&gt;CTSC 2010 jewelry&lt;br&gt;树，点上有字符，定义$ps(x, y)$表示点$x$到点$y$唯一路径上字母的连接，$count(p, t)$表示串$p$在$t$中的出现次数。给定$T$，求$sum_{x, y} count(ps(x, y), T)$ &lt;/p&gt;
+&lt;p&gt;Knapsack [Unpublished problem]&lt;br&gt;$n$个数$A_1, A_2, …, A_n$，对于所有$s$，求和恰好是$s$的子集个数。&lt;br&gt;($n, A_1 + A_2 + … + A_n &amp;lt;= 10^5$) &lt;/p&gt;
+&lt;h1 id=&quot;Number-theory&quot;&gt;&lt;a href=&quot;#Number-theory&quot; class=&quot;headerlink&quot; title=&quot;Number theory&quot;&gt;&lt;/a&gt;Number theory&lt;/h1&gt;&lt;p&gt;统计满足$1 &amp;lt;= x * y &amp;lt;= n$的$(x, y)$&lt;br&gt;$n &amp;lt;= 10^14$ &lt;/p&gt;
+&lt;p&gt;Chengdu 2012 Problem I / HDOJ 4472&lt;br&gt;统计满足$1 &amp;lt;= x &lt;em&gt; y &lt;/em&gt; z &amp;lt;= n$的$(x, y, z)$&lt;br&gt;$n &amp;lt;= 10^11$ &lt;/p&gt;
+&lt;p&gt;Project Euler 381&lt;br&gt;统计满足$1 &amp;lt;= lcm(x, y) &amp;lt;= n$的$(x, y)$&lt;br&gt;$n = 10^12$ &lt;/p&gt;
+&lt;p&gt;POI XIV Queries&lt;br&gt;$n$个询问形如$(a, b, d)$，统计满足$1 &amp;lt;= x &amp;lt;= a, 1 &amp;lt;= y &amp;lt;= b$且$gcd(x, y) = d$的$(x, y)$&lt;br&gt;$n, a, b, d &amp;lt;= 50000$ &lt;/p&gt;
+&lt;p&gt;SPOJ PGCD&lt;br&gt;$t$个询问形如$(n, m)$，统计满足$1 &amp;lt;= x &amp;lt;= n, 1 &amp;lt;= y &amp;lt;= m$且$gcd(x, y)$是质数的$(x, y)$&lt;br&gt;$t &amp;lt;= 10, n, m &amp;lt;= 10^7$ &lt;/p&gt;
+&lt;p&gt;Hangzhou 2013 Online / HDOJ 4746&lt;br&gt;定义$p(n)$表示$n$的&lt;strong&gt;不同&lt;/strong&gt;质因子个数。&lt;br&gt;$q$个询问形如$(n, m, k)$，统计满足$1 &amp;lt;= x &amp;lt;= n, 1 &amp;lt;= y &amp;lt;= m$且$p(gcd(x, y)) &amp;lt;= k$的$(x, y)$&lt;br&gt;$q &amp;lt;= 5000, n, m, k &amp;lt;= 5 * 10^5$ &lt;/p&gt;
+&lt;p&gt;Project Euler 388&lt;br&gt;统计满足$1 &amp;lt;= x, y, z &amp;lt;= n$且$gcd(x, y, z) = 1$的$(x, y, z)$&lt;br&gt;$n = 10^10$ &lt;/p&gt;
+&lt;p&gt;Chengdu 2012 Problem I / HDOJ 4472&lt;br&gt;统计满足$1 &amp;lt;= x &lt;em&gt; y &lt;/em&gt; z &amp;lt;= n$的$(x, y, z)$&lt;br&gt;$n &amp;lt;= 10^11$ &lt;/p&gt;
+&lt;p&gt;Project Euler 381&lt;br&gt;统计满足$1 &amp;lt;= lcm(x, y) &amp;lt;= n$的$(x, y)$&lt;br&gt;$n = 10^12$ &lt;/p&gt;
+&lt;p&gt;POI XIV Queries&lt;br&gt;$n$个询问形如$(a, b, d)$，统计满足$1 &amp;lt;= x &amp;lt;= a, 1 &amp;lt;= y &amp;lt;= b$且$gcd(x, y) = d$的$(x, y)$&lt;br&gt;$n, a, b, d &amp;lt;= 50000$ &lt;/p&gt;
+&lt;p&gt;SPOJ PGCD&lt;br&gt;$t$个询问形如$(n, m)$，统计满足$1 &amp;lt;= x &amp;lt;= n, 1 &amp;lt;= y &amp;lt;= m$且$gcd(x, y)$是质数的$(x, y)$&lt;br&gt;$t &amp;lt;= 10, n, m &amp;lt;= 10^7$ &lt;/p&gt;
+&lt;p&gt;Hangzhou 2013 Online / HDOJ 4746&lt;br&gt;定义$p(n)$表示$n$的&lt;strong&gt;不同&lt;/strong&gt;质因子个数。&lt;br&gt;$q$个询问形如$(n, m, k)$，统计满足$1 &amp;lt;= x &amp;lt;= n, 1 &amp;lt;= y &amp;lt;= m$且$p(gcd(x, y)) &amp;lt;= k$的$(x, y)$&lt;br&gt;$q &amp;lt;= 5000, n, m, k &amp;lt;= 5 * 10^5$ &lt;/p&gt;
+&lt;p&gt;Project Euler 388&lt;br&gt;统计满足$1 &amp;lt;= x, y, z &amp;lt;= n$且$gcd(x, y, z) = 1$的$(x, y, z)$&lt;br&gt;$n = 10^10$  &lt;/p&gt;
+&lt;p&gt;Project Euler 402 Integer-valued polynomial&lt;br&gt;定义$M(a, b, c) = \gcd{n^4 + a n^3 + b n^2 + c n : n in \mathbb{N}}$，例如$M(4, 2, 5) = 6$。&lt;br&gt;$S(n) = \sum&lt;em&gt;{0 &amp;lt; a, b, c \leq n} M(a, b, c)$。&lt;br&gt;求$sum&lt;/em&gt;{2 &amp;lt;= k &amp;lt;= K} S(fib_k) \bmod 10^9$。  &lt;/p&gt;
+&lt;p&gt;TCO 2013 2B LitPanels&lt;br&gt;$n &lt;em&gt; m$的矩形，把若干格子点亮，要求点亮的格子能被$2$个$a &lt;/em&gt; b$的覆盖，求方案数。&lt;br&gt;Project Euler 453&lt;br&gt;$n \times m$的点阵，统计非退化的四边形数量，答案mod 135707531。 &lt;/p&gt;
+&lt;p&gt;SRM 600 LotsOfLines&lt;br&gt;给出$A, B$，考虑所有直线$y = ax + b$满足$0 &amp;lt;= a &amp;lt; A, 0 &amp;lt;= b &amp;lt; B$，问平面被分成了几块。&lt;br&gt;$A, B &amp;lt;= 1200$ &lt;/p&gt;
+&lt;p&gt;HDOJ 4609&lt;br&gt;给出$A_1, A_2, …, A_n$，统计有多少对$(i, j, k)$满足$A_i, A_j, A_k$是三角形的三边。&lt;br&gt;$n, A_i &amp;lt;= 10^5$ &lt;/p&gt;
+&lt;p&gt;SRM 603 SumOfArrays&lt;br&gt;给出长度为$n$的数组$A, B$，安排一个顺序，使得$A[i] + B[i]$的众数最大。&lt;br&gt;$1 &amp;lt;= n &amp;lt;= 10^5, 0 &amp;lt;= A[i], B[i] &amp;lt;= 10^5$ 数据随机 &lt;/p&gt;
+&lt;p&gt;HDOJ 4624&lt;br&gt;给出一棵树，求$E(u) = sum_v (dist(u, v))^k$，答案模$10007$。&lt;br&gt;$n &amp;lt;= 50000, k &amp;lt;= 500$ &lt;/p&gt;
+&lt;p&gt;SRM 583 RandomPaintingOnABoard&lt;br&gt;$n \times m$的矩阵$P$，每次以$P[i][j] / sum P$的概率选择格子$(i, j)$，问每行每列都被选择至少一次所需要的步数期望。&lt;br&gt;$n, m &amp;lt;= 21, n * m &amp;lt;= 50, P[i][j] &amp;lt; 10$ &lt;/p&gt;
+&lt;p&gt;HDOJ 4624&lt;br&gt;$n$个白球，每次随机段区间染黑，问染成全黑的期望次数。&lt;br&gt;$n &amp;lt;= 50$ &lt;/p&gt;
+&lt;p&gt;SRM 560 BoundedOptimization&lt;br&gt;$n$个变量$x_i$，满足$l_i &amp;lt;= x_i &amp;lt;= r_i$，且$x_1 + x_2 + … + x_n &amp;lt;= S$，求一个特殊二次式的最大值（无平方项，无一次项，系数都是1）。&lt;br&gt;$n &amp;lt;= 13$ &lt;/p&gt;
+&lt;p&gt;维护数组$A$，支持$q$次操作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;add(a, b, v) for all a &amp;lt;= i &amp;lt;= b, A[i] += v &lt;/li&gt;
+&lt;li&gt;query(a, b) 求#{i : a &amp;lt;= i &amp;lt;= b and A[i] &amp;gt; 0} &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Codeforces 15E Holes&lt;br&gt;维护有根树，支持$q$次操作： &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;parent[v] := p，保证p &amp;gt; v &lt;/li&gt;
+&lt;li&gt;询问点v的深度&lt;br&gt;$n, q &amp;lt;= 10^5$ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Codeforces 348C&lt;br&gt;$n$个元素，$m$个集合$S_1, S_2, …, S_m$，$q$次操作： &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;把集合$S_i$的元素权值+= v &lt;/li&gt;
+&lt;li&gt;询问集合$S_i$元素的权值和&lt;br&gt;$n, |S_1| + |S_2| + … + |S_m|, q &amp;lt;= 10^5$ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Chengdu 2012 Problem D / HDOJ 4467&lt;br&gt;$n$个点$m$条边的无向图，点有2种颜色，边有权值，$q$次操作： &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;改变点$v$的颜色 &lt;/li&gt;
+&lt;li&gt;查询端点颜色是$(a, b)$的边权值之和&lt;br&gt;$n, m, q &amp;lt;= 10^5$ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Chengdu 2013 Problem G / HDOJ 4787&lt;br&gt;&lt;strong&gt; 在线 &lt;/strong&gt; 维护字符串集合$S$，$q$次操作： &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在$S$中插入$s$ &lt;/li&gt;
+&lt;li&gt;查询$t$在$S$中的子串数&lt;br&gt;$s$总长$10^5$，$t$总长$5 * 10^6$&lt;br&gt;(2~3 solutions will be presented) &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;SPOJ UNTITLE1&lt;br&gt;维护数组$A$，支持$q$次操作： &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;add(a, b, v) for all a &amp;lt;= i &amp;lt;= b, A[i] += v &lt;/li&gt;
+&lt;li&gt;query(a, b) 求max{S[i] : a &amp;lt;= i &amp;lt;= b}，其中S[i] = A[1] + A[2] + … + A[i]&lt;br&gt;$|A|, q &amp;lt;= 50000$ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;BZOJ 2724&lt;br&gt;&lt;strong&gt;在线&lt;/strong&gt;查询区间众数。&lt;br&gt;(an elegant algorithm to count occurrence) &lt;/p&gt;
+&lt;p&gt;BZOJ 2741&lt;br&gt;&lt;strong&gt;在线&lt;/strong&gt;查询区间最大连续异或和。 &lt;/p&gt;
+&lt;p&gt;BZOJ 巧克力王国&lt;br&gt;查询半平面内点权的和。 &lt;/p&gt;
+&lt;p&gt;Codechef March14 GERALD07&lt;br&gt;无向图，询问编号在$[L_i, R_i]$的边组成子图的连通块数量。 &lt;/p&gt;
+&lt;p&gt;Codeforces 19E&lt;br&gt;无向图，询问有多少条边，删掉之后的图是二分图。 &lt;/p&gt;
+&lt;p&gt;SPOJ COT2&lt;br&gt;查询树上路径不同颜色数量。&lt;br&gt;(2 solutions will be presented, the online version will also be discussed) &lt;/p&gt;
+&lt;p&gt;Tsinsen 1321 Attack (Chao Li)&lt;br&gt;2维平面上$n$个点，支持$q$次操作： &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;修改点权&lt;/li&gt;
+&lt;li&gt;询问平行于坐标轴的矩形区域内点权第$k$小的值&lt;br&gt;$n &amp;lt;= 60000, q &amp;lt;= 10000$  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$k$-th number with insertion&lt;/p&gt;
+&lt;p&gt;PA 2011 Kangaroos&lt;br&gt;给出${(A_1, B_1), (A_2, B_2), …, (A_n, B_n)}$，$q$次询问$[l, r]$，询问满足$l &amp;lt;= A_i &amp;lt;= B_i &amp;lt;= r$的最长连续i数量。&lt;br&gt;$n &amp;lt;= 50000, m &amp;lt;= 200000$  &lt;/p&gt;
+&lt;p&gt;CTSC 2010 jewelry&lt;br&gt;树，点上有字符，定义$ps(x, y)$表示点$x$到点$y$唯一路径上字母的连接，$count(p, t)$表示串$p$在$t$中的出现次数。给定$T$，求$sum_{x, y} count(ps(x, y), T)$ &lt;/p&gt;
+&lt;p&gt;Knapsack [Unpublished problem]&lt;br&gt;$n$个数$A_1, A_2, …, A_n$，对于所有$s$，求和恰好是$s$的子集个数。&lt;br&gt;($n, A_1 + A_2 + … + A_n &amp;lt;= 10^5$) &lt;/p&gt;
+&lt;h1 id=&quot;Number-theory-1&quot;&gt;&lt;a href=&quot;#Number-theory-1&quot; class=&quot;headerlink&quot; title=&quot;Number theory&quot;&gt;&lt;/a&gt;Number theory&lt;/h1&gt;&lt;p&gt;统计满足$1 &amp;lt;= x * y &amp;lt;= n$的$(x, y)$&lt;br&gt;$n &amp;lt;= 10^14$ &lt;/p&gt;
+&lt;p&gt;Chengdu 2012 Problem I / HDOJ 4472&lt;br&gt;统计满足$1 &amp;lt;= x &lt;em&gt; y &lt;/em&gt; z &amp;lt;= n$的$(x, y, z)$&lt;br&gt;$n &amp;lt;= 10^11$ &lt;/p&gt;
+&lt;p&gt;Project Euler 381&lt;br&gt;统计满足$1 &amp;lt;= lcm(x, y) &amp;lt;= n$的$(x, y)$&lt;br&gt;$n = 10^12$ &lt;/p&gt;
+&lt;p&gt;POI XIV Queries&lt;br&gt;$n$个询问形如$(a, b, d)$，统计满足$1 &amp;lt;= x &amp;lt;= a, 1 &amp;lt;= y &amp;lt;= b$且$gcd(x, y) = d$的$(x, y)$&lt;br&gt;$n, a, b, d &amp;lt;= 50000$ &lt;/p&gt;
+&lt;p&gt;SPOJ PGCD&lt;br&gt;$t$个询问形如$(n, m)$，统计满足$1 &amp;lt;= x &amp;lt;= n, 1 &amp;lt;= y &amp;lt;= m$且$gcd(x, y)$是质数的$(x, y)$&lt;br&gt;$t &amp;lt;= 10, n, m &amp;lt;= 10^7$ &lt;/p&gt;
+&lt;p&gt;Hangzhou 2013 Online / HDOJ 4746&lt;br&gt;定义$p(n)$表示$n$的&lt;strong&gt;不同&lt;/strong&gt;质因子个数。&lt;br&gt;$q$个询问形如$(n, m, k)$，统计满足$1 &amp;lt;= x &amp;lt;= n, 1 &amp;lt;= y &amp;lt;= m$且$p(gcd(x, y)) &amp;lt;= k$的$(x, y)$&lt;br&gt;$q &amp;lt;= 5000, n, m, k &amp;lt;= 5 * 10^5$ &lt;/p&gt;
+&lt;p&gt;Project Euler 388&lt;br&gt;统计满足$1 &amp;lt;= x, y, z &amp;lt;= n$且$gcd(x, y, z) = 1$的$(x, y, z)$&lt;br&gt;$n = 10^10$ &lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;来自ftiasch在&lt;a href=&quot;https://gist.github.com/ftiasch/007a7732456cc8f88ba6&quot;&gt;这里&lt;/a&gt;贴出的题。有些公式看着不太舒服，就移到这里了。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="ACM" scheme="https://moemoemortimer.github.io/tags/ACM/"/>
+    
+  </entry>
   
   <entry>
     <title>北方大学 ACM 多校训练赛 第四场 B.翻硬币【暴力】</title>
@@ -585,8 +1132,8 @@ main()
 &lt;p&gt;大学的时候再在快递单子上写下一个个名字的时候，一大股想念的感情就会喷涌而出，诶呀，无论对方喜不喜欢你寄去的东西，你知道对方一定会喜欢你给他/她寄东西的，那种感觉就已经很棒了~&lt;/p&gt;
 &lt;p&gt;再就基本上没有要写别人名字的情况了，要联系直接上秋秋说就好了。想想还有些寂寞呢。&lt;/p&gt;
 &lt;p&gt;最后放上收藏的这几首主题曲吧，歌词真的炒鸡赞。&lt;/p&gt;
-&lt;h2 id=&quot;前前前世-–-RADWIMPS&quot;&gt;&lt;a href=&quot;#前前前世-–-RADWIMPS&quot; class=&quot;headerlink&quot; title=&quot;前前前世 – RADWIMPS&quot;&gt;&lt;/a&gt;前前前世 – RADWIMPS&lt;/h2&gt;&lt;h3 id=&quot;original-ver&quot;&gt;&lt;a href=&quot;#original-ver&quot; class=&quot;headerlink&quot; title=&quot;original ver&quot;&gt;&lt;/a&gt;original ver&lt;/h3&gt;&lt;div id=&quot;dplayer0&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer0 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer0&quot;),&quot;video&quot;:{&quot;url&quot;:&quot;http://112.253.22.164/3/c/n/w/u/cnwunlkymtxptdxkobyorsajwxkuhn/hc.yinyuetai.com/87D901589089E48FCB290CA0CB70B61F.mp4&quot;,&quot;pic&quot;:&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f8efg02v6tj20rs0f3tdp.jpg&quot;}});&lt;/script&gt;
-&lt;h3 id=&quot;女声cover&quot;&gt;&lt;a href=&quot;#女声cover&quot; class=&quot;headerlink&quot; title=&quot;女声cover&quot;&gt;&lt;/a&gt;女声cover&lt;/h3&gt;&lt;div id=&quot;dplayer1&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer1 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer1&quot;),&quot;video&quot;:{&quot;url&quot;:&quot;http://hc.yinyuetai.com/uploads/videos/common/2D000156B50C0A23DB47CEBBCB2C4ED7.flv&quot;,&quot;pic&quot;:&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f8fh191pabj20rs0fl7bz.jpg&quot;}});&lt;/script&gt;
+&lt;h2 id=&quot;前前前世-–-RADWIMPS&quot;&gt;&lt;a href=&quot;#前前前世-–-RADWIMPS&quot; class=&quot;headerlink&quot; title=&quot;前前前世 – RADWIMPS&quot;&gt;&lt;/a&gt;前前前世 – RADWIMPS&lt;/h2&gt;&lt;h3 id=&quot;original-ver&quot;&gt;&lt;a href=&quot;#original-ver&quot; class=&quot;headerlink&quot; title=&quot;original ver&quot;&gt;&lt;/a&gt;original ver&lt;/h3&gt;&lt;div id=&quot;dplayer1&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer1 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer1&quot;),&quot;video&quot;:{&quot;url&quot;:&quot;http://112.253.22.164/3/c/n/w/u/cnwunlkymtxptdxkobyorsajwxkuhn/hc.yinyuetai.com/87D901589089E48FCB290CA0CB70B61F.mp4&quot;,&quot;pic&quot;:&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f8efg02v6tj20rs0f3tdp.jpg&quot;}});&lt;/script&gt;
+&lt;h3 id=&quot;女声cover&quot;&gt;&lt;a href=&quot;#女声cover&quot; class=&quot;headerlink&quot; title=&quot;女声cover&quot;&gt;&lt;/a&gt;女声cover&lt;/h3&gt;&lt;div id=&quot;dplayer2&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer2 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer2&quot;),&quot;video&quot;:{&quot;url&quot;:&quot;http://hc.yinyuetai.com/uploads/videos/common/2D000156B50C0A23DB47CEBBCB2C4ED7.flv&quot;,&quot;pic&quot;:&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f8fh191pabj20rs0fl7bz.jpg&quot;}});&lt;/script&gt;
 &lt;h3 id=&quot;歌词&quot;&gt;&lt;a href=&quot;#歌词&quot; class=&quot;headerlink&quot; title=&quot;歌词&quot;&gt;&lt;/a&gt;歌词&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;やっと眼を覚ましたかい それなのになぜ眼も合わせやしないんだい？&lt;br&gt;总算醒了吗 可为何不与我对视呢？&lt;br&gt;「遅いよ」と怒る君 これでもやれるだけ飛ばしてきたんだよ&lt;br&gt;你生气地抱怨说“太迟了啦” 可是我已经竭尽全力飞到你身边了哦&lt;/p&gt;
 &lt;p&gt;心が身体を追い越してきたんだよ&lt;br&gt;我的心甚至超越身体赶到你面前&lt;/p&gt;
@@ -810,61 +1357,6 @@ main()
       <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
     
       <category term="STL" scheme="https://moemoemortimer.github.io/tags/STL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HDU 1166 敌兵布阵 解题报告</title>
-    <link href="https://moemoemortimer.github.io/2016/10/07/hdu-1166/"/>
-    <id>https://moemoemortimer.github.io/2016/10/07/hdu-1166/</id>
-    <published>2016-10-07T13:52:32.000Z</published>
-    <updated>2016-10-07T13:55:24.872Z</updated>
-    
-    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=1166&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HDU 1166 敌兵布阵 题目传送门&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;思路&quot;&gt;&lt;a href=&quot;#思路&quot; class=&quot;headerlink&quot; title=&quot;思路&quot;&gt;&lt;/a&gt;思路&lt;/h2&gt;&lt;p&gt;这里实现的主要是线段树的点修改和区间查询。&lt;/p&gt;
-&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;65&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;66&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;67&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;68&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;69&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;70&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;71&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;72&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;73&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;74&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;75&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;76&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;77&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;78&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;79&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;cstdio&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;string&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#define lson l, m, rt &amp;lt;&amp;lt; 1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#define rson m+1, r, rt &amp;lt;&amp;lt; 1 | 1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;using namespace std;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;const int maxn = 55555;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int sum[maxn &amp;lt;&amp;lt; 2];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;void PushUp(int rt)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    sum[rt] = sum[rt&amp;lt;&amp;lt;1] + sum[rt&amp;lt;&amp;lt;1|1];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;void build(int l, int r, int rt)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(l == r)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        scanf(&lt;span class=&quot;string&quot;&gt;&quot;%d&quot;&lt;/span&gt;, &amp;amp;sum[rt]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; ;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    int m = (l+r) &amp;gt;&amp;gt; 1;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    build(lson);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    build(rson);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    PushUp(rt);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;void update(int p, int add, int l, int r, int rt)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(l == r)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        sum[rt] += add;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; ;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    int m = (l+r) &amp;gt;&amp;gt; 1;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(p &amp;lt;= m)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        update(p, add, lson);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        update(p, add, rson);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    PushUp(rt);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int query(int L, int R, int l, int r, int rt)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(L &amp;lt;= l &amp;amp;&amp;amp; r &amp;lt;= R)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; sum[rt];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    int m = (l+r) &amp;gt;&amp;gt; 1;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    int ret = 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(L &amp;lt;= m)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        ret += query(L, R, lson);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(R &amp;gt; m)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        ret += query(L, R, rson);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; ret;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;/span&gt;()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    int T, n;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    scanf(&lt;span class=&quot;string&quot;&gt;&quot;%d&quot;&lt;/span&gt;, &amp;amp;T);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int ca = 1; ca &amp;lt;= T; ca++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;Case %d:\n&quot;&lt;/span&gt;, ca);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        scanf(&lt;span class=&quot;string&quot;&gt;&quot;%d&quot;&lt;/span&gt;, &amp;amp;n);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        build(1, n, 1);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        char op[10];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(scanf(&lt;span class=&quot;string&quot;&gt;&quot;%s&quot;&lt;/span&gt;,op))&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(op[0] == &lt;span class=&quot;string&quot;&gt;&#39;E&#39;&lt;/span&gt;)&lt;span class=&quot;built_in&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            int a, b;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            scanf(&lt;span class=&quot;string&quot;&gt;&quot;%d%d&quot;&lt;/span&gt;, &amp;amp;a,&amp;amp;b);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(op[0] == &lt;span class=&quot;string&quot;&gt;&#39;Q&#39;&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%d\n&quot;&lt;/span&gt;, query(a, b, 1, n, 1));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(op[0] == &lt;span class=&quot;string&quot;&gt;&#39;S&#39;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                update(a, -b, 1, n, 1);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                update(a, b, 1, n, 1);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="线段树" scheme="https://moemoemortimer.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
-    
-      <category term="树状数组" scheme="https://moemoemortimer.github.io/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>UVa 11464 Even Parity 解题报告</title>
-    <link href="https://moemoemortimer.github.io/2016/10/07/uva-11464/"/>
-    <id>https://moemoemortimer.github.io/2016/10/07/uva-11464/</id>
-    <published>2016-10-07T13:51:45.000Z</published>
-    <updated>2016-10-07T13:51:45.638Z</updated>
-    
-    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;题意&quot;&gt;&lt;a href=&quot;#题意&quot; class=&quot;headerlink&quot; title=&quot;题意&quot;&gt;&lt;/a&gt;题意&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;page=show_problem&amp;amp;problem=2459&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;UVa 11464 偶数矩阵 题目传送门&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;大意&quot;&gt;&lt;a href=&quot;#大意&quot; class=&quot;headerlink&quot; title=&quot;大意&quot;&gt;&lt;/a&gt;大意&lt;/h3&gt;&lt;p&gt;给出一个$n&lt;em&gt;n$的01矩阵，要求把尽量少的&lt;em&gt;* 0变成1 &lt;/em&gt;&lt;/em&gt;，使得每个元素的上、下、左、右的元素（如果存在的话）之和均为偶数。所得矩阵为偶数矩阵。&lt;/p&gt;
-&lt;h3 id=&quot;输入&quot;&gt;&lt;a href=&quot;#输入&quot; class=&quot;headerlink&quot; title=&quot;输入&quot;&gt;&lt;/a&gt;输入&lt;/h3&gt;&lt;p&gt;输入第一行为T（T &amp;lt;= 30），表示T组数据。&lt;br&gt;每组数据第一行为正整数n（1 &amp;lt;= n &amp;lt;= 15）&lt;br&gt;接下来的n行每行包含n个非0即1的整数，相邻整数间用一个空格隔开。&lt;/p&gt;
-&lt;h3 id=&quot;输出&quot;&gt;&lt;a href=&quot;#输出&quot; class=&quot;headerlink&quot; title=&quot;输出&quot;&gt;&lt;/a&gt;输出&lt;/h3&gt;&lt;p&gt;对于每组数据，输出应改变的元素最小个数。如果无解，输出-1。&lt;/p&gt;
-&lt;h2 id=&quot;思路&quot;&gt;&lt;a href=&quot;#思路&quot; class=&quot;headerlink&quot; title=&quot;思路&quot;&gt;&lt;/a&gt;思路&lt;/h2&gt;&lt;p&gt;若暴力求解的话，最多要枚举$2^255$种情况，TLE妥妥的。&lt;br&gt;注意到n最大只有15，第一行只有不超过$2^15 = 32768$种可能，所以第一行的情况是可以枚举的，接下来根据第一行计算第二行，根据第二行计算第三行，以此类推，这样可将时间复杂度降至$O(2^n*n^2)$。&lt;/p&gt;
-&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;p&gt;用到两个二维数组，其中a[][]表示原矩阵，b[][]用来构成每一种状态。&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;cstdio&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;cstring&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#include&amp;lt;algorithm&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;using namespace std;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;const int maxn = 20;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;const int INF = 1000000000;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int n, a[maxn][maxn], b[maxn][maxn];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// 计算第一行状态为s时需要改变的元素个数&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int check(int s)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    memset(b, 0, sizeof(b));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    // 第1行&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    // 用&amp;amp;运算判断s的每一位是1or0，分别给b[0][c]赋值。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int c = 0; c &amp;lt; n; c++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(s &amp;amp; 1&amp;lt;&amp;lt;c) b[0][c] = 1;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        // 1不能变成0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(a[0][c] == 1) &lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; INF;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    // 由第一行开始往下一行递推&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int r = 1; r &amp;lt; n; r++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int c = 0; c &amp;lt; n; c++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            int sum = 0; // 计算元素b[r-1][c]的上、左、右3个元素之和&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(r &amp;gt; 1) sum += b[r-2][c];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(c &amp;gt; 0) sum += b[r-1][c-1];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(c &amp;lt; n-1) sum += b[r-1][c+1];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            b[r][c] = sum%2;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(a[r][c] == 1 &amp;amp;&amp;amp; b[r][c] == 0) &lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; INF;// 1不能变成0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    int cnt = 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int r = 0; r &amp;lt; n; r++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int c = 0; c &amp;lt; n; c++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(a[r][c] != b[r][c]) cnt++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; cnt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;int &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;/span&gt;()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    int T;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    scanf(&lt;span class=&quot;string&quot;&gt;&quot;%d&quot;&lt;/span&gt;, &amp;amp;T);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int ca = 1; ca &amp;lt;= T; ca++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        scanf(&lt;span class=&quot;string&quot;&gt;&quot;%d&quot;&lt;/span&gt;, &amp;amp;n);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int r = 0; r &amp;lt; n; r++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int c = 0; c &amp;lt; n; c++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                scanf(&lt;span class=&quot;string&quot;&gt;&quot;%d&quot;&lt;/span&gt;, &amp;amp;a[r][c]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        int ans = INF;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(int s = 0; s &amp;lt; (1 &amp;lt;&amp;lt; n); s++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            ans = min(ans, check(s));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(ans == INF) ans = -1;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;Case %d: %d\n&quot;&lt;/span&gt;, ca, ans);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; 0;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="解体报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E4%BD%93%E6%8A%A5%E5%91%8A/"/>
-    
-      <category term="递推" scheme="https://moemoemortimer.github.io/tags/%E9%80%92%E6%8E%A8/"/>
     
   </entry>
   
