@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://moemoemortimer.github.io/"/>
-  <updated>2017-05-09T03:17:48.504Z</updated>
+  <updated>2017-05-10T13:12:47.178Z</updated>
   <id>https://moemoemortimer.github.io/</id>
   
   <author>
@@ -20,9 +20,11 @@
     <link href="https://moemoemortimer.github.io/2017/05/08/2017-ACM-Shandong-Province-Contest-Summary/"/>
     <id>https://moemoemortimer.github.io/2017/05/08/2017-ACM-Shandong-Province-Contest-Summary/</id>
     <published>2017-05-08T03:05:14.000Z</published>
-    <updated>2017-05-09T03:17:48.504Z</updated>
+    <updated>2017-05-10T13:12:47.178Z</updated>
     
-    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;今天清理文件偶然发现了去年的省赛总结，那时候我还没有博客呢~所以今天一起放上来吧~&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;谢谢ACM，苦的甜的，你让我收获我太多太多。_(:3」∠❀)_&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;今天清理文件偶然发现了去年的省赛总结，那时候我还没有博客呢~所以今天一起放上来吧~&lt;/p&gt;
 &lt;h2 id=&quot;2016-省赛总结&quot;&gt;&lt;a href=&quot;#2016-省赛总结&quot; class=&quot;headerlink&quot; title=&quot;2016 省赛总结&quot;&gt;&lt;/a&gt;2016 省赛总结&lt;/h2&gt;&lt;p&gt;2016年6月4、5日有山东省ACM竞赛。这是我大学参加的第一个ACM正式赛，对我来说，它的意义难以言表。从上学期刷区域赛ranklist爱上ACM到今天有机会分到参赛名额，和学姐组队，像他们一样起个有点怪但自己又很喜欢的队名，穿上官方发的衣服，真的真的真的可以让人感动到哭。&lt;br&gt;队长大大说这次14级是主力，原本我是和同年级的小伙伴一起作为友情队参加的，基本没什么压力，听学长学姐说就是去免费 “旅游”的，后来女队的学姐有事情要忙，我就被抓去做替补，自己的心态一下子变了很多，就好像从一个旁观者变成了戏中人。其实说实话，我并没有付出应有的努力。为了给自己心理安慰，我花大价钱买了一本《挑战程序设计竞赛》，每天泡在实验室，还开了一个名叫“佛脚”（？）的文档记录赛前解题报告和心情，后来……比赛的时候都没用到，我还是太菜了，太菜了，唉。&lt;br&gt;因为一直在各种期待着，所以时间过得真的很快，今天已经6月9号了，省赛这么快就过去了啊，我真的不敢相信。&lt;br&gt;我们的位置靠墙，右前方的队伍是山东大学，他们的队名是nozomi，我不确定他们是不是想起日文名，意思是“希望”，当时感觉好棒好正能量啊，后来才发现整个山东大学的队伍们都用了LoveLive里的人名……死宅们你们也真是够了啊……总之他们队真的很强，比赛的时候数着人家的气球我就又羡慕又着急。&lt;br&gt;咳咳、终于扯到比赛上来了。开始前五分钟，我不知怎么的一下子就超级兴奋！！抱着学姐的手来回蹭个不停（啊喂泥垢了！！）那边一说开始我们就直接找水题、、A就是、、其实看题意还有点模糊，但再看看样例，感觉自己心里有底，又觉得还是应该谨慎一点，就这样战战兢兢地过了第一题，之后学姐们看B题我去找另外一个水题……我犯了一个超致命的错误：我把题意读错了。读错题意的现象一直持续到比赛结束，我真是该死&amp;gt;.&amp;lt;&lt;br&gt;我觉得自己在比赛的时候没有成为一个可以依靠的人，整场比赛我一直在犯错误，在胡乱着急，连水题也过不去，南南姐还得给我收拾残局。我真是太差劲了。归根结底是自己能力不够，所谓“雷声大，雨点小”。&lt;br&gt;我们在B题上花的时间太长了，后来听学长说是简单题，用搜索也能做直接乱写也能过（可是……唉没爱了没爱了）今后比赛的时候应该设定一个时间上限，比如水题最多给一小时难题最多给两小时这样的，其实当时代码已经成型了（后来想想我们这个时候的心理状态是错的，应该大胆明智地早早放弃）但是后面还有一道水题所以我们就决定先过了水题，也就是所谓的炉石传说题。这道题最初是我负责写的，可是我把题意理解错了，（没玩过真的伤不起啊TAT有的队就因为有人玩过都不用看题直接一写就过了呜嗷嗷嗷嗷）最后留给炉石传说题的时间只剩一小时了，我还是弱爆了，不得不麻烦南南姐和我一起读题读样例，最后还剩两分钟交了一次还是WA，结束后才发现有一个变量没加。然后感觉大家一下子就失落了……后来一直都很失落、、滚榜的时候真的很好玩也很燃，算是重燃了我对ACM的喜欢吧……不过这份激动终究还是别人的，和去年一样，自己仍然是个憧憬者。&lt;br&gt;我想变得更强。&lt;br&gt;我想保护我重要的队友。&lt;br&gt;我想成为能被他们依靠的存在。&lt;br&gt;                                                      2016.6.9 &lt;/p&gt;
 &lt;h2 id=&quot;2017-省赛总结&quot;&gt;&lt;a href=&quot;#2017-省赛总结&quot; class=&quot;headerlink&quot; title=&quot;2017 省赛总结&quot;&gt;&lt;/a&gt;2017 省赛总结&lt;/h2&gt;&lt;p&gt;看一年前那个傻傻的自己，真的很想去摸摸她的头啊~&lt;br&gt;庆幸我的初心没变。不，不能说是庆幸，而是我坚信自己对ACM的喜欢不会变。&lt;/p&gt;
 &lt;p&gt;终榜 &lt;a href=&quot;https://acm.qust.edu.cn/ranklist/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://acm.qust.edu.cn/ranklist/&lt;/a&gt;&lt;/p&gt;
@@ -51,12 +53,36 @@
     
     <summary type="html">
     
-      &lt;p&gt;今天清理文件偶然发现了去年的省赛总结，那时候我还没有博客呢~所以今天一起放上来吧~&lt;br&gt;
+      &lt;p&gt;谢谢ACM，苦的甜的，你让我收获我太多太多。_(:3」∠❀)_&lt;/p&gt;
     
     </summary>
     
     
       <category term="日常" scheme="https://moemoemortimer.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>POJ 1769 Minimizing maximizer【线段树 动态规划】</title>
+    <link href="https://moemoemortimer.github.io/2017/05/04/poj-1769/"/>
+    <id>https://moemoemortimer.github.io/2017/05/04/poj-1769/</id>
+    <published>2017-05-04T14:43:40.000Z</published>
+    <updated>2017-05-10T07:43:01.406Z</updated>
+    
+    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;
+    
+    </summary>
+    
+    
+      <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+      <category term="动态规划" scheme="https://moemoemortimer.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+      <category term="线段树" scheme="https://moemoemortimer.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
     
   </entry>
   
@@ -1010,9 +1036,9 @@ main()
     </summary>
     
     
-      <category term="日常" scheme="https://moemoemortimer.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
-    
       <category term="读书笔记" scheme="https://moemoemortimer.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="日常" scheme="https://moemoemortimer.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
     
   </entry>
   
@@ -1304,8 +1330,8 @@ main()
 &lt;p&gt;大学的时候再在快递单子上写下一个个名字的时候，一大股想念的感情就会喷涌而出，诶呀，无论对方喜不喜欢你寄去的东西，你知道对方一定会喜欢你给他/她寄东西的，那种感觉就已经很棒了~&lt;/p&gt;
 &lt;p&gt;再就基本上没有要写别人名字的情况了，要联系直接上秋秋说就好了。想想还有些寂寞呢。&lt;/p&gt;
 &lt;p&gt;最后放上收藏的这几首主题曲吧，歌词真的炒鸡赞。&lt;/p&gt;
-&lt;h2 id=&quot;前前前世-–-RADWIMPS&quot;&gt;&lt;a href=&quot;#前前前世-–-RADWIMPS&quot; class=&quot;headerlink&quot; title=&quot;前前前世 – RADWIMPS&quot;&gt;&lt;/a&gt;前前前世 – RADWIMPS&lt;/h2&gt;&lt;h3 id=&quot;original-ver&quot;&gt;&lt;a href=&quot;#original-ver&quot; class=&quot;headerlink&quot; title=&quot;original ver&quot;&gt;&lt;/a&gt;original ver&lt;/h3&gt;&lt;div id=&quot;dplayer1&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer1 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer1&quot;),&quot;video&quot;:{&quot;url&quot;:&quot;http://112.253.22.164/3/c/n/w/u/cnwunlkymtxptdxkobyorsajwxkuhn/hc.yinyuetai.com/87D901589089E48FCB290CA0CB70B61F.mp4&quot;,&quot;pic&quot;:&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f8efg02v6tj20rs0f3tdp.jpg&quot;}});&lt;/script&gt;
-&lt;h3 id=&quot;女声cover&quot;&gt;&lt;a href=&quot;#女声cover&quot; class=&quot;headerlink&quot; title=&quot;女声cover&quot;&gt;&lt;/a&gt;女声cover&lt;/h3&gt;&lt;div id=&quot;dplayer2&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer2 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer2&quot;),&quot;video&quot;:{&quot;url&quot;:&quot;http://hc.yinyuetai.com/uploads/videos/common/2D000156B50C0A23DB47CEBBCB2C4ED7.flv&quot;,&quot;pic&quot;:&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f8fh191pabj20rs0fl7bz.jpg&quot;}});&lt;/script&gt;
+&lt;h2 id=&quot;前前前世-–-RADWIMPS&quot;&gt;&lt;a href=&quot;#前前前世-–-RADWIMPS&quot; class=&quot;headerlink&quot; title=&quot;前前前世 – RADWIMPS&quot;&gt;&lt;/a&gt;前前前世 – RADWIMPS&lt;/h2&gt;&lt;h3 id=&quot;original-ver&quot;&gt;&lt;a href=&quot;#original-ver&quot; class=&quot;headerlink&quot; title=&quot;original ver&quot;&gt;&lt;/a&gt;original ver&lt;/h3&gt;&lt;div id=&quot;dplayer0&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer0 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer0&quot;),&quot;video&quot;:{&quot;url&quot;:&quot;http://112.253.22.164/3/c/n/w/u/cnwunlkymtxptdxkobyorsajwxkuhn/hc.yinyuetai.com/87D901589089E48FCB290CA0CB70B61F.mp4&quot;,&quot;pic&quot;:&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f8efg02v6tj20rs0f3tdp.jpg&quot;}});&lt;/script&gt;
+&lt;h3 id=&quot;女声cover&quot;&gt;&lt;a href=&quot;#女声cover&quot; class=&quot;headerlink&quot; title=&quot;女声cover&quot;&gt;&lt;/a&gt;女声cover&lt;/h3&gt;&lt;div id=&quot;dplayer1&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer1 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer1&quot;),&quot;video&quot;:{&quot;url&quot;:&quot;http://hc.yinyuetai.com/uploads/videos/common/2D000156B50C0A23DB47CEBBCB2C4ED7.flv&quot;,&quot;pic&quot;:&quot;http://ww4.sinaimg.cn/large/c3c8eb1bjw1f8fh191pabj20rs0fl7bz.jpg&quot;}});&lt;/script&gt;
 &lt;h3 id=&quot;歌词&quot;&gt;&lt;a href=&quot;#歌词&quot; class=&quot;headerlink&quot; title=&quot;歌词&quot;&gt;&lt;/a&gt;歌词&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;やっと眼を覚ましたかい それなのになぜ眼も合わせやしないんだい？&lt;br&gt;总算醒了吗 可为何不与我对视呢？&lt;br&gt;「遅いよ」と怒る君 これでもやれるだけ飛ばしてきたんだよ&lt;br&gt;你生气地抱怨说“太迟了啦” 可是我已经竭尽全力飞到你身边了哦&lt;/p&gt;
 &lt;p&gt;心が身体を追い越してきたんだよ&lt;br&gt;我的心甚至超越身体赶到你面前&lt;/p&gt;
@@ -1345,34 +1371,6 @@ main()
     
     
       <category term="映画" scheme="https://moemoemortimer.github.io/tags/%E6%98%A0%E7%94%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HDU 5816 Hearthstone【状压DP】</title>
-    <link href="https://moemoemortimer.github.io/2016/11/10/hdu-5816/"/>
-    <id>https://moemoemortimer.github.io/2016/11/10/hdu-5816/</id>
-    <published>2016-11-10T09:42:26.000Z</published>
-    <updated>2016-11-12T14:09:39.670Z</updated>
-    
-    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;h3 id=&quot;题目传送门&quot;&gt;&lt;a href=&quot;#题目传送门&quot; class=&quot;headerlink&quot; title=&quot;题目传送门&quot;&gt;&lt;/a&gt;题目传送门&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=5816&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HDU 5816 Hearthstone 题目传送门&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;大意&quot;&gt;&lt;a href=&quot;#大意&quot; class=&quot;headerlink&quot; title=&quot;大意&quot;&gt;&lt;/a&gt;大意&lt;/h3&gt;&lt;p&gt;咦。。。又见炉石传说。。。&lt;br&gt;有两种类型的卡牌，A种m张，B种n张，每张都有一个伤害值${k_1, k_2, k_3, …, k_n}$。&lt;br&gt;现在玩家手上没有卡牌，若他抽到A卡，则可以继续抽2张，若他抽到B卡，则可以对敌人造成$k_i$点伤害。&lt;br&gt;敌人的HP值为p，问玩家能成功打败敌人获得胜利的概率？&lt;/p&gt;
-&lt;h3 id=&quot;输入&quot;&gt;&lt;a href=&quot;#输入&quot; class=&quot;headerlink&quot; title=&quot;输入&quot;&gt;&lt;/a&gt;输入&lt;/h3&gt;&lt;p&gt;第一行T， T组测试数据&lt;br&gt;第二行m, n&lt;br&gt;第三行n个数，分别对应每张B卡的伤害值&lt;/p&gt;
-&lt;h3 id=&quot;输出&quot;&gt;&lt;a href=&quot;#输出&quot; class=&quot;headerlink&quot; title=&quot;输出&quot;&gt;&lt;/a&gt;输出&lt;/h3&gt;&lt;p&gt;以分数形式表示的答案。&lt;br&gt;注：&lt;br&gt;0/1 表示0；&lt;br&gt;1/1 表示1。&lt;/p&gt;
-&lt;h2 id=&quot;思路&quot;&gt;&lt;a href=&quot;#思路&quot; class=&quot;headerlink&quot; title=&quot;思路&quot;&gt;&lt;/a&gt;思路&lt;/h2&gt;&lt;p&gt;因为题目指出$m+n&amp;lt;=20$，因此可以转化为概率DP&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-    
-      <category term="状压DP" scheme="https://moemoemortimer.github.io/tags/%E7%8A%B6%E5%8E%8BDP/"/>
     
   </entry>
   
