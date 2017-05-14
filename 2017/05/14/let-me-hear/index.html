@@ -15,16 +15,16 @@
 
 
 
-<meta name="description" content="这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_">
+<meta name="description" content="拎得清，放得下，舍得扔，留得住，坐得稳，走得远。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HDU 1007 解题报告">
-<meta property="og:url" content="https://moemoemortimer.github.io/2016/07/21/hdu-1007/index.html">
+<meta property="og:title" content="行到水穷处，坐看云起时">
+<meta property="og:url" content="https://moemoemortimer.github.io/2017/05/14/let-me-hear/index.html">
 <meta property="og:site_name" content="银月轻语">
-<meta property="og:description" content="这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_">
-<meta property="og:updated_time" content="2016-07-27T17:28:56.298Z">
+<meta property="og:description" content="拎得清，放得下，舍得扔，留得住，坐得稳，走得远。">
+<meta property="og:updated_time" content="2017-05-14T12:42:52.663Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HDU 1007 解题报告">
-<meta name="twitter:description" content="这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_">
+<meta name="twitter:title" content="行到水穷处，坐看云起时">
+<meta name="twitter:description" content="拎得清，放得下，舍得扔，留得住，坐得稳，走得远。">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>HDU 1007 解题报告 | 银月轻语</title>
+<title>行到水穷处，坐看云起时 | 银月轻语</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -251,11 +251,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-hdu-1007" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-let-me-hear" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/07/21/hdu-1007/" class="article-date">
-      <time datetime="2016-07-21T11:39:37.000Z" itemprop="datePublished">2016-07-21</time>
+      <a href="/2017/05/14/let-me-hear/" class="article-date">
+      <time datetime="2017-05-14T12:16:31.000Z" itemprop="datePublished">2017-05-14</time>
 </a>
 
 
@@ -270,7 +270,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      HDU 1007 解题报告
+      行到水穷处，坐看云起时
     </h1>
   
 
@@ -281,7 +281,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分治/">分治</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解题报告/">解题报告</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日常/">日常</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -291,11 +291,15 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <script src="/assets/js/DPlayer.min.js"> </script><p>这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_<br><a id="more"></a></p>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1007" target="_blank" rel="external">题目传送门</a><br>大意：<br>给定平面上n个点，求最近两点的距离，输出距离的一半。</p>
-<p>和《挑战》上的题一模一样（除了数据范围？）<br>挑战上的是<a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1186" target="_blank" rel="external">UVa 10245 最近点对问题</a></p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>由于n比较大，直接暴力是不行的，因此要选用分治法。<br>我们把所有点按x坐标分为左右两半，那么最近点对的距离就是下面二者的最小值。<br>（1）两点同属一边时最小距离<br>（2）两点属于不同区域时最小距离<br>&emsp;<br>———————————我是分割线———————————<br>对于1可以递归计算，得到1的最小值d后，2就可以简化为两点属于不同区域时，距离小于d的值。<br>&emsp;<br>首先考虑x坐标。假设将点划分为左右两半的直线为L，其横坐标为x0， 那么到直线距离&gt;= d的点就没必要考虑了，只需要考虑x坐标满足x0 - d &lt; x &lt; x0 + d的点;接下来考虑y坐标， 只考虑那些y坐标不比自己大的点组成的点对， 即对于y坐标为yp的点， 我们只需考虑y坐标满足yp - d &lt; y &lt;= yp的点就好了。<br>为实现对x坐标的划分，我们可以在开始时先将所有点按x坐标排序。同时，为高效处理问题，我们在递归处理的同时，按y坐标进行归并排序。<br>递归的深度是O(log n)，而每一层有O(n)个操作，所以总复杂度是O(nlog n)。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iostream&gt;</span></span><br><span class="line"><span class="comment">#include&lt;algorithm&gt;</span></span><br><span class="line"><span class="comment">#include&lt;vector&gt;</span></span><br><span class="line"><span class="comment">#include&lt;cmath&gt;</span></span><br><span class="line"><span class="comment">#include&lt;stdio.h&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">typedef pair&lt;double, double&gt; P;</span><br><span class="line">int n;</span><br><span class="line">P a[100010];</span><br><span class="line">const int INF = 0xffffff0;</span><br><span class="line">//用于按y坐标归并的比较函数</span><br><span class="line">bool cmp(P a, P b)&#123;</span><br><span class="line">    <span class="built_in">return</span> a.second &lt; b.second;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//传入的a已经按x坐标排好序了（具体见下solve()函数）</span><br><span class="line">double closest(P *a, int n)&#123;</span><br><span class="line">    <span class="keyword">if</span> (n &lt;= 1)<span class="built_in">return</span> INF;</span><br><span class="line">    int m = n/2;</span><br><span class="line">    double x = a[m].first;</span><br><span class="line">    double d = min(closest(a, m), closest(a+m,n-m));</span><br><span class="line">    inplace_merge(a, a + m, a + n, cmp);   //归并两个排好序的数列</span><br><span class="line">	//此时，a已经按y坐标排好序了</span><br><span class="line"></span><br><span class="line">	//将到直线小于d的点加入</span><br><span class="line">    vector&lt;P&gt; b;</span><br><span class="line">    <span class="keyword">for</span>(int i = 0; i &lt; n; i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(fabs(a[i].first - x) &gt;= d)<span class="built_in">continue</span>;</span><br><span class="line"></span><br><span class="line">        //从后往前检查b中y坐标相差小于d的点</span><br><span class="line">        <span class="keyword">for</span>(int j = 0; j &lt; b.size(); j++)&#123;</span><br><span class="line">            double dx = a[i].first - b[b.size() - j - 1].first;</span><br><span class="line">            double dy = a[i].second - b[b.size() - j - 1].second;</span><br><span class="line">            <span class="keyword">if</span>(dy &gt;= d)<span class="built_in">break</span>;</span><br><span class="line">            d = min(d, sqrt(dx*dx + dy*dy));</span><br><span class="line">        &#125;</span><br><span class="line">        b.push_back(a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> d;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void <span class="function"><span class="title">solve</span></span>()&#123;</span><br><span class="line">    sort(a, a+n); //按x坐标排序</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%.2f\n"</span>,closest(a,n)/2.0);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int <span class="function"><span class="title">main</span></span>()&#123;</span><br><span class="line">    <span class="keyword">while</span>(scanf(<span class="string">"%d"</span>,&amp;n))&#123;</span><br><span class="line">        <span class="keyword">if</span>(n == 0)<span class="built_in">break</span>;</span><br><span class="line">        <span class="keyword">for</span>(int i = 0; i &lt; n; i++)&#123;</span><br><span class="line">            scanf(<span class="string">"%lf%lf"</span>, &amp;a[i].first, &amp;a[i].second);</span><br><span class="line">        &#125;</span><br><span class="line">        solve();</span><br><span class="line">    &#125;</span><br><span class="line"><span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <script src="/assets/js/DPlayer.min.js"> </script><p>拎得清，放得下，舍得扔，留得住，坐得稳，走得远。</p>
+<a id="more"></a>
+<p>这些是想讲给自己听的话，希望可以好好遵守。</p>
+<p>要有一定的自知之明，但不希望轻易认输。</p>
+<p>为了自己的理想而倾尽全力，就算最后没有好的结果也不会后悔。</p>
+<p>保护自己，不要弱气地低着头等着被欺负。</p>
+<p>追求美丽和精致，这是女孩子的天性，当然美好的形式有许多种。</p>
+<p>珍惜可以并肩作战的人和可以依靠的人。</p>
+<p>永怀感恩之心。</p>
 
       
     </div>
@@ -304,13 +308,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/07/21/hdu-1007/">HDU 1007 解题报告</a></p>
+        <p><span>本文标题:</span><a href="/2017/05/14/let-me-hear/">行到水穷处，坐看云起时</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Nyanko Chan</a></p>
-        <p><span>发布时间:</span>2016-07-21, 19:39:37</p>
-        <p><span>最后更新:</span>2016-07-28, 01:28:56</p>
+        <p><span>发布时间:</span>2017-05-14, 20:16:31</p>
+        <p><span>最后更新:</span>2017-05-14, 20:42:52</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/07/21/hdu-1007/" title="HDU 1007 解题报告">https://moemoemortimer.github.io/2016/07/21/hdu-1007/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://moemoemortimer.github.io/2016/07/21/hdu-1007/　　作者: Nyanko Chan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/05/14/let-me-hear/" title="行到水穷处，坐看云起时">https://moemoemortimer.github.io/2017/05/14/let-me-hear/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://moemoemortimer.github.io/2017/05/14/let-me-hear/　　作者: Nyanko Chan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -322,16 +326,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/07/21/codeforces-448c/">
-                    CodeForces 448C 解题报告
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/07/21/codeforces-587A/">
-                    CodeForces 587A 解题报告
+                <a href="/2017/05/08/2017-ACM-Shandong-Province-Contest-Summary/">
+                    2017 第八届ACM山东省赛总结
                 </a>
             </div>
         
@@ -342,7 +340,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目"><span class="toc-number">1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思路"><span class="toc-number">2.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a></li></ol>
+    
 </div>
 <style>
     .left-col .switch-btn,
@@ -373,7 +371,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"HDU 1007 解题报告　| 银月轻语　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"行到水穷处，坐看云起时　| 银月轻语　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -389,7 +387,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/07/21/hdu-1007/" data-title="HDU 1007 解题报告" data-url="https://moemoemortimer.github.io/2016/07/21/hdu-1007/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/05/14/let-me-hear/" data-title="行到水穷处，坐看云起时" data-url="https://moemoemortimer.github.io/2017/05/14/let-me-hear/"></div>
     <script>
         var duoshuoQuery = {short_name:"moemoemortimer"};
         var loadComment = function(){
@@ -412,15 +410,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/07/21/codeforces-448c/" title="上一篇: CodeForces 448C 解题报告">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/07/21/codeforces-587A/" title="下一篇: CodeForces 587A 解题报告">
+            <a href="/2017/05/08/2017-ACM-Shandong-Province-Contest-Summary/" title="下一篇: 2017 第八届ACM山东省赛总结">
                 <i class="fa fa-angle-right"></i>
             </a>
         

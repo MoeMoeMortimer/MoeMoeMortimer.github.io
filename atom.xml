@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://moemoemortimer.github.io/"/>
-  <updated>2017-05-10T13:12:47.178Z</updated>
+  <updated>2017-05-14T12:42:52.663Z</updated>
   <id>https://moemoemortimer.github.io/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>行到水穷处，坐看云起时</title>
+    <link href="https://moemoemortimer.github.io/2017/05/14/let-me-hear/"/>
+    <id>https://moemoemortimer.github.io/2017/05/14/let-me-hear/</id>
+    <published>2017-05-14T12:16:31.000Z</published>
+    <updated>2017-05-14T12:42:52.663Z</updated>
+    
+    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;拎得清，放得下，舍得扔，留得住，坐得稳，走得远。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;这些是想讲给自己听的话，希望可以好好遵守。&lt;/p&gt;
+&lt;p&gt;要有一定的自知之明，但不希望轻易认输。&lt;/p&gt;
+&lt;p&gt;为了自己的理想而倾尽全力，就算最后没有好的结果也不会后悔。&lt;/p&gt;
+&lt;p&gt;保护自己，不要弱气地低着头等着被欺负。&lt;/p&gt;
+&lt;p&gt;追求美丽和精致，这是女孩子的天性，当然美好的形式有许多种。&lt;/p&gt;
+&lt;p&gt;珍惜可以并肩作战的人和可以依靠的人。&lt;/p&gt;
+&lt;p&gt;永怀感恩之心。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;拎得清，放得下，舍得扔，留得住，坐得稳，走得远。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="日常" scheme="https://moemoemortimer.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
   
   <entry>
     <title>2017 第八届ACM山东省赛总结</title>
@@ -1347,34 +1376,6 @@ main()
     
     
       <category term="映画" scheme="https://moemoemortimer.github.io/tags/%E6%98%A0%E7%94%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HDU 5816 Hearthstone【状压DP】</title>
-    <link href="https://moemoemortimer.github.io/2016/11/10/hdu-5816/"/>
-    <id>https://moemoemortimer.github.io/2016/11/10/hdu-5816/</id>
-    <published>2016-11-10T09:42:26.000Z</published>
-    <updated>2016-11-12T14:09:39.670Z</updated>
-    
-    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;h3 id=&quot;题目传送门&quot;&gt;&lt;a href=&quot;#题目传送门&quot; class=&quot;headerlink&quot; title=&quot;题目传送门&quot;&gt;&lt;/a&gt;题目传送门&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=5816&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HDU 5816 Hearthstone 题目传送门&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;大意&quot;&gt;&lt;a href=&quot;#大意&quot; class=&quot;headerlink&quot; title=&quot;大意&quot;&gt;&lt;/a&gt;大意&lt;/h3&gt;&lt;p&gt;咦。。。又见炉石传说。。。&lt;br&gt;有两种类型的卡牌，A种m张，B种n张，每张都有一个伤害值${k_1, k_2, k_3, …, k_n}$。&lt;br&gt;现在玩家手上没有卡牌，若他抽到A卡，则可以继续抽2张，若他抽到B卡，则可以对敌人造成$k_i$点伤害。&lt;br&gt;敌人的HP值为p，问玩家能成功打败敌人获得胜利的概率？&lt;/p&gt;
-&lt;h3 id=&quot;输入&quot;&gt;&lt;a href=&quot;#输入&quot; class=&quot;headerlink&quot; title=&quot;输入&quot;&gt;&lt;/a&gt;输入&lt;/h3&gt;&lt;p&gt;第一行T， T组测试数据&lt;br&gt;第二行m, n&lt;br&gt;第三行n个数，分别对应每张B卡的伤害值&lt;/p&gt;
-&lt;h3 id=&quot;输出&quot;&gt;&lt;a href=&quot;#输出&quot; class=&quot;headerlink&quot; title=&quot;输出&quot;&gt;&lt;/a&gt;输出&lt;/h3&gt;&lt;p&gt;以分数形式表示的答案。&lt;br&gt;注：&lt;br&gt;0/1 表示0；&lt;br&gt;1/1 表示1。&lt;/p&gt;
-&lt;h2 id=&quot;思路&quot;&gt;&lt;a href=&quot;#思路&quot; class=&quot;headerlink&quot; title=&quot;思路&quot;&gt;&lt;/a&gt;思路&lt;/h2&gt;&lt;p&gt;因为题目指出$m+n&amp;lt;=20$，因此可以转化为概率DP&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-    
-      <category term="状压DP" scheme="https://moemoemortimer.github.io/tags/%E7%8A%B6%E5%8E%8BDP/"/>
     
   </entry>
   
