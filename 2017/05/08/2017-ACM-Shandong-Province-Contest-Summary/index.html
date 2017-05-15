@@ -411,24 +411,27 @@
 
 
     
-      <div class="duoshuo" id="comments">
-    <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2017/05/08/2017-ACM-Shandong-Province-Contest-Summary/" data-title="2017 第八届ACM山东省赛总结" data-url="https://moemoemortimer.github.io/2017/05/08/2017-ACM-Shandong-Province-Contest-Summary/"></div>
+        <section id="comments">
+    <style> aside.comment-bar { margin: auto 30px; }</style>
+    <div id="disqus_thread"></div>
     <script>
-        var duoshuoQuery = {short_name:"moemoemortimer"};
+        var disqus_config = function(){
+            this.page.url = 'https://moemoemortimer.github.io/2017/05/08/2017-ACM-Shandong-Province-Contest-Summary/';
+            this.page.identifier = '2017/05/08/2017-ACM-Shandong-Province-Contest-Summary/';
+        };
         var loadComment = function(){
             var d = document, s = d.createElement('script');
-            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-            s.async = true; s.charset = 'UTF-8';
+            s.src = '//NyankoChan611.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
             (d.head || d.body).appendChild(s);
         }
-
-        
     </script>
     
     <script> loadComment(); </script>
 
-</div>
+</section>
+
+
     
 
 

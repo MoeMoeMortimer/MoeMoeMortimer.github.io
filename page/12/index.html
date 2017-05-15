@@ -273,8 +273,8 @@
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
-            <span class="ds-thread-count"  data-thread-key="2016/06/26/photo/" ></span>
         
+            <span class="disqus-comment-count" data-disqus-identifier="2016/06/26/photo/"></span>
         
     </a>
 
@@ -315,7 +315,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2016/06/26/photo/#more">more >></a>
+          <a href="/2016/06/26/photo/#more">阅读全文 >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -346,8 +346,8 @@
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
-            <span class="ds-thread-count"  data-thread-key="2016/06/25/ACMgather/" ></span>
         
+            <span class="disqus-comment-count" data-disqus-identifier="2016/06/25/ACMgather/"></span>
         
     </a>
 
@@ -388,7 +388,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2016/06/25/ACMgather/#more">more >></a>
+          <a href="/2016/06/25/ACMgather/#more">阅读全文 >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -419,8 +419,8 @@
         <i class="fa fa-comments-o" aria-hidden="true"></i>
         <span class="count-comment"></span>
         
-            <span class="ds-thread-count"  data-thread-key="2016/06/24/HELLO-HEXO/" ></span>
         
+            <span class="disqus-comment-count" data-disqus-identifier="2016/06/24/HELLO-HEXO/"></span>
         
     </a>
 
@@ -461,7 +461,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2016/06/24/HELLO-HEXO/#more">more >></a>
+          <a href="/2016/06/24/HELLO-HEXO/#more">阅读全文 >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -542,28 +542,23 @@
 
 
     
+
+    
+        <script id="dsq-count-scr" src="//nyankochan611.disqus.com/count.js" async></script>
         <script>
             if ($(".left-col").is(":visible")) {
-                var duoshuoQuery = {short_name:"moemoemortimer"};
-                (function() {
-                    var d = document, s = d.createElement('script');
-                    s.src = 'http://static.duoshuo.com/embed.js';
-                    s.async = true; s.charset = 'UTF-8';
-                    (d.head || d.body).appendChild(s);
-                })();
-
-                $(document).ready(function(){
-                    var $duoshuoCount = $(".ds-thread-count");
-                    $duoshuoCount.bind("DOMNodeInserted", function(e) {
-                        var num = $(this).text().replace(/[^0-9]/ig,"");
+                var $disqusCount = $(".disqus-comment-count");
+                $disqusCount.bind("DOMNodeInserted", function(e) {
+                    var num = $(this).text().replace(/[^0-9]/ig,"");
+                    if (num > 0) {
                         $(this).siblings(".count-comment").text(num);
-                        $(this).remove();
-                    })
+                    }
+                    $(this).remove();
                 })
+            } else {
+                $(".disqus-comment-count").remove();
             }
         </script>
-    
-
      
 
 
