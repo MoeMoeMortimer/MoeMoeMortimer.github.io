@@ -78,9 +78,9 @@
     <link href="https://moemoemortimer.github.io/2017/05/30/string-hash/"/>
     <id>https://moemoemortimer.github.io/2017/05/30/string-hash/</id>
     <published>2017-05-30T11:17:46.000Z</published>
-    <updated>2017-05-30T12:33:25.047Z</updated>
+    <updated>2017-05-30T13:20:19.781Z</updated>
     
-    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;算法小教室&lt;em&gt;(:3」∠❀)&lt;/em&gt;&lt;/p&gt;
+    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;算法小教室_(:3」∠❀)_&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;p&gt;寻找字符串S在字符串T中出现的位置或次数的问题属于字符串匹配问题。我们在接下来的讨论中假设S的长度为n，T的长度为m。最朴素的想法是，枚举所有起始位置，再直接检查是否匹配，复杂度为O(nm)。&lt;/p&gt;
 &lt;h2 id=&quot;哈希算法用于字符串匹配&quot;&gt;&lt;a href=&quot;#哈希算法用于字符串匹配&quot; class=&quot;headerlink&quot; title=&quot;哈希算法用于字符串匹配&quot;&gt;&lt;/a&gt;哈希算法用于字符串匹配&lt;/h2&gt;&lt;p&gt;对于每个起始位置，我们不是O(m)地直接比较字符串是否匹配，而是O(l)地比较长度为m的字符串的哈希值与T的哈希值是否相等。虽然即使哈希值相等字符串也未必相等（碰撞），但如果哈希值是随机分布的话，不同的字符串哈希值相等的概率是很低的，可以当作这种情况不会发生。&lt;br&gt;但是，如果我们采用O(m)的算法计算长度为m的字符串子串的哈希值的话，那复杂度还是O(nm)。这里我们要是用一个叫滚动哈希的优化技巧。选取两个合适的互素常数b和h(l&amp;lt;b&amp;lt;h)，假设字符串$C=c_1c_2…c_m$，定义哈希函数&lt;/p&gt;
@@ -102,25 +102,25 @@
     
     <summary type="html">
     
-      &lt;p&gt;算法小教室&lt;em&gt;(:3」∠❀)&lt;/em&gt;&lt;/p&gt;
+      &lt;p&gt;算法小教室_(:3」∠❀)_&lt;/p&gt;
     
     </summary>
     
     
-      <category term="算法" scheme="https://moemoemortimer.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="哈希" scheme="https://moemoemortimer.github.io/tags/%E5%93%88%E5%B8%8C/"/>
+    
+      <category term="算法" scheme="https://moemoemortimer.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="字符串" scheme="https://moemoemortimer.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
   </entry>
   
   <entry>
-    <title>hana-piano-ver-katayoseryota</title>
+    <title>花【piano ver.】</title>
     <link href="https://moemoemortimer.github.io/2017/05/26/hana-piano-ver-katayoseryota/"/>
     <id>https://moemoemortimer.github.io/2017/05/26/hana-piano-ver-katayoseryota/</id>
     <published>2017-05-26T15:08:21.000Z</published>
-    <updated>2017-05-30T11:31:28.098Z</updated>
+    <updated>2017-05-30T13:20:09.151Z</updated>
     
     <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;偷偷地把片片藏起来_(:3」∠❀)_&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
