@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://moemoemortimer.github.io/"/>
-  <updated>2017-06-02T10:34:31.825Z</updated>
+  <updated>2017-06-11T16:21:23.906Z</updated>
   <id>https://moemoemortimer.github.io/</id>
   
   <author>
@@ -14,6 +14,71 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AOJ 0558 Cheese【BFS求最短路】</title>
+    <link href="https://moemoemortimer.github.io/2017/06/11/AOJ-0558/"/>
+    <id>https://moemoemortimer.github.io/2017/06/11/AOJ-0558/</id>
+    <published>2017-06-11T14:44:22.000Z</published>
+    <updated>2017-06-11T16:21:23.906Z</updated>
+    
+    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;h3 id=&quot;题目传送门&quot;&gt;&lt;a href=&quot;#题目传送门&quot; class=&quot;headerlink&quot; title=&quot;题目传送门&quot;&gt;&lt;/a&gt;题目传送门&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0558&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AOJ 0558 Cheese 题目传送门&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://vjudge.net/problem/Aizu-0558&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;方便提交的vjudge题目传送门&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h3&gt;&lt;p&gt;H*W的地图上有N个仓库，老鼠从S点出发要吃完所有奶酪，鼠窝和仓库都有一个硬度，开始时老鼠窝硬度为1，每次可以进入的仓库不能高于自己窝的硬度。吃完一个仓库的奶酪后鼠窝的硬度会加1，每次移动一步需要1分钟，吃奶酪时间不计，问吃完所有仓库的奶酪需要的最短时间。&lt;/p&gt;
+&lt;p&gt;题目输入保证每个硬度的工厂只有一个，且保证可以吃完所有仓库的奶酪。&lt;/p&gt;
+&lt;h3 id=&quot;数据范围&quot;&gt;&lt;a href=&quot;#数据范围&quot; class=&quot;headerlink&quot; title=&quot;数据范围&quot;&gt;&lt;/a&gt;数据范围&lt;/h3&gt;&lt;p&gt;1 ≤ H ≤ 1000，1 ≤ W ≤ 1000，1 ≤ N ≤ 9&lt;/p&gt;
+&lt;h2 id=&quot;思路&quot;&gt;&lt;a href=&quot;#思路&quot; class=&quot;headerlink&quot; title=&quot;思路&quot;&gt;&lt;/a&gt;思路&lt;/h2&gt;&lt;p&gt;既然保证N个工厂有N个硬度，还保证一定有解，说明输入的硬度只能为1,2,3,…,N,那么吃奶酪的顺序也必须是1,2,3,…,N,所以问题就可以拆分为：求S到1的最短路+1到2的最短路+2到3的最短路+…+n-1到n的最短路。&lt;/p&gt;
+&lt;p&gt;由于给出的是地图，所以用BFS求最短路。&lt;/p&gt;
+&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;bits/stdc++.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typedef&lt;/span&gt; pair&amp;lt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;gt; P;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt; maze[&lt;span class=&quot;number&quot;&gt;1005&lt;/span&gt;][&lt;span class=&quot;number&quot;&gt;1005&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; d[&lt;span class=&quot;number&quot;&gt;1005&lt;/span&gt;][&lt;span class=&quot;number&quot;&gt;1005&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; dirx[&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;] = &amp;#123;&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; diry[&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;] = &amp;#123;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; h, w, n, hard; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; si, sj;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; INF = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;lt;&amp;lt;&lt;span class=&quot;number&quot;&gt;30&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; tot = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;BFS&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; ai, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; aj)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;queue&lt;/span&gt;&amp;lt;P&amp;gt; que;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; h; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; j = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; j &amp;lt; w; j++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			d[i][j] = INF;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	que.push(P(ai, aj));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	d[ai][aj] = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(!que.empty())&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		P a = que.front();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		que.pop();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; x = a.first, y = a.second;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(maze[x][y]-&lt;span class=&quot;string&quot;&gt;&#39;0&#39;&lt;/span&gt; == hard)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			tot += d[x][y];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			si = x; sj = y;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; dx = x+dirx[i], dy = y+diry[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(dx&amp;gt;=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;amp;&amp;amp; dx&amp;lt;h &amp;amp;&amp;amp; dy&amp;gt;=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;amp;&amp;amp; dy&amp;lt;w &amp;amp;&amp;amp; maze[dx][dy]!=&lt;span class=&quot;string&quot;&gt;&#39;X&#39;&lt;/span&gt; &amp;amp;&amp;amp; d[dx][dy]==INF)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				d[dx][dy] = d[x][y]+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				que.push(P(dx, dy));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; argc, &lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; *argv[])&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(&lt;span class=&quot;built_in&quot;&gt;scanf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%d%d%d&quot;&lt;/span&gt;, &amp;amp;h, &amp;amp;w, &amp;amp;n) != EOF)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		getchar();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; h; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; j = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; j &amp;lt; w; j++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;built_in&quot;&gt;scanf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%c&quot;&lt;/span&gt;, &amp;amp;maze[i][j]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(maze[i][j] == &lt;span class=&quot;string&quot;&gt;&#39;S&#39;&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;					si = i; sj = j;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;				&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			getchar();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		tot = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		hard = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; n; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			BFS(si, sj);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			hard++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; tot &amp;lt;&amp;lt; &lt;span class=&quot;built_in&quot;&gt;endl&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;碎碎念&quot;&gt;&lt;a href=&quot;#碎碎念&quot; class=&quot;headerlink&quot; title=&quot;碎碎念&quot;&gt;&lt;/a&gt;碎碎念&lt;/h2&gt;&lt;p&gt;发现了吃奶酪的顺序已经确定，不用再优化，这题一下子就变得很水了有木有….&lt;br&gt;那你为什么还要写题解呢…&lt;br&gt;因为这是第一次交AOJ的题( •̀ ω •́ )y&lt;br&gt;虽然读题有点慢但最后还是看懂了开熏熏熏&amp;gt;o&amp;lt;&lt;/p&gt;
+&lt;p&gt;不过刚才看到问我这题的同学已经把它弃了，也不知道这么冷门的题他是从哪找的，在这里悄悄给一个差评…=.=&lt;br&gt;要真的想通过刷题有所收获的话&lt;br&gt;一忌伸手找别人要代码&lt;br&gt;二忌让别人帮忙看代码（除非给我20块233333）&lt;br&gt;三忌A不掉就弃题&lt;br&gt;这三点他回回都这么干，差评x100&lt;/p&gt;
+&lt;p&gt;突然发现我以前也是这样自欺欺人的，所以根本学不到什么东西。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+      <category term="BFS" scheme="https://moemoemortimer.github.io/tags/BFS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Happy 611&#39;s Day~</title>
+    <link href="https://moemoemortimer.github.io/2017/06/11/happy-611-day/"/>
+    <id>https://moemoemortimer.github.io/2017/06/11/happy-611-day/</id>
+    <published>2017-06-11T14:43:25.000Z</published>
+    <updated>2017-06-11T16:21:26.059Z</updated>
+    
+    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;611节日快乐_(:3」∠❀)_&lt;br&gt;（apuuuu你是神经病吗….）&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fghp8vbosnj22io1w0hdt.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;红瓦蓝天，小岛酱真的很美耶…( •̀ ω •́ )&lt;/p&gt;
+&lt;p&gt;刚说过不会出去浪的，然后就食言了(@ x @)&lt;br&gt;都是托了素素的福啦~（素爸爸的战友酥酥请客，允许携带家(fan)眷(tong)…&lt;/p&gt;
+&lt;p&gt;回来以后大家一致认为…太…太特么好吃了QAQ！！&lt;/p&gt;
+&lt;p&gt;顺路买了鲜百香双响炮，甜筒（抹茶味的没有了嗷T.T）还有芝士狂魔最爱的芝心pizza&lt;/p&gt;
+&lt;p&gt;种种机缘巧合之下，今天好像真的给自己过了个节似的。&lt;/p&gt;
+&lt;p&gt;然而期末越来越近了，事情只会以指数形式爆炸式增长。&lt;/p&gt;
+&lt;p&gt;啊啊啊啊啊啊啊啊打起精神来啊！&lt;/p&gt;
+&lt;p&gt;解题报告这么难写吗为什么不能保证日刷一题你对得起自己的承诺吗&lt;br&gt;高数练习册为什么刷的这么慢题有那么难吗总结总结方法不行吗&lt;br&gt;实验报告能不能快点写心得那种无聊的东西憋不出来就别硬挤了&lt;br&gt;计组你上课一脸蒙B下了课还不看就这点破水平还妄想做什么CPU啊快醒醒吧&lt;br&gt;数据结构你到底会不会啊不会就别装B好好学啊这可是基本功啊威震刚是不会同情你这种智障的啊&lt;br&gt;图论都是金子啊一条一条的定理你得理解呀会用呀将来有大用处的啊不是早就下定决心要好好搞图论了吗如果这还学不过别人比赛的时候是要你上去eat shit吗&lt;br&gt;自由泳别人学过就可以成为你学不会的借口了吗你得抓紧时间练呀非得拖到现在傻眼了吧哭哭哭哭个P&lt;/p&gt;
+&lt;p&gt;我告诉你，今年好好搞，明年还过节。晓得不咯？&lt;/p&gt;
+&lt;p&gt;嗯థ౪థ&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;611节日快乐_(:3」∠❀)_&lt;br&gt;（apuuuu你是神经病吗….）&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="日常" scheme="https://moemoemortimer.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
   
   <entry>
     <title>POJ 3061 Subsequence【尺取法】</title>
@@ -178,15 +243,14 @@
     <link href="https://moemoemortimer.github.io/2017/05/30/string-hash/"/>
     <id>https://moemoemortimer.github.io/2017/05/30/string-hash/</id>
     <published>2017-05-30T11:17:46.000Z</published>
-    <updated>2017-06-02T10:34:25.967Z</updated>
+    <updated>2017-06-02T10:36:47.167Z</updated>
     
     <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;算法小教室_(:3」∠❀)_&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;p&gt;寻找字符串S在字符串T中出现的位置或次数的问题属于字符串匹配问题。我们在接下来的讨论中假设S的长度为n，T的长度为m。最朴素的想法是，枚举所有起始位置，再直接检查是否匹配，复杂度为O(nm)。&lt;/p&gt;
 &lt;h2 id=&quot;哈希算法用于字符串匹配&quot;&gt;&lt;a href=&quot;#哈希算法用于字符串匹配&quot; class=&quot;headerlink&quot; title=&quot;哈希算法用于字符串匹配&quot;&gt;&lt;/a&gt;哈希算法用于字符串匹配&lt;/h2&gt;&lt;p&gt;对于每个起始位置，我们不是O(m)地直接比较字符串是否匹配，而是O(l)地比较长度为m的字符串的哈希值与T的哈希值是否相等。虽然即使哈希值相等字符串也未必相等（碰撞），但如果哈希值是随机分布的话，不同的字符串哈希值相等的概率是很低的，可以当作这种情况不会发生。&lt;br&gt;但是，如果我们采用O(m)的算法计算长度为m的字符串子串的哈希值的话，那复杂度还是O(nm)。这里我们要是用一个叫滚动哈希的优化技巧。选取两个合适的互素常数b和h(l&amp;lt;b&amp;lt;h)，假设字符串$C=c_1c_2…c_m$，定义哈希函数&lt;/p&gt;
 &lt;p&gt;$$H(C)=(c_1b^{m-1}+c_2b^{m-2}+c_3b^{m-3}+…+c_mb^0) mod h$$&lt;/p&gt;
-&lt;p&gt;其中b是基数，相当于把字符串看作是b进制数。这样，字符串$S=s_1s_2…s_n$从位置k+1开始长度为m的字符串子串S[k+1…k+m]的哈希值，就可以利用从位置k开始的字符串子串S[k…k+m-1]的哈希值，直接进行如下计算：&lt;/p&gt;
-&lt;p&gt;$$H(S[k+1…k+m])=(H(S[k…k+m-1])*b-s&lt;em&gt;kb^m+s&lt;/em&gt;{k+m}) mod h$$&lt;/p&gt;
+&lt;p&gt;其中b是基数，相当于把字符串看作是b进制数。这样，字符串$S=s_1s_2…s_n$从位置k+1开始长度为m的字符串子串S[k+1…k+m]的哈希值，就可以利用从位置k开始的字符串子串S[k…k+m-1]的哈希值，直接进行如下计算：&lt;br&gt;$$H(C)=(c_1b^{m-1}+c_2b^{m-2}+c_3b^{m-3}+…+c_mb^0) mod h$$&lt;br&gt;$$H(S[k+1…k+m])=(H(S[k…k+m-1])*b-s&lt;em&gt;kb^m+s&lt;/em&gt;{k+m}) mod h$$&lt;/p&gt;
 &lt;p&gt;于是，只要不断这样计算开始位置右移一位后的字符串子串的哈希值，就可以在O(n)时间内得到所有位置对应的哈希值，从而可以在O(n+m)时间内完成字符串的匹配。在实现时，可以用64位无符号整数计算哈希值，并取h等于$2^{64}$，通过自然溢出省去求模运算。 &lt;/p&gt;
 &lt;h3 id=&quot;字符串S在字符串T中是否出现&quot;&gt;&lt;a href=&quot;#字符串S在字符串T中是否出现&quot; class=&quot;headerlink&quot; title=&quot;字符串S在字符串T中是否出现&quot;&gt;&lt;/a&gt;字符串S在字符串T中是否出现&lt;/h3&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;long&lt;/span&gt; ull;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; ull B = &lt;span class=&quot;number&quot;&gt;100000007&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//a是否在b中出现&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;contain&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt; a, &lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt; b)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; a1 = a.length();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; b1 = b.length();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(a1&amp;gt;b1)&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ull t = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//计算b的a1次方&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; a1; ++i)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        t *= B;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ull ah = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, bh = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; a1; ++i)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        ah = ah*B+a[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        bh = bh*B+b[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//对b不断右移一位，更新哈希值并判断&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i+a1 &amp;lt;= b1 ; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//b从位置i开始长度为a1的字符串子串为a&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(ah == bh)&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(i+a1 &amp;lt; b1)bh = bh*B + b[i+a1] - b[i]*t;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;hr&gt;
@@ -206,9 +270,9 @@
     </summary>
     
     
-      <category term="算法" scheme="https://moemoemortimer.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="哈希" scheme="https://moemoemortimer.github.io/tags/%E5%93%88%E5%B8%8C/"/>
+    
+      <category term="算法" scheme="https://moemoemortimer.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="字符串" scheme="https://moemoemortimer.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
@@ -223,7 +287,7 @@
     
     <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;偷偷地把片片藏起来_(:3」∠❀)_&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;钢琴版的简直美哭嗷呜&quot;&gt;&lt;a href=&quot;#钢琴版的简直美哭嗷呜&quot; class=&quot;headerlink&quot; title=&quot;钢琴版的简直美哭嗷呜&quot;&gt;&lt;/a&gt;钢琴版的简直美哭嗷呜&lt;/h2&gt;&lt;div id=&quot;dplayer0&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer0 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer0&quot;),&quot;video&quot;:{&quot;url&quot;:&quot;http://120.192.82.54/hc.yinyuetai.com/uploads/videos/common/5E9D015B852C3CF7D27CBE1F34168A59.mp4&quot;,&quot;pic&quot;:&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fg3m1xhom2j20le0b4t97.jpg&quot;}});&lt;/script&gt;
+&lt;h2 id=&quot;钢琴版的简直美哭嗷呜&quot;&gt;&lt;a href=&quot;#钢琴版的简直美哭嗷呜&quot; class=&quot;headerlink&quot; title=&quot;钢琴版的简直美哭嗷呜&quot;&gt;&lt;/a&gt;钢琴版的简直美哭嗷呜&lt;/h2&gt;&lt;div id=&quot;dplayer1&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer1 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer1&quot;),&quot;video&quot;:{&quot;url&quot;:&quot;http://120.192.82.54/hc.yinyuetai.com/uploads/videos/common/5E9D015B852C3CF7D27CBE1F34168A59.mp4&quot;,&quot;pic&quot;:&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fg3m1xhom2j20le0b4t97.jpg&quot;}});&lt;/script&gt;
 &lt;h2 id=&quot;歌词&quot;&gt;&lt;a href=&quot;#歌词&quot; class=&quot;headerlink&quot; title=&quot;歌词&quot;&gt;&lt;/a&gt;歌词&lt;/h2&gt;&lt;p&gt;花びらのように散りゆく中で&lt;br&gt;【身处宛若漫天纷飞的花瓣之中】&lt;br&gt;夢みたいに 君に出逢えたキセキ&lt;br&gt;【似梦境奇迹般的得以与你邂逅】&lt;br&gt;愛し合って ケンカして&lt;br&gt;【彼此深爱 偶尔吵架】&lt;br&gt;色んな壁 二人で乗り越えて&lt;br&gt;【携手跨越横亘面前的各种屏障】&lt;br&gt;生まれ変わっても あなたのそばで 花になろう&lt;br&gt;【即便转世再生也要化为你身旁的花】&lt;/p&gt;
 &lt;p&gt;いつまでもあるのだろうか オレの真上にある太陽は&lt;br&gt;【悬在我头顶当空的太阳 无论到何时都会普照】&lt;br&gt;いつまでも守りきれるだろうか 泣き 笑い 怒る君の表情を&lt;br&gt;【你喜怒哀乐的表情 无论到何时我都会守候到尽头】&lt;br&gt;いずれ全てなくなるのならば 二人の出逢いにもっと感謝しよう&lt;br&gt;【假使以上所有全都消逝 那就更加感谢你我的相遇吧】&lt;br&gt;あの日 あの時 あの場所のキセキは&lt;br&gt;【那日 那时 那里发生的奇迹】&lt;br&gt;また 新しい軌跡を生むだろう&lt;br&gt;【又将会诞生新的轨迹交集】&lt;/p&gt;
 &lt;p&gt;愛することで強くなること 信じることで乗り切れること&lt;br&gt;【因爱而变得坚强 因信任而攻克所有难关】&lt;br&gt;君が残したモノは今も胸に ほら輝き失わずに&lt;br&gt;【你留下的东西如今仍在我胸前熠熠生辉】&lt;br&gt;幸せに思う 巡り会えたこと オレの笑顔取り戻せたこと&lt;br&gt;【思索着幸福得以相遇 脸上复又挂上笑容】&lt;br&gt;「ありがとう」 あふれる気持ち抱き 進む道程&lt;br&gt;【满怀感激的心情 继续朝前路迈进】&lt;/p&gt;
@@ -1116,125 +1180,6 @@ end
       <category term="日常" scheme="https://moemoemortimer.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
     
       <category term="比赛" scheme="https://moemoemortimer.github.io/tags/%E6%AF%94%E8%B5%9B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>不为人知的py交易日记【第二话：turtle库&amp;画画】</title>
-    <link href="https://moemoemortimer.github.io/2017/03/22/py-trade-dairy-2/"/>
-    <id>https://moemoemortimer.github.io/2017/03/22/py-trade-dairy-2/</id>
-    <published>2017-03-22T09:47:17.000Z</published>
-    <updated>2017-03-30T03:27:08.018Z</updated>
-    
-    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;这里是Nyanko桑的py交易记录，嘿嘿嘿⸜(* ॑꒳ ॑* )⸝&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;Python（蟒蛇）-绘制&quot;&gt;&lt;a href=&quot;#Python（蟒蛇）-绘制&quot; class=&quot;headerlink&quot; title=&quot;Python（蟒蛇） 绘制&quot;&gt;&lt;/a&gt;Python（蟒蛇） 绘制&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;def drawSnake(rad, angle, len, neckrad):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	for i in range(len):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		turtle.circle(rad, angle)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		turtle.circle(-rad, angle)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	turtle.circle(rad, angle/2)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	turtle.fd(rad)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	turtle.circle(neckrad+1, 180)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	turtle.fd(rad*2/3)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;Python（星星）-绘制&quot;&gt;&lt;a href=&quot;#Python（星星）-绘制&quot; class=&quot;headerlink&quot; title=&quot;Python（星星） 绘制&quot;&gt;&lt;/a&gt;Python（星星） 绘制&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;def drawStar(len, angle):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	for i in range(len):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		turtle.fd(100)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		angle = angle-144&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		turtle.seth(angle)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	for i in range(len):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		angle = angle+144&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		turtle.seth(angle)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		turtle.fd(100)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	angle = angle+57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	turtle.seth(angle)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	for i in range(len):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		turtle.fd(100)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		angle = angle+144&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		turtle.seth(angle)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	for i in range(len):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		angle = angle-144&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		turtle.seth(angle)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		turtle.fd(100)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;import是一个关键字，用来引入一些外部库   &lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;main函数&quot;&gt;&lt;a href=&quot;#main函数&quot; class=&quot;headerlink&quot; title=&quot;main函数&quot;&gt;&lt;/a&gt;main函数&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;def main():
-    turtle.setup(1300, 800, 0, 0)
-    pythonsize = 50
-    turtle.pensize(pythonsize)
-    turtle.pencolor(&amp;quot;blue&amp;quot;)
-    turtle.seth(-40)
-    drawSnake(40,80,5,pythonsize/2)
-    #turtle.seth(0)
-    #time.sleep(5)
-    #drawStar(5,0)
-    time.sleep(5)
-
-main()
-&lt;/code&gt;&lt;/pre&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这里是Nyanko桑的py交易记录，嘿嘿嘿⸜(* ॑꒳ ॑* )⸝&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="python" scheme="https://moemoemortimer.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>不为人知的py交易日记【第一话：基础】</title>
-    <link href="https://moemoemortimer.github.io/2017/03/18/py-trade-dairy-1/"/>
-    <id>https://moemoemortimer.github.io/2017/03/18/py-trade-dairy-1/</id>
-    <published>2017-03-18T12:00:43.000Z</published>
-    <updated>2017-03-30T14:08:00.769Z</updated>
-    
-    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;这里是Nyanko桑的py交易记录，嘿嘿嘿⸜(* ॑꒳ ॑* )⸝&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;环境配置&quot;&gt;&lt;a href=&quot;#环境配置&quot; class=&quot;headerlink&quot; title=&quot;环境配置&quot;&gt;&lt;/a&gt;环境配置&lt;/h2&gt;&lt;p&gt;请到官网&lt;a href=&quot;https://www.python.org/downloads/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.python.org/downloads/&lt;/a&gt;下载python3（知乎上好像有人说python3正在毁了py，不知道为什么会这么说…）&lt;/p&gt;
-&lt;p&gt;一路保持默认选项，顺利完成，没毛病、&lt;/p&gt;
-&lt;p&gt;然后尝试一下hello world作为第一个py交易（？），cmd和IDLE（Python GUI 图形化界面）都试一下&lt;/p&gt;
-&lt;p&gt;code只有一行：&lt;code&gt;print(&amp;quot;hello~&amp;quot;)&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&quot;配合sublime-text食用&quot;&gt;&lt;a href=&quot;#配合sublime-text食用&quot; class=&quot;headerlink&quot; title=&quot;配合sublime text食用&quot;&gt;&lt;/a&gt;配合sublime text食用&lt;/h3&gt;&lt;p&gt;其实我的第一个py程序是在sublime text上写的，试了试居然运行成功了（鸡冻），但是有一点不好….不能在它的console里输入…为解决输入问题，google出一个ST的插件2333&lt;/p&gt;
-&lt;p&gt;打开ST ——&amp;gt; Ctrl+shift+P ——&amp;gt; PCI （打开 Package Control: Install Package）——&amp;gt; SublimeREPL&lt;/p&gt;
-&lt;p&gt;安装SublimeREPL这个插件之后，你可以&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Tools &amp;gt; SublimeREPL &amp;gt; Python &amp;gt; Python 在新窗口中打开类似IDLE的交互式开发环境&lt;/li&gt;
-&lt;li&gt;通过同菜单下的 Python - RUN current file 运行当前文件。&lt;/li&gt;
-&lt;li&gt;添加快捷键（这里的姿势来自&lt;a href=&quot;http://blog.yzyzsun.me/sublime-text-for-mac/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这篇博文&lt;/a&gt;）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;以 Python - RUN current file 为例，设置与 Python IDLE 相同的快捷键 F5。&lt;br&gt;打开 Sublime Text &amp;gt; Preferences &amp;gt; Key Bindings - User，在文件中输入：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;quot;keys&amp;quot;: [&amp;quot;f5&amp;quot;],&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;quot;caption&amp;quot;: &amp;quot;SublimeREPL: Python - RUN current file&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;quot;command&amp;quot;: &amp;quot;run_existing_window_command&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;quot;args&amp;quot;: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;quot;id&amp;quot;: &amp;quot;repl_python_run&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;quot;file&amp;quot;: &amp;quot;config/Python/Main.sublime-menu&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;语法初步&quot;&gt;&lt;a href=&quot;#语法初步&quot; class=&quot;headerlink&quot; title=&quot;语法初步&quot;&gt;&lt;/a&gt;语法初步&lt;/h2&gt;&lt;h3 id=&quot;缩进&quot;&gt;&lt;a href=&quot;#缩进&quot; class=&quot;headerlink&quot; title=&quot;缩进&quot;&gt;&lt;/a&gt;缩进&lt;/h3&gt;&lt;p&gt;1个缩进 = 4个空格&lt;br&gt;体现代码间的层次关系，是表明程序框架的唯一手段。&lt;br&gt;（此处应@游标卡尺梗）&lt;/p&gt;
-&lt;h3 id=&quot;注释&quot;&gt;&lt;a href=&quot;#注释&quot; class=&quot;headerlink&quot; title=&quot;注释&quot;&gt;&lt;/a&gt;注释&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;单行注释以#开头&lt;/li&gt;
-&lt;li&gt;多行注释以三个单引号开头和结尾&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;变量命名规则&quot;&gt;&lt;a href=&quot;#变量命名规则&quot; class=&quot;headerlink&quot; title=&quot;变量命名规则&quot;&gt;&lt;/a&gt;变量命名规则&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;使用大小写字母、数字和下划线的组合，但首字母只能是大小写字母或下划线，不能使用空格。&lt;/li&gt;
-&lt;li&gt;中文等非字母符号也可以作为名字&lt;/li&gt;
-&lt;li&gt;不能与保留字相同（共33个，见下图）&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdrb1wl1juj20f808kaav.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&quot;输入函数&quot;&gt;&lt;a href=&quot;#输入函数&quot; class=&quot;headerlink&quot; title=&quot;输入函数&quot;&gt;&lt;/a&gt;输入函数&lt;/h3&gt;&lt;p&gt;Input()函数从控制台获得用户输入&lt;/p&gt;
-&lt;p&gt;&amp;lt;变量&amp;gt; = input(&amp;lt;提示性文字&amp;gt;)&lt;/p&gt;
-&lt;p&gt;获得的用户输入以字符串形式保存在变量中&lt;/p&gt;
-&lt;p&gt;例如：&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;val = input(&amp;quot;请输入你的名字：&amp;quot;)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;运行后&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdrb8xu1kgj20fn01djrf.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;表达式&quot;&gt;&lt;a href=&quot;#表达式&quot; class=&quot;headerlink&quot; title=&quot;表达式&quot;&gt;&lt;/a&gt;表达式&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;字符串&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;操作符+可以连接两个串&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdrbhe8omgj20hf01xaa8.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;字符串可理解为字符数组，若长度为L，第一个字节索引为0或-L，最后一个字节索引为L-1或-1&lt;/p&gt;
-&lt;p&gt;可以以区间形式获得字符串的一段，这里的区间是个左闭右开区间。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdrbupa93ej20gk06hmxl.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;分支语句&quot;&gt;&lt;a href=&quot;#分支语句&quot; class=&quot;headerlink&quot; title=&quot;分支语句&quot;&gt;&lt;/a&gt;分支语句&lt;/h3&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; &amp;lt;条件&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;成立&amp;gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;表达式组&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;elif&lt;/span&gt; &amp;lt;条件&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;成立&amp;gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;表达式组&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;......&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;表达式组N&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;赋值语句&quot;&gt;&lt;a href=&quot;#赋值语句&quot; class=&quot;headerlink&quot; title=&quot;赋值语句&quot;&gt;&lt;/a&gt;赋值语句&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;用等号给变量赋值&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;如：val = 1.8*float(input_str) + 32&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;同步赋值语句&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;先运算右侧n个表达式，然后同时将表达式结果赋给左侧&lt;/p&gt;
-&lt;p&gt;&amp;lt;变量1&amp;gt;,…, &amp;lt;变量N&amp;gt; = &amp;lt;表达式1&amp;gt;,…, &amp;lt;表达式N&amp;gt;&lt;/p&gt;
-&lt;p&gt;这里有一个很有趣的例子：交换两个变量的值&lt;br&gt;一种方法是引入一个中间变量temp，然而python有一个更神奇的方法：&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;x, y = y, x&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;这样也可以Σ(*ﾟдﾟﾉ)ﾉ&lt;/p&gt;
-&lt;h3 id=&quot;输出函数&quot;&gt;&lt;a href=&quot;#输出函数&quot; class=&quot;headerlink&quot; title=&quot;输出函数&quot;&gt;&lt;/a&gt;输出函数&lt;/h3&gt;&lt;p&gt;print()函数用来输出字符信息，或以字符形式输出变量&lt;/p&gt;
-&lt;p&gt;print()函数可以输出各种类型变量的值&lt;/p&gt;
-&lt;p&gt;print()函数通过%来选择要输出的变量&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fdrchq8nebj20lr06hwfl.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;循环语句&quot;&gt;&lt;a href=&quot;#循环语句&quot; class=&quot;headerlink&quot; title=&quot;循环语句&quot;&gt;&lt;/a&gt;循环语句&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;for i in range(&amp;lt;计数值&amp;gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;表达式&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这里是Nyanko桑的py交易记录，嘿嘿嘿⸜(* ॑꒳ ॑* )⸝&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="python" scheme="https://moemoemortimer.github.io/tags/python/"/>
     
   </entry>
   
