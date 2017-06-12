@@ -21,7 +21,7 @@
 <meta property="og:url" content="https://moemoemortimer.github.io/2017/06/12/poj-3279/index.html">
 <meta property="og:site_name" content="银月轻语">
 <meta property="og:description" content="这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_">
-<meta property="og:updated_time" content="2017-06-12T15:48:58.640Z">
+<meta property="og:updated_time" content="2017-06-12T15:53:17.181Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="POJ 3279 Fliptile【翻格子】">
 <meta name="twitter:description" content="这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_">
@@ -295,7 +295,7 @@
 <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><h3 id="题目传送门"><a href="#题目传送门" class="headerlink" title="题目传送门"></a>题目传送门</h3><p><a href="http://poj.org/problem?id=3279" target="_blank" rel="external">POJ 3279 Fliptile 题目传送门</a></p>
 <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>一个M*N的网格，每个格子可以翻转正反面，它们一面是黑色，另一面是白色。。每翻转一个格子时，与它上下左右相邻接的格子也会被翻转，要将所有格子都翻转成白色，输出最少步数对应的翻转方案。如不存在解则输出IMPOSSIBLE。</p>
 <h3 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h3><p>$1≤M,N≤15$</p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>首先，同一个格子翻转两次的话就会恢复原状，所以多次翻转是多余的。<br>其次，翻转的格子的集合相同的话，其次序是无关紧要的。<br>因此，总共有$2*{MN}$种翻转的方法。但是直接暴力肯定不行。</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>首先，同一个格子翻转两次的话就会恢复原状，所以多次翻转是多余的。<br>其次，翻转的格子的集合相同的话，其次序是无关紧要的。<br>因此，总共有$2^{MN}$种翻转的方法。但是直接暴力肯定不行。</p>
 <p>不妨先指定最上面一行的翻转方法。然后下一行就可以根据上一行确定翻转方案，如此反复下去就可以确定所有格子的翻转方法。最后一行如果并不是全为白色，则意味着该方法不可行。</p>
 <p>这样将第一行所有翻转方式都尝试一遍就能求出整个问题的最小步数。这个算法中最上面一行的翻转方法有$2^N$种，复杂度为$O(MN2^N)$</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>写的时候在黑板上画了好久，最后代码也才70+行，不行啊弱爆了orz</p>
@@ -310,7 +310,7 @@
         <p><span>本文标题:</span><a href="/2017/06/12/poj-3279/">POJ 3279 Fliptile【翻格子】</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Nyanko Chan</a></p>
         <p><span>发布时间:</span>2017-06-12, 23:21:47</p>
-        <p><span>最后更新:</span>2017-06-12, 23:48:58</p>
+        <p><span>最后更新:</span>2017-06-12, 23:53:17</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/06/12/poj-3279/" title="POJ 3279 Fliptile【翻格子】">https://moemoemortimer.github.io/2017/06/12/poj-3279/</a>
             <span class="copy-path" data-clipboard-text="原文: https://moemoemortimer.github.io/2017/06/12/poj-3279/　　作者: Nyanko Chan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>

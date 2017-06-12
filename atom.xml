@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://moemoemortimer.github.io/"/>
-  <updated>2017-06-12T15:48:58.640Z</updated>
+  <updated>2017-06-12T15:53:17.181Z</updated>
   <id>https://moemoemortimer.github.io/</id>
   
   <author>
@@ -20,13 +20,13 @@
     <link href="https://moemoemortimer.github.io/2017/06/12/poj-3279/"/>
     <id>https://moemoemortimer.github.io/2017/06/12/poj-3279/</id>
     <published>2017-06-12T15:21:47.000Z</published>
-    <updated>2017-06-12T15:48:58.640Z</updated>
+    <updated>2017-06-12T15:53:17.181Z</updated>
     
     <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;h3 id=&quot;题目传送门&quot;&gt;&lt;a href=&quot;#题目传送门&quot; class=&quot;headerlink&quot; title=&quot;题目传送门&quot;&gt;&lt;/a&gt;题目传送门&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://poj.org/problem?id=3279&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;POJ 3279 Fliptile 题目传送门&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h3&gt;&lt;p&gt;一个M*N的网格，每个格子可以翻转正反面，它们一面是黑色，另一面是白色。。每翻转一个格子时，与它上下左右相邻接的格子也会被翻转，要将所有格子都翻转成白色，输出最少步数对应的翻转方案。如不存在解则输出IMPOSSIBLE。&lt;/p&gt;
 &lt;h3 id=&quot;数据范围&quot;&gt;&lt;a href=&quot;#数据范围&quot; class=&quot;headerlink&quot; title=&quot;数据范围&quot;&gt;&lt;/a&gt;数据范围&lt;/h3&gt;&lt;p&gt;$1≤M,N≤15$&lt;/p&gt;
-&lt;h2 id=&quot;思路&quot;&gt;&lt;a href=&quot;#思路&quot; class=&quot;headerlink&quot; title=&quot;思路&quot;&gt;&lt;/a&gt;思路&lt;/h2&gt;&lt;p&gt;首先，同一个格子翻转两次的话就会恢复原状，所以多次翻转是多余的。&lt;br&gt;其次，翻转的格子的集合相同的话，其次序是无关紧要的。&lt;br&gt;因此，总共有$2*{MN}$种翻转的方法。但是直接暴力肯定不行。&lt;/p&gt;
+&lt;h2 id=&quot;思路&quot;&gt;&lt;a href=&quot;#思路&quot; class=&quot;headerlink&quot; title=&quot;思路&quot;&gt;&lt;/a&gt;思路&lt;/h2&gt;&lt;p&gt;首先，同一个格子翻转两次的话就会恢复原状，所以多次翻转是多余的。&lt;br&gt;其次，翻转的格子的集合相同的话，其次序是无关紧要的。&lt;br&gt;因此，总共有$2^{MN}$种翻转的方法。但是直接暴力肯定不行。&lt;/p&gt;
 &lt;p&gt;不妨先指定最上面一行的翻转方法。然后下一行就可以根据上一行确定翻转方案，如此反复下去就可以确定所有格子的翻转方法。最后一行如果并不是全为白色，则意味着该方法不可行。&lt;/p&gt;
 &lt;p&gt;这样将第一行所有翻转方式都尝试一遍就能求出整个问题的最小步数。这个算法中最上面一行的翻转方法有$2^N$种，复杂度为$O(MN2^N)$&lt;/p&gt;
 &lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;p&gt;写的时候在黑板上画了好久，最后代码也才70+行，不行啊弱爆了orz&lt;/p&gt;
@@ -233,9 +233,9 @@
     
       <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
     
-      <category term="BFS" scheme="https://moemoemortimer.github.io/tags/BFS/"/>
-    
       <category term="图论" scheme="https://moemoemortimer.github.io/tags/%E5%9B%BE%E8%AE%BA/"/>
+    
+      <category term="BFS" scheme="https://moemoemortimer.github.io/tags/BFS/"/>
     
   </entry>
   
