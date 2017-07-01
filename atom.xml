@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://moemoemortimer.github.io/"/>
-  <updated>2017-06-21T10:05:31.019Z</updated>
+  <updated>2017-07-01T15:44:22.923Z</updated>
   <id>https://moemoemortimer.github.io/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>裏切り者</title>
+    <link href="https://moemoemortimer.github.io/2017/07/01/wuragirimono/"/>
+    <id>https://moemoemortimer.github.io/2017/07/01/wuragirimono/</id>
+    <published>2017-07-01T15:33:17.000Z</published>
+    <updated>2017-07-01T15:44:22.923Z</updated>
+    
+    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;全世界都弃我而去，我怕是坚持不住了。&lt;br&gt;我好像坏掉了，再也撑不下去了。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;全世界都弃我而去，我怕是坚持不住了。&lt;br&gt;我好像坏掉了，再也撑不下去了。&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="日常" scheme="https://moemoemortimer.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
   
   <entry>
     <title>JAVA POI/PDFBox 读取txt、ppt、word、excel、pdf文件</title>
@@ -751,9 +773,9 @@ public static void readExcel(String filePath) throws IOException {
     </summary>
     
     
-      <category term="算法" scheme="https://moemoemortimer.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="哈希" scheme="https://moemoemortimer.github.io/tags/%E5%93%88%E5%B8%8C/"/>
+    
+      <category term="算法" scheme="https://moemoemortimer.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="字符串" scheme="https://moemoemortimer.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
@@ -768,7 +790,7 @@ public static void readExcel(String filePath) throws IOException {
     
     <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;偷偷地把片片藏起来_(:3」∠❀)_&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;钢琴版的简直美哭嗷呜&quot;&gt;&lt;a href=&quot;#钢琴版的简直美哭嗷呜&quot; class=&quot;headerlink&quot; title=&quot;钢琴版的简直美哭嗷呜&quot;&gt;&lt;/a&gt;钢琴版的简直美哭嗷呜&lt;/h2&gt;&lt;div id=&quot;dplayer0&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer0 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer0&quot;),&quot;video&quot;:{&quot;url&quot;:&quot;http://120.192.82.54/hc.yinyuetai.com/uploads/videos/common/5E9D015B852C3CF7D27CBE1F34168A59.mp4&quot;,&quot;pic&quot;:&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fg3m1xhom2j20le0b4t97.jpg&quot;}});&lt;/script&gt;
+&lt;h2 id=&quot;钢琴版的简直美哭嗷呜&quot;&gt;&lt;a href=&quot;#钢琴版的简直美哭嗷呜&quot; class=&quot;headerlink&quot; title=&quot;钢琴版的简直美哭嗷呜&quot;&gt;&lt;/a&gt;钢琴版的简直美哭嗷呜&lt;/h2&gt;&lt;div id=&quot;dplayer1&quot; class=&quot;dplayer&quot; style=&quot;margin-bottom: 20px;&quot;&gt;&lt;/div&gt;&lt;script&gt;var dplayer1 = new DPlayer({&quot;element&quot;:document.getElementById(&quot;dplayer1&quot;),&quot;video&quot;:{&quot;url&quot;:&quot;http://120.192.82.54/hc.yinyuetai.com/uploads/videos/common/5E9D015B852C3CF7D27CBE1F34168A59.mp4&quot;,&quot;pic&quot;:&quot;http://ww1.sinaimg.cn/large/c3c8eb1bly1fg3m1xhom2j20le0b4t97.jpg&quot;}});&lt;/script&gt;
 &lt;h2 id=&quot;歌词&quot;&gt;&lt;a href=&quot;#歌词&quot; class=&quot;headerlink&quot; title=&quot;歌词&quot;&gt;&lt;/a&gt;歌词&lt;/h2&gt;&lt;p&gt;花びらのように散りゆく中で&lt;br&gt;【身处宛若漫天纷飞的花瓣之中】&lt;br&gt;夢みたいに 君に出逢えたキセキ&lt;br&gt;【似梦境奇迹般的得以与你邂逅】&lt;br&gt;愛し合って ケンカして&lt;br&gt;【彼此深爱 偶尔吵架】&lt;br&gt;色んな壁 二人で乗り越えて&lt;br&gt;【携手跨越横亘面前的各种屏障】&lt;br&gt;生まれ変わっても あなたのそばで 花になろう&lt;br&gt;【即便转世再生也要化为你身旁的花】&lt;/p&gt;
 &lt;p&gt;いつまでもあるのだろうか オレの真上にある太陽は&lt;br&gt;【悬在我头顶当空的太阳 无论到何时都会普照】&lt;br&gt;いつまでも守りきれるだろうか 泣き 笑い 怒る君の表情を&lt;br&gt;【你喜怒哀乐的表情 无论到何时我都会守候到尽头】&lt;br&gt;いずれ全てなくなるのならば 二人の出逢いにもっと感謝しよう&lt;br&gt;【假使以上所有全都消逝 那就更加感谢你我的相遇吧】&lt;br&gt;あの日 あの時 あの場所のキセキは&lt;br&gt;【那日 那时 那里发生的奇迹】&lt;br&gt;また 新しい軌跡を生むだろう&lt;br&gt;【又将会诞生新的轨迹交集】&lt;/p&gt;
 &lt;p&gt;愛することで強くなること 信じることで乗り切れること&lt;br&gt;【因爱而变得坚强 因信任而攻克所有难关】&lt;br&gt;君が残したモノは今も胸に ほら輝き失わずに&lt;br&gt;【你留下的东西如今仍在我胸前熠熠生辉】&lt;br&gt;幸せに思う 巡り会えたこと オレの笑顔取り戻せたこと&lt;br&gt;【思索着幸福得以相遇 脸上复又挂上笑容】&lt;br&gt;「ありがとう」 あふれる気持ち抱き 進む道程&lt;br&gt;【满怀感激的心情 继续朝前路迈进】&lt;/p&gt;
@@ -887,40 +909,6 @@ public static void readExcel(String filePath) throws IOException {
       <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
     
       <category term="扫描线" scheme="https://moemoemortimer.github.io/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HDU 5976 【逆元】</title>
-    <link href="https://moemoemortimer.github.io/2017/05/03/hdu-5976/"/>
-    <id>https://moemoemortimer.github.io/2017/05/03/hdu-5976/</id>
-    <published>2017-05-03T13:48:46.000Z</published>
-    <updated>2017-05-09T03:08:34.133Z</updated>
-    
-    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;h3 id=&quot;题目传送门&quot;&gt;&lt;a href=&quot;#题目传送门&quot; class=&quot;headerlink&quot; title=&quot;题目传送门&quot;&gt;&lt;/a&gt;题目传送门&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=5976&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HDU 5976 Detachment 题目传送门&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h3&gt;&lt;p&gt;将$x$拆成$a_1, a_2, a_3,…, a_i$的和，保证$a_i$各不相同，令$ s=a_1·a_2·a_3·..·a_i$，求s的最大值。&lt;/p&gt;
-&lt;h3 id=&quot;输入&quot;&gt;&lt;a href=&quot;#输入&quot; class=&quot;headerlink&quot; title=&quot;输入&quot;&gt;&lt;/a&gt;输入&lt;/h3&gt;&lt;p&gt;第一行为测试组数T&lt;br&gt;接下来每行一个x&lt;/p&gt;
-&lt;h3 id=&quot;输出&quot;&gt;&lt;a href=&quot;#输出&quot; class=&quot;headerlink&quot; title=&quot;输出&quot;&gt;&lt;/a&gt;输出&lt;/h3&gt;&lt;p&gt;拆分后乘积最大值s&lt;br&gt;（可以选择不拆，也就是$s=x$）&lt;/p&gt;
-&lt;h2 id=&quot;思路&quot;&gt;&lt;a href=&quot;#思路&quot; class=&quot;headerlink&quot; title=&quot;思路&quot;&gt;&lt;/a&gt;思路&lt;/h2&gt;&lt;p&gt;创造TLE新纪录的一道题…orz&lt;/p&gt;
-&lt;p&gt;由均值不等式的推广可知，如果$a_i$可以相等，那么最好变成n个平均值时乘积会最大。如果没说n是多少，那么应尽量让n更大，现在要求$a_i$不相等，因此要从最小的开始(从2开始往后加可以让乘数尽量多),变成2,3,4,5,…这样的序列，如果这样分到k时，剩下的&amp;lt;k+1了，就把剩下的部分从k开始往前各位加1&lt;/p&gt;
-&lt;p&gt;比如17，先拆成2,3,4,5,剩一个3，倒着加回去变成2,4,5,6.&lt;/p&gt;
-&lt;p&gt;接下来就是代码部分，发现要预处理前缀和为了找到k，还要预处理阶乘，还有倒着加回去后发现阶乘部分可能少一个，所以要用到乘法逆元。&lt;/p&gt;
-&lt;p&gt;然后是时间优化&lt;br&gt;用费马小定理求逆元是会T的，所以学习了O(n)的求法，前缀和阶乘数组开大了是会T的，大概44725这么大是安全的【sqrt(1e9)】&lt;br&gt;交到最后心好累，看到AC一点感觉也没有了QAQ&lt;/p&gt;
-&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;cstdio&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;algorithm&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;meta-string&quot;&gt;&amp;lt;cmath&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span class=&quot;meta-keyword&quot;&gt;define&lt;/span&gt; MOD 1000000007&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;long&lt;/span&gt; ll;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ll f[&lt;span class=&quot;number&quot;&gt;45000&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; sum[&lt;span class=&quot;number&quot;&gt;45000&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ll inv[&lt;span class=&quot;number&quot;&gt;45000&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; t;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; x;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;scanf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%d&quot;&lt;/span&gt;, &amp;amp;t);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	f[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;sum[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;inv[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;; i &amp;lt; &lt;span class=&quot;number&quot;&gt;44725&lt;/span&gt;; i++)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		sum[i] = sum[i&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;]+i;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		f[i] = (f[i&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;]*i)%MOD;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		inv[i]=(MOD-MOD/i)*inv[MOD%i]%MOD;  &lt;span class=&quot;comment&quot;&gt;//O(n)的复杂度处理逆元&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;(t--)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;scanf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%d&quot;&lt;/span&gt;, &amp;amp;x);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(x&amp;lt;&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%d\n&quot;&lt;/span&gt;, x);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;continue&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; pos = lower_bound(sum, sum+&lt;span class=&quot;number&quot;&gt;44722&lt;/span&gt;, x)-sum; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(sum[pos]==x)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%lld\n&quot;&lt;/span&gt;, f[pos]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			&lt;span class=&quot;keyword&quot;&gt;continue&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		pos--;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		ll ans = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; y = x-sum[pos];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(y==pos)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			ans = ((f[pos]*inv[&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;])%MOD*(pos+&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;))%MOD;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			ans=f[pos]*inv[pos+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;-y]%MOD*(pos+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)%MOD;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%lld\n&quot;&lt;/span&gt;, (ans+MOD)%MOD);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
-    
-      <category term="数论" scheme="https://moemoemortimer.github.io/tags/%E6%95%B0%E8%AE%BA/"/>
-    
-      <category term="逆元" scheme="https://moemoemortimer.github.io/tags/%E9%80%86%E5%85%83/"/>
     
   </entry>
   
