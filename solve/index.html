@@ -1,2 +1,29 @@
-<script src="/assets/js/DPlayer.min.js"> </script><p>之前的表达有误，</p>
-<p>并查集是维护“同一组”的数据结构，那么对每个动物创建三个元素i−A, i−B, i−C。<br>建立3×N大小的并查集。<br>i−x表示i属于x。<br>并查集同一组的所有元素表示的情况都同时发生。<br>由于每个动物所在的种类是不确定的，所以当给出消息判断的时候，需要考虑 i在A,B,C三种情况，那么将三种情况都合并起来即可减少判断量。即<br>情况一<br>Union(x, y); // 当x和y都在A组<br>Union(x+N, y+N); // 当x和y都在B组<br>Union(x+2<em>N, y+2</em>N); // 当x和y都在C组<br>情况二<br>Union(x, y+N); // 表示A的x吃B的y<br>Union(x+N, y+2<em>N); // 表示B的x吃C的y<br>Union(x+2</em>N, y); // 表示C的x吃A的y</p>
+<html>
+<head>
+	<title>题解文档</title>
+</head>
+<body>
+</br>
+之前的表达有误，
+</br>
+并查集是维护“同一组”的数据结构，那么对每个动物创建三个元素i−A, i−B, i−C。
+</br>
+建立3×N大小的并查集。
+</br>
+i−x表示i属于x。
+</br>  
+并查集同一组的所有元素表示的情况都同时发生。  
+由于每个动物所在的种类是不确定的，所以当给出消息判断的时候，需要考虑 i在A,B,C三种情况，那么将三种情况都合并起来即可减少判断量。即
+</br>
+情况一
+</br>Union(x, y); // 当x和y都在A组
+</br>Union(x+N, y+N); // 当x和y都在B组
+</br>Union(x+2*N, y+2*N); // 当x和y都在C组
+</br>情况二
+</br>Union(x, y+N); // 表示A的x吃B的y
+</br>Union(x+N, y+2*N); // 表示B的x吃C的y
+</br>Union(x+2*N, y); // 表示C的x吃A的y
+</body>
+
+
+</html>
