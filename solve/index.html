@@ -14,23 +14,20 @@
 <meta name="author" content="Nyanko Chan" />
 
 
-     
-        <meta name="baidu-site-verification" content="6FpqAeHFZw" />
-    
-     
-        <meta name="google-site-verification" content="UA-3790261842f0ff88-1" />
-    
 
-
-<meta name="description">
+<meta name="description" content="之前的表达有误，
+并查集是维护“同一组”的数据结构，那么对每个动物创建三个元素i−A, i−B, i−C。建立3×N大小的并查集。i−x表示i属于x。并查集同一组的所有元素表示的情况都同时发生。由于每个动物所在的种类是不确定的，所以当给出消息判断的时候，需要考虑 i在A,B,C三种情况，那么将三种情况都合并起来即可减少判断量。即情况一Union(x, y); // 当x和y都在A组Union(x">
 <meta property="og:type" content="website">
-<meta property="og:title" content="银月轻语">
-<meta property="og:url" content="https://moemoemortimer.github.io/page/11/index.html">
+<meta property="og:title" content="solve">
+<meta property="og:url" content="https://moemoemortimer.github.io/solve/index.html">
 <meta property="og:site_name" content="银月轻语">
-<meta property="og:description">
+<meta property="og:description" content="之前的表达有误，
+并查集是维护“同一组”的数据结构，那么对每个动物创建三个元素i−A, i−B, i−C。建立3×N大小的并查集。i−x表示i属于x。并查集同一组的所有元素表示的情况都同时发生。由于每个动物所在的种类是不确定的，所以当给出消息判断的时候，需要考虑 i在A,B,C三种情况，那么将三种情况都合并起来即可减少判断量。即情况一Union(x, y); // 当x和y都在A组Union(x">
+<meta property="og:updated_time" content="2017-07-24T05:06:31.900Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="银月轻语">
-<meta name="twitter:description">
+<meta name="twitter:title" content="solve">
+<meta name="twitter:description" content="之前的表达有误，
+并查集是维护“同一组”的数据结构，那么对每个动物创建三个元素i−A, i−B, i−C。建立3×N大小的并查集。i−x表示i属于x。并查集同一组的所有元素表示的情况都同时发生。由于每个动物所在的种类是不确定的，所以当给出消息判断的时候，需要考虑 i在A,B,C三种情况，那么将三种情况都合并起来即可减少判断量。即情况一Union(x, y); // 当x和y都在A组Union(x">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -58,13 +55,11 @@
 <link rel="stylesheet" href="/css/style.css">
 
 
-    <style> .article { opacity: 0;} </style>
-
 
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>银月轻语</title>
+<title>solve | 银月轻语</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -73,7 +68,7 @@
     var yiliaConfig = {
         fancybox: true,
         animate: true,
-        isHome: true,
+        isHome: false,
         isPost: false,
         isArchive: false,
         isTag: false,
@@ -259,24 +254,13 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-codeforces-701B" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/07/23/codeforces-701B/" class="article-date">
-      <time datetime="2016-07-23T10:06:18.000Z" itemprop="datePublished">2016-07-23</time>
+      <a href="/solve/index.html" class="article-date">
+      <time datetime="2017-07-24T05:02:48.000Z" itemprop="datePublished">2017-07-24</time>
 </a>
 
- 
-    <a href="/2016/07/23/codeforces-701B/#comments" title="查看评论">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
-        
-        
-            <span class="disqus-comment-count" data-disqus-identifier="2016/07/23/codeforces-701B/"></span>
-        
-    </a>
 
     </div>
   
@@ -288,705 +272,93 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/23/codeforces-701B/">CodeForces 701B 解题报告</a>
+    <h1 class="article-title" itemprop="name">
+      solve
     </h1>
   
 
       </header>
       
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/水题/">水题</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解题报告/">解题报告</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/07/23/codeforces-701B/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-codeforces-701A" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/23/codeforces-701A/" class="article-date">
-      <time datetime="2016-07-23T10:06:02.000Z" itemprop="datePublished">2016-07-23</time>
-</a>
-
- 
-    <a href="/2016/07/23/codeforces-701A/#comments" title="查看评论">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
+      <div class="article-info article-info-post">
         
-        
-            <span class="disqus-comment-count" data-disqus-identifier="2016/07/23/codeforces-701A/"></span>
-        
-    </a>
 
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/23/codeforces-701A/">CodeForces 701A 解题报告</a>
-    </h1>
-  
-
-      </header>
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p>这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_<br>
+              <style>
+    .article-meta { display: none; }
+    #container .article .article-title { padding-right: 0; }
+    .article-header {
+        padding: 0;
+        padding-top: 26px;
+        border-left: none;
+        text-align: center;
+    }
+    .article-header:hover { border-left: none; }
+    .article-title { font-size: 1.6em }
+    .article-entry hr { margin: 0;}
+    .article-meta,
+    #container .article-info-post.article-info { display: none;}
+    #container .article .article-title { padding: 0; }
+</style>
+
+
           
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
+        <script src="/assets/js/DPlayer.min.js"> </script><p>之前的表达有误，</p>
+<p>并查集是维护“同一组”的数据结构，那么对每个动物创建三个元素i−A, i−B, i−C。<br>建立3×N大小的并查集。<br>i−x表示i属于x。<br>并查集同一组的所有元素表示的情况都同时发生。<br>由于每个动物所在的种类是不确定的，所以当给出消息判断的时候，需要考虑 i在A,B,C三种情况，那么将三种情况都合并起来即可减少判断量。即<br>情况一<br>Union(x, y); // 当x和y都在A组<br>Union(x+N, y+N); // 当x和y都在B组<br>Union(x+2<em>N, y+2</em>N); // 当x和y都在C组<br>情况二<br>Union(x, y+N); // 表示A的x吃B的y<br>Union(x+N, y+2<em>N); // 表示B的x吃C的y<br>Union(x+2</em>N, y); // 表示C的x吃A的y</p>
 
       
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解题报告/">解题报告</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/贪心/">贪心</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/07/23/codeforces-701A/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
     </div>
     
   </div>
+  
+    
+
+
   
 </article>
 
 
 
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"solve　| 银月轻语　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
 
 
 
 
 
 
-  
-    <article id="post-codeforces-700A" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/23/codeforces-700A/" class="article-date">
-      <time datetime="2016-07-23T09:11:48.000Z" itemprop="datePublished">2016-07-23</time>
-</a>
 
- 
-    <a href="/2016/07/23/codeforces-700A/#comments" title="查看评论">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
+
+
+
+
+    <script>
         
-        
-            <span class="disqus-comment-count" data-disqus-identifier="2016/07/23/codeforces-700A/"></span>
-        
-    </a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/23/codeforces-700A/">CodeForces 700A 解题报告</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数学/">数学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解题报告/">解题报告</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/07/23/codeforces-700A/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hdu-5742" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/23/hdu-5742/" class="article-date">
-      <time datetime="2016-07-23T07:23:13.000Z" itemprop="datePublished">2016-07-23</time>
-</a>
-
- 
-    <a href="/2016/07/23/hdu-5742/#comments" title="查看评论">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
-        
-        
-            <span class="disqus-comment-count" data-disqus-identifier="2016/07/23/hdu-5742/"></span>
-        
-    </a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/23/hdu-5742/">HDU 5742 解题报告</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数学/">数学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解题报告/">解题报告</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/07/23/hdu-5742/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hdu-5723" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/23/hdu-5723/" class="article-date">
-      <time datetime="2016-07-23T07:23:00.000Z" itemprop="datePublished">2016-07-23</time>
-</a>
-
- 
-    <a href="/2016/07/23/hdu-5723/#comments" title="查看评论">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
-        
-        
-            <span class="disqus-comment-count" data-disqus-identifier="2016/07/23/hdu-5723/"></span>
-        
-    </a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/23/hdu-5723/">HDU 5723 解题报告</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <script src="/assets/js/DPlayer.min.js"> </script>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hdu-5745" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/23/hdu-5745/" class="article-date">
-      <time datetime="2016-07-23T07:22:44.000Z" itemprop="datePublished">2016-07-23</time>
-</a>
-
- 
-    <a href="/2016/07/23/hdu-5745/#comments" title="查看评论">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
-        
-        
-            <span class="disqus-comment-count" data-disqus-identifier="2016/07/23/hdu-5745/"></span>
-        
-    </a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/23/hdu-5745/">HDU 5745 解题报告</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解题报告/">解题报告</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/07/23/hdu-5745/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hdu-5734" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/22/hdu-5734/" class="article-date">
-      <time datetime="2016-07-22T14:47:07.000Z" itemprop="datePublished">2016-07-22</time>
-</a>
-
- 
-    <a href="/2016/07/22/hdu-5734/#comments" title="查看评论">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
-        
-        
-            <span class="disqus-comment-count" data-disqus-identifier="2016/07/22/hdu-5734/"></span>
-        
-    </a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/22/hdu-5734/">HDU 5734 解题报告</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数学/">数学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解题报告/">解题报告</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/07/22/hdu-5734/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hdu-2585" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/22/hdu-2585/" class="article-date">
-      <time datetime="2016-07-22T10:53:28.000Z" itemprop="datePublished">2016-07-22</time>
-</a>
-
- 
-    <a href="/2016/07/22/hdu-2585/#comments" title="查看评论">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
-        
-        
-            <span class="disqus-comment-count" data-disqus-identifier="2016/07/22/hdu-2585/"></span>
-        
-    </a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/22/hdu-2585/">HDU 2585 解题报告</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解题报告/">解题报告</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/递归/">递归</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/07/22/hdu-2585/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-codeforces-448c" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/21/codeforces-448c/" class="article-date">
-      <time datetime="2016-07-21T11:39:54.000Z" itemprop="datePublished">2016-07-21</time>
-</a>
-
- 
-    <a href="/2016/07/21/codeforces-448c/#comments" title="查看评论">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
-        
-        
-            <span class="disqus-comment-count" data-disqus-identifier="2016/07/21/codeforces-448c/"></span>
-        
-    </a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/21/codeforces-448c/">CodeForces 448C 解题报告</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解题报告/">解题报告</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/递归/">递归</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/07/21/codeforces-448c/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hdu-1007" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/21/hdu-1007/" class="article-date">
-      <time datetime="2016-07-21T11:39:37.000Z" itemprop="datePublished">2016-07-21</time>
-</a>
-
- 
-    <a href="/2016/07/21/hdu-1007/#comments" title="查看评论">
-        <i class="fa fa-comments-o" aria-hidden="true"></i>
-        <span class="count-comment"></span>
-        
-        
-            <span class="disqus-comment-count" data-disqus-identifier="2016/07/21/hdu-1007/"></span>
-        
-    </a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/21/hdu-1007/">HDU 1007 解题报告</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分治/">分治</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解题报告/">解题报告</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/07/21/hdu-1007/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/10/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/12/">Next &raquo;</a>
-    </nav>
-  
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
@@ -1042,26 +414,6 @@
         })
     </script>
 
-
-    
-
-    
-        <script id="dsq-count-scr" src="//NyankoChan611.disqus.com/count.js" async></script>
-        <script>
-            if ($(".left-col").is(":visible")) {
-                var $disqusCount = $(".disqus-comment-count");
-                $disqusCount.bind("DOMNodeInserted", function(e) {
-                    var num = $(this).text().replace(/[^0-9]/ig,"");
-                    if (num > 0) {
-                        $(this).siblings(".count-comment").text(num);
-                    }
-                    $(this).remove();
-                })
-            } else {
-                $(".disqus-comment-count").remove();
-            }
-        </script>
-     
 
 
 
