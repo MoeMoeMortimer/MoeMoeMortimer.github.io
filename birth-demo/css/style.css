@@ -6,14 +6,18 @@ abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body,
         }
 */
 
-body #bg{
+body #ityped{
+	
 	font-size: 24px;
     color: #000000;
+    background-color: #000000;
     text-align:center;
+
+   
 }
 
 
-body #ityped-cursor{
+body .ityped-cursor{
     opacity: 1;
     -webkit-animation: blink 0.8s infinite;
     -moz-animation: blink 0.8s infinite;
