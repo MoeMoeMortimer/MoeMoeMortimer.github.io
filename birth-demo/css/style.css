@@ -10,7 +10,7 @@ body #ityped{
 	
 	font-size: 24px;
     color: #000000;
-    background-color: #000000;
+    background-color: #ffffff;
     text-align:center;
 
    
@@ -177,4 +177,11 @@ body .ityped-cursor{
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+}
+
+
+#dplayer {
+	height: 500px;
+	width: 800px;
+	margin: 20 50 100 50;
 }

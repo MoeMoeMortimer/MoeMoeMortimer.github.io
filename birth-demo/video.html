@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html >
+	<head>
+		<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="css/vdo.css">
+		<link rel="stylesheet" href="dplayer/dist/DPlayer.min.css">
+		<title>video test</title>
+	</head>
+	<body>
+		<script type="text/javascript" src="js/src/particle.js"></script>
+		<div id = "label">柬濡桑生日快乐！</div>
+		<div id="dplayer">
+		<script src="dplayer/dist/DPlayer.min.js"></script>
+		
+		<script type="text/javascript">
+		var dp = new DPlayer({
+   			element: document.getElementById('dplayer'),
+    		video: {
+        		url: 'http://oeferips4.bkt.clouddn.com/IMG_7344.MOV',
+        		pic: 'demo.png'
+    		}, 
+    		danmaku: {
+        		id: '1234',
+        		api: 'https://api.prprpr.me/dplayer/'
+    		}
+		});
+		</script>
+		</div>
+	</body>
+</html>
