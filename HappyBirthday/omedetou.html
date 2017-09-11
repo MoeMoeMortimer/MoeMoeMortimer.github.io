@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html >
+	<head>
+	
+		<title>柬濡桑生日快乐</title>
+    <link rel="shortcut icon" href="pics/favicon.ico" />
+    <script src="js/src/tagswitch.js"></script>
+		<link rel="stylesheet" href="css/ome.css" media="screen" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/shake.css">
+		<link rel="stylesheet" href="dplayer/dist/DPlayer.min.css">
+	<script async="" src="http://cdn.gbtags.com/analytics.js/1.5.2/analytics.min.js"></script>
+    <script src="http://cdn.gbtags.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="js/src/jquery.typed.js"></script>
+
+	
+		<script>
+        $(function(){
+            
+            // make conversation
+            $('#story').typed({
+                strings: ["嘘~快看，这里有一只落单的肉肉朱。^2000\n我们可以尝试捕捉它。^2000\n肉肉朱富含大量的蛋白质，^2000\n可以为我们提供好几天的能量。^2000\n不过肉肉朱可不好对付。^2000\n今天是肉肉朱的生日。^2000\n肉肉朱过生日的时候会收到很多好吃的食物，^2000\n吃饱喝足的肉肉朱会放松警惕，变成 ....."],
+                typeSpeed: 50,
+                backDelay: 500,
+                loop: false,
+                loopCount: false,
+                showCursor: false,
+                callback: function(){
+                  $('#story1').typed({
+                      strings: ["智障朱( ¯(∞)¯ ) ,^2000哦不不不...", "呆呆朱。^2000\n这时我们可以慢慢从后面接近它，小心别发出任何声音。^2000\n好了，抓到肉肉朱之后，记得问他要下一关的密码哟⸜(\* ॑꒳ ॑\* )⸝"],
+                      showCursor: false,
+                      typeSpeed: 50,
+                      backDelay: 500,
+                      loop: false,
+                      loopCount: false
+                  });
+                }
+            });
+        });
+    	</script>
+
+    	<script type="text/javascript">
+    		
+			function check(n){
+  				if(n==831143)
+  				 window.location.href = "video.html";
+  				else 
+  					alert('密码不对辣~你不是柬濡桑呀');
+			}
+      </script>
+    	
+	</head>
+	<body>
+		<script type="text/javascript" src="js/src/particle.js"></script>
+		
+  		<div id="holder">
+          <span id="story"></span>
+          <span id="story1"></span>
+      </div>
+      <div class="content">
+          <div class="des">
+            
+            <p style="font-size:16px; line-height: 1.5;">咕嘿嘿~密码有六个数字，分别是：肉肉朱阳历生日月份+肉肉朱的麻麻有几个娃+今天是星期几+昨天肉肉朱收到几本书+第一个合数+肉肉朱的手机号最后一位除以2！</p>
+          </div>
+          <div class="btn">
+            <form>
+              <input type="text"  name="val" style="font-size: 18px; width: 150px;" >
+              <input type="button" type="submit" value="提交" class="shake" onclick="check(val.value)" style="font-size: 18px; color: #ffffff; opacity: 0.5; background-color: #333333; border-radius: 20%">
+              <img class = "pas" src="pics/miaopas.gif"></img>
+            </form>
+            
+          </div>
+              
+          
+      </div>
+	</body>
+</html>
