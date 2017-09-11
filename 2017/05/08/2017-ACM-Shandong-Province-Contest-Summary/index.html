@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Nyanko Chan" />
+
+
+
+<meta name="description" content="谢谢ACM，苦的甜的，你让我收获我太多太多。_(:3」∠❀)_">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2017 第八届ACM山东省赛总结">
+<meta property="og:url" content="https://moemoemortimer.github.io/2017/05/08/2017-ACM-Shandong-Province-Contest-Summary/index.html">
+<meta property="og:site_name" content="银月轻语">
+<meta property="og:description" content="谢谢ACM，苦的甜的，你让我收获我太多太多。_(:3」∠❀)_">
+<meta property="og:image" content="http://ww1.sinaimg.cn/mw690/c3c8eb1bly1ffe81z8pekj21w02iou0y.jpg">
+<meta property="og:updated_time" content="2017-05-10T13:12:47.178Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2017 第八届ACM山东省赛总结">
+<meta name="twitter:description" content="谢谢ACM，苦的甜的，你让我收获我太多太多。_(:3」∠❀)_">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/mw690/c3c8eb1bly1ffe81z8pekj21w02iou0y.jpg">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="银月轻语" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>2017 第八届ACM山东省赛总结 | 银月轻语</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: false
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/lyy.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Nyanko Chan</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">前天看到了小兔子，昨天是小鹿，今天是你。</p>
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:nyankochan611@gmail.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/MoeMoeMortimer" title="GitHub"></a>
+                            
+                                <a class="fa 网易云音乐" href="http://music.163.com/#/user/home?id=278753307" title="网易云音乐"></a>
+                            
+                                <a class="fa bilibili" href="http://space.bilibili.com/4103685/" title="bilibili"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/01背包/">01背包</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ACM/">ACM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BFS/">BFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DFS/">DFS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DP/">DP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GCD/">GCD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JAVA/">JAVA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LCM/">LCM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MV/">MV</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PDFBox/">PDFBox</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/POI/">POI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/STL/">STL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tarjan/">Tarjan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dfs/">dfs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中国剩余定理/">中国剩余定理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二分/">二分</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二分图/">二分图</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二分图最大匹配/">二分图最大匹配</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/优先队列/">优先队列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/几何/">几何</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分治/">分治</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动态规划/">动态规划</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/匈牙利算法/">匈牙利算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/双指针/">双指针</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/哈希/">哈希</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图论/">图论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/姿势/">姿势</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字符串/">字符串</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习笔记/">学习笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小说/">小说</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/尺取法/">尺取法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工作/">工作</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/并查集/">并查集</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开关问题/">开关问题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/归并/">归并</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/影评/">影评</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微分方程/">微分方程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/快速幂/">快速幂</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/扩展欧几里得/">扩展欧几里得</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/扫描线/">扫描线</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排序/">排序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/搜索/">搜索</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数学/">数学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据库/">数据库</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数论/">数论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日常/">日常</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/映画/">映画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/暴力/">暴力</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最小生成树/">最小生成树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最短路/">最短路</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/栈/">栈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/树状数组/">树状数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/概率期望/">概率期望</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模拟/">模拟</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模板/">模板</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/比赛/">比赛</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/水题/">水题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游记/">游记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/状压DP/">状压DP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/状态压缩DP/">状态压缩DP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电影/">电影</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/线段树/">线段树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/背包/">背包</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/胡言乱语/">胡言乱语</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/解体报告/">解体报告</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/解题报告/">解题报告</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/记忆化搜索/">记忆化搜索</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/读书笔记/">读书笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/贪心/">贪心</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/逆元/">逆元</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/递归/">递归</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/递推/">递推</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/集训队/">集训队</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://www.lyeec.me/">Matriks</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://www.cnblogs.com/wangkaipeng/">docyard</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hsmouc.com/">梦的小窝</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Nyanko Chan</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/lyy.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Nyanko Chan</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">前天看到了小兔子，昨天是小鹿，今天是你。</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:nyankochan611@gmail.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/MoeMoeMortimer" title="GitHub"></a>
+                            
+                                <a class="fa 网易云音乐" target="_blank" href="http://music.163.com/#/user/home?id=278753307" title="网易云音乐"></a>
+                            
+                                <a class="fa bilibili" target="_blank" href="http://space.bilibili.com/4103685/" title="bilibili"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-2017-ACM-Shandong-Province-Contest-Summary" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/05/08/2017-ACM-Shandong-Province-Contest-Summary/" class="article-date">
+      <time datetime="2017-05-08T03:05:14.000Z" itemprop="datePublished">2017-05-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2017 第八届ACM山东省赛总结
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日常/">日常</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <script src="/assets/js/DPlayer.min.js"> </script><p>谢谢ACM，苦的甜的，你让我收获我太多太多。_(:3」∠❀)_</p>
+<a id="more"></a>
+<p>今天清理文件偶然发现了去年的省赛总结，那时候我还没有博客呢~所以今天一起放上来吧~</p>
+<h2 id="2016-省赛总结"><a href="#2016-省赛总结" class="headerlink" title="2016 省赛总结"></a>2016 省赛总结</h2><p>2016年6月4、5日有山东省ACM竞赛。这是我大学参加的第一个ACM正式赛，对我来说，它的意义难以言表。从上学期刷区域赛ranklist爱上ACM到今天有机会分到参赛名额，和学姐组队，像他们一样起个有点怪但自己又很喜欢的队名，穿上官方发的衣服，真的真的真的可以让人感动到哭。<br>队长大大说这次14级是主力，原本我是和同年级的小伙伴一起作为友情队参加的，基本没什么压力，听学长学姐说就是去免费 “旅游”的，后来女队的学姐有事情要忙，我就被抓去做替补，自己的心态一下子变了很多，就好像从一个旁观者变成了戏中人。其实说实话，我并没有付出应有的努力。为了给自己心理安慰，我花大价钱买了一本《挑战程序设计竞赛》，每天泡在实验室，还开了一个名叫“佛脚”（？）的文档记录赛前解题报告和心情，后来……比赛的时候都没用到，我还是太菜了，太菜了，唉。<br>因为一直在各种期待着，所以时间过得真的很快，今天已经6月9号了，省赛这么快就过去了啊，我真的不敢相信。<br>我们的位置靠墙，右前方的队伍是山东大学，他们的队名是nozomi，我不确定他们是不是想起日文名，意思是“希望”，当时感觉好棒好正能量啊，后来才发现整个山东大学的队伍们都用了LoveLive里的人名……死宅们你们也真是够了啊……总之他们队真的很强，比赛的时候数着人家的气球我就又羡慕又着急。<br>咳咳、终于扯到比赛上来了。开始前五分钟，我不知怎么的一下子就超级兴奋！！抱着学姐的手来回蹭个不停（啊喂泥垢了！！）那边一说开始我们就直接找水题、、A就是、、其实看题意还有点模糊，但再看看样例，感觉自己心里有底，又觉得还是应该谨慎一点，就这样战战兢兢地过了第一题，之后学姐们看B题我去找另外一个水题……我犯了一个超致命的错误：我把题意读错了。读错题意的现象一直持续到比赛结束，我真是该死&gt;.&lt;<br>我觉得自己在比赛的时候没有成为一个可以依靠的人，整场比赛我一直在犯错误，在胡乱着急，连水题也过不去，南南姐还得给我收拾残局。我真是太差劲了。归根结底是自己能力不够，所谓“雷声大，雨点小”。<br>我们在B题上花的时间太长了，后来听学长说是简单题，用搜索也能做直接乱写也能过（可是……唉没爱了没爱了）今后比赛的时候应该设定一个时间上限，比如水题最多给一小时难题最多给两小时这样的，其实当时代码已经成型了（后来想想我们这个时候的心理状态是错的，应该大胆明智地早早放弃）但是后面还有一道水题所以我们就决定先过了水题，也就是所谓的炉石传说题。这道题最初是我负责写的，可是我把题意理解错了，（没玩过真的伤不起啊TAT有的队就因为有人玩过都不用看题直接一写就过了呜嗷嗷嗷嗷）最后留给炉石传说题的时间只剩一小时了，我还是弱爆了，不得不麻烦南南姐和我一起读题读样例，最后还剩两分钟交了一次还是WA，结束后才发现有一个变量没加。然后感觉大家一下子就失落了……后来一直都很失落、、滚榜的时候真的很好玩也很燃，算是重燃了我对ACM的喜欢吧……不过这份激动终究还是别人的，和去年一样，自己仍然是个憧憬者。<br>我想变得更强。<br>我想保护我重要的队友。<br>我想成为能被他们依靠的存在。<br>                                                      2016.6.9 </p>
+<h2 id="2017-省赛总结"><a href="#2017-省赛总结" class="headerlink" title="2017 省赛总结"></a>2017 省赛总结</h2><p>看一年前那个傻傻的自己，真的很想去摸摸她的头啊~<br>庆幸我的初心没变。不，不能说是庆幸，而是我坚信自己对ACM的喜欢不会变。</p>
+<p>终榜 <a href="https://acm.qust.edu.cn/ranklist/" target="_blank" rel="external">https://acm.qust.edu.cn/ranklist/</a></p>
+<p>一言蔽之，有情理之中，也有意料之外。</p>
+<p>今年的省赛相比去年提前了一个月。从确定队伍的时候起我就知道留给我们的时间不多了。</p>
+<p>说到队伍，去年我在女队，现在想想拿不到奖是必然事件。一是经验不足，刷题数知识面都太窄，拿我这样的队员上场只有被吊打的份。二是没有系统组织训练，交流太少，连队友擅长的部分还有coding风格都不熟悉还谈什么配合。总之去年是遗憾满满的一年，可能也让学姐很失望，这是她的退役战了啊……</p>
+<p>但实际上，16年的省赛让我受益匪浅。</p>
+<p>首先是心理，因为是正式队员，一开始我就把比赛看得很重，加上山师超棒的组织和学校的支持，使得ACM赛事在我心中的地位只增不减。<br>当时看着激烈的滚榜和学长们上台领奖的身影，满满的憧憬早就盖过了失败的苦涩。<br>其次是经验，掰着手指头算算，17省赛之前我只参加过这么一次正式赛，不得不说，正赛和日常训练赛差别实在是太大了。对16年的比赛情形我至今仍记忆犹新。</p>
+<p>之前和学姐一起上课的时候偶然说起今年的省赛，她了解到我的情况之后建议我尽早找一个固定的队友。我心里一紧，因为我不知道该怎么办。之前和集训队一个主力队员谈到过队友的问题，他说他会选最强的人做队友……这话一定程度上给我造成了阴影，因为这确实是竞赛的本质，比赛不就是要筛选出最强的人吗。但这和我的理解相悖。16年省赛过后我的想法愈发清晰和纯粹：“我喜欢ACM，我要变强，我要强大到可以保护我的队友，可以被他们放心地依靠”。那么我愿意保护的人一定要是值得我去为之拼命奋斗的人。可能随着时间和阅历的积累我的想法也会改变，但我最喜欢这时候的自己。</p>
+<p>好像跑题了，总之我组好了自己满意的队伍。这里多亏kid_zhao帮忙找来了学长。去年的队名是我起的，灵感来自《四月是你的谎言》，今年的队名是kid_zhao起的，灵感来自我的名字、诶嘿嘿有点羞耻(～￣▽￣*)o</p>
+<p>其实我的压力还是蛮大的，因为今年我不仅是正式队还是主力队员（因为多数是大二的），而且是我们队的队长，我很想把责任尽到，好好做。</p>
+<p>因为是在赛前一个月（不到）建起来的队伍，大家还不能友好地打成一片，有了去年的经验，我先做的事情就是破冰。建了一个群，尽可能地多讨论题目，约训练赛，熟悉大家的长处。几场比赛磨合下来，大家熟悉了很多，配合也很顺手，手速快的时候真是特别爽。</p>
+<p>但这都不是重要的，团队配合只是让比赛更稳更顺利进行的一种催化剂，真正比的还是实力。</p>
+<p>怎么办，那就看书、刷题呗。那真是段黑暗的日子，中间又经历了几次不如意和挫折，我受到了很大的考验，有时候会消极地想“唉要不算了，你看你这么弱，大家也不是很看好你，再搞下去不是死钻牛角尖么”，可是我舍不得放弃自己这么喜欢又喜欢了这么久的东西，就安慰自己“再坚持一下”。</p>
+<p>就这么一天一天地捱过去，省赛终于到了。之前一个人训练的时候还会想 说不定能冲个金呢，后来我告诉自己要认清实力，给自己明确的定位之后压力也小了不少。看我们队还有我自己的状态我觉得银牌稳了。</p>
+<p>热身赛的时候A题我们想搜索可是一直不行，到最后也没搞出来，大家都感觉很疲倦，而且我觉得自己紧张了。之前知乎上说一个ACM队的队长要会说段子放松气氛，还不能把紧张的情绪传达出去以免乱了队友的阵脚，还要学会取舍，把握做题节奏，带飞队友，最最重要也是所有队员都应该做到的就是信任，信任和你并肩作战的人。</p>
+<p>正赛前一天晚上我水水地提了个作战计划，其实也是没话找话让大家放松一点，我觉得我们的优势是手速快，我们计划第二天可以先拼一波手速拯救一下后面的罚时，还是像热身赛一样三开，发现水题就上，争取半小时过三题。但我们的缺点就是后劲不足，对有区分度的题拿不稳，这样很容易卡题挂机。所以明天思路不能乱，前面留出足够的时间，后面稳住就好。<br>正赛时我们半小时出了两题，但可能因为有点紧张都没能1A，第三个（F题）总是莫名WA，我们怀疑自己没读懂题意，但是又不知道到底哪里没读懂。刷了下榜看到别的队也是错了好几发才A的，于是决定不浪费时间先看别的，大概一小时之后又过了一个贪心题，这时候我已经完全放弃手速战略，心想跟榜能做几个是几个了。我建议先看看别的题，但因为F过不了大家心里总是拧着，于是接下来就成了在CDF中间摇摆不定，学长说F“这题不能不过，这题我们一定得过呀！”，又僵持了一阵，局面变成我看C，kid_zhao看D，学长一边帮着我看C一边想F的坑点在哪，后来学长说他想到了，和kid_zhao讲了下两人一拍即合，说就这样绝对没问题，果然这次终于返回了Yes！过了这四个题，大伙终于放心了，刷了一下榜，这时候我们在铜牌区。我们决定主攻CD了。我和学长看C，kid_zhao继续想D，比赛到三个多小时的时候，我感觉脑子有点不够用了。我们思路已经成型了，知道这题该怎么解，然后就是一直互相理清对方的思路，调代码，我负责预处理的组合数，学长去处理之后的数组和位置，后来发现要用到逆元，还好前两天做过类似的题，get了线性递推逆元的姿势，封榜时我们是铜牌第一，C题WA了一发，这时候加上逆元改好C题的代码后终于把这题过了。我隐约觉得这题是道银牌题，所以当时激动的要哭了。<br>然后就剩D了，不得不说后半程完全放kid_zhao一个人怼D题是个错误的做法，还是我们在C题上浪费的时间太多，不然就能留出更多的时间大家一起看，因为这两题都是组合数学，肯定有相似的地方，我真的很后悔把他一个人抛在一边。这时候还剩大概45min，我觉得时间已经不够了。但还想垂死挣扎一下，其实我是满足了，但看jc菌很想把这题过了，但是思路不够明白，于是尽全力帮他稳住心态，千万不能炸啊。我问他“你确定推的公式对么”，他说确定，好，那我们就交交交！虽然最后也没过，但我觉得死而无憾辣！</p>
+<p>因为是封榜后过题，滚榜的时候看到我们队咻地飞上去，还飞过了铜牌线，我们三个都惊呆了！一边“哇！”一边击掌~看到那个微妙的名次我有种黑子的篮球战胜了奇迹的世代的感觉&gt;o&lt;</p>
+<p>学长去考研，不知道jc菌还会不会继续坚持，但总之这次比赛给了我极大的信心，我会继续走下去的，好像之前也说过类似的话吧，那我现在的心情和第一次说出这话时的心情一样，谁也拦不住我。</p>
+<p>我也知道这条路很难走，觉悟是一定要有的。而且一山更比一山高，知道了自己并不如想象的那么菜以后，剩下的事情就是竭尽全力了。</p>
+<p>去年学长们也是银牌，说明拿银是本分之职，是起码的责任。而我没有强大到可以保护所有的队友，其实有点狼狈。赛后看kid_zhao不甘心的样子觉得有点对不起他，我太菜，还差得远呢。</p>
+<p>之后的比赛还有很多，网络赛要想出线会更难，到时候可能还会遇到因为经费问题不让女生参赛的打击，如果紧抓着这块银牌不放就变成lowbee了。</p>
+<h3 id="【一点碎碎念】"><a href="#【一点碎碎念】" class="headerlink" title="【一点碎碎念】"></a>【一点碎碎念】</h3><p>我认为省赛对新NEW ACMer来说还是很重要的，毕竟这是他们成为ACMer将近一年后，迎来的第一场大型比赛，不能理解为什么不把名额多分几个给16级的学弟学妹，就算是友情队也好啊。</p>
+<h2 id="竞赛生涯拿到的第一块牌叽"><a href="#竞赛生涯拿到的第一块牌叽" class="headerlink" title="竞赛生涯拿到的第一块牌叽"></a>竞赛生涯拿到的第一块牌叽</h2><p>舍不得送去实验室肿么办www<br><img src="http://ww1.sinaimg.cn/mw690/c3c8eb1bly1ffe81z8pekj21w02iou0y.jpg" alt=""></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/05/08/2017-ACM-Shandong-Province-Contest-Summary/">2017 第八届ACM山东省赛总结</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Nyanko Chan</a></p>
+        <p><span>发布时间:</span>2017-05-08, 11:05:14</p>
+        <p><span>最后更新:</span>2017-05-10, 21:12:47</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/05/08/2017-ACM-Shandong-Province-Contest-Summary/" title="2017 第八届ACM山东省赛总结">https://moemoemortimer.github.io/2017/05/08/2017-ACM-Shandong-Province-Contest-Summary/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://moemoemortimer.github.io/2017/05/08/2017-ACM-Shandong-Province-Contest-Summary/　　作者: Nyanko Chan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/05/14/let-me-hear/">
+                    行到水穷处，坐看云起时
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/05/04/poj-2932/">
+                    POJ 2932 Coneology【扫描线】
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2016-省赛总结"><span class="toc-number">1.</span> <span class="toc-text">2016 省赛总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2017-省赛总结"><span class="toc-number">2.</span> <span class="toc-text">2017 省赛总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#【一点碎碎念】"><span class="toc-number">2.1.</span> <span class="toc-text">【一点碎碎念】</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#竞赛生涯拿到的第一块牌叽"><span class="toc-number">3.</span> <span class="toc-text">竞赛生涯拿到的第一块牌叽</span></a></li></ol>
+</div>
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script>
+    yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+</script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"2017 第八届ACM山东省赛总结　| 银月轻语　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+        <section id="comments">
+    <style> aside.comment-bar { margin: auto 30px; }</style>
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function(){
+            this.page.url = 'https://moemoemortimer.github.io/2017/05/08/2017-ACM-Shandong-Province-Contest-Summary/';
+            this.page.identifier = '2017/05/08/2017-ACM-Shandong-Province-Contest-Summary/';
+        };
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = '//NyankoChan611.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        }
+    </script>
+    
+    <script> loadComment(); </script>
+
+</section>
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/05/14/let-me-hear/" title="上一篇: 行到水穷处，坐看云起时">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/05/04/poj-2932/" title="下一篇: POJ 2932 Coneology【扫描线】">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/08/18/math-sample/">数论模板</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/08/codeforces-787D/">CodeForces 787D Legacy【线段树优化建图+Dijkstra】</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/08/codeforces-731C/">CodeForces 731C Socks【DFS/BFS】</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/08/codeforces-339D/">CodeForces 339D Xenia and Bit Operations【线段树单点更新】</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/02/Summer-Training-Day1/">DAY 1 Summary</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/31/Summer-Training-2017/">我的暑期集训不可能这么鬼畜</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/26/love-in-the-time-of-cholera/">请用一枝玫瑰纪念我</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/19/file-processing-by-java/">JAVA POI/PDFBox 读取txt、ppt、word、excel、pdf文件</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/17/ACMgather-2017/">毕业聚餐第二弹_(:3」∠❀)_</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/17/2017-north-multi-university-training-round4-A/">北方大学 ACM 多校训练赛 第四场 A. 恶魔包毁灭世界【二分图最大匹配+强连通分量】</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/14/hdu-5971/">HDU 5971 Wrestling Match【二分图判定】</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/14/hdu-5974/">HDU 5974 A Simple Math Problem【暴力+剪枝】</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/12/poj-3279/">POJ 3279 Fliptile【翻格子】</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/12/poj-3320/">POJ 3320 Jessica's Reading Problem【尺取法】</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/11/AOJ-0558/">AOJ 0558 Cheese【BFS求最短路】</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/11/happy-611-day/">Happy 611's Day~</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/01/poj-3061/">POJ 3061 Subsequence【尺取法】</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/01/poj-2456/">POJ 2456 Aggressive Cows【二分查找】</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/31/zoj-2913/">ZOJ 2913 Bus Pass【滚动队列BFS】</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/30/poj-3723/">POJ 3723 Conscription【最小生成树】</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/30/poj-3255/">POJ 3255 Roadblocks【次短路】</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/30/string-hash/">字符串哈希</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/26/hana-piano-ver-katayoseryota/">花【piano ver.】</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/14/let-me-hear/">行到水穷处，坐看云起时</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/08/2017-ACM-Shandong-Province-Contest-Summary/">2017 第八届ACM山东省赛总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/04/poj-2932/">POJ 2932 Coneology【扫描线】</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/03/hdu-5976/">HDU 5976 【逆元】</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/30/ural-2018/">URAL 2018 The Debut Album【动态规划】</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/29/hdu-5245/">HDU 5245 Joyful 【概率期望】</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/29/hdu-5241/">HDU 5241 Friends 【高精度乘法+快速幂】</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/28/ftiasch-200-problemset/">叉姐200题【搬运】</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/26/2017-north-multi-university-training-round4-B/">北方大学 ACM 多校训练赛 第四场 B.翻硬币【暴力】</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/26/2017GPLT/">2017天梯赛-大区赛</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/22/py-trade-dairy-2/">不为人知的py交易日记【第二话：turtle库&画画】</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/18/py-trade-dairy-1/">不为人知的py交易日记【第一话：基础】</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/18/books-in-2017/">2017年读书笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/11/upgraded-eight-queens/">八皇后问题加强版【回溯】</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/28/trip-to-chongqing/">巴渝行小记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/25/days-in-bed/">卧床记_(:3」∠❀)_</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/25/codeforces-742B/">Codeforces 742B 解题报告【数论】</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/19/CCF-CSP-certification/">CCF/CSP 认证</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/10/kiminonawa/">《君の名は。》影评</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/10/hdu-5816/">HDU 5816 Hearthstone【状压DP】</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/19/codeforces-732C/">Codeforces 732C 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/19/codeforces-727A/">Codeforces 727A 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/09/cf-contest-724/">Intel Code Challenge Final Round 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/uva-136/">UVa 136 Ugly Numbers 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/uva-12096/">UVa 12096 集合栈计算机 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/07/hdu-1166/">HDU 1166 敌兵布阵 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/07/uva-11464/">UVa 11464 Even Parity 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/07/uva-11210/">UVa 11210 Chinese Mahjong 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/07/fast-pow/">快速幂模板</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/07/codeforces-570B/">CodeForces 570B 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/25/mysql-note-1/">MySQL从入门到狗带 ——第一话：MySQL入门篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/05/java-note-6/">Java从入门到放弃 ——第六话：IO</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/05/java-note-5/">Java从入门到放弃 ——第五话：异常处理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/05/java-note-4/">Java从入门到放弃 ——第四话：集合框架</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/05/java-note-3/">Java从入门到放弃 ——第三话：常用工具类</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/05/java-note-2/">Java从入门到放弃 ——第二话：包和修饰符</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/05/java-note-1/">Java从入门到放弃 ——第一话：封装，继承，抽象类与接口</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/29/set-wifi-hotspot/">将笔记本电脑设为无线WIFI热点</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/28/A-Man-Called-Ove/">『一个叫欧维的男人决定去死』</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/21/something-about-relationship/">如何得与凉风约，不与尘沙一起来。</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/21/Tamako-Love-Story/">《玉子爱情故事》——影评</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/18/hdu-2209/">HDU 2209 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/18/repost/">转载：3xian之所在</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/18/hdu-1548/">HDU 1548 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/16/just-nonsence/">单细胞生物の生存战争</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/codeforces-704A/">CodeForces 704A 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/dp/">动态规划</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/codeforces-705B/">CodeForces 705B 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/codeforces-703C/">CodeForces 703C 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/poj-1061/">POJ 1061 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/hdu-2669/">HDU 2669 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/hdu-5690/">HDU 5690 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/poj-1006/">POJ 1006 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/hdu-1576/">HDU 1576 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/hdu-2504/">HDU 2504 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/hdu-1019/">HDU 1019 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/15/hdu-2104/">HDU 2104 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/12/poj-3254/">POJ 3254 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/12/backpack/">背包问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/12/hdu-1203/">HDU 1203 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/12/hdu-2546/">HDU 2546 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/09/the-shortest-path/">最短路问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/09/poj-2240/">POJ 2240 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/09/poj-2387/">POJ 2387 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/09/hdu-2112/">HDU 2112 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/09/hdu-1874/">HDU 1874 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/09/hdu-2544/">HDU 2544 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/09/hdu-5761/">HDU 5761 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/04/number-theory/">数论专题</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/30/sort/">排序</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/30/hdu-1872/">HDU 1872 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/30/poj-2299/">POJ 2299 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/30/hdu-1511/">HDU 1151 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/30/cf-edu-15/">Educational Codeforces Round 15 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/29/memory-search/">记忆化搜索与动态规划</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/hdu-1978/">HDU 1978 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/hdu-4484/">HDU 4484 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/hdu-1078/">HDU 1078 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/poj-3414/">POJ 3414 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/hdu-2717/">HDU 2717 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/27/hdu-1181/">HDU 1181 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/25/study-bfs-dfs/">深度优先搜索、广度优先搜索</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/codeforces-701C/">CodeForces 701C 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/codeforces-701B/">CodeForces 701B 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/codeforces-701A/">CodeForces 701A 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/codeforces-700A/">CodeForces 700A 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/hdu-5742/">HDU 5742 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/hdu-5723/">HDU 5723 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/hdu-5745/">HDU 5745 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/22/hdu-5734/">HDU 5734 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/22/hdu-2585/">HDU 2585 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/21/codeforces-448c/">CodeForces 448C 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/21/hdu-1007/">HDU 1007 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/21/codeforces-587A/">CodeForces 587A 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/stl-study-notes/">STL学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/codeforces-581C/">CodeForces 581C 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/hdu-4544/">HDU 4544 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/hdu-1873/">HDU 1873 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/codeforces-579B/">CodeForces 579B 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/codeforces-624B/">CodeForces 624B 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/trainning-diary/">暑期集训日记本✧٩(ˊωˋ*)و✧</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/codeforces-651A/">CodeForces 651A 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/uva-11729/">UVA 11729 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/19/uva-11292/">UVA 11292 解题报告</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/18/short-holiday/">夏休み</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/03/death-flag/">都怪我作死</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/01/confession/">面壁思过，不知所措</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/27/aishite/">吃老夫一记安利</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/26/insert-video/">嗷~~宝宝解锁了新姿势(*//ω//*)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/26/photo/">图床ԅ(¯﹃¯ԅ)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/25/ACMgather/">论代码能力与食量的正比例关系</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/24/HELLO-HEXO/">Created my Private Castle</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2017 Nyanko Chan
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >本站到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+             title: "a.article-title, .article-more-link a", 
+             post: ".article-entry a[href], .copyright a[href]", 
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哟~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现辣~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
