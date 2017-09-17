@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html >
+	<head>
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		
+		<link rel="stylesheet" href="css/animations.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/shake.css">
+		<title>银月轻语 | Nyanko Chan</title>
+		<link rel="shortcut icon" href="pics/icon.ico" />
+		<script type="text/javascript" src="js/tagswitch.js"></script>
+
+	</head>
+	<body>
+	 	<script type="text/javascript" src="js/particle.js"></script>
+		<div id="object" class="fadeIn">
+			<img id = "fav" src="pics/favicon.png" />
+			<div id = "main-description">
+				<h1 style="color: #333333;"> Nyanko Chan </h1>
+				<h2 style="color: #333333;">我有整个宇宙想讲给你听，张口却吐不出半粒星辰。</h2>
+			</div>
+
+		</div>
+		<div class="shake" >
+			<a href="mainpage.html">
+				<button class="button" >点击进入主页</button>
+			</a>
+			
+		</div>	
+		
+
+		
+
+		<script>
+		$(window).scroll(function() {
+			$('#animatedElement').each(function(){
+			var imagePos = $(this).offset().top;
+
+			var topOfWindow = $(window).scrollTop();
+			if (imagePos < topOfWindow+400) {
+				$(this).addClass("fadeIn");
+			}
+			});
+		});
+		</script>
+		<script>
+			$('#animatedElement').click(function() {
+				$(this).addClass("fadeIn");
+			});
+		</script>
+		
+	</body>
+</html>
+<!---
+
+
+
+
+-->

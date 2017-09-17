@@ -1,0 +1,57 @@
+
+#object{
+	width: 300px;
+	height: 300px;
+	margin-top: 100px;
+	margin-left: auto;
+	margin-right: auto; 
+	visibility: hidden;
+	text-align: center;
+	
+}
+
+#fav {
+	width: 180px;
+	height: 180px;
+	border: 8px solid #CCC; 
+	text-align: center;
+	border-radius: 50% 50% 50% 50%;
+}
+
+#fav : hover {
+	width: 180px;
+	height: 180px;
+	border: 8px solid #CCC; 
+	text-align: center;
+	border-radius: 50% 50% 50% 50%;
+}
+
+
+#main-description h1{
+	font-family: "宋体";
+	font-size: 35px;
+	text-align: center;
+}
+
+#main-description h2{
+	font-family: "微软雅黑";
+	font-size: 20px;
+	text-align: center;
+}
+
+
+.button{
+	text-align: center;
+	width: 200px;
+	height: 40px;
+	font-size: 20px;
+	margin-top: 90px;
+	margin-left: 570px;
+
+	color: #ffffff;
+	background: #000000;
+	border-radius: 20%;
+	opacity: 0.6;
+	
+}
+
