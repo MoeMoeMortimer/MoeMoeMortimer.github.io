@@ -268,9 +268,9 @@
     </summary>
     
     
-      <category term="日常" scheme="https://moemoemortimer.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
-    
       <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+      <category term="日常" scheme="https://moemoemortimer.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
     
   </entry>
   
@@ -343,9 +343,9 @@
     </summary>
     
     
-      <category term="日常" scheme="https://moemoemortimer.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
-    
       <category term="读书笔记" scheme="https://moemoemortimer.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="日常" scheme="https://moemoemortimer.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
     
   </entry>
   
@@ -765,9 +765,9 @@ public static void readExcel(String filePath) throws IOException {
     
       <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
     
-      <category term="数学" scheme="https://moemoemortimer.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
-    
       <category term="暴力" scheme="https://moemoemortimer.github.io/tags/%E6%9A%B4%E5%8A%9B/"/>
+    
+      <category term="数学" scheme="https://moemoemortimer.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
