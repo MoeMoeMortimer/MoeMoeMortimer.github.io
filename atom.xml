@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://moemoemortimer.github.io/"/>
-  <updated>2018-04-23T08:41:07.186Z</updated>
+  <updated>2018-04-23T08:45:30.677Z</updated>
   <id>https://moemoemortimer.github.io/</id>
   
   <author>
@@ -16,15 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>【线段树+二分】HDU 4614 Vases and Flowers</title>
     <link href="https://moemoemortimer.github.io/2018/04/23/HDU4614/"/>
     <id>https://moemoemortimer.github.io/2018/04/23/HDU4614/</id>
-    <published>2018-04-23T08:15:47.765Z</published>
-    <updated>2018-04-23T08:41:07.186Z</updated>
+    <published>2018-04-23T08:40:12.000Z</published>
+    <updated>2018-04-23T08:45:30.677Z</updated>
     
-    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;hr&gt;
-&lt;p&gt;title:【线段树+二分】HDU 4614 Vases and Flowers&lt;br&gt;date:2018-04-23 16:40:12&lt;/p&gt;
-&lt;h2 id=&quot;tags-线段树-解题报告&quot;&gt;&lt;a href=&quot;#tags-线段树-解题报告&quot; class=&quot;headerlink&quot; title=&quot;tags:[线段树, 解题报告]&quot;&gt;&lt;/a&gt;tags:[线段树, 解题报告]&lt;/h2&gt;&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;/p&gt;
+    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;h3 id=&quot;题目传送门&quot;&gt;&lt;a href=&quot;#题目传送门&quot; class=&quot;headerlink&quot; title=&quot;题目传送门&quot;&gt;&lt;/a&gt;题目传送门&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=4614&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HDU 4614 Vases and Flowers 题目传送门&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h3&gt;&lt;p&gt;n个花瓶排成一列，每次两种操作&lt;/p&gt;
@@ -39,25 +37,25 @@
     
     <summary type="html">
     
-      &lt;hr&gt;
-&lt;p&gt;title:【线段树+二分】HDU 4614 Vases and Flowers&lt;br&gt;date:2018-04-23 16:40:12&lt;/p&gt;
-&lt;h2 id=&quot;tags-线段树-解题报告&quot;&gt;&lt;a href=&quot;#tags-线段树-解题报告&quot; class=&quot;headerlink&quot; title=&quot;tags:[线段树, 解题报告]&quot;&gt;&lt;/a&gt;tags:[线段树, 解题报告]&lt;/h2&gt;&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;/p&gt;
+      &lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;/p&gt;
     
     </summary>
     
     
+      <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+      <category term="线段树" scheme="https://moemoemortimer.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
+    
   </entry>
   
   <entry>
-    <title></title>
+    <title>【线段树体积交】HDU 3642 Get The Treasury</title>
     <link href="https://moemoemortimer.github.io/2018/04/23/HDU3642/"/>
     <id>https://moemoemortimer.github.io/2018/04/23/HDU3642/</id>
-    <published>2018-04-23T07:55:32.358Z</published>
-    <updated>2018-04-23T08:36:00.004Z</updated>
+    <published>2018-04-23T07:55:32.000Z</published>
+    <updated>2018-04-23T08:45:25.764Z</updated>
     
-    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;hr&gt;
-&lt;p&gt;title:【线段树体积交】HDU 3642 Get The Treasury&lt;br&gt;date:2018-04-23 15:55:32&lt;/p&gt;
-&lt;h2 id=&quot;tags-线段树-解题报告&quot;&gt;&lt;a href=&quot;#tags-线段树-解题报告&quot; class=&quot;headerlink&quot; title=&quot;tags:[线段树, 解题报告]&quot;&gt;&lt;/a&gt;tags:[线段树, 解题报告]&lt;/h2&gt;&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;/p&gt;
+    <content type="html">&lt;script src=&quot;/assets/js/DPlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h2&gt;&lt;h3 id=&quot;题目传送门&quot;&gt;&lt;a href=&quot;#题目传送门&quot; class=&quot;headerlink&quot; title=&quot;题目传送门&quot;&gt;&lt;/a&gt;题目传送门&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://acm.hdu.edu.cn/showproblem.php?pid=3642&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HDU 3642 Get The Treasury 题目传送门&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h3&gt;&lt;p&gt;求三维空间内被覆盖至少三次的体积，坐标均为整数。&lt;/p&gt;
@@ -73,12 +71,14 @@
     
     <summary type="html">
     
-      &lt;hr&gt;
-&lt;p&gt;title:【线段树体积交】HDU 3642 Get The Treasury&lt;br&gt;date:2018-04-23 15:55:32&lt;/p&gt;
-&lt;h2 id=&quot;tags-线段树-解题报告&quot;&gt;&lt;a href=&quot;#tags-线段树-解题报告&quot; class=&quot;headerlink&quot; title=&quot;tags:[线段树, 解题报告]&quot;&gt;&lt;/a&gt;tags:[线段树, 解题报告]&lt;/h2&gt;&lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;/p&gt;
+      &lt;p&gt;这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_&lt;/p&gt;
     
     </summary>
     
+    
+      <category term="解题报告" scheme="https://moemoemortimer.github.io/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/"/>
+    
+      <category term="线段树" scheme="https://moemoemortimer.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
     
   </entry>
   
