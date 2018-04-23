@@ -15,16 +15,16 @@
 
 
 
-<meta name="description">
+<meta name="description" content="这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HDU 5723 解题报告">
-<meta property="og:url" content="https://moemoemortimer.github.io/2016/07/23/hdu-5723/index.html">
+<meta property="og:title" content="【线段树体积交】HDU 3642 Get The Treasury">
+<meta property="og:url" content="https://moemoemortimer.github.io/2018/04/23/HDU3642/index.html">
 <meta property="og:site_name" content="银月轻语">
-<meta property="og:description">
-<meta property="og:updated_time" content="2016-07-27T14:31:30.144Z">
+<meta property="og:description" content="这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_">
+<meta property="og:updated_time" content="2018-04-23T08:11:50.742Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HDU 5723 解题报告">
-<meta name="twitter:description">
+<meta name="twitter:title" content="【线段树体积交】HDU 3642 Get The Treasury">
+<meta name="twitter:description" content="这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>HDU 5723 解题报告 | 银月轻语</title>
+<title>【线段树体积交】HDU 3642 Get The Treasury | 银月轻语</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -251,11 +251,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-hdu-5723" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-HDU3642" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/07/23/hdu-5723/" class="article-date">
-      <time datetime="2016-07-23T07:23:00.000Z" itemprop="datePublished">2016-07-23</time>
+      <a href="/2018/04/23/HDU3642/" class="article-date">
+      <time datetime="2018-04-23T07:55:32.000Z" itemprop="datePublished">2018-04-23</time>
 </a>
 
 
@@ -270,7 +270,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      HDU 5723 解题报告
+      【线段树体积交】HDU 3642 Get The Treasury
     </h1>
   
 
@@ -280,6 +280,10 @@
         
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/线段树/">线段树</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解题报告/">解题报告</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -287,7 +291,19 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <script src="/assets/js/DPlayer.min.js"> </script>
+        <script src="/assets/js/DPlayer.min.js"> </script><p>这里是nyanko sama亲手调教出来的解题报告_(:3」∠❀)_</p>
+<a id="more"></a>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><h3 id="题目传送门"><a href="#题目传送门" class="headerlink" title="题目传送门"></a>题目传送门</h3><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=3642" target="_blank" rel="external">HDU 3642 Get The Treasury 题目传送门</a></p>
+<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>求三维空间内被覆盖至少三次的体积，坐标均为整数。</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>有点求三重积分的感觉。<br>z坐标很小，因此可以暴力z坐标，相当于切成了一个个小片，然后每一层当成线段树处理二维面积交。<br>我把z坐标也离散化了，不知道会不会快一点。</p>
+<p>直接把面积交的代码拿过来了，主要是pushUp函数需要写得优雅一点。<br>首先做如下定义（求交三次及以上的面积）：</p>
+<p>int cov[maxn&lt;&lt;2];  //区间覆盖次数<br>int sum[maxn&lt;&lt;2];  //覆盖一次的总长度<br>int sum2[maxn&lt;&lt;2]; //覆盖两次的总长度<br>int sum3[maxn&lt;&lt;2]; //覆盖大于等于三次的总长度</p>
+<hr>
+<p>对于某个位置，分别更新三个sum：</p>
+<p>对于sum3，如果cov[id]&gt;=3，说明已经被覆盖了三次，sum3[id] = x[r+1]-x[l];<br>如果cov[id]==2，说明被覆盖了两次，需要加上子节点表示覆盖一次的sum<br>如果cov[id]==1，说明这个位置已经被覆盖了一次，那就从子节点传sum2上来<br>如果cov[id]==0，这个地方没有被覆盖过，那么我们只有从子节点将覆盖了三次的结果传上来了。</p>
+<p>sum2和sum的更新同理。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;bits/stdc++.h&gt;</span><br><span class="line">#define lson l, mid, id&lt;&lt;1</span><br><span class="line">#define rson mid+1, r, id&lt;&lt;1|1</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line">typedef long long ll;</span><br><span class="line">const int maxn = 10005;</span><br><span class="line"></span><br><span class="line">int cov[maxn&lt;&lt;2];  //区间覆盖次数</span><br><span class="line">int sum[maxn&lt;&lt;2];  //覆盖一次的总长度</span><br><span class="line">int sum2[maxn&lt;&lt;2]; //覆盖两次的总长度</span><br><span class="line">int sum3[maxn&lt;&lt;2]; //覆盖大于等于三次的总长度</span><br><span class="line">int x[maxn];</span><br><span class="line">int z[maxn&lt;&lt;1];</span><br><span class="line"></span><br><span class="line">struct seg &#123;</span><br><span class="line">    int l, r, y; int p;</span><br><span class="line">    seg() &#123;&#125;</span><br><span class="line">    seg(int l, int r, int y, int p): l(l), r(r), y(y), p(p) &#123;&#125;</span><br><span class="line">&#125;node[maxn&lt;&lt;2], tmp[maxn&lt;&lt;2];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">struct cube</span><br><span class="line">&#123;</span><br><span class="line">    int x1, y1, x2, y2, z1, z2;</span><br><span class="line">    cube() &#123;&#125;</span><br><span class="line">    cube(int x1, int y1, int x2, int y2, int z1, int z2): x1(x1), y1(y1), x2(x2), y2(y2), z1(z1), z2(z2) &#123;&#125;</span><br><span class="line">&#125;cubes[maxn&lt;&lt;1];</span><br><span class="line"></span><br><span class="line">bool cmp(seg a, seg b)&#123;</span><br><span class="line">    return a.y&lt;b.y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//如果&gt;=3，说明已经被覆盖了三次</span><br><span class="line">//如果==2，说明被覆盖了两次</span><br><span class="line">//如果==1，说明这个位置已经被覆盖了一次，那就从子节点传上来（子节点如果已被覆盖一次，加起来就是两次）</span><br><span class="line">//如果==0，这个地方没有被覆盖，那么我们只有从子节点将覆盖的结果传上来。</span><br><span class="line">void pushUp(int l, int r, int id)&#123;</span><br><span class="line">    if(cov[id]) sum[id] = x[r+1]-x[l];</span><br><span class="line">    else if(l==r) sum[id] = 0;</span><br><span class="line">    else sum[id] = sum[id&lt;&lt;1] + sum[id&lt;&lt;1|1];</span><br><span class="line"></span><br><span class="line">    //更新sum2</span><br><span class="line">    if(cov[id]&gt;=2) sum2[id] = x[r+1]-x[l];</span><br><span class="line">    else if(l==r) sum2[id] = 0;</span><br><span class="line">    else if(cov[id]==1) sum2[id] = sum[id&lt;&lt;1]+sum[id&lt;&lt;1|1];</span><br><span class="line">    else if(cov[id]==0) sum2[id] = sum2[id&lt;&lt;1]+sum2[id&lt;&lt;1|1];</span><br><span class="line"></span><br><span class="line">    //更新sum3</span><br><span class="line">    if(cov[id]&gt;=3) sum3[id] = x[r+1]-x[l];</span><br><span class="line">    else if(l==r) sum3[id] = 0;</span><br><span class="line">    else if(cov[id]==2) sum3[id] = sum[id&lt;&lt;1]+sum[id&lt;&lt;1|1];</span><br><span class="line">    else if(cov[id]==1) sum3[id] = sum2[id&lt;&lt;1]+sum2[id&lt;&lt;1|1];</span><br><span class="line">    else if(cov[id]==0) sum3[id] = sum3[id&lt;&lt;1]+sum3[id&lt;&lt;1|1];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void update(int L, int R, int v, int l, int r, int id)&#123;</span><br><span class="line">    if(L&lt;=l &amp;&amp; r&lt;=R)&#123;</span><br><span class="line">        cov[id] += v;</span><br><span class="line">        pushUp(l, r, id);</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    int mid = (l+r)&gt;&gt;1;</span><br><span class="line">    if(L&lt;=mid) update(L, R, v, lson);</span><br><span class="line">    if(R&gt; mid) update(L, R, v, rson);</span><br><span class="line">    pushUp(l, r, id);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">int main(int argc, char const *argv[])</span><br><span class="line">&#123;</span><br><span class="line">    int n;</span><br><span class="line">    int ka = 1;</span><br><span class="line">    int t;</span><br><span class="line">    scanf("%d", &amp;t);</span><br><span class="line">    while(t--)&#123;</span><br><span class="line">        scanf("%d", &amp;n);</span><br><span class="line">        int x1, x2, y1, y2, z1, z2;</span><br><span class="line">        ll ans = 0;</span><br><span class="line">        for(int i = 1; i &lt;= n; i++)&#123;</span><br><span class="line">            scanf("%d%d%d%d%d%d", &amp;x1, &amp;y1, &amp;z1, &amp;x2, &amp;y2, &amp;z2);</span><br><span class="line">            node[i] = seg(x1, x2, y1, 1);</span><br><span class="line">            node[i+n]  = seg(x1, x2, y2, -1);</span><br><span class="line">            cubes[i] = cube(x1, y1, x2, y2, z1, z2);</span><br><span class="line">            x[i] = x1;</span><br><span class="line">            x[i+n] = x2;</span><br><span class="line">            z[i] = z1;</span><br><span class="line">            z[i+n] = z2;</span><br><span class="line">        &#125;</span><br><span class="line">        n = n&lt;&lt;1;</span><br><span class="line">        //sort(node+1, node+n+1, cmp);</span><br><span class="line">        sort(x+1, x+n+1);</span><br><span class="line">        sort(z+1, z+n+1);</span><br><span class="line">        int m1 = unique(x+1, x+n+1) - x - 1;</span><br><span class="line">        int m2 = unique(z+1, z+n+1) - z - 1;</span><br><span class="line">        n = n&gt;&gt;1;</span><br><span class="line">        for(int i = 1; i &lt; m2; i++)&#123;</span><br><span class="line">            ll res = 0;</span><br><span class="line">            int cnt = 0;</span><br><span class="line">            memset(cov, 0, sizeof(cov));</span><br><span class="line">            memset(sum, 0, sizeof(sum));</span><br><span class="line">            memset(sum2, 0, sizeof(sum2));</span><br><span class="line">            memset(sum3, 0, sizeof(sum3));</span><br><span class="line">            for(int j = 1; j &lt;= n; j++)&#123;</span><br><span class="line">                if(cubes[j].z1&lt;=z[i] &amp;&amp; cubes[j].z2&gt;z[i])&#123;</span><br><span class="line">                    tmp[cnt++] = node[j];</span><br><span class="line">                    tmp[cnt++] = node[j+n];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            sort(tmp, tmp+cnt, cmp);</span><br><span class="line">            for(int j = 0; j &lt; cnt-1; j++)&#123;</span><br><span class="line">                int l = lower_bound(x+1, x+m1+1, tmp[j].l) - x;</span><br><span class="line">                int r = lower_bound(x+1, x+m1+1, tmp[j].r) - x;</span><br><span class="line">                //cout &lt;&lt; l &lt;&lt; " " &lt;&lt; r-1 &lt;&lt; endl;</span><br><span class="line">                if(l&lt;r) update(l, r-1, tmp[j].p, 1, m1, 1);</span><br><span class="line">                </span><br><span class="line">                res += (ll)sum3[1]*(tmp[j+1].y-tmp[j].y);</span><br><span class="line">            &#125;</span><br><span class="line">            ans += res*(z[i+1]-z[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        printf("Case %d: %lld\n", ka++, ans);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -295,13 +311,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/07/23/hdu-5723/">HDU 5723 解题报告</a></p>
+        <p><span>本文标题:</span><a href="/2018/04/23/HDU3642/">【线段树体积交】HDU 3642 Get The Treasury</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Nyanko Chan</a></p>
-        <p><span>发布时间:</span>2016-07-23, 15:23:00</p>
-        <p><span>最后更新:</span>2016-07-27, 22:31:30</p>
+        <p><span>发布时间:</span>2018-04-23, 15:55:32</p>
+        <p><span>最后更新:</span>2018-04-23, 16:11:50</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/07/23/hdu-5723/" title="HDU 5723 解题报告">https://moemoemortimer.github.io/2016/07/23/hdu-5723/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://moemoemortimer.github.io/2016/07/23/hdu-5723/　　作者: Nyanko Chan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/04/23/HDU3642/" title="【线段树体积交】HDU 3642 Get The Treasury">https://moemoemortimer.github.io/2018/04/23/HDU3642/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://moemoemortimer.github.io/2018/04/23/HDU3642/　　作者: Nyanko Chan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -313,16 +329,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/07/23/hdu-5742/">
-                    HDU 5742 解题报告
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/07/23/hdu-5745/">
-                    HDU 5745 解题报告
+                <a href="/2018/04/17/HDU4578/">
+                    【线段树多标记】HDU 4578 Transformation
                 </a>
             </div>
         
@@ -333,7 +343,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目"><span class="toc-number">1.</span> <span class="toc-text">题目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目传送门"><span class="toc-number">1.1.</span> <span class="toc-text">题目传送门</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#题目描述"><span class="toc-number">1.2.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#思路"><span class="toc-number">1.3.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码"><span class="toc-number">1.4.</span> <span class="toc-text">代码</span></a></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn,
@@ -364,7 +374,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"HDU 5723 解题报告　| 银月轻语　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"【线段树体积交】HDU 3642 Get The Treasury　| 银月轻语　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -383,8 +393,8 @@
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function(){
-            this.page.url = 'https://moemoemortimer.github.io/2016/07/23/hdu-5723/';
-            this.page.identifier = '2016/07/23/hdu-5723/';
+            this.page.url = 'https://moemoemortimer.github.io/2018/04/23/HDU3642/';
+            this.page.identifier = '2018/04/23/HDU3642/';
         };
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -406,15 +416,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/07/23/hdu-5742/" title="上一篇: HDU 5742 解题报告">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/07/23/hdu-5745/" title="下一篇: HDU 5745 解题报告">
+            <a href="/2018/04/17/HDU4578/" title="下一篇: 【线段树多标记】HDU 4578 Transformation">
                 <i class="fa fa-angle-right"></i>
             </a>
         
